@@ -1,0 +1,10 @@
+82874d50396e2043ace67e4005fb2214  usr/bin/inotifywait
+d6b981c7523a3dcd4f38ffbcb8a017aa  usr/bin/inotifywatch
+3582361c178eac2bc0a3ba02a1cd986c  usr/share/doc/inotify-tools/changelog.Debian.gz
+f6b0026302ae1e3cf04a6fa857e87d3e  usr/share/doc/inotify-tools/changelog.gz
+b3f068e4ac2f1d5704b444d2baf70649  usr/share/doc/inotify-tools/README
+d603243fcac23abb2130157fc65fc117  usr/share/doc/inotify-tools/AUTHORS
+18ac6cc5d5d944fd341c498f4533baf2  usr/share/doc/inotify-tools/copyright
+8fa8e09f164d639a0181bc8bfe94eda3  usr/share/doc/inotify-tools/NEWS.gz
+ae4b845831afe7baa96edf42b02d774b  usr/share/man/man1/inotifywait.1.gz
+31bf70c4912b91c572f0d664a10f5a03  usr/share/man/man1/inotifywatch.1.gz

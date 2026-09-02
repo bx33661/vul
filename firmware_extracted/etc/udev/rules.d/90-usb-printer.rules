@@ -1,0 +1,8 @@
+# The rules of USB Printer device
+
+LABEL="Manage USB Printer"
+
+KERNEL=="lp[0-9]*", RUN+="/usr/sbin/nas-share set_samba_printer"  
+ 
+
+

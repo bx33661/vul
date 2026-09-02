@@ -1,0 +1,56 @@
+/*  XXX: for fixed window
+#header {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#container {
+    width: 100%; 
+    height: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#contents2 {
+    height: 400px !important;
+}
+*/
+
+/* menu */
+#mst_tab_main_control, #mst_tab_main_backup {
+    display: none;
+}
+
+/* share */
+#mst_con_share_add_and_del {
+    display: none;
+}
+
+#mst_share_database {
+    display: block;
+}
+
+#mst_share_legend {
+    height: 220px;
+}
+
+#mst_share_list_body {
+    height: 170px; 
+}
+
+/* setting */
+#mst_tab_setting_view, #mst_tab_setting_database {
+    display: none;
+}
+
+/* XXX: modern browser (expect ie7) hack */
+/* XXX: for fixed window
+#setting_menu_list li {
+    width: 78% !important;
+}
+*/
+
+#mst_login_server_name {
+    display: block;
+}
+

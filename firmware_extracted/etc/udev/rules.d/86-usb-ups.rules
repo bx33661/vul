@@ -1,0 +1,12 @@
+# The rules of APC UPS device
+
+LABEL="persistent_UPS_add"
+
+KERNEL=="hiddev*", ATTRS{product}=="*UPS*", ATTRS{manufacturer}=="American Power Conversion", \
+  ACTION=="add", RUN+="/usr/sbin/nas-system ups"
+
+KERNEL=="hiddev*", \
+  ACTION=="remove", RUN+="/usr/sbin/nas-system ups off"
+
+LABEL="persistent_ups_end"
+

@@ -1,0 +1,27 @@
+<div id="mst_state_control" class="mst_state"></div>
+
+<fieldset>
+	<legend>[[CONTROL_TITLE]]</legend>
+	<div class="legend_page">
+		[[CONTROL_EXPLANATION]]
+		<table id="mst_control_state_tbl">
+		<tr>
+			<td id="mst_control_state_tbl_td_state_msg">[[CONTROL_STATE]]</td>
+			<td class="margin"></td>
+			<td id="mst_control_state_tbl_td_state">[[CONTROL_STATE_ON]]</td>
+			<td class="margin"></td>
+			<td id="mst_control_state_tbl_td_btn">
+				<input type="button" id="mst_control_change_btn" value="[[CONTROL_STOP_SERVER]]" />
+			</td>
+		</tr>
+		</table>
+	</div>
+</fieldset>
+
+<fieldset>
+	<legend>[[CONTROL_AUTORUN_TITLE]]</legend>
+	<div class="legend_page">
+        <input type="checkbox" id="mst_control_autorun" />
+        <span>[[CONTROL_AUTORUN_EXPLANATION]]<span>
+	</div>
+</fieldset>

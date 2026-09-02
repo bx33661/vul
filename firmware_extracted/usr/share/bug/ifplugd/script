@@ -1,0 +1,6 @@
+#!/bin/sh
+
+exec >&3
+
+echo " /proc/net/dev interfaces:"
+grep ":" /proc/net/dev | cut -f1 -d":"

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# sync with ntp server
+
+/usr/sbin/nas-system sync_ntp
+

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# eject ODD
+sg_turs /dev/scd0
+if [ "$?" = "0" ]; then
+	sg_prevent -a /dev/scd0
+	if [ "$?" != 0 ]; then
+		sleep 1
+		sg_prevent -a /dev/scd0
+	fi
+
+	for (( TIME=1; TIME <= 5; TIME += 1))
+	do
+		eject /dev/scd0
+		if [ "$?" != "0" ]; then
+			sleep 1
+		else
+			break
+		fi
+	done
+fi

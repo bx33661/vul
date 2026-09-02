@@ -1,0 +1,13 @@
+#!/bin/sh -e
+
+exec >&2
+
+echo ""
+echo "************************************************************************"
+echo "*"
+echo "* The update-modules command is deprecated and should not be used!"
+echo "*"
+echo "************************************************************************"
+echo ""
+
+exit 0

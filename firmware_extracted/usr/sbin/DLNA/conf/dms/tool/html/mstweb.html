@@ -1,0 +1,15 @@
+<html>
+<head></head>
+<script type="text/javascript">
+function getServerIp() {
+	var _url = document.URL;
+ 	_temp_url = _url.split('/');
+	_temp2_url = _temp_url[2].split(':');
+	return _temp2_url[0];
+}
+serverIp = getServerIp();
+var url = "http://" + serverIp;
+
+location.href = url;
+</script>
+</html>

@@ -1,0 +1,5 @@
+/etc/ifplugd/action.d/ifupdown
+/etc/ifplugd/ifplugd.action
+/etc/init.d/ifplugd
+/etc/apm/scripts.d/ifplugd
+/etc/udev/rules.d/z60_ifplugd.rules

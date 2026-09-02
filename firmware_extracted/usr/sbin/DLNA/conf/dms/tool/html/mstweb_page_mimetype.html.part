@@ -1,0 +1,47 @@
+<div id="mst_state_mimetype" class="mst_state"></div>
+
+<div class="setting_main_container_list">
+	<div class="setting_main_container">
+		<div id="mst_mime_legend_block1">
+			<div class="icon_list_block">
+				<div class="icon_list_block_main">
+					<table>
+					<tr>
+						<td>
+							<input type="button" id="mime_btn_add" value="[[MIMETYPE_ADD]]" onclick="mstweb_page_mimetype_on_add()" /> 
+							<input type="button" id="mime_btn_edit" value="[[MIMETYPE_EDIT]]" onclick="mstweb_page_mimetype_on_edit()" /> 
+							<input type="button" id="mime_btn_del" value="[[MIMETYPE_UNREGISTER]]" onclick="mstweb_page_mimetype_unregister()" /> 
+							<span class="separater"> | </span>
+							<input type="button" id="mime_btn_reset" value="[[MIMETYPE_RESET]]" onclick="mstweb_page_mimetype_reset()" /> 
+						</td>
+					</tr>
+					</table>
+				</div>
+				<div class="icon_list_block_sub">
+					<ul class="icon_list">
+						<li class="icon_item_reload" id="mime_btn_reload" onclick="mstweb_page_mimetype_get_mimetype_list()" onmouseover="list('mime', 'change_btn', this.id, 'reload', 'over')" onmouseout="list('mime', 'change_btn', this.id, 'reload', 'out')" onmouseup="list('mime', 'change_btn', this.id, 'reload', 'up')" onmousedown="list('mime', 'change_btn', this.id, 'reload', 'down')" />
+						<li class="icon_item_padding" />
+						<li class="icon_item_allon" id="mime_btn_all" onclick="list('mime', 'change_all_tr', 'select')" onmouseover="list('mime', 'change_btn', this.id, 'allon', 'over')" onmouseout="list('mime', 'change_btn', this.id, 'allon', 'out')" onmouseup="list('mime', 'change_btn', this.id, 'allon', 'up')" onmousedown="list('mime', 'change_btn', this.id, 'allon', 'down')" />
+						<li class="icon_item_alloff" id="mime_btn_none" onclick="list('mime', 'change_all_tr', 'unselect')" onmouseover="list('mime', 'change_btn', this.id, 'alloff', 'over')" onmouseout="list('mime', 'change_btn', this.id, 'alloff', 'out')" onmouseup="list('mime', 'change_btn', this.id, 'alloff', 'up')" onmousedown="list('mime', 'change_btn', this.id, 'alloff', 'down')" />
+					</ul>
+					<div class="float_cancel"></div>
+				</div>
+				<div class="float_cancel"></div>
+			</div>
+		
+			<div class="list_head">
+				<table class="list_head2">
+				<tr>
+					<td class="list_item_td_checkbox"></td>
+					<td class="list_item_td_extention">[[MIMETYPE_EXTENTION]]</td>
+					<td>[[MIMETYPE_MIMETYPE]]</td>
+				</tr>
+				</table>
+			</div>
+		
+			<form id='mstweb_page_mimetype' name='mstweb_page_mimetype'>
+				<div id='mstweb_page_mimetype_mimetype_list'></div>
+			</form>
+		</div>
+	</div>
+</div>

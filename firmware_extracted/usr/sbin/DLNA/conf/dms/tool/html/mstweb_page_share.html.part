@@ -1,0 +1,65 @@
+<div id="mst_state_share" class="mst_state"></div>
+
+<table id="mst_share_block1">
+<tr>
+	<td>
+		<fieldset>
+			<legend>[[SHARE_TITLE]]</legend>
+			<div class="legend_page" id="mst_share_legend">
+
+				<div id="mst_share_legend_block1">
+
+					<div class="icon_list_block">
+						<div class="icon_list_block_main">
+							<table>
+							<tr>
+								<td id="mst_con_share_add_and_del">
+									<input type="button" value="[[SHARE_ADD]]" id="mst_con_share_add" />
+									<input type="button" value="[[SHARE_UNREGISTER]]" id="mst_con_share_del" onclick="mstweb_page_share_unregister_share_list()" />
+								</td>
+							</tr>
+							</table>
+						</div>
+						<div class="icon_list_block_sub">
+							<ul class="icon_list">
+						<li class="icon_item_reload" id="share_btn_reload" onclick="mstweb_page_share_get_share_list()" onmouseover="list('share', 'change_btn', this.id, 'reload', 'over')" onmouseout="list('share', 'change_btn', this.id, 'reload', 'out')" onmouseup="list('share', 'change_btn', this.id, 'reload', 'up')" onmousedown="list('share', 'change_btn', this.id, 'reload', 'down')" />
+						<li class="icon_item_padding" />
+						<li class="icon_item_allon" id="share_btn_all" onclick="list('share', 'change_all_tr', 'select')" onmouseover="list('share', 'change_btn', this.id, 'allon', 'over')" onmouseout="list('share', 'change_btn', this.id, 'allon', 'out')" onmouseup="list('share', 'change_btn', this.id, 'allon', 'up')" onmousedown="list('share', 'change_btn', this.id, 'allon', 'down')" />
+						<li class="icon_item_alloff" id="share_btn_none" onclick="list('share', 'change_all_tr', 'unselect')" onmouseover="list('share', 'change_btn', this.id, 'alloff', 'over')" onmouseout="list('share', 'change_btn', this.id, 'alloff', 'out')" onmouseup="list('share', 'change_btn', this.id, 'alloff', 'up')" onmousedown="list('share', 'change_btn', this.id, 'alloff', 'down')" />
+							</ul>
+							<div class="float_cancel"></div>
+						</div>
+						<div class="float_cancel"></div>
+					</div>
+						
+					<div class="list_head">
+						<table class="list_head2">
+						<tr>
+							<td class="list_item_td_checkbox"></td>
+							<td>[[SHARE_CONTAINER]]</td>
+						</tr>
+						</table>
+					</div>
+							
+					<form id="mstweb_page_share" name="mstweb_page_share">
+						<div id="page_share_list"></div>
+					</form>
+				</div>
+			</div>
+		</fieldset>
+	</td>
+</tr>
+<tr>
+	<td>
+		<fieldset id="mst_share_database">
+			<legend>[[DATABASE_TITLE]]</legend>
+				<div class="legend_page">
+					[[DATABASE_NOTICE_MESSAGE]]
+					<div align="center">
+						<input type="button" id="mst_con_share_repair" onclick="mstweb_page_share_repair_database()" value="[[DATABASE_REPAIR_DATABASE]]" />
+					</div>
+				</div>
+		</fieldset>
+	</td>
+</tr>
+</table>

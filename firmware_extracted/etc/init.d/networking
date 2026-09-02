@@ -1,0 +1,161 @@
+#!/bin/sh -e
+### BEGIN INIT INFO
+# Provides:          networking
+# Required-Start:    mountkernfs ifupdown $local_fs
+# Required-Stop:     ifupdown $local_fs
+# Default-Start:     S
+# Default-Stop:      0 6
+# Short-Description: Raise network interfaces.
+### END INIT INFO
+
+PATH="/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin"
+
+[ -x /sbin/ifup ] || exit 0
+
+. /lib/lsb/init-functions
+
+LINK_STATUS=
+
+check_link_status() {
+	# check link status for NC1
+	if [ "$(nas-network get method)" = "dhcp" ]; then
+		if ! nas-network link_status 3; then
+			nas-common log "[LINK] eth0: link down checked in /etc/init.d/networking"
+			log_action_msg "Configuring network interfaces: Link down"
+			exit 0
+		else
+			LINK_STATUS=ON
+		fi
+	else
+		if ! nas-network link_status 3; then
+			LINK_STATUS=OFF
+		else
+			LINK_STATUS=ON
+		fi
+	fi
+}
+
+stop_dhclient() {
+  if [ -e /var/run/dhclient.eth0.pid ]; then
+    dhclient3 -r -pf /var/run/dhclient.eth0.pid
+  fi
+}
+
+free_memory() {
+	if [ "$1" = "on" ]; then
+		MIN_FREE_KBYTES=$(cat /proc/sys/vm/min_free_kbytes)
+		echo 24000 > /proc/sys/vm/min_free_kbytes
+	else
+		if [ -z "$MIN_FREE_KBYTES" ]; then
+			MIN_FREE_KBYTES=1441
+		fi 
+		echo $MIN_FREE_KBYTES > /proc/sys/vm/min_free_kbytes
+	fi
+}
+
+check_network_file_systems() {
+    [ -e /proc/mounts ] || return 0
+
+    exec 9<&0 < /proc/mounts
+    while read DEV MTPT FSTYPE REST; do
+	case $DEV in
+	/dev/nbd*|/dev/nd[a-z]*|/dev/etherd/e*)
+	    log_warning_msg "not deconfiguring network interfaces: network devices still mounted."
+	    exit 0
+	    ;;
+	esac
+	case $FSTYPE in
+	nfs|nfs4|smbfs|ncp|ncpfs|cifs|coda|ocfs2|gfs|pvfs|pvfs2|fuse.httpfs|fuse.curlftpfs)
+	    log_warning_msg "not deconfiguring network interfaces: network file systems still mounted."
+	    exit 0
+	    ;;
+	esac
+    done
+    exec 0<&9 9<&-
+}
+
+case "$1" in
+start)
+	ifconfig lo up
+
+	check_link_status
+
+	log_action_begin_msg "Configuring network interfaces"
+
+	if [ "$LINK_STATUS" = "ON" ]; then
+		nas-common icon 2 blink
+	fi
+	touch /var/run/ifsetting
+
+	free_memory on
+	usleep 100
+
+	if ifup -a; then
+	    log_action_end_msg $?
+	else
+	    log_action_end_msg $?
+	fi
+
+	free_memory off
+	rm -f /var/run/ifsetting
+	;;
+
+stop)
+	check_network_file_systems
+
+	log_action_begin_msg "Deconfiguring network interfaces"
+
+	nas-common icon 2 blink
+	touch /var/run/ifsetting
+
+	if ifdown -a --exclude=lo; then
+	    log_action_end_msg $?
+	else
+	    log_action_end_msg $?
+	fi
+        stop_dhclient
+
+	rm -f /var/run/ifsetting
+	;;
+
+restart)
+	check_link_status
+
+	log_action_begin_msg "Reconfiguring network interfaces"
+
+	if [ "$LINK_STATUS" = "ON" ]; then
+	  nas-common icon 2 blink
+        fi
+	touch /var/run/ifsetting
+
+	free_memory on
+	usleep 100
+
+	ifdown -a --exclude=lo || true
+        stop_dhclient
+	usleep 100
+	ifconfig eth0 down		# ifdown fail when network address is different
+
+	usleep 100
+	if ifup -a --exclude=lo; then
+	    log_action_end_msg $?
+	else
+	    log_action_end_msg $?
+	fi
+
+	free_memory off
+	if [ "$LINK_STATUS" = "ON" ]; then
+	  nas-common icon 2 on
+        fi
+
+	(sleep 10; rm -f /var/run/ifsetting) &
+	;;
+
+*)
+	echo "Usage: /etc/init.d/networking {start|stop|restart}"
+	exit 1
+	;;
+esac
+
+exit 0
+

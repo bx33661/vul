@@ -1,0 +1,54 @@
+/lib/modules/2.6.22.18/fs/reiserfs/reiserfs.ko:
+/lib/modules/2.6.22.18/fs/ext2/ext2.ko:
+/lib/modules/2.6.22.18/fs/msdos/msdos.ko: /lib/modules/2.6.22.18/fs/fat/fat.ko
+/lib/modules/2.6.22.18/fs/jffs2/jffs2.ko:
+/lib/modules/2.6.22.18/fs/fat/fat.ko:
+/lib/modules/2.6.22.18/fs/hfsplus/hfsplus.ko:
+/lib/modules/2.6.22.18/fs/udf/udf.ko:
+/lib/modules/2.6.22.18/fs/isofs/isofs.ko:
+/lib/modules/2.6.22.18/fs/xfs/xfs.ko:
+/lib/modules/2.6.22.18/fs/vfat/vfat.ko: /lib/modules/2.6.22.18/fs/fat/fat.ko
+/lib/modules/2.6.22.18/fs/cifs/cifs.ko:
+/lib/modules/2.6.22.18/fs/fuse/fuse.ko:
+/lib/modules/2.6.22.18/fs/nls/nls_cp850.ko:
+/lib/modules/2.6.22.18/fs/nls/nls_cp949.ko:
+/lib/modules/2.6.22.18/fs/nls/nls_cp437.ko:
+/lib/modules/2.6.22.18/fs/nls/nls_iso8859-2.ko:
+/lib/modules/2.6.22.18/fs/nls/nls_iso8859-1.ko:
+/lib/modules/2.6.22.18/nas/hddgpio.ko:
+/lib/modules/2.6.22.18/extra/scst.ko:
+/lib/modules/2.6.22.18/extra/iscsi-scst.ko: /lib/modules/2.6.22.18/extra/scst.ko
+/lib/modules/2.6.22.18/extra/dev_handlers/scst_cdrom.ko: /lib/modules/2.6.22.18/extra/scst.ko
+/lib/modules/2.6.22.18/extra/dev_handlers/scst_changer.ko: /lib/modules/2.6.22.18/extra/scst.ko
+/lib/modules/2.6.22.18/extra/dev_handlers/scst_modisk.ko: /lib/modules/2.6.22.18/extra/scst.ko
+/lib/modules/2.6.22.18/extra/dev_handlers/scst_user.ko: /lib/modules/2.6.22.18/extra/scst.ko
+/lib/modules/2.6.22.18/extra/dev_handlers/scst_raid.ko: /lib/modules/2.6.22.18/extra/scst.ko
+/lib/modules/2.6.22.18/extra/dev_handlers/scst_tape.ko: /lib/modules/2.6.22.18/extra/scst.ko
+/lib/modules/2.6.22.18/extra/dev_handlers/scst_disk.ko: /lib/modules/2.6.22.18/extra/scst.ko
+/lib/modules/2.6.22.18/extra/dev_handlers/scst_vdisk.ko: /lib/modules/2.6.22.18/extra/scst.ko
+/lib/modules/2.6.22.18/extra/dev_handlers/scst_processor.ko: /lib/modules/2.6.22.18/extra/scst.ko
+/lib/modules/2.6.22.18/arch/arm/plat-feroceon/mv_drivers_lsp/mv_i2c/i2c-micom.ko:
+/lib/modules/2.6.22.18/arch/arm/plat-feroceon/mv_drivers_lsp/mv_temp/tempsensor.ko:
+/lib/modules/2.6.22.18/arch/arm/plat-feroceon/mv_drivers_lsp/mv_btns/btns_driver.ko:
+/lib/modules/2.6.22.18/sound/core/oss/snd-pcm-oss.ko: /lib/modules/2.6.22.18/sound/core/snd-pcm.ko /lib/modules/2.6.22.18/sound/core/snd-timer.ko /lib/modules/2.6.22.18/sound/core/snd-page-alloc.ko /lib/modules/2.6.22.18/sound/core/snd.ko /lib/modules/2.6.22.18/sound/soundcore.ko
+/lib/modules/2.6.22.18/sound/core/snd.ko: /lib/modules/2.6.22.18/sound/soundcore.ko
+/lib/modules/2.6.22.18/sound/core/snd-pcm.ko: /lib/modules/2.6.22.18/sound/core/snd-timer.ko /lib/modules/2.6.22.18/sound/core/snd.ko /lib/modules/2.6.22.18/sound/soundcore.ko /lib/modules/2.6.22.18/sound/core/snd-page-alloc.ko
+/lib/modules/2.6.22.18/sound/core/snd-timer.ko: /lib/modules/2.6.22.18/sound/core/snd.ko /lib/modules/2.6.22.18/sound/soundcore.ko
+/lib/modules/2.6.22.18/sound/core/snd-page-alloc.ko:
+/lib/modules/2.6.22.18/sound/soundcore.ko:
+/lib/modules/2.6.22.18/crypto/pcbc.ko:
+/lib/modules/2.6.22.18/crypto/ecb.ko:
+/lib/modules/2.6.22.18/drivers/net/tun.ko:
+/lib/modules/2.6.22.18/drivers/usb/class/usblp.ko:
+/lib/modules/2.6.22.18/drivers/usb/gadget/g_zero.ko:
+/lib/modules/2.6.22.18/drivers/usb/gadget/g_ether.ko:
+/lib/modules/2.6.22.18/drivers/usb/gadget/g_file_storage.ko:
+/lib/modules/2.6.22.18/drivers/usb/host/ohci-hcd.ko:
+/lib/modules/2.6.22.18/drivers/usb/host/uhci-hcd.ko:
+/lib/modules/2.6.22.18/drivers/char/hw_random/rng-core.ko:
+/lib/modules/2.6.22.18/drivers/hid/hid.ko:
+/lib/modules/2.6.22.18/drivers/hid/usbhid/usbhid.ko: /lib/modules/2.6.22.18/drivers/hid/hid.ko
+/lib/modules/2.6.22.18/drivers/md/dm-crypt.ko:
+/lib/modules/2.6.22.18/drivers/i2c/busses/i2c-mv64xxx.ko:
+/lib/modules/2.6.22.18/drivers/scsi/thor/mv61xx.ko:
+/lib/modules/2.6.22.18/drivers/scsi/scsi_wait_scan.ko:

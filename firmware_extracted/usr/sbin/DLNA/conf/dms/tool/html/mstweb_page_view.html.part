@@ -1,0 +1,41 @@
+<div id="mst_state_view" class='mst_state'></div>
+
+<div class="setting_main_container_list">
+	<div class="setting_main_container">
+		<div class="setting_main_left">
+		 [[LANGUAGE_TITLE]] 
+		</div>
+		<div class="setting_main_right">
+			<form id="form_setting_view_language">
+				<select id="select_setting_view_language" name="language">
+					<option value="ja" [[lang_ja]]>[[LANGUAGE_ITEM_JA]]</option>
+					<option value="en" [[lang_en]]>[[LANGUAGE_ITEM_EN]]</option>
+				</select>
+			</form>
+		</div>
+		<div class="setting_main_foot"></div>
+	</div>
+
+	<div class="setting_main_container">
+		<div class="setting_main_left">
+			[[DESIGN_TITLE]]
+		</div>
+		<div class="setting_main_right">
+			<form id="form_setting_view_skin">
+				<select id="select_setting_view_skin" name="skin">
+					<option value="default" id="setting_view_skin_default">[[DESIGN_ITEM_DEFAULT]]</option>
+					<option value="full" id="setting_view_skin_full">full (test)</option>
+					<option value="none" id="setting_view_skin_none">[[DESIGN_ITEM_NONE]]</option>
+				</select>
+			</form>
+		</div>
+		<div class="setting_main_foot"></div>
+	</div>
+</div>
+
+<hr class="setting" />
+
+<div class="mst_setting_btn_area">
+	<input type="button" id="page_view_btn_apply" value="[[COMMON_APPLY]]" onclick="mstweb_page_view_on_apply()" />
+	<input type="button" id="page_view_btn_undo" value="[[COMMON_UNDO]]" onclick="mstweb_page_view_get_page()" />
+</div>

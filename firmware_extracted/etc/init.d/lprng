@@ -1,0 +1,139 @@
+#! /bin/sh -e
+### BEGIN INIT INFO
+# Provides: lpd
+# Required-Start: $network $remote_fs $syslog
+# Required-Stop: $network
+# Default-Start: 2 3 5
+# Default-Stop: 0 1 4 6
+# Short-Description: Start lpd to allow printing
+# Description: lpd is the print daemon required for lpr to work properly.
+#   It is basically a server that arbitrates print jobs to printer(s).
+### END INIT INFO
+# Return values acc. to LSB for all commands but status:
+# 0 - success
+# 1 - misc error
+# 2 - invalid or excess args
+# 3 - unimplemented feature (e.g. reload)
+# 4 - insufficient privilege
+# 5 - program not installed
+# 6 - program not configured
+#
+# Note that starting an already running service, stopping
+# or restarting a not-running service as well as the restart
+# with force-reload (in case signalling is not supported) are
+# considered a success.
+
+
+# Source gLSB script
+. /lib/lsb/init-functions
+
+# replace with the place you configured:
+DAEMON=/usr/sbin/lpd
+CONFIGDIR=/etc/lprng
+PRINTCAP=/etc/printcap
+LPDPRINTCAP=/etc/lprng/printcap
+DESC="LPRng printer spooler"
+
+# Check for printcap file, if there isn't one, there is no need to start
+test -f $PRINTCAP || test -f $LPDPRINTCAP || exit 0
+
+# Do not start if there is no lpd or the lib dir is not there
+test -f $DAEMON || test -d /usr/lib/lprng || exit 5
+
+# Work out what port we are running on
+LPD_PORT=$(sed '/^[[:space:]]*lpd_port/!d; s/.*[=#]\(.*\)/\1/; q' $CONFIGDIR/lpd.conf)
+if [ -z $LPD_PORT ]
+then
+  LPD_PORT=515
+fi
+
+# Check lpd.conf for lockfile
+LOCKFILE=$(sed '/^[[:space:]]*lockfile/!d; s/.*[=#]\(.*\)/\1/; q' $CONFIGDIR/lpd.conf)
+if [ -z $LOCKFILE ]
+then
+  LOCKFILE=/var/run/lprng/lpd
+fi
+
+PIDFILE=$LOCKFILE.$LPD_PORT
+
+if [ -r /etc/default/lprng ]; then
+	. /etc/default/lprng
+fi
+
+initialise()
+{
+# Description
+#   Runs checkpc and also checks we have the run directory
+  RUNDIR=$(dirname ${PIDFILE})
+  [ ! -d ${RUNDIR} ] && mkdir -p ${RUNDIR}
+  checkpc -f > /dev/null || true
+}
+
+cleanup()
+# description:
+#   Removes all lock and control files on this host.
+{
+  rm -f "${PIDFILE}"
+
+  for dir in $(find /var/spool/lpd/* -type d -print)
+  do
+    rm -f ${dir}/lock.pr
+    rm -f ${dir}/control.pr
+    rm -f ${dir}/unspooler.pr
+  done
+}
+
+case "$1" in
+  start)
+	if [ "$START_LPD" != "yes" ]; then
+		log_warning_msg "Not starting LPRng - edit /etc/default/lprng and change START_LPD to be yes."
+		exit 0
+    fi
+	log_daemon_msg "Starting $DESC" lpd
+	initialise
+	if start-stop-daemon --start --quiet --pidfile "${PIDFILE}" \
+		--exec $DAEMON ; then
+		log_end_msg 0
+	else
+		log_end_msg 1
+		exit 1
+	fi
+	;;
+  stop)
+	log_daemon_msg "Stopping $DESC" lpd
+	if start-stop-daemon --stop --oknodo --quiet --pidfile "${PIDFILE}" ; then
+		cleanup
+		log_end_msg 0
+	else
+		log_end_msg 1
+		exit 1
+	fi
+	;;
+  reload)
+	 log_daemon_msg "Reloading $DESC configuration files..."
+	 if start-stop-daemon --stop --signal 1 --quiet --pidfile \
+		"${PIDFILE}" --oknodo ; then
+	 	log_end_msg 0
+	else
+		log_end_msg 1
+		exit 1
+	fi
+  	;;
+  restart|force-reload)
+	log_daemon_msg "Restarting $DESC" lpd
+	if [ -e "${PIDFILE}" ]; then 
+		start-stop-daemon --stop --quiet --pidfile "${PIDFILE}" 
+		sleep 1
+	fi
+	initialise
+	start-stop-daemon --start --quiet --pidfile "${PIDFILE}" \
+	    --exec $DAEMON
+	log_end_msg 0
+	;;
+  *)
+	echo "Usage: /etc/init.d/lprng {start|stop|restart|force-reload}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

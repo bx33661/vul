@@ -1,0 +1,1 @@
+root:$1$$oCLuEVgI1iAqOA8pwkzAg1:0:0:root:/root:/bin/sh

@@ -1,0 +1,21 @@
+<div id="mst_state_name" class="mst_state"></div>
+
+<div class="setting_main_container_list">
+	<div class="setting_main_container">
+		<div class="setting_main_left">[[SERVER_TITLE]]</div>
+		<div class="setting_main_right">
+			<form onsubmit="mstweb_page_name_change_name(); return false;" id="mstweb_page_name_form">
+				<input id="page_name_server_name" type="text" name="server_name" maxlength="128" size="50" value="[[SERVER_NAME]]" onkeyup="mstweb_page_name_view_update_btn()" />
+			</form>
+			<div id="mst_name_footer_msg">[[SERVER_FOOTER_MESSAGE]]</div>
+		</div>
+		<div class="setting_main_foot"></div>
+	</div>
+</div>
+
+<hr class="setting" />
+
+<div class="mst_setting_btn_area">
+	<input type="button" id="page_name_btn_apply" value="[[COMMON_APPLY]]" onclick="mstweb_page_name_change_name()" />
+	<input type="button" id="page_name_btn_undo" value="[[COMMON_UNDO]]" onclick="mstweb_page_name_undo_name()" />
+</div>

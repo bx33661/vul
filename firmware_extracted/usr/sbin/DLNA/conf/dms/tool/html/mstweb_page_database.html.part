@@ -1,0 +1,10 @@
+<div id="mst_state_name" class="mst_state"></div>
+
+<div class="setting_main_container_list">
+	<div class="setting_main_container">
+        <div id="mst_page_database_message">[[DATABASE_NOTICE_MESSAGE]]</div>
+        <div id="mst_page_database_control">
+            <input type="button" id="mst_con_database_rebuild" onclick="mstweb_page_database_rebuild_database()" value="[[DATABASE_REPAIR_DATABASE]]" />
+        </div>
+    </div>
+</div>

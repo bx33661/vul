@@ -1,0 +1,11 @@
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] On node 0 totalpages: 32768
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000]   DMA zone: 288 pages used for memmap
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000]   DMA zone: 0 pages reserved
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000]   DMA zone: 32480 pages, LIFO batch:7
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000]   Normal zone: 0 pages used for memmap
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] Calibrating delay loop... 794.62 BogoMIPS (lpj=3973120)
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.630000] sd 1:0:0:0: [sda] Mode Sense: 23 00 10 00
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.650000] sd 1:0:0:0: [sda] Mode Sense: 23 00 10 00
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.710000] sd 1:0:1:0: [sdb] Mode Sense: 23 00 10 00
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.730000] sd 1:0:1:0: [sdb] Mode Sense: 23 00 10 00
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.820000] sr 1:0:2:0: Attached scsi CD-ROM sr0

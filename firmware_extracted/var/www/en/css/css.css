@@ -1,0 +1,214 @@
+INPUT {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif
+}
+.input2 {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif
+}
+TEXTAREA {
+	BORDER-RIGHT: #bdbdbd 1px solid; BORDER-TOP: #bdbdbd 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #f7f7f7 1px solid; COLOR: #000000; BORDER-BOTTOM: #f7f7f7 1px solid; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif
+}
+SELECT {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif; BACKGROUND-COLOR: #f7f7f7
+}
+.input2 {
+	BORDER-RIGHT: #ffffff 0px solid; BORDER-TOP: #ffffff 0px solid; FONT-SIZE: 12px; BORDER-LEFT: #ffffff 0px solid; COLOR: #000000; BORDER-BOTTOM: #f7f7f7 0px solid; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif
+}
+.search {
+	FONT-SIZE: 11px; COLOR: white; FONT-FAMILY: "tahoma", "굴림"; BACKGROUND-COLOR: #f7f7f7
+}
+.k {
+	FONT-SIZE: 11px; FONT-FAMILY: "Arial"
+}
+.k2 {
+	FONT-SIZE: 11px; COLOR: #c90909; FONT-FAMILY: "Arial"
+}
+.producttitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #3e3e3e; FONT-FAMILY: "돋음"
+}
+.producttexst {
+	FONT-SIZE: 11px; COLOR: #7a7a7a; FONT-FAMILY: 굴림, Arial
+}
+.price {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ee6704; FONT-FAMILY: 돋움, Arial
+}
+.black {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: black; FONT-FAMILY: 돋움, Arial
+}
+.aalign {
+	FONT-SIZE: 12px; COLOR: #686868; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif
+}
+.aalign A {
+	FONT-SIZE: 12px; COLOR: #686868; TEXT-DECORATION: none
+}
+.aalign A:hover {
+	FONT-SIZE: 12px; COLOR: #686868; TEXT-DECORATION: underline
+}
+.newch1 {
+	FONT-SIZE: 11px; COLOR: #686868; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif; TEXT-DECORATION: underline
+}
+.newch1 A:link {
+	FONT-SIZE: 11px; COLOR: #686868; TEXT-DECORATION: underline
+}
+.newch1 A:hover {
+	FONT-SIZE: 11px; COLOR: #686868; TEXT-DECORATION: underline
+}
+.page1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #f76f00; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif; TEXT-DECORATION: none
+}
+.page1 A:link {
+	FONT-SIZE: 11px; COLOR: #f76f00; TEXT-DECORATION: none
+}
+.page1 A:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #f76f00; TEXT-DECORATION: none
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #626262; LINE-HEIGHT: 135%; FONT-FAMILY: "돋움", "굴림", Arial, Helvetica, sans-serif
+}
+TD A {
+	COLOR: #3f3f3f; TEXT-DECORATION: none
+}
+TD A:hover {
+	COLOR: #ff9300; TEXT-DECORATION: none
+}
+.root {
+	FONT-SIZE: 11px; COLOR: #898989; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif
+}
+.root A {
+	FONT-SIZE: 11px; COLOR: #898989; TEXT-DECORATION: none
+}
+.root A:hover {
+	FONT-SIZE: 11px; COLOR: #898989; TEXT-DECORATION: none
+}
+.bg-gn1 {
+	FONT-SIZE: 12px; COLOR: #3f3f3f; BACKGROUND-COLOR: #edf7f5
+}
+.bg-gn2 {
+	FONT-SIZE: 12px; COLOR: #3f3f3f; BACKGROUND-COLOR: #d7eee9
+}
+.bg-gn3 {
+	FONT-SIZE: 12px; COLOR: #3f3f3f; BACKGROUND-COLOR: #f5faf9
+}
+.bg-gray {
+	BACKGROUND-COLOR: #f1f2f2
+}
+.bg-blue {
+	BACKGROUND-COLOR: #e9f2fe
+}
+.bg-blue2 {
+	BACKGROUND-COLOR: #cedef3
+}
+.bd-bg {
+	FONT-SIZE: 12px; BACKGROUND-IMAGE: url(/kt_home/common/img/bd_bg.gif); COLOR: #3f3f3f; BACKGROUND-REPEAT: repeat-x
+}
+.bg-pn {
+	FONT-SIZE: 12px; COLOR: #000000; BACKGROUND-COLOR: #f9e8ff
+}
+.bg-cn {
+	FONT-SIZE: 12px; COLOR: #000000; BACKGROUND-COLOR: #ecf4f6
+}
+.line-b {
+	BACKGROUND-COLOR: #7c7c7c
+}
+.line-g {
+	BACKGROUND-COLOR: #a8a8a8
+}
+.line-g2 {
+	BACKGROUND-COLOR: #e0e0e0
+}
+.line-g3 {
+	BACKGROUND-COLOR: #cecece
+}
+.line-g4 {
+	BACKGROUND-COLOR: #dadada
+}
+.bd-txt {
+	FONT-SIZE: 12px; COLOR: #7c7c7c; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif
+}
+.bd-txt A {
+	COLOR: #7c7c7c; TEXT-DECORATION: none
+}
+.bd-txt A:hover {
+	COLOR: #3da4d7; TEXT-DECORATION: none
+}
+.bd-txt-pr {
+	FONT-SIZE: 12px; COLOR: #7c7c7c; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif
+}
+.bd-txt-pr A {
+	COLOR: #7c7c7c; TEXT-DECORATION: none
+}
+.bd-txt-pr A:hover {
+	COLOR: #7c7c7c; TEXT-DECORATION: none
+}
+.bd-txt-soc {
+	FONT-SIZE: 12px; COLOR: #3f3f3f; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif
+}
+.bd-txt-soc A {
+	COLOR: #3f3f3f; TEXT-DECORATION: none
+}
+.bd-txt-soc A:hover {
+	COLOR: #3f3f3f; TEXT-DECORATION: none
+}
+.bd-txt-about {
+	FONT-SIZE: 12px; COLOR: #3f3f3f; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif
+}
+.bd-txt-about A {
+	COLOR: #3f3f3f; TEXT-DECORATION: none
+}
+.bd-txt-about A:hover {
+	COLOR: #3f3f3f; TEXT-DECORATION: none
+}
+.bd-txt-prod {
+	FONT-SIZE: 12px; COLOR: #3f3f3f; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif
+}
+.bd-txt-prod A {
+	COLOR: #3f3f3f; TEXT-DECORATION: none
+}
+.bd-txt-prod A:hover {
+	COLOR: #3f3f3f; TEXT-DECORATION: none
+}
+.bd-txt-ir {
+	FONT-SIZE: 12px; COLOR: #3f3f3f; FONT-FAMILY: 돋움,Verdana, Arial, Helvetica, geneva,sans-serif
+}
+.smenu-ir {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #027968; FONT-FAMILY: Verdana, Arial, Helvetica, geneva,sans-serif
+}
+.smenu-ir A {
+	COLOR: #027968; TEXT-DECORATION: none
+}
+.smenu-ir A:hover {
+	COLOR: #027968; TEXT-DECORATION: none
+}
+.bd-txt-ir A {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.bd-txt-ir A:hover {
+	COLOR: #027968; TEXT-DECORATION: none
+}
+.button {
+	BORDER-RIGHT: #d0d0d0 1px outset; BORDER-TOP: #d0d0d0 1px outset; FONT-WEIGHT: bold; FONT-SIZE: 12px; BORDER-LEFT: #d0d0d0 1px outset; CURSOR: hand; BORDER-BOTTOM: #d0d0d0 1px outset; FONT-FAMILY: 굴림체; HEIGHT: 20px; BACKGROUND-COLOR: #ecf4f6
+}
+.selectBox {
+	SCROLLBAR-FACE-COLOR: #f7f7f7; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; OVERFLOW: auto; SCROLLBAR-SHADOW-COLOR: #f7f7f7; SCROLLBAR-3DLIGHT-COLOR: #f7f7f7; SCROLLBAR-ARROW-COLOR: #000000; SCROLLBAR-TRACK-COLOR: #f7f7f7; SCROLLBAR-DARKSHADOW-COLOR: #f7f7f7; BACKGROUND-COLOR: #f7f7f7
+}
+
+
+
+.selectBoxSelectedArea {
+	PADDING-LEFT: 3px; FONT-SIZE: 12px; COLOR: #272727; LINE-HEIGHT: 17px; PADDING-TOP: 1px; FONT-FAMILY: "돋움", "돋움체", Arial; BACKGROUND-COLOR: #f7f7f7
+}
+.selectBoxSelectedAreaFocus {
+	PADDING-LEFT: 3px; FONT-SIZE: 12px; COLOR: #272727; LINE-HEIGHT: 17px; PADDING-TOP: 1px; FONT-FAMILY: "돋움"; BACKGROUND-COLOR: #ebebeb
+}
+.selectBoxOption {
+	PADDING-LEFT: 3px; FONT-SIZE: 12px; COLOR: #272727; LINE-HEIGHT: 17px; PADDING-TOP: 2px; FONT-FAMILY: "돋움"; BACKGROUND-COLOR: #f7f7f7
+}
+.selectBoxOptionOver {
+	PADDING-LEFT: 3px; FONT-SIZE: 12px; COLOR: #272727; LINE-HEIGHT: 17px; PADDING-TOP: 2px; FONT-FAMILY: "돋움"; BACKGROUND-COLOR: #f7f7f7
+}
+.selectBoxOptionInnerLayer {
+	BORDER-RIGHT: #c5c5c5 1px solid; BORDER-TOP: #c5c5c5 1px solid; OVERFLOW: auto; BORDER-LEFT: #c5c5c5 1px solid; BORDER-BOTTOM: #c5c5c5 1px solid; BACKGROUND-COLOR: #ebebeb
+}
+
+selectbox03  { font: 12px Verdana; font-size:12px; height:20px; width:200px; color:272727; background-color: #f7f7f7; border: 1 solid #f7f7f7}
+
+.m_gray_01 { font-family: "굴림";font-size: 9pt; line-height: 14pt; color: #626262; font-weight: bold}

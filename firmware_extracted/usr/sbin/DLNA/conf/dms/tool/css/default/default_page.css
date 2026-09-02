@@ -1,0 +1,600 @@
+/*** block ***/
+
+#container {
+    width: 800px; 
+    height: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#contents2 {
+}
+
+#contents3 {
+    height: 360px;
+    position: relative;
+    z-index: 10;
+}
+
+#header {
+}
+
+#menu_main {
+    float: left; width: 90%
+}
+
+#menu_sub {
+    float: right;
+    padding-top: 4px;
+}
+
+#menu_sub ul li {
+    list-style: none; 
+    padding-left: 16px; 
+}
+
+/*** prototype only ***/
+
+.prototype_page_off {
+    display: none;
+}
+
+.prototype_page_on {
+}
+
+
+/*** menu ***/
+
+#menu_list {
+    height: 22px;
+}
+
+#menu_list li {
+    float:left; 
+    height: 20px;
+    list-style-type: none;
+    margin-right: 3px; 
+    text-align: center; 
+    white-space: nowrap;
+    width: 140px;
+    background-color: #d1eaf2;
+}
+
+#menu_list .upper_tab {
+    position: relative;
+    top: 5px;
+    z-index: 20;
+    cursor: pointer;
+    color: #000; 
+}
+
+#menu_list li.tab_hover {
+    background-color: #b0e0e6;
+}
+
+#menu_list li.tab_active {
+    background-color: #ebebeb;
+    height: 22px;
+}
+
+#menu_list li.tab_active div {
+    font-weight: bold;
+    padding-bottom: 6px;
+}
+
+#contents2 {
+    clear: both;
+    background-color: #ebebeb;
+    padding: 5px 10px; 
+}
+
+.menu_sub_list {
+    display: inline;
+}
+
+.menu_logout {
+    text-decoration: none; 
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+/*** setting ***/
+
+#mst_setting_block1 {
+    height: 100%;
+}
+
+#mst_setting_menu {
+    float: left; 
+    width: 120px;
+}
+
+#mst_setting_menu_block1 {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+#mst_setting_content {
+    float: left; 
+    width: 600px; 
+    margin-top: 20px;
+}
+
+#setting_menu_list {
+}
+
+#setting_menu_list li {
+    list-style-type: none;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ebebeb;
+}
+
+/* XXX: modern browser (expect ie7) hack */
+html>/**/body #setting_menu_list li {
+    width: 77% !important;
+}
+
+/* XXX: ie7 hack */
+*+html #setting_menu_list li {
+    width: 78% !important;
+}
+
+#setting_menu_list li.tab_hover {
+    background-color: #ebebeb;
+}
+
+#setting_menu_list li.tab_active {
+    color: black; 
+    background-color: #cdcdcd;
+    font-weight: bold; 
+}
+
+#setting_menu_list .left_side_tab {
+    position: relative;
+    z-index: 20;
+    width: 70px;
+}
+
+
+#mst_setting_content_block1 {
+    background-color: #cdcdcd;
+    padding: 5px;   /* XXX: workaround for transcorners */
+}
+
+#mst_setting_content_block2 {
+    height: 310px;
+    overflow: hidden;
+}
+
+#mst_setting_content_block3 {
+    padding: 10px 30px;
+}
+
+.setting_main_container {
+    margin-bottom: 20px;
+}
+
+.setting_main_container_list {
+    height: 100px;
+}
+
+.setting_main_left {
+    width: 135px;
+    float: left;
+}
+
+.setting_main_right {
+    width: 360px;
+    float: left;
+}
+
+.setting_main_foot {
+    clear: both;
+}
+
+/*** login ***/
+
+#mst_login_block1 {
+    text-align: center;
+}
+
+#mst_login_block2 {
+    width: 280px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-top: 100px;
+}
+
+#mst_login_block2_head {
+    text-align: center; 
+    margin-bottom: 10px;
+}
+
+#mst_login_block2_body {
+    text-align: right;
+}
+
+#mst_login_btn {
+    width: 80px;
+    margin-left: 5px;
+}
+
+#mst_login_server_name {
+    text-align: right;
+    font-size: 16px;
+    font-weight: bold;
+    display: none;
+}
+
+/*** backup ***/
+
+#mst_bu_block1 {
+    width: 100%;
+}
+
+#mst_bu_legend {
+    height: 290px;
+}
+
+/*** backup - server list ***/
+
+#mst_bu_s_block1 {
+    width: 100%;
+}
+
+#mst_bu_s_list_body {
+    height: 240px; 
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#mst_bu_s_list_item table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+#mst_bu_s_list_item_td_icon {
+    width: 30px;
+}
+
+#mst_bu_s_list_item_icon {
+    width: 16px; 
+    height: 16px;
+}
+
+#mst_bu_s_list_item_td_name {
+    width: 300px;
+}
+
+
+#mst_bu_s_list_loading {
+    background-color: transparent; 
+    width: 100%;
+}
+
+#mst_bu_s_list_loading_td_icon {
+    width: 24px; 
+    text-align: center;
+}
+
+
+/*** backup - task list ***/
+
+#mst_bu_t_list_block1 {
+    width: 100%;
+}
+
+#mst_bu_t_list_block2 {
+    width: 95%; 
+    padding: 5px 0px 0px 10px; 
+    margin-bottom: 10px;
+}
+
+#mst_bu_t_list_item_td_folder {
+    width: 300px;
+}
+
+#mst_bu_t_list_item_td_state {
+    width: 100px;
+}
+
+#mst_bu_t_list_loading {
+    background-color: transparent; 
+    width: 100%;
+}
+
+#mst_bu_t_list_loading_td_icon {
+    width: 24px; 
+    text-align: center;
+}
+
+
+/*** backup - browse container ***/
+#mst_bu_b_block1 {
+    margin-bottom: 10px;
+}
+
+#mst_bu_b_block2 {
+    width: 100%
+}
+
+#mst_bu_b_list_item_td_icon {
+    width: 24px;
+}
+
+#mst_bu_b_list_item_td_name_name {
+    font-weight: bold;
+}
+
+#mst_bu_b_list_item_td_icon img {
+    width: 20px;
+}
+
+#mst_bu_b_container_tree {
+    height: 230px;
+    overflow: auto; 
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#mst_bu_b_list_loading {
+    background-color: transparent; 
+    width: 100%;
+}
+
+#mst_bu_b_list_loading_td_icon {
+    width: 24px; 
+    text-align: center;
+}
+
+
+/*** share ***/
+
+#mst_share_block1 {
+    width: 100%;
+}
+
+#mst_share_legend {
+    height: 180px;
+}
+
+#mst_share_legend_block1 {
+    width: 100%
+}
+
+#mst_share_database_legend_block1 {
+    width: 100%
+}
+
+#share_btn_repair {
+    margin-top: 10px; 
+    width: 200px;
+}
+
+#mst_share_list_body {
+    height: 130px; 
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#mst_share_list_loading {
+    background-color: transparent; 
+    width: 100%;
+}
+
+#mst_share_list_loading_td_icon {
+    width:24px; 
+    text-align: center;
+}
+
+#mst_share_database {
+    display: block;
+}
+
+/*** security ***/
+
+.mst_sec_ad_block {
+    vertical-align: top; 
+    width: 360px;
+}
+
+.mst_sec_ad_legend_block1 {
+    width: 100%; 
+    height: 200px;
+}
+
+.mst_sec_ad_list_item_td_host {
+    width: 165px;
+}
+
+.mst_sec_default_block1 {
+    width: 100%;
+}
+
+#mstweb_page_security_default {
+    margin-top: 10px;
+}
+
+#sec_a_btn_remove, #sec_d_btn_remove {
+}
+
+#mst_sec_ad_move_block1 {
+    vertical-align: middle;
+}
+
+#sec_d_btn_to_allow, #sec_a_btn_to_deny {
+    margin: 7px 0px;
+    width: 65px;
+    height: 30px;
+}
+
+#sec_ad_list_body {
+    height: 150px; 
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#mst_sec_default_block2 tr td input {
+    cursor: pointer; 
+    vertical-align: middle;
+}
+
+#mst_sec_default_block2 tr td span label {
+    cursor: pointer;
+}
+
+#mst_sec_default_block2 tr td.margin {
+    width: 10px;
+}
+
+#mst_sec_default_block2 tr td span {
+    vertical-align:middle; 
+    padding-top: 1px;
+}
+
+#mst_sec_ad_list_loading {
+    background-color: transparent; 
+    width: 100%;
+}
+
+#mst_sec_ad_list_loading_td_icon {
+    width:24px; 
+    text-align: center;
+}
+
+#mst_sec_setting_security_dialog {
+    text-align: right;
+}
+
+/*** control ***/
+#mst_control_change_btn {
+    width: 150px;
+}
+
+#mst_control_state_tbl {
+    margin-top: 10px;
+    table-layout: fixed;
+}
+
+#mst_control_state_tbl_td_state_msg {
+    width: 80px;
+}
+
+#mst_control_state_tbl_td_state {
+    width: 250px;
+    border: 1px inset gray; 
+    background-color: white;
+    padding: 1px 1px 0 2px;
+}
+
+#mst_control_state_tbl_td_btn {
+    width: 200px;
+}
+
+#mst_control_state_tbl tr td.margin {
+    width: 10px;
+}
+
+/* setting */
+#mst_tab_setting_activation {
+    display: none;
+}
+
+/*** setting - * ***/
+
+.mst_setting_btn_area {
+    width: 100%; 
+    text-align: center; margin-top: 20px;
+}
+
+#page_name_btn_apply, #page_name_btn_undo, 
+#mstweb_page_password_btn_apply, #mstweb_page_password_btn_clear,
+#page_view_btn_apply, #page_view_btn_undo {
+    width: 80px; 
+    margin: 0 10px;
+}
+
+
+/*** setting - name ***/
+
+#mst_name_footer_msg {
+    margin-top: 5px;
+}
+
+
+/*** setting - password ***/
+
+#mstweb_page_password_form table tr {
+    height: 30px;
+}
+
+#mstweb_page_password_form table tr td.message {
+    padding-right: 20px; 
+    white-space: nowrap; 
+    text-align: right
+}
+
+#mstweb_page_password_warn_pass {
+    color: red; 
+    margin-left: 10px; 
+    display: none;
+}
+
+/*** setting - database ***/
+#mst_page_database_message {
+    margin-bottom: 10px;
+}
+
+#mst_page_database_control {
+    text-align: center;
+}
+
+#mst_con_database_rebuild {
+    width: 200px;
+}
+
+/*** setting - view ***/
+
+.setting_main_right select {
+    width: 170px;
+}
+
+
+/*** setting - mimetype ***/
+
+#mst_mime_legend_block1 {
+    width: 100%;
+}
+
+.list_item_td_extention {
+    width: 100px;
+}
+
+#mst_mime_list_body {
+    height: 220px; 
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#page_mimetype_add_btn_apply, #page_mimetype_add_btn_cancel,
+#page_mimetype_edit_btn_apply, #page_mimetype_edit_btn_cancel 
+{
+    width: 70px;
+    margin-left: 10px;
+}
+
+#mst_mimetype_list_loading {
+    background-color: transparent; 
+    width: 100%;
+}
+
+#mst_mimetype_list_loading_td_icon {
+    width:24px; 
+    text-align: center;
+}

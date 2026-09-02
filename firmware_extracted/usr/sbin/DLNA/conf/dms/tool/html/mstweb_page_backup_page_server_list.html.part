@@ -1,0 +1,32 @@
+<div id="mst_bu_s_block1">
+    <div class="icon_list_block">
+		<div id="icon_list_block_main">
+			<table>
+			<tr>
+				<td>
+                </td>
+			</tr>
+			</table>
+		</div>
+		<div class="icon_list_block_sub">
+			<ul class="icon_list">
+				<li class="icon_item_reload" id="bu_s_btn_reload" onclick="mstweb_page_backup_get_server_list()" onmouseover="list('bu_s', 'change_btn', this.id, 'reload', 'over')" onmouseout="list('bu_s', 'change_btn', this.id, 'reload', 'out')" onmousedown="list('bu_s', 'change_btn', this.id, 'reload', 'down')" onmouseup="list('bu_s', 'change_btn', this.id, 'reload', 'up')" />
+			</ul>
+			<div class="float_cancel"></div>
+		</div>
+        <div class="float_cancel"></div>
+	</div>
+
+	<div class="list_head">
+		<table class="list_head2">
+		<tr>
+			<td class="list_item_td_first"></td>
+			<td>[[BACKUP_SERVER_LIST]]</td>
+		</tr>
+		</table>
+	</div>
+	
+	<form id="mstweb_page_backup" name="mstweb_page_backup">
+		<div id="page_backup_server_list"></div>
+	</form>
+</div>

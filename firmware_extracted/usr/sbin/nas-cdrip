@@ -1,0 +1,80 @@
+#!/bin/sh
+
+# $1: target directory
+
+. /usr/lib/nas/common.sh
+
+get_addr() {
+  IP=$(nas-network get ipaddr)
+  echo "\\\\$IP\\service\\AudioCD\\$(basename "$TARGET_DIR")\\$@"
+}
+
+FUNC=NAS-CDRIP
+CDDA_DEVICE=/dev/sr0
+export CDDA_DEVICE
+LANG=UTF8
+export LANG
+#CDDBP_SERVER=www.musicbrainz.org
+#export CDDBP_SERVER
+
+HOME_DIR=/var/run/rip
+INDEX_FILE=$HOME_DIR/audio.cdindex
+
+# STEP 0: prepare 
+mkdir -p $HOME_DIR
+rm -rf $HOME_DIR/*
+cd $HOME_DIR
+
+# STEP 1: get informtion
+icedax -t 0 cddb=1 
+if [ -e "$INDEX_FILE" ]; then
+  CD_TITLE=$(grep -m1 "<Title>" $INDEX_FILE | sed 's/<\/*Title>//g')
+  CD_ARTIST=$(grep -m1 "<Artist>" $INDEX_FILE | sed 's/<\/*Artist>//g')
+  TRACK_NUM=$(grep -m1 "<NumTracks>" $INDEX_FILE | sed 's/<\/*NumTracks>//g')
+  CD_TITLE=$(echo $CD_TITLE)
+  CD_ARTIST=$(echo $CD_ARTIST)
+  TRACK_NUM=$(echo $TRACK_NUM)
+
+  echo $CD_TITLE : $CD_ARTIST : $TRACK_NUM
+  lcd_msg_center Audio CD $TRACK_NUM Tr
+
+  TRACK_NAMES=$(grep "<Name>" $INDEX_FILE | sed 's/[[:blank:]]*<\/*Name>/"/g' | tr -d "./")
+  #TRACK_NAMES=$(echo $TRACK_NAMES)
+  echo $TRACK_NAMES
+
+  FOLDER_NAME="$CD_TITLE - $CD_ARTIST"
+else
+  FOLDER_NAME="AudioCD_$(date +%Y%m%d)"
+fi
+
+# STEP 2: make folder
+if [ -z "$1" ]; then
+  TARGET_BASE_DIR="/mnt/disk/default/service/AudioCD"
+else
+  TARGET_BASE_DIR="$1"
+fi
+
+TARGET_DIR=$TARGET_BASE_DIR/$FOLDER_NAME
+
+TARGET_DIR=$(mkudir "$TARGET_DIR")
+chmod 777 "$TARGET_DIR"
+
+# STEP 3: extract CD
+SCRIPT=$HOME_DIR/make.sh
+cd "$TARGET_DIR"
+echo "#!/bin/bash" > $SCRIPT
+echo icedax -B -H cddb=1 $TRACK_NAMES >> $SCRIPT
+chmod +x $SCRIPT
+lcd_msg "Extracting..."
+$SCRIPT 2>&1 |
+while read data; do
+  echo $data | grep "recorded successfully" > /dev/null
+  if [ "$?" = 0 ]; then
+    NAME=$(echo $data | sed "s/^[^']*//" | sed "s/[^']*$//" | tr -d "'" | sed "s/[[:blank:]]$//")
+    message_senderd_rip 10 "$(get_addr "$NAME")"
+  fi
+done
+
+find "$TARGET_DIR"/ -exec chmod 777 {} \;
+lcd_msg "Extract finished"
+buzzer out

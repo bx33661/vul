@@ -1,0 +1,68 @@
+/* first or middle sibling, no children */
+.ygtvtn { background: url(../../img/extern/tn.gif) 0 0 no-repeat; width:34px; height:22px; }
+
+/* first or middle sibling, no children, non-togglable */
+.ygtvtnw { background: url(../../img/extern/tnw.gif) 0 0 no-repeat; width:34px; height:22px; }
+
+/* first or middle sibling, children, non-togglable */
+.ygtvtpw { background: url(../../img/extern/tnw.gif) 0 0 no-repeat; width:34px; height:22px; }
+
+/* first or middle sibling, collapsable */
+.ygtvtm { background: url(../../img/extern/tm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, collapsable, hover */
+.ygtvtmh { background: url(../../img/extern/tmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, expandable */
+.ygtvtp { background: url(../../img/extern/tp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, expandable, hover */
+.ygtvtph { background: url(../../img/extern/tph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* last sibling, no children */
+.ygtvln { background: url(../../img/extern/ln.gif) 0 0 no-repeat; width:34px; height:22px; }
+
+/* last sibling, no children, no togglable */
+.ygtvlnw { background: url(../../img/extern/lnw.gif) 0 0 no-repeat; width:34px; height:22px; }
+
+/* Last sibling, collapsable */
+.ygtvlm { background: url(../../img/extern/lm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, collapsable, hover */
+.ygtvlmh { background: url(../../img/extern/lmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, expandable */
+.ygtvlp { background: url(../../img/extern/lp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, expandable */
+.ygtvlpw { background: url(../../img/extern/lnw.gif) 0 0 no-repeat; width:34px; height:22px; }
+
+/* Last sibling, expandable, hover */
+.ygtvlph { background: url(../../img/extern/lph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Loading icon */
+.ygtvloading { background: url(../../img/extern/loading.gif) 0 0 no-repeat; width:34px; height:22px; }
+
+/* the style for the empty cells that are used for rendering the depth 
+ * of the node */
+.ygtvdepthcell { background: url(../../img/extern/vline.gif) 0 0 no-repeat; width:17px; height:22px; }
+
+.ygtvblankdepthcell { width:17px; height:22px; }
+
+/* the style of the div around each node */
+.ygtvitem { }  
+
+/* the style of the div around each node's collection of children */
+.ygtvchildren { }  
+* html .ygtvchildren { height:1%; }  
+
+/* the style of the text label in ygTextNode */
+.ygtvlabel, .ygtvlabel:link, .ygtvlabel:visited, .ygtvlabel:hover { 
+/*	margin-left:2px;*/
+	text-decoration: underline;
+}
+
+/*
+.ygtvlabel { color: #0000ff; background-color:#e6e6fa; cursor:pointer }
+*/
+.ygtvlabel:hover { color: #0000ff; background-color:#e6e6fa; cursor:pointer }

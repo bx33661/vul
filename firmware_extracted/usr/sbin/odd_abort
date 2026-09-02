@@ -1,0 +1,93 @@
+#!/bin/bash
+#===============================================
+#   odd_abort
+#===============================================
+
+. /usr/lib/nas/common.sh
+
+ABORTFILE=/var/www/run/abort
+MEDIAFILE=/tmp/mediatype
+DEVICE=/dev/sg2
+LOGFILE=/var/run/odd_abort.log
+STATUSFILE=/var/www/run/status11
+FUNC="ODD_ABORT"
+
+#ABORT=$(cat $ABORTFILE)
+MEDIATYPE=$(cat $MEDIAFILE)
+
+echo "odd_abort started" > $LOGFILE
+
+ISOTOOL=mkisofs
+case "$MEDIATYPE" in
+  "CD-RW"|"CD-R")
+    RECTOOL=cdrecord
+    ;;
+  *) # DVD/BD recording tool
+    RECTOOL=growisofs
+    ;;
+esac
+
+ALLKILLED="FALSE"
+while :
+do
+    if [ "$(cat $ABORTFILE)" = "T" ]; then
+      echo "abort T" >> $LOGFILE
+
+      for (( TIME=1; TIME <= 60; TIME += 1))
+      do
+        ISOPID=$(pidof $ISOTOOL)
+        RECPID=$(pidof $RECTOOL)
+
+        echo "check pid" $ISOTOOL $ISOPID >> $LOGFILE
+        echo "check pid" $RECTOOL $RECPID >> $LOGFILE
+
+        pidof $ISOTOOL
+        RSTKILLISO=$?
+        if [ "$RSTKILLISO" = "0" ]; then
+          pkill $ISOTOOL
+          echo "alive so pkill" $ISOTOOL ":" $? >> $LOGFILE
+        fi
+ 
+        pidof $RECTOOL
+        RSTKILLREC=$?
+        if [ "$RSTKILLREC" = "0" ]; then
+          pkill $RECTOOL
+          echo "alive so pkill" $RECTOOL ":" $? >> $LOGFILE
+        fi
+      
+        if [[ "$RSTKILLREC" != "0" && "$RSTKILLISO" != "0" ]]; then
+          ALLKILLED="TRUE"
+          echo "all of tools terminated" >> $LOGFILE
+          echo "time" $TIME >> $LOGFILE
+          break
+        fi
+
+        sleep 1
+        #echo "time" $TIME >> $LOGFILE
+      done
+
+      if [ "$ALLKILLED" = "TRUE" ]; then 
+        #echo "F" > $ABORTFILE
+        pidof odd_burning
+        if [ "$?" != "0" ]; then
+          echo "F" > $ABORTFILE
+        fi
+        echo "Aborted" > $STATUSFILE
+        echo "Aborted" >> $LOGFILE
+        log_func $FUNC "Aborted"
+      else
+        echo "abort timeout 60sec" >> $LOGFILE
+        log_func $FUNC "abort timeout 60sec"
+      fi
+      break
+    fi
+    
+    pidof odd_burning
+    if [ "$?" != "0" ]; then
+      break
+    else
+      sleep 1
+    fi
+done
+
+echo "Abort Terminated" >> $LOGFILE

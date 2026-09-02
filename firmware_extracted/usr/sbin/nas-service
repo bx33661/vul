@@ -1,0 +1,130 @@
+#!/bin/bash
+
+#===============================================================================
+# nas-service 
+#===============================================================================
+
+LIBDIR=$PREFIX/usr/lib/nas/
+. $LIBDIR/service.sh
+
+case "$1" in
+  "control")
+    [ -z "$2" ] || [ -z "$3" ] && usage "$1 SERVICE {start|stop|restart|reload}"
+    control_service $2 $3 $4   
+    ;;
+  "config")
+    [ -z "$2" ] && usage "$1 PROPERTY ..."
+    shift 
+    config_service $@    
+    ;;
+  "enable")
+    [ $# -lt 3 ] && usage "$1 SERVICE {on|off}"
+    [ $3 != "on" ] && [ $3 != "off" ] && usage "$1 SERVICE {on|off}"
+    enable_service $2 $3   
+    ;; 
+  "get")
+    [ -z "$2" ] && usage "$1 PROPERTY"
+    shift 
+    service_get $@
+    ;;
+  "get_iscsi")
+    [ -z "$2" ] && usage "$1 PROPERTY"
+    get_iscsi $2 
+    ;;
+  "set_iscsi")
+    [ $# -lt 3 ] && usage "$1 PROPERTY VALUE"
+    set_iscsi $2 $3
+    ;;
+  "get_timemachine")
+    [ -z "$2" ] && usage "$1 PROPERTY"
+    get_timemachine $2 
+    ;;
+  "set_timemachine")
+    set_timemachine $2 $3
+    ;;
+  "get_samba")
+    [ -z "$2" ] && usage "$1 PROPERTY"
+    get_samba $2 
+    ;;
+  "set_samba")
+    [ $# -lt 3 ] && usage "$1 PROPERTY VALUE"
+    set_samba $2 $3
+    ;;
+  "get_ftp")
+    [ -z "$2" ] && usage "$1 PROPERTY"
+    get_ftp $2 
+    ;;
+  "set_ftp")
+    [ $# -lt 3 ] && usage "$1 PROPERTY VALUE"
+    set_ftp $2 $3
+    ;;
+  "get_afp")
+    [ -z "$2" ] && usage "$1 PROPERTY"
+    get_afp $2 
+    ;;
+  "get_itunes")
+    [ -z "$2" ] && usage "$1 PROPERTY"
+    get_itunes $2 
+    ;;
+  "set_itunes")
+    [ $# -lt 3 ] && usage "$1 PROPERTY VALUE"
+    set_itunes $2 $3
+    ;;
+  "get_torrent")
+    [ -z "$2" ] && usage "$1 PROPERTY"
+    get_torrent $2
+    ;;
+  "get_printer")
+    [ -z "$2" ] && usage "$1 PROPERTY"
+    get_printer $2 
+    ;;
+  "get_dlna")
+    [ -z "$2" ] && usage "$1 PROPERTY"
+    get_dlna $2 
+    ;;
+  "set_dlna")
+    [ $# -lt 3 ] && usage "$1 PROPERTY VALUE"
+    set_dlna $2 $3
+    ;;
+  "init_dlna_db")
+    init_dlna_db
+    ;;
+  "get_ddns")
+    [ -z "$2" ] && usage "$1 PROPERTY"
+    get_ddns $2 
+    ;;
+  "set_ddns")
+    [ $# -lt 4 ] && usage "$1 PROPERTY VALUE"
+    set_ddns $2 $3 $4
+    ;;
+  "register_ddns")
+    [ -z "$2" ] && usage "$1 {add|remove}"
+    register_ddns $2 $3
+    ;;
+  "get_trans_info")
+    get_trans_info $2 $3
+    ;;
+  "start_transcoding")
+    start_transcoding $2 $3 $4
+    ;;
+  "get_web")
+    get_web $2 
+    ;;
+  "set_web")
+    set_web $2 $3 $4 $5 $6
+    ;;
+  "get_sql")
+    get_sql $2
+    ;;
+  "set_sql")
+    set_sql $2 $3 $4
+    ;;
+  "gen_web_conf")
+    gen_lighttpd_conf > /etc/lighttpd/lighttpd.ports
+    gen_http_vhost_conf > /etc/apache2/extra/httpd-vhosts.conf
+    ;;
+   *)
+    usage "{control|config|enable|get|get_ftp|get_afp|get_itunes|get_printer}" 
+    ;;
+esac
+

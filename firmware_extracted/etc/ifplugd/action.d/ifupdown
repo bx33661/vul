@@ -1,0 +1,28 @@
+#!/bin/sh
+
+nas-common log [LINK] $(dmesg | grep "eth0: link" | tail -n1 | tee /var/run/link_status)
+
+# check if network setting in progress first
+if [ -e /var/run/ifsetting ]; then
+	case "$2" in
+	up) 	nas-common icon 2 on ;;
+	down)	nas-common icon 2 off ;;
+	esac
+	exit 0
+fi
+
+case "$2" in
+up)
+	nas-common icon 2 blink
+        /sbin/ifup $1
+	nas-common icon 2 on
+	nas-common buzzer in
+	nas-common broadcast ip
+        ;;
+down)
+        /sbin/ifdown $1
+	nas-common icon 2 off
+	nas-common buzzer out
+        ;;
+esac
+

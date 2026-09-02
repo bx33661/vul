@@ -1,0 +1,81 @@
+#!/bin/sh
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+runlevel=S
+prevlevel=N
+umask 022
+export PATH runlevel prevlevel
+
+CFGFILE="/etc/runlevel.conf"
+
+# for stopwatch
+USE_STOPWATCH=yes
+STOPWATCH_FILE=/var/log/boottime
+cat /dev/null > $STOPWATCH_FILE
+
+if [ "$USE_STOPWATCH" = "yes" ]; then
+  STOPWATCH="/usr/bin/time -a -o $STOPWATCH_FILE -f[%E_%P]_%C "
+fi
+
+# start stopwatch
+START_TIME=$(date +%s)
+
+echo "---[STEP 1]----------------------------------------"
+
+# activate eth0 first for checking link status
+ifconfig eth0 up
+
+$STOPWATCH /etc/init.d/mountkernfs.sh start
+$STOPWATCH /etc/init.d/hostname.sh start & 
+$STOPWATCH /etc/init.d/module-init-tools start
+$STOPWATCH /etc/init.d/nas-preinit start 
+$STOPWATCH /etc/init.d/udev start 
+wait
+
+echo "---[STEP 2]----------------------------------------"
+$STOPWATCH /etc/init.d/lighttpd start &
+$STOPWATCH /etc/init.d/apache2 start &
+$STOPWATCH /etc/init.d/sysklogd start 
+$STOPWATCH /etc/init.d/ifupdown-clean start 
+$STOPWATCH /etc/init.d/ifupdown start
+$STOPWATCH /etc/init.d/networking start 
+#$STOPWATCH /etc/init.d/buttond start & 
+$STOPWATCH /etc/init.d/mtab.sh start
+$STOPWATCH /etc/init.d/mountall.sh start
+$STOPWATCH /etc/init.d/udev-mtab start 
+wait
+
+echo "---[STEP 3]----------------------------------------"
+$STOPWATCH /etc/init.d/nas-init start
+
+# end stopwatch
+END_TIME=$(date +%s)
+echo " * Elapsed Time = $(($END_TIME - $START_TIME)) sec" | tee -a $STOPWATCH_FILE 
+
+echo "---[STEP 4]----------------------------------------"
+# set system clock from hwclock (UTC) : TEMPORARY!!!
+hwclock -s -u
+
+$STOPWATCH /etc/init.d/nas-postinit start &
+$STOPWATCH /etc/init.d/klogd start 
+$STOPWATCH /etc/init.d/ifplugd start  
+$STOPWATCH /etc/init.d/avahi-daemon start 
+#$STOPWATCH /etc/init.d/dbus start 
+$STOPWATCH /etc/init.d/crond start 
+$STOPWATCH /etc/init.d/portmap start 
+#$STOPWATCH /etc/init.d/telnetd start
+$STOPWATCH /etc/init.d/lld2d start
+$STOPWATCH /etc/init.d/s_mirror start 
+$STOPWATCH /etc/init.d/bootchart start
+wait
+
+#Temporary
+#$STOPWATCH modprobe btns_driver
+$STOPWATCH iomain -b 2
+$STOPWATCH /etc/init.d/buttond start & 
+$STOPWATCH nas-mond & 
+# real end
+END_TIME=$(date +%s)
+echo " * Total Elapsed Time = $(($END_TIME - $START_TIME)) sec" | tee -a $STOPWATCH_FILE 
+echo "---[FINISH]----------------------------------------"
+

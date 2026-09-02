@@ -1,0 +1,136 @@
+#!/bin/bash
+
+#===============================================================================
+# nas-share 
+#===============================================================================
+
+LIBDIR=$PREFIX/usr/lib/nas/
+
+. $LIBDIR/share.sh
+
+case "$1" in
+  "init_user")
+    init_user
+    ;;
+  "check_user")
+    [ $# -lt 2 ] && usage "$1 USERNAME"
+    check_user $2
+    ;;
+  "add_user")
+    [ $# -lt 3 ] && usage "$1 USERNAME PASSWORD"
+    add_user $2 $3
+    ;;
+  "mod_user")
+    [ $# -lt 3 ] && usage "$1 USERNAME PASSWORD"
+    mod_user $2 $3
+    ;;
+  "del_user")
+    [ $# -lt 2 ] && usage "$1 USERNAME"
+    del_user $2 
+    ;;
+  "add_group")
+    [ $# -lt 2 ] && usage "$1 GROUPNAME"
+    add_group $2 $3
+    ;;
+  "mod_group")
+    [ $# -lt 2 ] && usage "$1 GROUPNAME"
+    mod_group $2 $3
+    ;;
+  "del_group")
+    [ $# -lt 2 ] && usage "$1 GROUPNAME"
+    del_group $2 
+    ;;
+  "gen_folder")
+    gen_folder 
+    ;;
+  "gen_folder_link")
+    gen_folder_link 
+    ;;
+  "gen_default_folder")
+    gen_default_folder
+    ;;
+  "gen_default_web_folder")
+    gen_default_web_folder
+    ;;
+  "check_folder")
+    [ $# -lt 2 ] && usage "$1 FOLDERNAME"
+    check_folder $2
+    ;;
+  "add_folder")
+    [ $# -lt 2 ] && usage "$1 FOLDERNAME"
+    add_folder $2 
+    ;;
+  "mod_folder")
+    [ $# -lt 2 ] && usage "$1 FOLDERNAME"
+    mod_folder $2 
+    ;;
+  "del_folder")
+    [ $# -lt 2 ] && usage "$1 FOLDERNAME"
+    del_folder $2 
+    ;;
+  "del_all_folder")
+    del_all_folder
+    ;;
+  "gen_samba_conf")
+    gen_samba_conf $2
+    ;;
+  "gen_ftp_conf")
+    gen_ftp_conf $2
+    ;;
+  "gen_afp_conf")
+    gen_afp_conf $2
+    ;;
+  "gen_conf")
+    gen_conf
+    ;;
+  "gen_user_folder_list")
+    [ -z "$2" ] && usage "$1 USERNAME"
+    gen_user_folder_list $2
+    ;;
+  "del_trashbox")
+    [ -z "$2" ] && usage "$1 volume"
+    del_trashbox $2
+    ;;
+  "add_samba_usb")
+    shift
+    add_samba_usb $@
+    ;;
+  "del_samba_usb")
+    shift 
+    del_samba_usb $@
+    ;;
+  "del_samba_usb_all")
+    del_samba_usb_all
+    ;;
+  "add_samba_cdrom")
+    add_samba_cdrom $2
+    ;;
+  "del_samba_cdrom")
+    del_samba_cdrom
+    ;;
+  "gen_iscsi_chap")
+    gen_iscsi_chap $2
+    ;;
+  "add_volume")
+    shift
+    add_volume $@
+    ;;
+  "remove_volume")
+    shift
+    remove_volume $@
+    ;;
+  "add_myweb")
+    add_myweb $2
+    ;;
+  "add_mysql")
+    add_mysql
+    ;;
+  "set_samba_printer")
+    set_samba_printer
+    ;;
+  *)
+    usage "{init_user|add_user|mod_user|del_user}" 
+    ;;
+esac
+
+exit $?

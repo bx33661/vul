@@ -1,0 +1,68 @@
+.treeview,{ 
+	padding: 0;
+	margin: 0;
+	
+}
+
+.treeview A:link {color:#000; text-decoration:none;}
+.treeview A:visited {color:#000; text-decoration:none;}
+.treeview A:hover {color:#CC0000; text-decoration:underline; font-weight:bold;}
+.treeview A:active {color:#FF9900; text-decoration:none;}
+
+
+#web_menu_control {background-color:#494949;height:25px;}
+#full_menu, #short_menu {color:#fff;cursor:pointer;}
+#web_menu_control .arrow_right{background:url(../images/arrow_right.gif) 3px 2px no-repeat;}
+#web_menu_control .arrow_down{background:url(../images/arrow_down.gif) 3px 2px no-repeat;}
+
+#web_menu {margin: 0px; padding:0px;}
+
+
+.filetree span.main_menu_class{padding : 2px 0 1px 40px; border-bottom:1px solid #ececec;font-size:15px;;font-weight:bold;display: block; line-height:25px; cursor:pointer;}
+.filetree span.sub_menu{padding : 5px 0 1px 60px; border-bottom:1px solid #ececec;display: block; line-height:23px;cursor:pointer;}
+
+.filetree div.main_menu{background:#9b9b9b url(../images/minus.gif) 230px 10px no-repeat; color:#fff}
+.filetree div.main_menu_collapse{background:#f6f6f6 url(../images/plus.gif) 230px 10px no-repeat;  color:#535353}
+
+.filetree span.icon_system { background: url(../images/icon_system.gif) 10px 5px no-repeat; }
+.filetree span.icon_network { background: url(../images/icon_network.gif) 30px 5px no-repeat; }
+.filetree span.icon_remote_access { background: url(../images/icon_remote_access.gif) 30px 5px no-repeat; }
+.filetree span.icon_time { background: url(../images/icon_time.gif) 30px 5px no-repeat; }
+.filetree span.icon_mail_notification { background: url(../images/icon_mail_notification.gif) 30px 5px no-repeat; }
+.filetree span.icon_volume { background: url(../images/icon_volume.gif) 30px 5px no-repeat; }
+.filetree span.icon_sm { background: url(../images/icon_sm.png) 30px 5px no-repeat; }
+.filetree span.icon_power { background: url(../images/icon_power.gif) 30px 5px no-repeat; }
+.filetree span.icon_language { background: url(../images/icon_language.gif) 30px 5px no-repeat; }
+.filetree span.icon_firmware { background: url(../images/icon_firmware.gif) 30px 5px no-repeat; }
+.filetree span.icon_lcd { background: url(../images/icon_lcd.gif) 30px 5px no-repeat; }
+
+.filetree span.icon_share { background: url(../images/icon_share.gif) 10px 5px no-repeat; }
+.filetree span.icon_user { background: url(../images/icon_user.gif) 30px 5px no-repeat; }
+.filetree span.icon_group { background: url(../images/icon_group.gif) 30px 5px no-repeat; }
+.filetree span.icon_folder { background: url(../images/icon_folder.gif) 30px 5px no-repeat; }
+
+.filetree span.icon_odd { background: url(../images/icon_odd.gif) 10px 5px no-repeat; }
+.filetree span.icon_storing { background: url(../images/icon_storing.gif) 30px 5px no-repeat; }
+.filetree span.icon_burning { background: url(../images/icon_burning.gif) 30px 5px no-repeat; }
+.filetree span.icon_sch_backup { background: url(../images/icon_sch_backup.gif) 30px 5px no-repeat; }
+
+.filetree span.icon_service { background: url(../images/icon_service.gif) 10px 5px no-repeat; }
+.filetree span.icon_dlna { background: url(../images/icon_dlna.gif) 30px 5px no-repeat; }
+.filetree span.icon_network_server { background: url(../images/icon_network_server.gif) 30px 5px no-repeat; }
+.filetree span.icon_printer { background: url(../images/icon_printer.gif) 30px 5px no-repeat; }
+.filetree span.icon_itunes { background: url(../images/icon_itunes.gif) 30px 5px no-repeat; }
+.filetree span.icon_time_machine { background: url(../images/icon_time_machine.gif) 30px 5px no-repeat; }
+.filetree span.icon_iscsi { background: url(../images/icon_iscsi.gif) 30px 5px no-repeat; }
+.filetree span.icon_torrent { background: url(../images/icon_torrent.gif) 30px 5px no-repeat; }
+.filetree span.icon_rsync { background: url(../images/icon_rsync.gif) 30px 5px no-repeat; }
+.filetree span.icon_nfs { background: url(../images/icon_nfs.gif) 30px 5px no-repeat; }
+
+.filetree span.icon_mobile_device { background: url(../images/icon_mobile_device.gif) 10px 5px no-repeat; }
+.filetree span.icon_usb_backup { background: url(../images/icon_usb_backup.gif) 30px 5px no-repeat; }
+.filetree span.icon_esata { background: url(../images/icon_esata.gif) 30px 5px no-repeat; }
+.filetree span.icon_usb_memcard { background: url(../images/icon_usb_memcard.gif) 30px 5px no-repeat; }
+
+.filetree span.icon_information { background: url(../images/icon_information.gif) 10px 5px no-repeat; }
+.filetree span.icon_status { background: url(../images/icon_status.gif) 30px 5px no-repeat; }
+.filetree span.icon_log { background: url(../images/icon_log.gif) 30px 5px no-repeat; }
+ 

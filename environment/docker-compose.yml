@@ -1,0 +1,35 @@
+name: cnvd-2026-20654
+
+services:
+  lg-nas:
+    platform: linux/arm/v5
+    build:
+      context: ..
+      dockerfile: environment/Dockerfile
+    image: cnvd-2026-20654:1.0.0-2569
+    privileged: true
+    stdin_open: true
+    tty: true
+    ports:
+      - "127.0.0.1:80:80"
+      - "127.0.0.1:443:443"
+      - "127.0.0.1:8000:8000"
+      - "127.0.0.1:9090:9090"
+    volumes:
+      - nas-disk:/mnt/disk
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - >-
+          test ! -e /var/run/nas/booting &&
+          wget -q -O /dev/null http://127.0.0.1:8000/en/login/login.php &&
+          wget -q -O /dev/null http://127.0.0.1:9090/index.html
+      start_period: 15s
+      interval: 10s
+      timeout: 5s
+      retries: 9
+    stop_grace_period: 15s
+    restart: unless-stopped
+
+volumes:
+  nas-disk:

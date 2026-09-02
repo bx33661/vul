@@ -1,0 +1,166 @@
+#!/bin/sh
+
+#
+# CD-ROM mount daemon for NC1
+# 
+# Operation:
+#   - Mount CD-ROM
+#   - Check media type and display to LCD
+#   - Check blank
+#   - Send PREVENT ALLOW MEDIUM REMOVAL command after mount (unlock eject)
+#
+
+LIBDIR=/usr/lib/nas/
+. $LIBDIR/storage.sh
+
+FUNC="NAS-CDROMD"
+CDDEV=$(sg_map | grep /dev/scd0 | awk '{print $1}')
+INTERVAL=4	# sec
+ALLOWED=false
+INSERTED=false
+ODDFILE=/sys/block/sr0/device/state
+
+check_blank() {
+  DATA=$(sg_raw -r 16 $CDDEV 51 0 0 0 0 0 0 0 F0 00 2>&1 | tail -n 1)
+  STATUS=$(echo $DATA | awk '{print $4}')
+  let "STATUS = 0x$STATUS & 3"
+  case "$STATUS" in
+    0)	echo blank ;;
+    1)	echo appendable ;;
+    2)  echo complete ;;
+    3)  echo other ;;
+  esac
+}
+
+get_disc_type() {
+  DISC=$(sg_get_config $CDDEV | grep "Current profile" | cut -d " " -f 3)
+  LAYER=
+  case "${DISC:0:2}" in
+    "DV")
+      DATA=$(sg_raw -r 16 $CDDEV AD 0 0 0 0 0 0 0 10 0 0 0 2>&1 | tail -n 1)
+      STATUS=$(echo $DATA | awk '{print $8}')
+      let "STATUS = 0x$STATUS & 0x60"
+      [ "$STATUS" -gt 0 ] && LAYER=DL
+
+      BOOK_TYPE=$(echo $DATA | awk '{print $6}')
+      let "BOOK_TYPE = 0x$BOOK_TYPE >> 4"
+      case "$BOOK_TYPE" in
+        "0")    DISC="DVD-ROM" ;;
+        "1")    DISC="DVD-RAM" ;;
+        "2")    DISC="DVD-R" ;;
+        "3")    DISC="DVD-RW" ;;
+        "5")    DISC="DVD+RW" ;;
+        "6")    DISC="DVD+R" ;;
+      esac
+      ;;
+    "BD")
+      DATA=$(sg_raw -r 32 $CDDEV AD 1 0 0 0 0 0 0 10 0 0 0 2>&1 | tail -n 1)
+      STATUS=$(echo $DATA | awk '{print $2}')
+      let "STATUS = 0x$STATUS & 0xF0"
+      [ "$STATUS" -gt 16 ] && LAYER=DL
+      ;;
+  esac
+  echo $DISC $LAYER
+   
+#   TYPE=$(echo $DISC | cut -d "-" -f 2)
+#   if [ "$TYPE" = "ROM" ]; then
+#      echo "ROM Disc"
+#   else
+#      echo "Data Disc"
+#   fi
+}
+
+# check iSCSI enabled
+case "$(nas-service get enabled iscsi)" in
+  "off")	mkdir -p $CDROM_MOUNT_DIR ;;
+  "on")		rm -rf $CDROM_MOUNT_DIR ;;
+esac
+
+# start USB / CD-ROM monitoring daemon
+while true; do
+
+  CHECK_ODD=$(cat $ODDFILE)
+  if [ "$CHECK_ODD" != "running" ]; then
+    log_func $FUNC "sr0: $CHECK_ODD->running"
+    echo "scsi remove-single-device 1 0 2 0" > /proc/scsi/scsi
+    sleep 1
+    echo "scsi add-single-device 1 0 2 0" > /proc/scsi/scsi
+    sleep 1
+    DEVICE_NAME=$(sg_get_config $CDDEV | head -n 1)
+    log_func $FUNC $DEVICE_NAME
+  fi
+
+  TUR_MSG=$(sg_turs -n 1 -v $CDDEV 2>&1)
+  if [ "$?" = "0" ]; then
+    if [ "$INSERTED" = "false" ]; then
+      lcd_icon $ICON_DISC on
+      INSERTED=true
+
+      # get disc type
+      BLANK=$(check_blank)
+      DISC_TYPE=$(get_disc_type)
+      DISC_SIZE=$(sg_readcap $CDDEV | tail -n 1 | cut -d ":" -f 2)
+      log_func $FUNC $DISC_TYPE $BLANK $DISC_SIZE
+      
+      if [ ! -e "$BOOTING_FILE" ]; then
+        buzzer in odd
+      #  lcd_msg_center $DISC_TYPE 
+        if [ "$BLANK" == "blank" ]; then
+           lcd_msg_center "$DISC_TYPE(Blank)"
+        else
+           TYPE=$(echo $DISC_TYPE | cut -d "-" -f 2 | awk '{print $1}')
+           if [ "$TYPE" = "ROM" ]; then
+              sg_raw -r 2k $CDDEV 28 0 0 0 0 10 0 0 1 0 2>&1 | grep "Sense key: Illegal Request"
+              if [ $? = 0 ] && [ "${DISC_TYPE:0:2}" = "CD" ]; then
+                 lcd_msg_center "$DISC_TYPE(Audio)" 
+              else
+                 lcd_msg_center "$DISC_TYPE(Data)" 
+              fi
+           else
+              lcd_msg_center "$DISC_TYPE(Data)"
+           fi
+        fi
+      fi
+
+      # check blank
+      [ "$BLANK" == "blank" ] && continue
+
+      # check file system type
+      FS_TYPE=$(vol_id --type /dev/scd0)
+      log_func $FUNC FSTYPE=$FS_TYPE
+      [ "$FS_TYPE" != "udf" ] && [ "$FS_TYPE" != "iso9660" ] && continue
+
+      # mount disc
+      odd_mount /dev/scd0
+    fi
+
+    pidof iscsi-scstd > /dev/null 2>&1
+    if [ $? = 0 ]; then
+      cat /proc/scsi_tgt/sessions | grep "iscsi" > /dev/null 2>&1
+      if [ $? != 0 ]; then
+        if [ "$ALLOWED" == "false" ]; then
+          log_func $FUNC "iscsi-ODD prevent allowed"
+          sg_prevent -a $CDDEV
+          ALLOWED=true
+        fi
+      else
+        ALLOWED=false
+      fi
+    else
+      ALLOWED=false
+    fi      
+  else
+    if [ "$INSERTED" = "true" ]; then
+      echo $TUR_MSG | grep "Medium not present" > /dev/null 2>&1
+      if [ "$?" = "0" ]; then
+        lcd_icon $ICON_DISC off
+        buzzer out odd
+        odd_umount /dev/scd0
+        lcd_menu $LCD_MENU_MAIN
+        INSERTED=false
+      fi
+    fi
+  fi
+
+  sleep $INTERVAL
+done

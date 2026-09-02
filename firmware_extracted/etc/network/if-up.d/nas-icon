@@ -1,0 +1,7 @@
+#!/bin/sh
+
+[ "$METHOD" = loopback ] && exit 0
+
+if nas-network link_status 3; then
+	nas-common icon 2 on
+fi

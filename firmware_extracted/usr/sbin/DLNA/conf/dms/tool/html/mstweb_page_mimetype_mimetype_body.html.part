@@ -1,0 +1,20 @@
+<tr name="mime_tr" id="[[TR_ID]]" onmouseover="list('mime', 'change_tr', this.id, 'over')" onmouseout="list('mime', 'change_tr', this.id, 'out')">
+    <td class="list_item_td_checkbox" onmousedown="list('mime', 'change_tr', this.parentNode.id, 'add')">
+        <input type="checkbox" name="mime_se" value="[[EXTENTION]]" id='[[SE_ID]]' onclick="list('mime', 'view_update_btn')" />
+    </td>
+    <td class="list_item_td_extention" onmousedown="list('mime', 'change_tr', this.parentNode.id, 'down')">[[EXTENTION]]</td>
+    <td onmousedown="list('mime', 'change_tr', this.parentNode.id, 'down')" >[[MIMETYPE]]</td>
+</tr>
+<tr name="mime_tr_edit" id="[[TR_ID]]_edit" class="list_body2_edit_invisible">
+    <td class="list_item_td_checkbox">
+        <input type="checkbox" value="" id='[[SE_ID]]_edit' class="list_item_invisible" />
+    </td>
+    <td class="list_item_td_extention">
+        <input size="12" id="[[SE_ID]]_edit_extention" type="text" name="extention" value="[[EXTENTION]]" /> 
+    </td>
+    <td>
+        <input size="24" id="[[SE_ID]]_edit_mimetype" type="text" name="mimetype" value="[[MIMETYPE]]" />
+        <input type="button" id="page_mimetype_edit_btn_apply" value="[[COMMON_APPLY]]" onclick="mstweb_page_mimetype_register(true, '[[EXTENTION]]','[[SE_ID]]_edit_extention', '[[SE_ID]]_edit_mimetype')" />
+        <input type="button" id="page_mimetype_edit_btn_cancel" value="[[COMMON_CANCEL]]" onclick="mstweb_page_mimetype_on_edit('[[TR_ID]]')" />
+    </td>
+</tr>

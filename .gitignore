@@ -1,0 +1,31 @@
+# Docker
+.env
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.tmp
+*.bak
+*.backup
+
+# 固件文件（太大，不推送）
+firmware_*.zip
+firmware_*_extracted/
+*.bin
+*.tar.gz

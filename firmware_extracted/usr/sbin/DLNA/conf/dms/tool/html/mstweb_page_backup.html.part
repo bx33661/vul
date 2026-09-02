@@ -1,0 +1,11 @@
+<div id="mst_state_backup" class="mst_state"></div>
+
+<div id="mst_bu_block1">
+    <fieldset>
+        <legend>[[BACKUP_TITLE]]</legend>
+        <div id="mst_bu_legend" class="legend_page">
+            <div id="mstweb_page_backup_contents"></div>
+        </div>
+    </fieldset>
+</div>
+

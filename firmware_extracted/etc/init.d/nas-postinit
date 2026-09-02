@@ -1,0 +1,50 @@
+#! /bin/sh 
+### BEGIN INIT INFO
+# Provides:          nas-init
+# Required-Start:    
+# Required-Stop:     
+# Default-Start:     S 
+# Default-Stop:      0 1 6
+# Short-Description: NAS initialization 
+# Description:       NAS initialization
+### END INIT INFO
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
+export DEBUG=
+
+do_start()
+{
+	# set icon state
+	VOL_NUM=$(nas-storage get vol_num)
+	if [ "$VOL_NUM" != "0" ]; then
+		nas-common icon 6 on
+	else
+		nas-common icon 6 off
+	fi
+	# start icon monitoring
+	#watch -n 5 nas-system check_icon >/dev/null &
+	nas-icond &
+
+	# set hibernation / ups (conf. in /etc/nas/system.conf)
+	nas-system hibernation
+        #commented ups setting because udev detects ups
+	#nas-system ups
+
+	# check md1(rootfs)
+    nas-storage check_md1
+
+	# clean status
+	sleep 2
+	rm -f /var/run/nas/booting	
+}
+
+case "$1" in
+  start)
+	do_start
+	;;
+  *)
+	echo "Usage: nas-postinit start" >&2
+	exit 3
+	;;
+esac

@@ -1,0 +1,1167 @@
+2009-08-27 03:12:56 startup archives install
+2009-08-27 03:12:56 install dpkg <none> 1.14.25
+2009-08-27 03:12:56 status half-installed dpkg 1.14.25
+2009-08-27 03:13:02 status unpacked dpkg 1.14.25
+2009-08-27 03:13:03 status unpacked dpkg 1.14.25
+2009-08-27 03:13:03 configure dpkg 1.14.25 1.14.25
+2009-08-27 03:13:03 status unpacked dpkg 1.14.25
+2009-08-27 03:13:03 status unpacked dpkg 1.14.25
+2009-08-27 03:13:03 status unpacked dpkg 1.14.25
+2009-08-27 03:13:03 status unpacked dpkg 1.14.25
+2009-08-27 03:13:03 status unpacked dpkg 1.14.25
+2009-08-27 03:13:03 status half-configured dpkg 1.14.25
+2009-08-27 03:13:03 status installed dpkg 1.14.25
+2009-08-27 03:13:19 startup archives install
+2009-08-27 03:13:19 install file-rc <none> 0.8.11
+2009-08-27 03:13:19 status half-installed file-rc 0.8.11
+2009-08-27 03:13:19 status unpacked file-rc 0.8.11
+2009-08-27 03:13:19 status unpacked file-rc 0.8.11
+2009-08-27 03:13:19 configure file-rc 0.8.11 0.8.11
+2009-08-27 03:13:19 status unpacked file-rc 0.8.11
+2009-08-27 03:13:19 status unpacked file-rc 0.8.11
+2009-08-27 03:13:19 status half-configured file-rc 0.8.11
+2009-08-27 03:13:19 status installed file-rc 0.8.11
+2009-08-27 03:13:20 startup archives install
+2009-08-27 03:13:20 install gcc-4.3-base <none> 4.3.2-1.1
+2009-08-27 03:13:20 status half-installed gcc-4.3-base 4.3.2-1.1
+2009-08-27 03:13:20 status unpacked gcc-4.3-base 4.3.2-1.1
+2009-08-27 03:13:20 status unpacked gcc-4.3-base 4.3.2-1.1
+2009-08-27 03:13:20 configure gcc-4.3-base 4.3.2-1.1 4.3.2-1.1
+2009-08-27 03:13:20 status unpacked gcc-4.3-base 4.3.2-1.1
+2009-08-27 03:13:20 status half-configured gcc-4.3-base 4.3.2-1.1
+2009-08-27 03:13:20 status installed gcc-4.3-base 4.3.2-1.1
+2009-08-27 03:13:20 startup archives install
+2009-08-27 03:13:20 install libgcc1 <none> 1:4.3.2-1.1
+2009-08-27 03:13:20 status half-installed libgcc1 1:4.3.2-1.1
+2009-08-27 03:13:21 status unpacked libgcc1 1:4.3.2-1.1
+2009-08-27 03:13:21 status unpacked libgcc1 1:4.3.2-1.1
+2009-08-27 03:13:21 configure libgcc1 1:4.3.2-1.1 1:4.3.2-1.1
+2009-08-27 03:13:21 status unpacked libgcc1 1:4.3.2-1.1
+2009-08-27 03:13:21 status half-configured libgcc1 1:4.3.2-1.1
+2009-08-27 03:13:21 status installed libgcc1 1:4.3.2-1.1
+2009-08-27 03:13:21 startup archives install
+2009-08-27 03:13:21 install libstdc++6 <none> 4.3.2-1.1
+2009-08-27 03:13:21 status half-installed libstdc++6 4.3.2-1.1
+2009-08-27 03:13:22 status unpacked libstdc++6 4.3.2-1.1
+2009-08-27 03:13:22 status unpacked libstdc++6 4.3.2-1.1
+2009-08-27 03:13:22 configure libstdc++6 4.3.2-1.1 4.3.2-1.1
+2009-08-27 03:13:22 status unpacked libstdc++6 4.3.2-1.1
+2009-08-27 03:13:22 status half-configured libstdc++6 4.3.2-1.1
+2009-08-27 03:13:22 status installed libstdc++6 4.3.2-1.1
+2009-08-27 03:13:22 startup archives install
+2009-08-27 03:13:22 install lzma <none> 4.43-14
+2009-08-27 03:13:22 status half-installed lzma 4.43-14
+2009-08-27 03:13:22 status unpacked lzma 4.43-14
+2009-08-27 03:13:23 status unpacked lzma 4.43-14
+2009-08-27 03:13:23 configure lzma 4.43-14 4.43-14
+2009-08-27 03:13:23 status unpacked lzma 4.43-14
+2009-08-27 03:13:23 status half-configured lzma 4.43-14
+2009-08-27 03:13:23 status installed lzma 4.43-14
+2009-08-27 03:13:24 startup archives install
+2009-08-27 03:13:24 install zlib1g <none> 1:1.2.3.3.dfsg-12
+2009-08-27 03:13:24 status half-installed zlib1g 1:1.2.3.3.dfsg-12
+2009-08-27 03:13:24 status unpacked zlib1g 1:1.2.3.3.dfsg-12
+2009-08-27 03:13:24 status unpacked zlib1g 1:1.2.3.3.dfsg-12
+2009-08-27 03:13:24 configure zlib1g 1:1.2.3.3.dfsg-12 1:1.2.3.3.dfsg-12
+2009-08-27 03:13:24 status unpacked zlib1g 1:1.2.3.3.dfsg-12
+2009-08-27 03:13:24 status half-configured zlib1g 1:1.2.3.3.dfsg-12
+2009-08-27 03:13:24 status installed zlib1g 1:1.2.3.3.dfsg-12
+2009-08-27 03:13:25 startup archives install
+2009-08-27 03:13:25 install gpgv <none> 1.4.9-3
+2009-08-27 03:13:25 status half-installed gpgv 1.4.9-3
+2009-08-27 03:13:25 status unpacked gpgv 1.4.9-3
+2009-08-27 03:13:25 status unpacked gpgv 1.4.9-3
+2009-08-27 03:13:25 configure gpgv 1.4.9-3 1.4.9-3
+2009-08-27 03:13:25 status unpacked gpgv 1.4.9-3
+2009-08-27 03:13:25 status half-configured gpgv 1.4.9-3
+2009-08-27 03:13:25 status installed gpgv 1.4.9-3
+2009-08-27 03:13:25 startup archives install
+2009-08-27 03:13:25 install libusb-0.1-4 <none> 2:0.1.12-13
+2009-08-27 03:13:25 status half-installed libusb-0.1-4 2:0.1.12-13
+2009-08-27 03:13:26 status unpacked libusb-0.1-4 2:0.1.12-13
+2009-08-27 03:13:26 status unpacked libusb-0.1-4 2:0.1.12-13
+2009-08-27 03:13:26 configure libusb-0.1-4 2:0.1.12-13 2:0.1.12-13
+2009-08-27 03:13:26 status unpacked libusb-0.1-4 2:0.1.12-13
+2009-08-27 03:13:26 status half-configured libusb-0.1-4 2:0.1.12-13
+2009-08-27 03:13:26 status installed libusb-0.1-4 2:0.1.12-13
+2009-08-27 03:13:26 startup archives install
+2009-08-27 03:13:26 install libncurses5 <none> 5.7+20081213-1
+2009-08-27 03:13:26 status half-installed libncurses5 5.7+20081213-1
+2009-08-27 03:13:27 status unpacked libncurses5 5.7+20081213-1
+2009-08-27 03:13:27 status unpacked libncurses5 5.7+20081213-1
+2009-08-27 03:13:27 configure libncurses5 5.7+20081213-1 5.7+20081213-1
+2009-08-27 03:13:27 status unpacked libncurses5 5.7+20081213-1
+2009-08-27 03:13:27 status half-configured libncurses5 5.7+20081213-1
+2009-08-27 03:13:27 status installed libncurses5 5.7+20081213-1
+2009-08-27 03:13:27 startup archives install
+2009-08-27 03:13:27 install libreadline5 <none> 5.2-3.1
+2009-08-27 03:13:27 status half-installed libreadline5 5.2-3.1
+2009-08-27 03:13:28 status unpacked libreadline5 5.2-3.1
+2009-08-27 03:13:28 status unpacked libreadline5 5.2-3.1
+2009-08-27 03:13:28 configure libreadline5 5.2-3.1 5.2-3.1
+2009-08-27 03:13:28 status unpacked libreadline5 5.2-3.1
+2009-08-27 03:13:28 status half-configured libreadline5 5.2-3.1
+2009-08-27 03:13:28 status installed libreadline5 5.2-3.1
+2009-08-27 03:13:29 startup archives install
+2009-08-27 03:13:29 install libbz2-1.0 <none> 1.0.5-1
+2009-08-27 03:13:29 status half-installed libbz2-1.0 1.0.5-1
+2009-08-27 03:13:29 status unpacked libbz2-1.0 1.0.5-1
+2009-08-27 03:13:29 status unpacked libbz2-1.0 1.0.5-1
+2009-08-27 03:13:29 configure libbz2-1.0 1.0.5-1 1.0.5-1
+2009-08-27 03:13:29 status unpacked libbz2-1.0 1.0.5-1
+2009-08-27 03:13:29 status half-configured libbz2-1.0 1.0.5-1
+2009-08-27 03:13:29 status installed libbz2-1.0 1.0.5-1
+2009-08-27 03:13:30 startup archives install
+2009-08-27 03:13:31 install gnupg <none> 1.4.9-3
+2009-08-27 03:13:31 status half-installed gnupg 1.4.9-3
+2009-08-27 03:13:35 status unpacked gnupg 1.4.9-3
+2009-08-27 03:13:35 status unpacked gnupg 1.4.9-3
+2009-08-27 03:13:35 configure gnupg 1.4.9-3 1.4.9-3
+2009-08-27 03:13:35 status unpacked gnupg 1.4.9-3
+2009-08-27 03:13:35 status half-configured gnupg 1.4.9-3
+2009-08-27 03:13:35 status installed gnupg 1.4.9-3
+2009-08-27 03:13:35 startup archives install
+2009-08-27 03:13:35 install debian-archive-keyring <none> 2009.01.31
+2009-08-27 03:13:35 status half-installed debian-archive-keyring 2009.01.31
+2009-08-27 03:13:35 status unpacked debian-archive-keyring 2009.01.31
+2009-08-27 03:13:35 status unpacked debian-archive-keyring 2009.01.31
+2009-08-27 03:13:35 configure debian-archive-keyring 2009.01.31 2009.01.31
+2009-08-27 03:13:35 status unpacked debian-archive-keyring 2009.01.31
+2009-08-27 03:13:35 status half-configured debian-archive-keyring 2009.01.31
+2009-08-27 03:13:35 status installed debian-archive-keyring 2009.01.31
+2009-08-27 03:13:37 startup archives install
+2009-08-27 03:13:37 install apt <none> 0.7.20.2
+2009-08-27 03:13:37 status half-installed apt 0.7.20.2
+2009-08-27 03:13:43 status unpacked apt 0.7.20.2
+2009-08-27 03:13:44 status unpacked apt 0.7.20.2
+2009-08-27 03:13:44 configure apt 0.7.20.2 0.7.20.2
+2009-08-27 03:13:44 status unpacked apt 0.7.20.2
+2009-08-27 03:13:44 status unpacked apt 0.7.20.2
+2009-08-27 03:13:44 status unpacked apt 0.7.20.2
+2009-08-27 03:13:44 status unpacked apt 0.7.20.2
+2009-08-27 03:13:44 status half-configured apt 0.7.20.2
+2009-08-27 03:13:46 status installed apt 0.7.20.2
+2009-08-27 03:13:47 startup archives install
+2009-08-27 03:13:47 install ncurses-bin <none> 5.7+20081213-1
+2009-08-27 03:13:47 status half-installed ncurses-bin 5.7+20081213-1
+2009-08-27 03:13:48 status unpacked ncurses-bin 5.7+20081213-1
+2009-08-27 03:13:48 status unpacked ncurses-bin 5.7+20081213-1
+2009-08-27 03:13:48 configure ncurses-bin 5.7+20081213-1 5.7+20081213-1
+2009-08-27 03:13:48 status unpacked ncurses-bin 5.7+20081213-1
+2009-08-27 03:13:48 status half-configured ncurses-bin 5.7+20081213-1
+2009-08-27 03:13:48 status installed ncurses-bin 5.7+20081213-1
+2009-08-27 03:13:48 startup archives install
+2009-08-27 03:13:48 install lsb-base <none> 3.2-20
+2009-08-27 03:13:48 status half-installed lsb-base 3.2-20
+2009-08-27 03:13:48 status unpacked lsb-base 3.2-20
+2009-08-27 03:13:48 status unpacked lsb-base 3.2-20
+2009-08-27 03:13:48 configure lsb-base 3.2-20 3.2-20
+2009-08-27 03:13:48 status unpacked lsb-base 3.2-20
+2009-08-27 03:13:48 status half-configured lsb-base 3.2-20
+2009-08-27 03:13:48 status installed lsb-base 3.2-20
+2009-08-27 03:13:49 startup archives install
+2009-08-27 03:13:50 install ifupdown <none> 0.6.8+nmu1
+2009-08-27 03:13:50 status half-installed ifupdown 0.6.8+nmu1
+2009-08-27 03:13:50 status unpacked ifupdown 0.6.8+nmu1
+2009-08-27 03:13:50 status unpacked ifupdown 0.6.8+nmu1
+2009-08-27 03:13:50 configure ifupdown 0.6.8+nmu1 0.6.8+nmu1
+2009-08-27 03:13:50 status unpacked ifupdown 0.6.8+nmu1
+2009-08-27 03:13:50 status unpacked ifupdown 0.6.8+nmu1
+2009-08-27 03:13:50 status unpacked ifupdown 0.6.8+nmu1
+2009-08-27 03:13:50 status unpacked ifupdown 0.6.8+nmu1
+2009-08-27 03:13:50 status half-configured ifupdown 0.6.8+nmu1
+2009-08-27 03:13:51 status installed ifupdown 0.6.8+nmu1
+2009-08-27 03:13:51 startup archives install
+2009-08-27 03:13:51 install hostname <none> 2.95
+2009-08-27 03:13:51 status half-installed hostname 2.95
+2009-08-27 03:13:51 status unpacked hostname 2.95
+2009-08-27 03:13:51 status unpacked hostname 2.95
+2009-08-27 03:13:51 configure hostname 2.95 2.95
+2009-08-27 03:13:51 status unpacked hostname 2.95
+2009-08-27 03:13:51 status half-configured hostname 2.95
+2009-08-27 03:13:51 status installed hostname 2.95
+2009-08-27 03:13:51 startup archives install
+2009-08-27 03:13:52 install netbase <none> 4.34
+2009-08-27 03:13:52 status half-installed netbase 4.34
+2009-08-27 03:13:52 status unpacked netbase 4.34
+2009-08-27 03:13:52 status unpacked netbase 4.34
+2009-08-27 03:13:52 configure netbase 4.34 4.34
+2009-08-27 03:13:52 status unpacked netbase 4.34
+2009-08-27 03:13:52 status unpacked netbase 4.34
+2009-08-27 03:13:52 status unpacked netbase 4.34
+2009-08-27 03:13:52 status unpacked netbase 4.34
+2009-08-27 03:13:52 status unpacked netbase 4.34
+2009-08-27 03:13:52 status half-configured netbase 4.34
+2009-08-27 03:13:52 status installed netbase 4.34
+2009-08-27 03:13:54 startup archives install
+2009-08-27 03:13:54 install grep <none> 2.5.3~dfsg-6
+2009-08-27 03:13:54 status half-installed grep 2.5.3~dfsg-6
+2009-08-27 03:13:56 status unpacked grep 2.5.3~dfsg-6
+2009-08-27 03:13:56 status unpacked grep 2.5.3~dfsg-6
+2009-08-27 03:13:56 configure grep 2.5.3~dfsg-6 2.5.3~dfsg-6
+2009-08-27 03:13:56 status unpacked grep 2.5.3~dfsg-6
+2009-08-27 03:13:56 status half-configured grep 2.5.3~dfsg-6
+2009-08-27 03:13:56 status installed grep 2.5.3~dfsg-6
+2009-08-27 03:13:58 startup archives install
+2009-08-27 03:13:58 install debianutils <none> 2.30
+2009-08-27 03:13:58 status half-installed debianutils 2.30
+2009-08-27 03:13:59 status unpacked debianutils 2.30
+2009-08-27 03:13:59 status unpacked debianutils 2.30
+2009-08-27 03:13:59 configure debianutils 2.30 2.30
+2009-08-27 03:13:59 status unpacked debianutils 2.30
+2009-08-27 03:13:59 status half-configured debianutils 2.30
+2009-08-27 03:13:59 status installed debianutils 2.30
+2009-08-27 03:14:00 startup archives install
+2009-08-27 03:14:00 install base-passwd <none> 3.5.20
+2009-08-27 03:14:00 status half-installed base-passwd 3.5.20
+2009-08-27 03:14:00 status unpacked base-passwd 3.5.20
+2009-08-27 03:14:00 status unpacked base-passwd 3.5.20
+2009-08-27 03:14:00 configure base-passwd 3.5.20 3.5.20
+2009-08-27 03:14:00 status unpacked base-passwd 3.5.20
+2009-08-27 03:14:00 status half-configured base-passwd 3.5.20
+2009-08-27 03:14:00 status installed base-passwd 3.5.20
+2009-08-27 03:14:01 startup archives install
+2009-08-27 03:14:01 install base-files <none> 5
+2009-08-27 03:14:01 status half-installed base-files 5
+2009-08-27 03:14:01 status unpacked base-files 5
+2009-08-27 03:14:01 status unpacked base-files 5
+2009-08-27 03:14:01 configure base-files 5 5
+2009-08-27 03:14:01 status unpacked base-files 5
+2009-08-27 03:14:01 status unpacked base-files 5
+2009-08-27 03:14:01 status unpacked base-files 5
+2009-08-27 03:14:02 status unpacked base-files 5
+2009-08-27 03:14:02 status unpacked base-files 5
+2009-08-27 03:14:02 status half-configured base-files 5
+2009-08-27 03:14:02 status installed base-files 5
+2009-08-27 03:14:06 startup archives install
+2009-08-27 03:14:06 install perl-base <none> 5.10.0-19
+2009-08-27 03:14:06 status half-installed perl-base 5.10.0-19
+2009-08-27 03:14:13 status unpacked perl-base 5.10.0-19
+2009-08-27 03:14:14 status unpacked perl-base 5.10.0-19
+2009-08-27 03:14:14 configure perl-base 5.10.0-19 5.10.0-19
+2009-08-27 03:14:14 status unpacked perl-base 5.10.0-19
+2009-08-27 03:14:14 status half-configured perl-base 5.10.0-19
+2009-08-27 03:14:14 status installed perl-base 5.10.0-19
+2009-08-27 03:14:14 startup archives install
+2009-08-27 03:14:14 install libncursesw5 <none> 5.7+20081213-1
+2009-08-27 03:14:14 status half-installed libncursesw5 5.7+20081213-1
+2009-08-27 03:14:15 status unpacked libncursesw5 5.7+20081213-1
+2009-08-27 03:14:15 status unpacked libncursesw5 5.7+20081213-1
+2009-08-27 03:14:15 configure libncursesw5 5.7+20081213-1 5.7+20081213-1
+2009-08-27 03:14:15 status unpacked libncursesw5 5.7+20081213-1
+2009-08-27 03:14:15 status half-configured libncursesw5 5.7+20081213-1
+2009-08-27 03:14:15 status installed libncursesw5 5.7+20081213-1
+2009-08-27 03:14:16 startup archives install
+2009-08-27 03:14:16 install libgpm2 <none> 1.20.4-3.1
+2009-08-27 03:14:16 status half-installed libgpm2 1.20.4-3.1
+2009-08-27 03:14:16 status unpacked libgpm2 1.20.4-3.1
+2009-08-27 03:14:16 status unpacked libgpm2 1.20.4-3.1
+2009-08-27 03:14:16 configure libgpm2 1.20.4-3.1 1.20.4-3.1
+2009-08-27 03:14:16 status unpacked libgpm2 1.20.4-3.1
+2009-08-27 03:14:16 status half-configured libgpm2 1.20.4-3.1
+2009-08-27 03:14:16 status installed libgpm2 1.20.4-3.1
+2009-08-27 03:14:16 startup archives install
+2009-08-27 03:14:16 install dialog <none> 1.1-20080316-1
+2009-08-27 03:14:16 status half-installed dialog 1.1-20080316-1
+2009-08-27 03:14:18 status unpacked dialog 1.1-20080316-1
+2009-08-27 03:14:18 status unpacked dialog 1.1-20080316-1
+2009-08-27 03:14:18 configure dialog 1.1-20080316-1 1.1-20080316-1
+2009-08-27 03:14:18 status unpacked dialog 1.1-20080316-1
+2009-08-27 03:14:18 status half-configured dialog 1.1-20080316-1
+2009-08-27 03:14:18 status installed dialog 1.1-20080316-1
+2009-08-27 03:14:19 startup archives install
+2009-08-27 03:14:19 install apt-utils <none> 0.7.20.2
+2009-08-27 03:14:19 status half-installed apt-utils 0.7.20.2
+2009-08-27 03:14:19 status unpacked apt-utils 0.7.20.2
+2009-08-27 03:14:19 status unpacked apt-utils 0.7.20.2
+2009-08-27 03:14:19 configure apt-utils 0.7.20.2 0.7.20.2
+2009-08-27 03:14:19 status unpacked apt-utils 0.7.20.2
+2009-08-27 03:14:19 status half-configured apt-utils 0.7.20.2
+2009-08-27 03:14:20 status installed apt-utils 0.7.20.2
+2009-08-27 03:14:20 startup archives install
+2009-08-27 03:14:20 install debconf-english <none> 1.5.24
+2009-08-27 03:14:20 status half-installed debconf-english 1.5.24
+2009-08-27 03:14:20 status unpacked debconf-english 1.5.24
+2009-08-27 03:14:20 status unpacked debconf-english 1.5.24
+2009-08-27 03:14:20 configure debconf-english 1.5.24 1.5.24
+2009-08-27 03:14:20 status unpacked debconf-english 1.5.24
+2009-08-27 03:14:20 status half-configured debconf-english 1.5.24
+2009-08-27 03:14:20 status installed debconf-english 1.5.24
+2009-08-27 03:14:21 startup archives install
+2009-08-27 03:14:21 install debconf <none> 1.5.24
+2009-08-27 03:14:21 status half-installed debconf 1.5.24
+2009-08-27 03:14:22 status unpacked debconf 1.5.24
+2009-08-27 03:14:23 status unpacked debconf 1.5.24
+2009-08-27 03:14:23 configure debconf 1.5.24 1.5.24
+2009-08-27 03:14:23 status unpacked debconf 1.5.24
+2009-08-27 03:14:23 status unpacked debconf 1.5.24
+2009-08-27 03:14:23 status unpacked debconf 1.5.24
+2009-08-27 03:14:23 status unpacked debconf 1.5.24
+2009-08-27 03:14:23 status half-configured debconf 1.5.24
+2009-08-27 03:14:25 status installed debconf 1.5.24
+2009-08-27 03:14:25 startup archives install
+2009-08-27 03:14:25 upgrade sed 4.1.5-6 4.1.5-6
+2009-08-27 03:14:25 status half-configured sed 4.1.5-6
+2009-08-27 03:14:25 status unpacked sed 4.1.5-6
+2009-08-27 03:14:25 status half-installed sed 4.1.5-6
+2009-08-27 03:14:26 status half-installed sed 4.1.5-6
+2009-08-27 03:14:26 status unpacked sed 4.1.5-6
+2009-08-27 03:14:26 status unpacked sed 4.1.5-6
+2009-08-27 03:14:26 configure sed 4.1.5-6 4.1.5-6
+2009-08-27 03:14:26 status unpacked sed 4.1.5-6
+2009-08-27 03:14:26 status half-configured sed 4.1.5-6
+2009-08-27 03:14:27 status installed sed 4.1.5-6
+2009-08-27 03:14:32 startup archives install
+2009-08-27 03:14:32 install libselinux1 <none> 2.0.65-5
+2009-08-27 03:14:32 status half-installed libselinux1 2.0.65-5
+2009-08-27 03:14:32 status unpacked libselinux1 2.0.65-5
+2009-08-27 03:14:32 status unpacked libselinux1 2.0.65-5
+2009-08-27 03:14:33 configure libselinux1 2.0.65-5 2.0.65-5
+2009-08-27 03:14:33 status unpacked libselinux1 2.0.65-5
+2009-08-27 03:14:33 status half-configured libselinux1 2.0.65-5
+2009-08-27 03:14:33 status installed libselinux1 2.0.65-5
+2009-08-27 03:14:33 startup archives install
+2009-08-27 03:14:33 install libvolume-id0 <none> 0.125-7
+2009-08-27 03:14:33 status half-installed libvolume-id0 0.125-7
+2009-08-27 03:14:33 status unpacked libvolume-id0 0.125-7
+2009-08-27 03:14:33 status unpacked libvolume-id0 0.125-7
+2009-08-27 03:14:33 configure libvolume-id0 0.125-7 0.125-7
+2009-08-27 03:14:33 status unpacked libvolume-id0 0.125-7
+2009-08-27 03:14:33 status half-configured libvolume-id0 0.125-7
+2009-08-27 03:14:33 status installed libvolume-id0 0.125-7
+2009-08-27 03:14:34 startup archives install
+2009-08-27 03:14:34 install udev <none> 0.125-7
+2009-08-27 03:14:34 status half-installed udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 configure udev 0.125-7 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status unpacked udev 0.125-7
+2009-08-27 03:14:37 status half-configured udev 0.125-7
+2009-08-27 03:14:38 status installed udev 0.125-7
+2009-08-27 03:14:38 startup archives install
+2009-08-27 03:14:39 install libdaemon0 <none> 0.12-2lenny1
+2009-08-27 03:14:39 status half-installed libdaemon0 0.12-2lenny1
+2009-08-27 03:14:39 status unpacked libdaemon0 0.12-2lenny1
+2009-08-27 03:14:39 status unpacked libdaemon0 0.12-2lenny1
+2009-08-27 03:14:39 configure libdaemon0 0.12-2lenny1 0.12-2lenny1
+2009-08-27 03:14:39 status unpacked libdaemon0 0.12-2lenny1
+2009-08-27 03:14:39 status half-configured libdaemon0 0.12-2lenny1
+2009-08-27 03:14:39 status installed libdaemon0 0.12-2lenny1
+2009-08-27 03:14:39 startup archives install
+2009-08-27 03:14:39 install ifplugd <none> 0.28-12
+2009-08-27 03:14:39 status half-installed ifplugd 0.28-12
+2009-08-27 03:14:40 status unpacked ifplugd 0.28-12
+2009-08-27 03:14:40 status unpacked ifplugd 0.28-12
+2009-08-27 03:14:40 configure ifplugd 0.28-12 0.28-12
+2009-08-27 03:14:40 status unpacked ifplugd 0.28-12
+2009-08-27 03:14:40 status unpacked ifplugd 0.28-12
+2009-08-27 03:14:40 status unpacked ifplugd 0.28-12
+2009-08-27 03:14:40 status unpacked ifplugd 0.28-12
+2009-08-27 03:14:40 status unpacked ifplugd 0.28-12
+2009-08-27 03:14:40 status unpacked ifplugd 0.28-12
+2009-08-27 03:14:40 status half-configured ifplugd 0.28-12
+2009-08-27 03:14:43 status installed ifplugd 0.28-12
+2009-08-27 03:14:44 startup archives install
+2009-08-27 03:14:44 install libdbus-1-3 <none> 1.2.1-5
+2009-08-27 03:14:44 status half-installed libdbus-1-3 1.2.1-5
+2009-08-27 03:14:45 status unpacked libdbus-1-3 1.2.1-5
+2009-08-27 03:14:45 status unpacked libdbus-1-3 1.2.1-5
+2009-08-27 03:14:45 configure libdbus-1-3 1.2.1-5 1.2.1-5
+2009-08-27 03:14:45 status unpacked libdbus-1-3 1.2.1-5
+2009-08-27 03:14:45 status half-configured libdbus-1-3 1.2.1-5
+2009-08-27 03:14:45 status installed libdbus-1-3 1.2.1-5
+2009-08-27 03:14:45 startup archives install
+2009-08-27 03:14:45 install libexpat1 <none> 2.0.1-4
+2009-08-27 03:14:45 status half-installed libexpat1 2.0.1-4
+2009-08-27 03:14:46 status unpacked libexpat1 2.0.1-4
+2009-08-27 03:14:46 status unpacked libexpat1 2.0.1-4
+2009-08-27 03:14:46 configure libexpat1 2.0.1-4 2.0.1-4
+2009-08-27 03:14:46 status unpacked libexpat1 2.0.1-4
+2009-08-27 03:14:46 status half-configured libexpat1 2.0.1-4
+2009-08-27 03:14:46 status installed libexpat1 2.0.1-4
+2009-08-27 03:14:46 startup archives install
+2009-08-27 03:14:46 install libconfuse0 <none> 2.6-2
+2009-08-27 03:14:46 status half-installed libconfuse0 2.6-2
+2009-08-27 03:14:46 status unpacked libconfuse0 2.6-2
+2009-08-27 03:14:46 status unpacked libconfuse0 2.6-2
+2009-08-27 03:14:46 configure libconfuse0 2.6-2 2.6-2
+2009-08-27 03:14:46 status unpacked libconfuse0 2.6-2
+2009-08-27 03:14:46 status half-configured libconfuse0 2.6-2
+2009-08-27 03:14:47 status installed libconfuse0 2.6-2
+2009-08-27 03:14:48 startup archives install
+2009-08-27 03:14:48 install libwrap0 <none> 7.6.q-16
+2009-08-27 03:14:48 status half-installed libwrap0 7.6.q-16
+2009-08-27 03:14:49 status unpacked libwrap0 7.6.q-16
+2009-08-27 03:14:49 status unpacked libwrap0 7.6.q-16
+2009-08-27 03:14:49 configure libwrap0 7.6.q-16 7.6.q-16
+2009-08-27 03:14:49 status unpacked libwrap0 7.6.q-16
+2009-08-27 03:14:49 status half-configured libwrap0 7.6.q-16
+2009-08-27 03:14:49 status installed libwrap0 7.6.q-16
+2009-08-27 03:14:49 startup archives install
+2009-08-27 03:14:49 install portmap <none> 6.0-9
+2009-08-27 03:14:49 status half-installed portmap 6.0-9
+2009-08-27 03:14:49 status unpacked portmap 6.0-9
+2009-08-27 03:14:49 status unpacked portmap 6.0-9
+2009-08-27 03:14:50 configure portmap 6.0-9 6.0-9
+2009-08-27 03:14:50 status unpacked portmap 6.0-9
+2009-08-27 03:14:50 status unpacked portmap 6.0-9
+2009-08-27 03:14:50 status half-configured portmap 6.0-9
+2009-08-27 03:14:52 status installed portmap 6.0-9
+2009-08-27 03:14:53 startup archives install
+2009-08-27 03:14:53 install dhcp3-common <none> 3.1.1-6
+2009-08-27 03:14:53 status half-installed dhcp3-common 3.1.1-6
+2009-08-27 03:14:54 status unpacked dhcp3-common 3.1.1-6
+2009-08-27 03:14:54 status unpacked dhcp3-common 3.1.1-6
+2009-08-27 03:14:54 configure dhcp3-common 3.1.1-6 3.1.1-6
+2009-08-27 03:14:54 status unpacked dhcp3-common 3.1.1-6
+2009-08-27 03:14:54 status half-configured dhcp3-common 3.1.1-6
+2009-08-27 03:14:54 status installed dhcp3-common 3.1.1-6
+2009-08-27 03:14:54 startup archives install
+2009-08-27 03:14:54 install dhcp3-client <none> 3.1.1-6
+2009-08-27 03:14:54 status half-installed dhcp3-client 3.1.1-6
+2009-08-27 03:14:55 status unpacked dhcp3-client 3.1.1-6
+2009-08-27 03:14:55 status unpacked dhcp3-client 3.1.1-6
+2009-08-27 03:14:55 configure dhcp3-client 3.1.1-6 3.1.1-6
+2009-08-27 03:14:55 status unpacked dhcp3-client 3.1.1-6
+2009-08-27 03:14:55 status unpacked dhcp3-client 3.1.1-6
+2009-08-27 03:14:55 status unpacked dhcp3-client 3.1.1-6
+2009-08-27 03:14:55 status unpacked dhcp3-client 3.1.1-6
+2009-08-27 03:14:55 status unpacked dhcp3-client 3.1.1-6
+2009-08-27 03:14:55 status half-configured dhcp3-client 3.1.1-6
+2009-08-27 03:14:57 status installed dhcp3-client 3.1.1-6
+2009-08-27 03:14:57 startup archives install
+2009-08-27 03:14:57 install module-init-tools <none> 3.4-1
+2009-08-27 03:14:57 status half-installed module-init-tools 3.4-1
+2009-08-27 03:14:58 status unpacked module-init-tools 3.4-1
+2009-08-27 03:14:58 status unpacked module-init-tools 3.4-1
+2009-08-27 03:14:58 configure module-init-tools 3.4-1 3.4-1
+2009-08-27 03:14:58 status unpacked module-init-tools 3.4-1
+2009-08-27 03:14:58 status unpacked module-init-tools 3.4-1
+2009-08-27 03:14:58 status unpacked module-init-tools 3.4-1
+2009-08-27 03:14:58 status half-configured module-init-tools 3.4-1
+2009-08-27 03:14:59 status installed module-init-tools 3.4-1
+2009-08-27 03:14:59 startup archives install
+2009-08-27 03:15:00 install libssl0.9.8 <none> 0.9.8g-15
+2009-08-27 03:15:00 status half-installed libssl0.9.8 0.9.8g-15
+2009-08-27 03:15:01 status unpacked libssl0.9.8 0.9.8g-15
+2009-08-27 03:15:01 status unpacked libssl0.9.8 0.9.8g-15
+2009-08-27 03:15:01 configure libssl0.9.8 0.9.8g-15 0.9.8g-15
+2009-08-27 03:15:01 status unpacked libssl0.9.8 0.9.8g-15
+2009-08-27 03:15:01 status half-configured libssl0.9.8 0.9.8g-15
+2009-08-27 03:15:03 status installed libssl0.9.8 0.9.8g-15
+2009-08-27 03:15:03 startup archives install
+2009-08-27 03:15:04 install libpcre3 <none> 7.6-2.1
+2009-08-27 03:15:04 status half-installed libpcre3 7.6-2.1
+2009-08-27 03:15:04 status unpacked libpcre3 7.6-2.1
+2009-08-27 03:15:04 status unpacked libpcre3 7.6-2.1
+2009-08-27 03:15:04 configure libpcre3 7.6-2.1 7.6-2.1
+2009-08-27 03:15:04 status unpacked libpcre3 7.6-2.1
+2009-08-27 03:15:04 status half-configured libpcre3 7.6-2.1
+2009-08-27 03:15:04 status installed libpcre3 7.6-2.1
+2009-08-27 03:15:05 startup archives install
+2009-08-27 03:15:05 install libglib2.0-0 <none> 2.16.6-1
+2009-08-27 03:15:05 status half-installed libglib2.0-0 2.16.6-1
+2009-08-27 03:15:07 status unpacked libglib2.0-0 2.16.6-1
+2009-08-27 03:15:07 status unpacked libglib2.0-0 2.16.6-1
+2009-08-27 03:15:07 configure libglib2.0-0 2.16.6-1 2.16.6-1
+2009-08-27 03:15:07 status unpacked libglib2.0-0 2.16.6-1
+2009-08-27 03:15:07 status half-configured libglib2.0-0 2.16.6-1
+2009-08-27 03:15:07 status installed libglib2.0-0 2.16.6-1
+2009-08-27 03:15:08 startup archives install
+2009-08-27 03:15:08 install libglib2.0-data <none> 2.16.6-1
+2009-08-27 03:15:08 status half-installed libglib2.0-data 2.16.6-1
+2009-08-27 03:15:11 status unpacked libglib2.0-data 2.16.6-1
+2009-08-27 03:15:12 status unpacked libglib2.0-data 2.16.6-1
+2009-08-27 03:15:12 configure libglib2.0-data 2.16.6-1 2.16.6-1
+2009-08-27 03:15:12 status unpacked libglib2.0-data 2.16.6-1
+2009-08-27 03:15:12 status half-configured libglib2.0-data 2.16.6-1
+2009-08-27 03:15:12 status installed libglib2.0-data 2.16.6-1
+2009-08-27 03:15:12 startup archives install
+2009-08-27 03:15:12 install vim-common <none> 1:7.1.314-3+lenny2
+2009-08-27 03:15:12 status half-installed vim-common 1:7.1.314-3+lenny2
+2009-08-27 03:15:13 status unpacked vim-common 1:7.1.314-3+lenny2
+2009-08-27 03:15:14 status unpacked vim-common 1:7.1.314-3+lenny2
+2009-08-27 03:15:14 configure vim-common 1:7.1.314-3+lenny2 1:7.1.314-3+lenny2
+2009-08-27 03:15:14 status unpacked vim-common 1:7.1.314-3+lenny2
+2009-08-27 03:15:14 status unpacked vim-common 1:7.1.314-3+lenny2
+2009-08-27 03:15:14 status half-configured vim-common 1:7.1.314-3+lenny2
+2009-08-27 03:15:14 status installed vim-common 1:7.1.314-3+lenny2
+2009-08-27 03:15:14 startup archives install
+2009-08-27 03:15:14 install vim-tiny <none> 1:7.1.314-3+lenny2
+2009-08-27 03:15:14 status half-installed vim-tiny 1:7.1.314-3+lenny2
+2009-08-27 03:15:15 status unpacked vim-tiny 1:7.1.314-3+lenny2
+2009-08-27 03:15:15 status unpacked vim-tiny 1:7.1.314-3+lenny2
+2009-08-27 03:15:15 configure vim-tiny 1:7.1.314-3+lenny2 1:7.1.314-3+lenny2
+2009-08-27 03:15:15 status unpacked vim-tiny 1:7.1.314-3+lenny2
+2009-08-27 03:15:15 status unpacked vim-tiny 1:7.1.314-3+lenny2
+2009-08-27 03:15:15 status half-configured vim-tiny 1:7.1.314-3+lenny2
+2009-08-27 03:15:18 status installed vim-tiny 1:7.1.314-3+lenny2
+2009-08-27 03:15:19 startup archives install
+2009-08-27 03:15:19 install libdb4.6 <none> 4.6.21-11
+2009-08-27 03:15:19 status half-installed libdb4.6 4.6.21-11
+2009-08-27 03:15:20 status unpacked libdb4.6 4.6.21-11
+2009-08-27 03:15:20 status unpacked libdb4.6 4.6.21-11
+2009-08-27 03:15:20 configure libdb4.6 4.6.21-11 4.6.21-11
+2009-08-27 03:15:20 status unpacked libdb4.6 4.6.21-11
+2009-08-27 03:15:20 status half-configured libdb4.6 4.6.21-11
+2009-08-27 03:15:20 status installed libdb4.6 4.6.21-11
+2009-08-27 03:15:21 startup archives install
+2009-08-27 03:15:21 install libpam-runtime <none> 1.0.1-5
+2009-08-27 03:15:21 status half-installed libpam-runtime 1.0.1-5
+2009-08-27 03:15:22 status unpacked libpam-runtime 1.0.1-5
+2009-08-27 03:15:22 status unpacked libpam-runtime 1.0.1-5
+2009-08-27 03:15:22 configure libpam-runtime 1.0.1-5 1.0.1-5
+2009-08-27 03:15:22 status unpacked libpam-runtime 1.0.1-5
+2009-08-27 03:15:22 status unpacked libpam-runtime 1.0.1-5
+2009-08-27 03:15:22 status unpacked libpam-runtime 1.0.1-5
+2009-08-27 03:15:22 status half-configured libpam-runtime 1.0.1-5
+2009-08-27 03:15:22 status installed libpam-runtime 1.0.1-5
+2009-08-27 03:15:23 startup archives install
+2009-08-27 03:15:23 install libpam0g <none> 1.0.1-5
+2009-08-27 03:15:23 status half-installed libpam0g 1.0.1-5
+2009-08-27 03:15:23 status unpacked libpam0g 1.0.1-5
+2009-08-27 03:15:23 status unpacked libpam0g 1.0.1-5
+2009-08-27 03:15:23 configure libpam0g 1.0.1-5 1.0.1-5
+2009-08-27 03:15:23 status unpacked libpam0g 1.0.1-5
+2009-08-27 03:15:24 status half-configured libpam0g 1.0.1-5
+2009-08-27 03:15:25 status installed libpam0g 1.0.1-5
+2009-08-27 03:15:26 startup archives install
+2009-08-27 03:15:26 install libpam-modules <none> 1.0.1-5
+2009-08-27 03:15:26 status half-installed libpam-modules 1.0.1-5
+2009-08-27 03:15:29 status unpacked libpam-modules 1.0.1-5
+2009-08-27 03:15:29 status unpacked libpam-modules 1.0.1-5
+2009-08-27 03:15:29 configure libpam-modules 1.0.1-5 1.0.1-5
+2009-08-27 03:15:29 status unpacked libpam-modules 1.0.1-5
+2009-08-27 03:15:29 status unpacked libpam-modules 1.0.1-5
+2009-08-27 03:15:29 status unpacked libpam-modules 1.0.1-5
+2009-08-27 03:15:30 status unpacked libpam-modules 1.0.1-5
+2009-08-27 03:15:30 status unpacked libpam-modules 1.0.1-5
+2009-08-27 03:15:30 status unpacked libpam-modules 1.0.1-5
+2009-08-27 03:15:30 status unpacked libpam-modules 1.0.1-5
+2009-08-27 03:15:30 status unpacked libpam-modules 1.0.1-5
+2009-08-27 03:15:30 status unpacked libpam-modules 1.0.1-5
+2009-08-27 03:15:30 status half-configured libpam-modules 1.0.1-5
+2009-08-27 03:15:30 status installed libpam-modules 1.0.1-5
+2009-08-27 03:15:31 startup archives install
+2009-08-27 03:15:31 install passwd <none> 1:4.1.1-6
+2009-08-27 03:15:31 status half-installed passwd 1:4.1.1-6
+2009-08-27 03:15:34 status unpacked passwd 1:4.1.1-6
+2009-08-27 03:15:35 status unpacked passwd 1:4.1.1-6
+2009-08-27 03:15:35 configure passwd 1:4.1.1-6 1:4.1.1-6
+2009-08-27 03:15:35 status unpacked passwd 1:4.1.1-6
+2009-08-27 03:15:35 status unpacked passwd 1:4.1.1-6
+2009-08-27 03:15:35 status unpacked passwd 1:4.1.1-6
+2009-08-27 03:15:35 status unpacked passwd 1:4.1.1-6
+2009-08-27 03:15:35 status unpacked passwd 1:4.1.1-6
+2009-08-27 03:15:35 status half-configured passwd 1:4.1.1-6
+2009-08-27 03:15:35 status installed passwd 1:4.1.1-6
+2009-08-27 03:15:36 startup archives install
+2009-08-27 03:15:36 install sudo <none> 1.6.9p17-2
+2009-08-27 03:15:36 status half-installed sudo 1.6.9p17-2
+2009-08-27 03:15:36 status unpacked sudo 1.6.9p17-2
+2009-08-27 03:15:36 status unpacked sudo 1.6.9p17-2
+2009-08-27 03:15:36 configure sudo 1.6.9p17-2 1.6.9p17-2
+2009-08-27 03:15:36 status unpacked sudo 1.6.9p17-2
+2009-08-27 03:15:36 status unpacked sudo 1.6.9p17-2
+2009-08-27 03:15:36 status unpacked sudo 1.6.9p17-2
+2009-08-27 03:15:36 status half-configured sudo 1.6.9p17-2
+2009-08-27 03:15:37 status installed sudo 1.6.9p17-2
+2009-08-27 03:15:38 startup archives install
+2009-08-27 03:15:38 install libsqlite3-0 <none> 3.5.9-6
+2009-08-27 03:15:38 status half-installed libsqlite3-0 3.5.9-6
+2009-08-27 03:15:38 status unpacked libsqlite3-0 3.5.9-6
+2009-08-27 03:15:38 status unpacked libsqlite3-0 3.5.9-6
+2009-08-27 03:15:38 configure libsqlite3-0 3.5.9-6 3.5.9-6
+2009-08-27 03:15:38 status unpacked libsqlite3-0 3.5.9-6
+2009-08-27 03:15:38 status half-configured libsqlite3-0 3.5.9-6
+2009-08-27 03:15:39 status installed libsqlite3-0 3.5.9-6
+2009-08-27 03:15:39 startup archives install
+2009-08-27 03:15:39 install sqlite3 <none> 3.5.9-6
+2009-08-27 03:15:39 status half-installed sqlite3 3.5.9-6
+2009-08-27 03:15:39 status unpacked sqlite3 3.5.9-6
+2009-08-27 03:15:39 status unpacked sqlite3 3.5.9-6
+2009-08-27 03:15:39 configure sqlite3 3.5.9-6 3.5.9-6
+2009-08-27 03:15:39 status unpacked sqlite3 3.5.9-6
+2009-08-27 03:15:39 status half-configured sqlite3 3.5.9-6
+2009-08-27 03:15:39 status installed sqlite3 3.5.9-6
+2009-08-27 12:15:40 startup archives install
+2009-08-27 12:15:40 install tzdata <none> 2008h-2
+2009-08-27 12:15:40 status half-installed tzdata 2008h-2
+2009-08-27 12:15:55 status unpacked tzdata 2008h-2
+2009-08-27 12:15:56 status unpacked tzdata 2008h-2
+2009-08-27 12:15:57 configure tzdata 2008h-2 2008h-2
+2009-08-27 12:15:57 status unpacked tzdata 2008h-2
+2009-08-27 12:15:57 status half-configured tzdata 2008h-2
+2009-08-27 12:15:59 status installed tzdata 2008h-2
+2009-08-27 12:16:00 startup archives install
+2009-08-27 12:16:00 install liblockfile1 <none> 1.08-3
+2009-08-27 12:16:00 status half-installed liblockfile1 1.08-3
+2009-08-27 12:16:00 status unpacked liblockfile1 1.08-3
+2009-08-27 12:16:00 status unpacked liblockfile1 1.08-3
+2009-08-27 12:16:00 configure liblockfile1 1.08-3 1.08-3
+2009-08-27 12:16:00 status unpacked liblockfile1 1.08-3
+2009-08-27 12:16:00 status half-configured liblockfile1 1.08-3
+2009-08-27 12:16:00 status installed liblockfile1 1.08-3
+2009-08-27 12:16:00 startup archives install
+2009-08-27 12:16:01 install libcap1 <none> 1:1.10-14
+2009-08-27 12:16:01 status half-installed libcap1 1:1.10-14
+2009-08-27 12:16:01 status unpacked libcap1 1:1.10-14
+2009-08-27 12:16:01 status unpacked libcap1 1:1.10-14
+2009-08-27 12:16:01 configure libcap1 1:1.10-14 1:1.10-14
+2009-08-27 12:16:01 status unpacked libcap1 1:1.10-14
+2009-08-27 12:16:01 status half-configured libcap1 1:1.10-14
+2009-08-27 12:16:01 status installed libcap1 1:1.10-14
+2009-08-27 12:16:01 startup archives install
+2009-08-27 12:16:01 install lockfile-progs <none> 0.1.11-0.1
+2009-08-27 12:16:01 status half-installed lockfile-progs 0.1.11-0.1
+2009-08-27 12:16:01 status unpacked lockfile-progs 0.1.11-0.1
+2009-08-27 12:16:02 status unpacked lockfile-progs 0.1.11-0.1
+2009-08-27 12:16:02 configure lockfile-progs 0.1.11-0.1 0.1.11-0.1
+2009-08-27 12:16:02 status unpacked lockfile-progs 0.1.11-0.1
+2009-08-27 12:16:02 status half-configured lockfile-progs 0.1.11-0.1
+2009-08-27 12:16:02 status installed lockfile-progs 0.1.11-0.1
+2009-08-27 12:16:02 startup archives install
+2009-08-27 12:16:02 install ntpdate <none> 1:4.2.4p4+dfsg-8
+2009-08-27 12:16:02 status half-installed ntpdate 1:4.2.4p4+dfsg-8
+2009-08-27 12:16:02 status unpacked ntpdate 1:4.2.4p4+dfsg-8
+2009-08-27 12:16:02 status unpacked ntpdate 1:4.2.4p4+dfsg-8
+2009-08-27 12:16:02 configure ntpdate 1:4.2.4p4+dfsg-8 1:4.2.4p4+dfsg-8
+2009-08-27 12:16:02 status unpacked ntpdate 1:4.2.4p4+dfsg-8
+2009-08-27 12:16:02 status unpacked ntpdate 1:4.2.4p4+dfsg-8
+2009-08-27 12:16:02 status unpacked ntpdate 1:4.2.4p4+dfsg-8
+2009-08-27 12:16:02 status unpacked ntpdate 1:4.2.4p4+dfsg-8
+2009-08-27 12:16:02 status unpacked ntpdate 1:4.2.4p4+dfsg-8
+2009-08-27 12:16:02 status half-configured ntpdate 1:4.2.4p4+dfsg-8
+2009-08-27 12:16:03 status installed ntpdate 1:4.2.4p4+dfsg-8
+2009-08-27 12:16:03 startup archives install
+2009-08-27 12:16:03 install libgpg-error0 <none> 1.4-2
+2009-08-27 12:16:03 status half-installed libgpg-error0 1.4-2
+2009-08-27 12:16:03 status unpacked libgpg-error0 1.4-2
+2009-08-27 12:16:03 status unpacked libgpg-error0 1.4-2
+2009-08-27 12:16:03 configure libgpg-error0 1.4-2 1.4-2
+2009-08-27 12:16:03 status unpacked libgpg-error0 1.4-2
+2009-08-27 12:16:03 status half-configured libgpg-error0 1.4-2
+2009-08-27 12:16:03 status installed libgpg-error0 1.4-2
+2009-08-27 12:16:04 startup archives install
+2009-08-27 12:16:04 install libgcrypt11 <none> 1.4.1-1
+2009-08-27 12:16:04 status half-installed libgcrypt11 1.4.1-1
+2009-08-27 12:16:05 status unpacked libgcrypt11 1.4.1-1
+2009-08-27 12:16:05 status unpacked libgcrypt11 1.4.1-1
+2009-08-27 12:16:05 configure libgcrypt11 1.4.1-1 1.4.1-1
+2009-08-27 12:16:05 status unpacked libgcrypt11 1.4.1-1
+2009-08-27 12:16:05 status half-configured libgcrypt11 1.4.1-1
+2009-08-27 12:16:05 status installed libgcrypt11 1.4.1-1
+2009-08-27 12:16:05 startup archives install
+2009-08-27 12:16:05 install libtasn1-3 <none> 1.4-1
+2009-08-27 12:16:05 status half-installed libtasn1-3 1.4-1
+2009-08-27 12:16:05 status unpacked libtasn1-3 1.4-1
+2009-08-27 12:16:05 status unpacked libtasn1-3 1.4-1
+2009-08-27 12:16:06 configure libtasn1-3 1.4-1 1.4-1
+2009-08-27 12:16:06 status unpacked libtasn1-3 1.4-1
+2009-08-27 12:16:06 status half-configured libtasn1-3 1.4-1
+2009-08-27 12:16:06 status installed libtasn1-3 1.4-1
+2009-08-27 12:16:06 startup archives install
+2009-08-27 12:16:06 install libgnutls26 <none> 2.4.2-6
+2009-08-27 12:16:06 status half-installed libgnutls26 2.4.2-6
+2009-08-27 12:16:07 status unpacked libgnutls26 2.4.2-6
+2009-08-27 12:16:07 status unpacked libgnutls26 2.4.2-6
+2009-08-27 12:16:07 configure libgnutls26 2.4.2-6 2.4.2-6
+2009-08-27 12:16:07 status unpacked libgnutls26 2.4.2-6
+2009-08-27 12:16:07 status half-configured libgnutls26 2.4.2-6
+2009-08-27 12:16:08 status installed libgnutls26 2.4.2-6
+2009-08-27 12:16:08 startup archives install
+2009-08-27 12:16:08 install ssmtp <none> 2.62-3
+2009-08-27 12:16:08 status half-installed ssmtp 2.62-3
+2009-08-27 12:16:08 status unpacked ssmtp 2.62-3
+2009-08-27 12:16:08 status unpacked ssmtp 2.62-3
+2009-08-27 12:16:09 configure ssmtp 2.62-3 2.62-3
+2009-08-27 12:16:09 status unpacked ssmtp 2.62-3
+2009-08-27 12:16:09 status unpacked ssmtp 2.62-3
+2009-08-27 12:16:09 status unpacked ssmtp 2.62-3
+2009-08-27 12:16:09 status half-configured ssmtp 2.62-3
+2009-08-27 12:16:11 status installed ssmtp 2.62-3
+2009-08-27 12:16:11 startup archives install
+2009-08-27 12:16:11 install libcomerr2 <none> 1.41.3-1
+2009-08-27 12:16:11 status half-installed libcomerr2 1.41.3-1
+2009-08-27 12:16:12 status unpacked libcomerr2 1.41.3-1
+2009-08-27 12:16:12 status unpacked libcomerr2 1.41.3-1
+2009-08-27 12:16:12 configure libcomerr2 1.41.3-1 1.41.3-1
+2009-08-27 12:16:12 status unpacked libcomerr2 1.41.3-1
+2009-08-27 12:16:12 status half-configured libcomerr2 1.41.3-1
+2009-08-27 12:16:12 status installed libcomerr2 1.41.3-1
+2009-08-27 12:16:12 startup archives install
+2009-08-27 12:16:12 install e2fslibs <none> 1.41.3-1
+2009-08-27 12:16:12 status half-installed e2fslibs 1.41.3-1
+2009-08-27 12:16:13 status unpacked e2fslibs 1.41.3-1
+2009-08-27 12:16:13 status unpacked e2fslibs 1.41.3-1
+2009-08-27 12:16:13 configure e2fslibs 1.41.3-1 1.41.3-1
+2009-08-27 12:16:13 status unpacked e2fslibs 1.41.3-1
+2009-08-27 12:16:13 status half-configured e2fslibs 1.41.3-1
+2009-08-27 12:16:13 status installed e2fslibs 1.41.3-1
+2009-08-27 12:16:13 startup archives install
+2009-08-27 12:16:13 install libuuid1 <none> 1.41.3-1
+2009-08-27 12:16:13 status half-installed libuuid1 1.41.3-1
+2009-08-27 12:16:14 status unpacked libuuid1 1.41.3-1
+2009-08-27 12:16:14 status unpacked libuuid1 1.41.3-1
+2009-08-27 12:16:14 configure libuuid1 1.41.3-1 1.41.3-1
+2009-08-27 12:16:14 status unpacked libuuid1 1.41.3-1
+2009-08-27 12:16:14 status half-configured libuuid1 1.41.3-1
+2009-08-27 12:16:14 status installed libuuid1 1.41.3-1
+2009-08-27 12:16:14 startup archives install
+2009-08-27 12:16:15 install libblkid1 <none> 1.41.3-1
+2009-08-27 12:16:15 status half-installed libblkid1 1.41.3-1
+2009-08-27 12:16:15 status unpacked libblkid1 1.41.3-1
+2009-08-27 12:16:15 status unpacked libblkid1 1.41.3-1
+2009-08-27 12:16:15 configure libblkid1 1.41.3-1 1.41.3-1
+2009-08-27 12:16:15 status unpacked libblkid1 1.41.3-1
+2009-08-27 12:16:15 status half-configured libblkid1 1.41.3-1
+2009-08-27 12:16:15 status installed libblkid1 1.41.3-1
+2009-08-27 12:16:15 startup archives install
+2009-08-27 12:16:15 install libss2 <none> 1.41.3-1
+2009-08-27 12:16:15 status half-installed libss2 1.41.3-1
+2009-08-27 12:16:16 status unpacked libss2 1.41.3-1
+2009-08-27 12:16:16 status unpacked libss2 1.41.3-1
+2009-08-27 12:16:16 configure libss2 1.41.3-1 1.41.3-1
+2009-08-27 12:16:16 status unpacked libss2 1.41.3-1
+2009-08-27 12:16:16 status half-configured libss2 1.41.3-1
+2009-08-27 12:16:16 status installed libss2 1.41.3-1
+2009-08-27 12:16:17 startup archives install
+2009-08-27 12:16:17 install e2fsprogs <none> 1.41.3-1
+2009-08-27 12:16:17 status half-installed e2fsprogs 1.41.3-1
+2009-08-27 12:16:19 status unpacked e2fsprogs 1.41.3-1
+2009-08-27 12:16:19 status unpacked e2fsprogs 1.41.3-1
+2009-08-27 12:16:19 configure e2fsprogs 1.41.3-1 1.41.3-1
+2009-08-27 12:16:19 status unpacked e2fsprogs 1.41.3-1
+2009-08-27 12:16:19 status unpacked e2fsprogs 1.41.3-1
+2009-08-27 12:16:19 status half-configured e2fsprogs 1.41.3-1
+2009-08-27 12:16:19 status installed e2fsprogs 1.41.3-1
+2009-08-27 12:16:19 startup archives install
+2009-08-27 12:16:20 install uuid-runtime <none> 1.41.3-1
+2009-08-27 12:16:20 status half-installed uuid-runtime 1.41.3-1
+2009-08-27 12:16:20 status unpacked uuid-runtime 1.41.3-1
+2009-08-27 12:16:20 status unpacked uuid-runtime 1.41.3-1
+2009-08-27 12:16:20 configure uuid-runtime 1.41.3-1 1.41.3-1
+2009-08-27 12:16:20 status unpacked uuid-runtime 1.41.3-1
+2009-08-27 12:16:20 status half-configured uuid-runtime 1.41.3-1
+2009-08-27 12:16:20 status installed uuid-runtime 1.41.3-1
+2009-08-27 12:16:22 startup archives install
+2009-08-27 12:16:22 install mount <none> 2.13.1.1-1
+2009-08-27 12:16:22 status half-installed mount 2.13.1.1-1
+2009-08-27 12:16:22 status unpacked mount 2.13.1.1-1
+2009-08-27 12:16:22 status unpacked mount 2.13.1.1-1
+2009-08-27 12:16:22 configure mount 2.13.1.1-1 2.13.1.1-1
+2009-08-27 12:16:22 status unpacked mount 2.13.1.1-1
+2009-08-27 12:16:22 status half-configured mount 2.13.1.1-1
+2009-08-27 12:16:22 status installed mount 2.13.1.1-1
+2009-08-27 12:16:23 startup archives install
+2009-08-27 12:16:23 install libdevmapper1.02.1 <none> 2:1.02.27-4
+2009-08-27 12:16:23 status half-installed libdevmapper1.02.1 2:1.02.27-4
+2009-08-27 12:16:23 status unpacked libdevmapper1.02.1 2:1.02.27-4
+2009-08-27 12:16:23 status unpacked libdevmapper1.02.1 2:1.02.27-4
+2009-08-27 12:16:23 configure libdevmapper1.02.1 2:1.02.27-4 2:1.02.27-4
+2009-08-27 12:16:23 status unpacked libdevmapper1.02.1 2:1.02.27-4
+2009-08-27 12:16:23 status half-configured libdevmapper1.02.1 2:1.02.27-4
+2009-08-27 12:16:24 status installed libdevmapper1.02.1 2:1.02.27-4
+2009-08-27 12:16:24 startup archives install
+2009-08-27 12:16:24 install libparted1.8-10 <none> 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:24 status half-installed libparted1.8-10 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:25 status unpacked libparted1.8-10 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:25 status unpacked libparted1.8-10 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:25 configure libparted1.8-10 1.8.8.git.2008.03.24-11.1 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:25 status unpacked libparted1.8-10 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:25 status half-configured libparted1.8-10 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:25 status installed libparted1.8-10 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:25 startup archives install
+2009-08-27 12:16:25 install parted <none> 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:25 status half-installed parted 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:26 status unpacked parted 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:26 status unpacked parted 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:26 configure parted 1.8.8.git.2008.03.24-11.1 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:26 status unpacked parted 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:26 status half-configured parted 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:26 status installed parted 1.8.8.git.2008.03.24-11.1
+2009-08-27 12:16:26 startup archives install
+2009-08-27 12:16:26 install libkeyutils1 <none> 1.2-9
+2009-08-27 12:16:26 status half-installed libkeyutils1 1.2-9
+2009-08-27 12:16:26 status unpacked libkeyutils1 1.2-9
+2009-08-27 12:16:26 status unpacked libkeyutils1 1.2-9
+2009-08-27 12:16:26 configure libkeyutils1 1.2-9 1.2-9
+2009-08-27 12:16:26 status unpacked libkeyutils1 1.2-9
+2009-08-27 12:16:26 status half-configured libkeyutils1 1.2-9
+2009-08-27 12:16:26 status installed libkeyutils1 1.2-9
+2009-08-27 12:16:27 startup archives install
+2009-08-27 12:16:27 install libkrb53 <none> 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:27 status half-installed libkrb53 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:28 status unpacked libkrb53 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:28 status unpacked libkrb53 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:28 configure libkrb53 1.6.dfsg.4~beta1-5 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:28 status unpacked libkrb53 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:28 status half-configured libkrb53 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:28 status installed libkrb53 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:29 startup archives install
+2009-08-27 12:16:29 install krb5-config <none> 1.22
+2009-08-27 12:16:29 status half-installed krb5-config 1.22
+2009-08-27 12:16:29 status unpacked krb5-config 1.22
+2009-08-27 12:16:29 status unpacked krb5-config 1.22
+2009-08-27 12:16:29 configure krb5-config 1.22 1.22
+2009-08-27 12:16:29 status unpacked krb5-config 1.22
+2009-08-27 12:16:29 status half-configured krb5-config 1.22
+2009-08-27 12:16:32 status installed krb5-config 1.22
+2009-08-27 12:16:32 startup archives install
+2009-08-27 12:16:32 install libkadm55 <none> 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:32 status half-installed libkadm55 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:33 status unpacked libkadm55 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:33 status unpacked libkadm55 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:33 configure libkadm55 1.6.dfsg.4~beta1-5 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:33 status unpacked libkadm55 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:33 status half-configured libkadm55 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:33 status installed libkadm55 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:33 startup archives install
+2009-08-27 12:16:33 install krb5-user <none> 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:33 status half-installed krb5-user 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:34 status unpacked krb5-user 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:34 status unpacked krb5-user 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:34 configure krb5-user 1.6.dfsg.4~beta1-5 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:34 status unpacked krb5-user 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:34 status half-configured krb5-user 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:34 status installed krb5-user 1.6.dfsg.4~beta1-5
+2009-08-27 12:16:34 startup archives install
+2009-08-27 12:16:34 install libgdbm3 <none> 1.8.3-3
+2009-08-27 12:16:34 status half-installed libgdbm3 1.8.3-3
+2009-08-27 12:16:35 status unpacked libgdbm3 1.8.3-3
+2009-08-27 12:16:35 status unpacked libgdbm3 1.8.3-3
+2009-08-27 12:16:35 configure libgdbm3 1.8.3-3 1.8.3-3
+2009-08-27 12:16:35 status unpacked libgdbm3 1.8.3-3
+2009-08-27 12:16:35 status half-configured libgdbm3 1.8.3-3
+2009-08-27 12:16:35 status installed libgdbm3 1.8.3-3
+2009-08-27 12:16:35 startup archives install
+2009-08-27 12:16:35 install libid3tag0 <none> 0.15.1b-10
+2009-08-27 12:16:35 status half-installed libid3tag0 0.15.1b-10
+2009-08-27 12:16:36 status unpacked libid3tag0 0.15.1b-10
+2009-08-27 12:16:36 status unpacked libid3tag0 0.15.1b-10
+2009-08-27 12:16:36 configure libid3tag0 0.15.1b-10 0.15.1b-10
+2009-08-27 12:16:36 status unpacked libid3tag0 0.15.1b-10
+2009-08-27 12:16:36 status half-configured libid3tag0 0.15.1b-10
+2009-08-27 12:16:36 status installed libid3tag0 0.15.1b-10
+2009-08-27 12:16:37 startup archives install
+2009-08-27 12:16:37 install libxml2 <none> 2.6.32.dfsg-5
+2009-08-27 12:16:37 status half-installed libxml2 2.6.32.dfsg-5
+2009-08-27 12:16:38 status unpacked libxml2 2.6.32.dfsg-5
+2009-08-27 12:16:38 status unpacked libxml2 2.6.32.dfsg-5
+2009-08-27 12:16:38 configure libxml2 2.6.32.dfsg-5 2.6.32.dfsg-5
+2009-08-27 12:16:38 status unpacked libxml2 2.6.32.dfsg-5
+2009-08-27 12:16:38 status half-configured libxml2 2.6.32.dfsg-5
+2009-08-27 12:16:38 status installed libxml2 2.6.32.dfsg-5
+2009-08-27 12:16:39 startup archives install
+2009-08-27 12:16:39 install libsasl2-2 <none> 2.1.22.dfsg1-23
+2009-08-27 12:16:39 status half-installed libsasl2-2 2.1.22.dfsg1-23
+2009-08-27 12:16:39 status unpacked libsasl2-2 2.1.22.dfsg1-23
+2009-08-27 12:16:39 status unpacked libsasl2-2 2.1.22.dfsg1-23
+2009-08-27 12:16:39 configure libsasl2-2 2.1.22.dfsg1-23 2.1.22.dfsg1-23
+2009-08-27 12:16:39 status unpacked libsasl2-2 2.1.22.dfsg1-23
+2009-08-27 12:16:39 status half-configured libsasl2-2 2.1.22.dfsg1-23
+2009-08-27 12:16:39 status installed libsasl2-2 2.1.22.dfsg1-23
+2009-08-27 12:16:40 startup archives install
+2009-08-27 12:16:40 install libldap-2.4-2 <none> 2.4.11-1
+2009-08-27 12:16:40 status half-installed libldap-2.4-2 2.4.11-1
+2009-08-27 12:16:40 status unpacked libldap-2.4-2 2.4.11-1
+2009-08-27 12:16:40 status unpacked libldap-2.4-2 2.4.11-1
+2009-08-27 12:16:40 configure libldap-2.4-2 2.4.11-1 2.4.11-1
+2009-08-27 12:16:41 status unpacked libldap-2.4-2 2.4.11-1
+2009-08-27 12:16:41 status unpacked libldap-2.4-2 2.4.11-1
+2009-08-27 12:16:41 status half-configured libldap-2.4-2 2.4.11-1
+2009-08-27 12:16:41 status installed libldap-2.4-2 2.4.11-1
+2009-08-27 12:16:41 startup archives install
+2009-08-27 12:16:41 install libsasl2-modules <none> 2.1.22.dfsg1-23
+2009-08-27 12:16:41 status half-installed libsasl2-modules 2.1.22.dfsg1-23
+2009-08-27 12:16:42 status unpacked libsasl2-modules 2.1.22.dfsg1-23
+2009-08-27 12:16:42 status unpacked libsasl2-modules 2.1.22.dfsg1-23
+2009-08-27 12:16:42 configure libsasl2-modules 2.1.22.dfsg1-23 2.1.22.dfsg1-23
+2009-08-27 12:16:42 status unpacked libsasl2-modules 2.1.22.dfsg1-23
+2009-08-27 12:16:42 status half-configured libsasl2-modules 2.1.22.dfsg1-23
+2009-08-27 12:16:42 status installed libsasl2-modules 2.1.22.dfsg1-23
+2009-08-27 12:16:42 startup archives install
+2009-08-27 12:16:43 install libpopt0 <none> 1.14-4
+2009-08-27 12:16:43 status half-installed libpopt0 1.14-4
+2009-08-27 12:16:43 status unpacked libpopt0 1.14-4
+2009-08-27 12:16:43 status unpacked libpopt0 1.14-4
+2009-08-27 12:16:43 configure libpopt0 1.14-4 1.14-4
+2009-08-27 12:16:43 status unpacked libpopt0 1.14-4
+2009-08-27 12:16:43 status half-configured libpopt0 1.14-4
+2009-08-27 12:16:43 status installed libpopt0 1.14-4
+2009-08-27 12:16:44 startup archives install
+2009-08-27 12:16:44 install libattr1 <none> 1:2.4.43-2
+2009-08-27 12:16:44 status half-installed libattr1 1:2.4.43-2
+2009-08-27 12:16:44 status unpacked libattr1 1:2.4.43-2
+2009-08-27 12:16:44 status unpacked libattr1 1:2.4.43-2
+2009-08-27 12:16:44 configure libattr1 1:2.4.43-2 1:2.4.43-2
+2009-08-27 12:16:44 status unpacked libattr1 1:2.4.43-2
+2009-08-27 12:16:44 status half-configured libattr1 1:2.4.43-2
+2009-08-27 12:16:44 status installed libattr1 1:2.4.43-2
+2009-08-27 12:16:44 startup archives install
+2009-08-27 12:16:45 install libacl1 <none> 2.2.47-2
+2009-08-27 12:16:45 status half-installed libacl1 2.2.47-2
+2009-08-27 12:16:45 status unpacked libacl1 2.2.47-2
+2009-08-27 12:16:45 status unpacked libacl1 2.2.47-2
+2009-08-27 12:16:45 configure libacl1 2.2.47-2 2.2.47-2
+2009-08-27 12:16:45 status unpacked libacl1 2.2.47-2
+2009-08-27 12:16:45 status half-configured libacl1 2.2.47-2
+2009-08-27 12:16:45 status installed libacl1 2.2.47-2
+2009-08-27 12:16:46 startup archives install
+2009-08-27 12:16:46 install rsync <none> 3.0.3-2
+2009-08-27 12:16:46 status half-installed rsync 3.0.3-2
+2009-08-27 12:16:46 status unpacked rsync 3.0.3-2
+2009-08-27 12:16:46 status unpacked rsync 3.0.3-2
+2009-08-27 12:16:47 configure rsync 3.0.3-2 3.0.3-2
+2009-08-27 12:16:47 status unpacked rsync 3.0.3-2
+2009-08-27 12:16:47 status unpacked rsync 3.0.3-2
+2009-08-27 12:16:47 status unpacked rsync 3.0.3-2
+2009-08-27 12:16:47 status half-configured rsync 3.0.3-2
+2009-08-27 12:16:47 status installed rsync 3.0.3-2
+2009-08-27 12:16:48 startup archives install
+2009-08-27 12:16:48 install libmagic1 <none> 4.26-1
+2009-08-27 12:16:48 status half-installed libmagic1 4.26-1
+2009-08-27 12:16:50 status unpacked libmagic1 4.26-1
+2009-08-27 12:16:50 status unpacked libmagic1 4.26-1
+2009-08-27 12:16:50 configure libmagic1 4.26-1 4.26-1
+2009-08-27 12:16:50 status unpacked libmagic1 4.26-1
+2009-08-27 12:16:50 status half-configured libmagic1 4.26-1
+2009-08-27 12:16:50 status installed libmagic1 4.26-1
+2009-08-27 12:17:01 startup archives install
+2009-08-27 12:17:01 install bash <none> 3.2-4
+2009-08-27 12:17:01 status half-installed bash 3.2-4
+2009-08-27 12:17:02 status unpacked bash 3.2-4
+2009-08-27 12:17:02 status unpacked bash 3.2-4
+2009-08-27 12:17:02 configure bash 3.2-4 3.2-4
+2009-08-27 12:17:02 status unpacked bash 3.2-4
+2009-08-27 12:17:02 status unpacked bash 3.2-4
+2009-08-27 12:17:02 status unpacked bash 3.2-4
+2009-08-27 12:17:02 status unpacked bash 3.2-4
+2009-08-27 12:17:02 status unpacked bash 3.2-4
+2009-08-27 12:17:02 status half-configured bash 3.2-4
+2009-08-27 12:17:03 status installed bash 3.2-4
+2009-08-27 12:17:04 startup archives install
+2009-08-27 12:17:04 install lprng <none> 3.8.A-1.1
+2009-08-27 12:17:04 status half-installed lprng 3.8.A-1.1
+2009-08-27 12:17:09 status unpacked lprng 3.8.A-1.1
+2009-08-27 12:17:09 status unpacked lprng 3.8.A-1.1
+2009-08-27 12:17:09 configure lprng 3.8.A-1.1 3.8.A-1.1
+2009-08-27 12:17:09 status unpacked lprng 3.8.A-1.1
+2009-08-27 12:17:09 status unpacked lprng 3.8.A-1.1
+2009-08-27 12:17:09 status unpacked lprng 3.8.A-1.1
+2009-08-27 12:17:09 status unpacked lprng 3.8.A-1.1
+2009-08-27 12:17:09 status unpacked lprng 3.8.A-1.1
+2009-08-27 12:17:09 status unpacked lprng 3.8.A-1.1
+2009-08-27 12:17:09 status half-configured lprng 3.8.A-1.1
+2009-08-27 12:17:14 status installed lprng 3.8.A-1.1
+2009-08-27 12:17:14 startup archives install
+2009-08-27 12:17:14 install sysklogd <none> 1.5-5
+2009-08-27 12:17:14 status half-installed sysklogd 1.5-5
+2009-08-27 12:17:15 status unpacked sysklogd 1.5-5
+2009-08-27 12:17:15 status unpacked sysklogd 1.5-5
+2009-08-27 12:17:15 configure sysklogd 1.5-5 1.5-5
+2009-08-27 12:17:15 status unpacked sysklogd 1.5-5
+2009-08-27 12:17:15 status unpacked sysklogd 1.5-5
+2009-08-27 12:17:15 status unpacked sysklogd 1.5-5
+2009-08-27 12:17:15 status unpacked sysklogd 1.5-5
+2009-08-27 12:17:15 status unpacked sysklogd 1.5-5
+2009-08-27 12:17:15 status unpacked sysklogd 1.5-5
+2009-08-27 12:17:15 status half-configured sysklogd 1.5-5
+2009-08-27 12:17:17 status installed sysklogd 1.5-5
+2009-08-27 12:17:17 startup archives install
+2009-08-27 12:17:17 install klogd <none> 1.5-5
+2009-08-27 12:17:17 status half-installed klogd 1.5-5
+2009-08-27 12:17:17 status unpacked klogd 1.5-5
+2009-08-27 12:17:17 status unpacked klogd 1.5-5
+2009-08-27 12:17:17 configure klogd 1.5-5 1.5-5
+2009-08-27 12:17:17 status unpacked klogd 1.5-5
+2009-08-27 12:17:17 status unpacked klogd 1.5-5
+2009-08-27 12:17:17 status unpacked klogd 1.5-5
+2009-08-27 12:17:17 status half-configured klogd 1.5-5
+2009-08-27 12:17:18 status installed klogd 1.5-5
+2009-08-27 12:17:19 startup archives install
+2009-08-27 12:17:19 install logrotate <none> 3.7.1-5
+2009-08-27 12:17:19 status half-installed logrotate 3.7.1-5
+2009-08-27 12:17:19 status unpacked logrotate 3.7.1-5
+2009-08-27 12:17:19 status unpacked logrotate 3.7.1-5
+2009-08-27 12:17:19 configure logrotate 3.7.1-5 3.7.1-5
+2009-08-27 12:17:19 status unpacked logrotate 3.7.1-5
+2009-08-27 12:17:19 status unpacked logrotate 3.7.1-5
+2009-08-27 12:17:19 status unpacked logrotate 3.7.1-5
+2009-08-27 12:17:19 status half-configured logrotate 3.7.1-5
+2009-08-27 12:17:19 status installed logrotate 3.7.1-5
+2009-08-27 12:17:20 startup archives install
+2009-08-27 12:17:20 install libntfs-3g31 <none> 1:1.2531-1.1
+2009-08-27 12:17:20 status half-installed libntfs-3g31 1:1.2531-1.1
+2009-08-27 12:17:20 status unpacked libntfs-3g31 1:1.2531-1.1
+2009-08-27 12:17:20 status unpacked libntfs-3g31 1:1.2531-1.1
+2009-08-27 12:17:20 configure libntfs-3g31 1:1.2531-1.1 1:1.2531-1.1
+2009-08-27 12:17:20 status unpacked libntfs-3g31 1:1.2531-1.1
+2009-08-27 12:17:20 status half-configured libntfs-3g31 1:1.2531-1.1
+2009-08-27 12:17:21 status installed libntfs-3g31 1:1.2531-1.1
+2009-08-27 12:17:21 startup archives install
+2009-08-27 12:17:21 install ntfs-3g <none> 1:1.2531-1.1
+2009-08-27 12:17:21 status half-installed ntfs-3g 1:1.2531-1.1
+2009-08-27 12:17:21 status unpacked ntfs-3g 1:1.2531-1.1
+2009-08-27 12:17:21 status unpacked ntfs-3g 1:1.2531-1.1
+2009-08-27 12:17:21 configure ntfs-3g 1:1.2531-1.1 1:1.2531-1.1
+2009-08-27 12:17:21 status unpacked ntfs-3g 1:1.2531-1.1
+2009-08-27 12:17:21 status half-configured ntfs-3g 1:1.2531-1.1
+2009-08-27 12:17:21 status installed ntfs-3g 1:1.2531-1.1
+2009-08-27 12:17:43 startup archives install
+2009-08-27 12:17:43 install libsgutils1 <none> 1.24-2
+2009-08-27 12:17:43 status half-installed libsgutils1 1.24-2
+2009-08-27 12:17:43 status unpacked libsgutils1 1.24-2
+2009-08-27 12:17:43 status unpacked libsgutils1 1.24-2
+2009-08-27 12:17:43 configure libsgutils1 1.24-2 1.24-2
+2009-08-27 12:17:43 status unpacked libsgutils1 1.24-2
+2009-08-27 12:17:43 status half-configured libsgutils1 1.24-2
+2009-08-27 12:17:43 status installed libsgutils1 1.24-2
+2009-08-27 12:17:45 startup archives install
+2009-08-27 12:17:45 install sg3-utils <none> 1.24-2
+2009-08-27 12:17:45 status half-installed sg3-utils 1.24-2
+2009-08-27 12:17:47 status unpacked sg3-utils 1.24-2
+2009-08-27 12:17:47 status unpacked sg3-utils 1.24-2
+2009-08-27 12:17:47 configure sg3-utils 1.24-2 1.24-2
+2009-08-27 12:17:47 status unpacked sg3-utils 1.24-2
+2009-08-27 12:17:47 status half-configured sg3-utils 1.24-2
+2009-08-27 12:17:48 status installed sg3-utils 1.24-2
+2009-08-27 12:17:48 startup archives install
+2009-08-27 12:17:48 install time <none> 1.7-23
+2009-08-27 12:17:48 status half-installed time 1.7-23
+2009-08-27 12:17:48 status unpacked time 1.7-23
+2009-08-27 12:17:48 status unpacked time 1.7-23
+2009-08-27 12:17:49 configure time 1.7-23 1.7-23
+2009-08-27 12:17:49 status unpacked time 1.7-23
+2009-08-27 12:17:49 status half-configured time 1.7-23
+2009-08-27 12:17:49 status installed time 1.7-23
+2009-08-27 12:17:51 startup archives install
+2009-08-27 12:17:51 install psmisc <none> 22.6-1
+2009-08-27 12:17:51 status half-installed psmisc 22.6-1
+2009-08-27 12:17:52 status unpacked psmisc 22.6-1
+2009-08-27 12:17:52 status unpacked psmisc 22.6-1
+2009-08-27 12:17:52 configure psmisc 22.6-1 22.6-1
+2009-08-27 12:17:52 status unpacked psmisc 22.6-1
+2009-08-27 12:17:52 status half-configured psmisc 22.6-1
+2009-08-27 12:17:52 status installed psmisc 22.6-1
+2009-08-27 12:17:53 startup archives install
+2009-08-27 12:17:53 install bootchart <none> 0.10~svn407-3
+2009-08-27 12:17:53 status half-installed bootchart 0.10~svn407-3
+2009-08-27 12:17:53 status unpacked bootchart 0.10~svn407-3
+2009-08-27 12:17:53 status unpacked bootchart 0.10~svn407-3
+2009-08-27 12:17:53 configure bootchart 0.10~svn407-3 0.10~svn407-3
+2009-08-27 12:17:53 status unpacked bootchart 0.10~svn407-3
+2009-08-27 12:17:53 status unpacked bootchart 0.10~svn407-3
+2009-08-27 12:17:53 status unpacked bootchart 0.10~svn407-3
+2009-08-27 12:17:53 status half-configured bootchart 0.10~svn407-3
+2009-08-27 12:17:54 status installed bootchart 0.10~svn407-3
+2009-08-27 12:17:54 startup archives install
+2009-08-27 12:17:55 install liblzo2-2 <none> 2.03-1
+2009-08-27 12:17:55 status half-installed liblzo2-2 2.03-1
+2009-08-27 12:17:55 status unpacked liblzo2-2 2.03-1
+2009-08-27 12:17:55 status unpacked liblzo2-2 2.03-1
+2009-08-27 12:17:55 configure liblzo2-2 2.03-1 2.03-1
+2009-08-27 12:17:55 status unpacked liblzo2-2 2.03-1
+2009-08-27 12:17:55 status half-configured liblzo2-2 2.03-1
+2009-08-27 12:17:55 status installed liblzo2-2 2.03-1
+2009-08-27 12:17:56 startup archives install
+2009-08-27 12:17:56 install mtd-utils <none> 20080508-1
+2009-08-27 12:17:56 status half-installed mtd-utils 20080508-1
+2009-08-27 12:17:58 status unpacked mtd-utils 20080508-1
+2009-08-27 12:17:58 status unpacked mtd-utils 20080508-1
+2009-08-27 12:17:58 configure mtd-utils 20080508-1 20080508-1
+2009-08-27 12:17:58 status unpacked mtd-utils 20080508-1
+2009-08-27 12:17:58 status half-configured mtd-utils 20080508-1
+2009-08-27 12:17:58 status installed mtd-utils 20080508-1
+2009-08-27 12:17:59 startup archives install
+2009-08-27 12:17:59 install wget <none> 1.11.4-2
+2009-08-27 12:17:59 status half-installed wget 1.11.4-2
+2009-08-27 12:18:01 status unpacked wget 1.11.4-2
+2009-08-27 12:18:01 status unpacked wget 1.11.4-2
+2009-08-27 12:18:01 configure wget 1.11.4-2 1.11.4-2
+2009-08-27 12:18:01 status unpacked wget 1.11.4-2
+2009-08-27 12:18:01 status unpacked wget 1.11.4-2
+2009-08-27 12:18:01 status half-configured wget 1.11.4-2
+2009-08-27 12:18:02 status installed wget 1.11.4-2
+2009-08-27 12:18:03 startup archives install
+2009-08-27 12:18:03 install libinotifytools0 <none> 3.12-1
+2009-08-27 12:18:03 status half-installed libinotifytools0 3.12-1
+2009-08-27 12:18:03 status unpacked libinotifytools0 3.12-1
+2009-08-27 12:18:03 status unpacked libinotifytools0 3.12-1
+2009-08-27 12:18:03 configure libinotifytools0 3.12-1 3.12-1
+2009-08-27 12:18:03 status unpacked libinotifytools0 3.12-1
+2009-08-27 12:18:03 status half-configured libinotifytools0 3.12-1
+2009-08-27 12:18:03 status installed libinotifytools0 3.12-1
+2009-08-27 12:18:04 startup archives install
+2009-08-27 12:18:04 install inotify-tools <none> 3.12-1
+2009-08-27 12:18:04 status half-installed inotify-tools 3.12-1
+2009-08-27 12:18:04 status unpacked inotify-tools 3.12-1
+2009-08-27 12:18:04 status unpacked inotify-tools 3.12-1
+2009-08-27 12:18:04 configure inotify-tools 3.12-1 3.12-1
+2009-08-27 12:18:04 status unpacked inotify-tools 3.12-1
+2009-08-27 12:18:04 status half-configured inotify-tools 3.12-1
+2009-08-27 12:18:04 status installed inotify-tools 3.12-1
+2009-08-27 12:18:05 startup archives install
+2009-08-27 12:18:05 install libssh2-1 <none> 0.18-1
+2009-08-27 12:18:05 status half-installed libssh2-1 0.18-1
+2009-08-27 12:18:06 status unpacked libssh2-1 0.18-1
+2009-08-27 12:18:06 status unpacked libssh2-1 0.18-1
+2009-08-27 12:18:06 configure libssh2-1 0.18-1 0.18-1
+2009-08-27 12:18:06 status unpacked libssh2-1 0.18-1
+2009-08-27 12:18:06 status half-configured libssh2-1 0.18-1
+2009-08-27 12:18:06 status installed libssh2-1 0.18-1
+2009-08-27 12:18:08 startup archives install
+2009-08-27 12:18:08 install openssl <none> 0.9.8g-15+lenny1
+2009-08-27 12:18:08 status half-installed openssl 0.9.8g-15+lenny1
+2009-08-27 12:18:12 status unpacked openssl 0.9.8g-15+lenny1
+2009-08-27 12:18:12 status unpacked openssl 0.9.8g-15+lenny1
+2009-08-27 12:18:12 configure openssl 0.9.8g-15+lenny1 0.9.8g-15+lenny1
+2009-08-27 12:18:12 status unpacked openssl 0.9.8g-15+lenny1
+2009-08-27 12:18:12 status unpacked openssl 0.9.8g-15+lenny1
+2009-08-27 12:18:12 status half-configured openssl 0.9.8g-15+lenny1
+2009-08-27 12:18:13 status installed openssl 0.9.8g-15+lenny1
+2009-08-27 12:18:13 startup archives install
+2009-08-27 12:18:14 install libidn11 <none> 1.8+20080606-1
+2009-08-27 12:18:14 status half-installed libidn11 1.8+20080606-1
+2009-08-27 12:18:14 status unpacked libidn11 1.8+20080606-1
+2009-08-27 12:18:14 status unpacked libidn11 1.8+20080606-1
+2009-08-27 12:18:14 configure libidn11 1.8+20080606-1 1.8+20080606-1
+2009-08-27 12:18:14 status unpacked libidn11 1.8+20080606-1
+2009-08-27 12:18:14 status half-configured libidn11 1.8+20080606-1
+2009-08-27 12:18:14 status installed libidn11 1.8+20080606-1
+2009-08-27 12:18:15 startup archives install
+2009-08-27 12:18:15 install ca-certificates <none> 20080809
+2009-08-27 12:18:15 status half-installed ca-certificates 20080809
+2009-08-27 12:18:17 status unpacked ca-certificates 20080809
+2009-08-27 12:18:17 status unpacked ca-certificates 20080809
+2009-08-27 12:18:17 configure ca-certificates 20080809 20080809
+2009-08-27 12:18:17 status unpacked ca-certificates 20080809
+2009-08-27 12:18:17 status half-configured ca-certificates 20080809
+2009-08-27 12:18:42 status installed ca-certificates 20080809
+2009-08-27 12:18:43 startup archives install
+2009-08-27 12:18:43 install libcurl3 <none> 7.18.2-8lenny2
+2009-08-27 12:18:43 status half-installed libcurl3 7.18.2-8lenny2
+2009-08-27 12:18:44 status unpacked libcurl3 7.18.2-8lenny2
+2009-08-27 12:18:44 status unpacked libcurl3 7.18.2-8lenny2
+2009-08-27 12:18:44 configure libcurl3 7.18.2-8lenny2 7.18.2-8lenny2
+2009-08-27 12:18:44 status unpacked libcurl3 7.18.2-8lenny2
+2009-08-27 12:18:44 status half-configured libcurl3 7.18.2-8lenny2
+2009-08-27 12:18:44 status installed libcurl3 7.18.2-8lenny2

@@ -1,0 +1,67 @@
+#!/bin/bash
+
+#===============================================================================
+# nas-network 
+#===============================================================================
+
+LIBDIR=/usr/lib/nas/
+. $LIBDIR/network.sh
+
+case "$1" in
+  "hostname")
+    [ -z "$2" ] && usage "$1 HOSTNAME"
+    set_hostname $2
+    ;;
+  "address"|"netmask"|"gateway"|"dns1"|"dns2"|"mtu")  
+    [ -z "$2" ] && usage "$1 ADDRESS"
+    set_interface $1 $2
+    ;;
+  "interface")
+    [ $# -lt 8 ] && usage "$1 METHOD ADDRESS NETMASK GATEWAY DNS1 DNS2 MTU"
+    shift
+    set_interface all $@
+    ;;
+  "static"|"dhcp"|"ipv4ll")  
+    set_interface $1 
+    ;;
+  "apply") 
+    apply_interface 
+    ;;
+  "set_interface")
+    shift 
+    set_interface_all $@
+    ;;
+  "check_conflict")
+    [ -z "$2" ] && usage "$1 IP"
+    check_conflict $2
+    ;;
+  "workgroup")
+    [ -z "$2" ] && usage "$1 WORKGROUP"
+    set_workgroup $2
+    ;;
+  "domain")
+    [ $# -lt 3 ] && usage "$1 DOMAIN USER PASSWORD"
+    set_domain $2 $3 $4
+    ;;
+  "link_status")
+    link_status $2
+    ;;
+  "get")
+    [ -z "$2" ] && usage "$1 PROPERTY"
+    network_get $2
+    ;;  
+  "port_forwarding")
+    [ -z "$2" ] && usage "$1 {discovery|status|on|off}"
+    shift
+    set_port_forwarding $@ 
+    ;;   
+  "iscsi_chap")
+    [ $# -lt 2 ] && usage "$1 STATUS INPW OUTPW"
+    set_iscsi_chap $2 $3 $4 
+    ;;
+  *)
+    usage "{update|hostname}" 
+    ;;
+esac
+
+exit $?

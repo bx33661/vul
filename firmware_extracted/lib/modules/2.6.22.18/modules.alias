@@ -1,0 +1,25 @@
+# Aliases extracted from modules themselves.
+alias iso9660 isofs
+alias char-major-10-229 fuse
+alias nls_euc-kr nls_cp949
+alias char-major-237-* scst_user
+alias sound-service-?-12 snd_pcm_oss
+alias sound-service-?-3 snd_pcm_oss
+alias char-major-116-* snd
+alias char-major-14-* soundcore
+alias char-major-10-200 tun
+alias usb:v04B8p0202d*dc*dsc*dp*ic*isc*ip* usblp
+alias usb:v*p*d*dc*dsc*dp*ic07isc01ip03* usblp
+alias usb:v*p*d*dc*dsc*dp*ic07isc01ip02* usblp
+alias usb:v*p*d*dc*dsc*dp*ic07isc01ip01* usblp
+alias usb:v*p*d*dc07dsc01dp03ic*isc*ip* usblp
+alias usb:v*p*d*dc07dsc01dp02ic*isc*ip* usblp
+alias usb:v*p*d*dc07dsc01dp01ic*isc*ip* usblp
+alias pci:v*d*sv*sd*bc0Csc03i10* ohci_hcd
+alias pci:v*d*sv*sd*bc0Csc03i00* uhci_hcd
+alias usb:v*p*d*dc*dsc*dp*ic03isc*ip* usbhid
+alias pci:v000011ABd00006122sv*sd*bc*sc*i* mv61xx
+alias pci:v000011ABd00006145sv*sd*bc*sc*i* mv61xx
+alias pci:v000011ABd00006141sv*sd*bc*sc*i* mv61xx
+alias pci:v000011ABd00006121sv*sd*bc*sc*i* mv61xx
+alias pci:v000011ABd00006101sv*sd*bc*sc*i* mv61xx

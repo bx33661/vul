@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scpd xmlns="urn:schemas-upnp-org:service-1-0">
+    <specVersion>
+        <major>1</major>
+        <minor>0</minor>
+    </specVersion>
+    <serviceStateTable>
+        <stateVariable sendEvents="yes">
+            <name>DefaultPermission</name>
+            <dataType>string</dataType>
+            <allowedValueList>
+                <allowedValue>allow</allowedValue>
+                <allowedValue>deny</allowedValue>
+            </allowedValueList>
+        </stateVariable>
+        <stateVariable sendEvents="yes">
+            <name>PermissionsUpdateID</name>
+            <dataType>ui4</dataType>
+        </stateVariable>
+   </serviceStateTable>
+</scpd>

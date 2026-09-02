@@ -1,0 +1,1 @@
+<META HTTP-EQUIV="Refresh" CONTENT="0; URL=http://<?=$_SERVER[HTTP_HOST]?>:8000/">

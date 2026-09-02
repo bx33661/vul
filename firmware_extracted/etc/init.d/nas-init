@@ -1,0 +1,66 @@
+#! /bin/sh 
+### BEGIN INIT INFO
+# Provides:          nas-init
+# Required-Start:    
+# Required-Stop:     
+# Default-Start:     S 
+# Default-Stop:      0 1 6
+# Short-Description: NAS initialization 
+# Description:       NAS initialization
+### END INIT INFO
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+DESC="NAS initialization"
+
+. /lib/init/vars.sh
+. /lib/lsb/init-functions
+. /usr/lib/nas/common.sh
+
+export DEBUG=
+
+do_start()
+{
+	ip_setupd &
+
+	# nas-share gen_folder 
+	nas-service control all start 
+
+	nas-usbd &
+	nas-cdromd &
+#	nas-mond &
+
+	lcd_msg_center "LG Home NAS"
+	
+	log_func "BOOT" "Booting finished"
+	broadcast poweron
+}
+
+do_stop()
+{
+	#nas-share gen_folder
+	nas-service control all stop 
+}
+
+case "$1" in
+  start)
+	[ "$VERBOSE" != no ] && log_action_msg "Starting $DESC" 
+	do_start
+	case "$?" in
+		0|1) [ "$VERBOSE" != no ] && log_daemon_msg "$DESC Start"; log_end_msg 0;;
+		2) [ "$VERBOSE" != no ] && log_daemon_msg "$DESC Start"; log_end_msg 1 ;;
+	esac
+	;;
+  stop)
+	[ "$VERBOSE" != no ] && log_action_msg "Stopping $DESC" 
+	do_stop
+	case "$?" in
+		0|1) [ "$VERBOSE" != no ] && log_daemon_msg "$DESC Stop"; log_end_msg 0 ;;
+		2) [ "$VERBOSE" != no ] && log_daemon_msg "$DESC Stop"; log_end_msg 1 ;;
+	esac
+	;;
+  *)
+	echo "Usage: $SCRIPTNAME {start|stop}" >&2
+	exit 3
+	;;
+esac
+

@@ -1,0 +1,62 @@
+#!/bin/sh
+
+TEMP_MAIL=/tmp/test.eml
+MAILTO=$(nas-system get email_to)
+SUBJECT=$(nas-system get email_subject)
+SMTP_AUTH=$(nas-system get smtp_auth)
+HOSTNAME=$(hostname)
+
+echo "To:$MAILTO" > $TEMP_MAIL
+echo "From:$HOSTNAME Notification System<$MAILTO>" >> $TEMP_MAIL
+echo "Subject:$SUBJECT : HDD Status Report" >> $TEMP_MAIL
+echo "" >> $TEMP_MAIL
+echo "Regular HDD Activity Report" >> $TEMP_MAIL
+echo "" >> $TEMP_MAIL
+
+
+DEVS=$(mount | grep "/mnt/disk/" | cut -d " " -f 1)
+
+for DEV in $DEVS; do
+
+  VOL=$(mount | grep "$DEV" | cut -d " " -f 3)
+  echo "[Volume $(basename $VOL) : $DEV]" >> $TEMP_MAIL
+  echo "" >> $TEMP_MAIL
+
+  # HDD Usage report
+  USED=$(df -h | grep $DEV | awk '{ print "Size: "$2 ", Used: "$3 ", Avail: "$4 ", Usage Rate: "$5 }')
+  echo "HDD Usage Status :" >> $TEMP_MAIL
+  echo "$USED" >> $TEMP_MAIL
+  echo "" >> $TEMP_MAIL
+
+  # Trash Box usage report
+  TRASH=$(du -sh $(find /mnt/disk/ -name trashbox))
+  echo "Trashbox Usage Status :" >> $TEMP_MAIL
+  echo $TRASH >> $TEMP_MAIL
+  echo "" >> $TEMP_MAIL
+
+done
+
+echo "" >> $TEMP_MAIL
+echo "Need to keep trashbox size below 15GB for optimal performance" >> $TEMP_MAIL
+echo "" >> $TEMP_MAIL
+ 
+if [[ "$SMTP_AUTH" = "on" || "$SMTP_AUTH" = "ON" ]]; then
+  SMTP_USER=$(nas-system get smtp_user)
+  SMTP_PASS=$(nas-system get smtp_pass)
+  ssmtp -au$SMTP_USER -ap$SMTP_PASS $MAILTO < $TEMP_MAIL &
+else
+  ssmtp $MAILTO < $TEMP_MAIL &
+fi
+
+BACKGROUND_PID=$!
+TIMEOUT=30
+while ps -p $BACKGROUND_PID >/dev/null; do
+  TIMEOUT=$(($TIMEOUT - 1))
+  if [ "$TIMEOUT" -lt "0" ]; then
+    break
+  fi
+  sleep 1
+done
+pkill ssmtp
+
+rm $TEMP_MAIL

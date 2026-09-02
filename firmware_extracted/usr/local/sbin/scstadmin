@@ -1,0 +1,7 @@
+#!/bin/sh
+INSTALLED=$(dpkg -l | grep perl-modules)
+if [ -z "$INSTALLED" ]; then
+	/usr/local/sbin/scstadmin.compiled $@
+else
+	/usr/local/sbin/scstadmin.pl $@
+fi

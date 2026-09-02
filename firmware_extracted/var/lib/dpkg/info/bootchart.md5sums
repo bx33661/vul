@@ -1,0 +1,9 @@
+d65c754bd0f34ac2f9dab89db481e8a0  sbin/bootchartd
+b1891b43652d5fa2b4c823f8368c64b0  usr/share/man/man1/bootchartd.1.gz
+cb5913f50f753b9f54fb41ceeb0d97fb  usr/share/man/man5/bootchartd.conf.5.gz
+17e748a4ba0dd6542ddf916f4cdf6964  usr/share/doc/bootchart/README
+c77dc1694d30f977780fc7d5cee4976d  usr/share/doc/bootchart/copyright
+f7591106aa0c7c9f41a5f4e4d54d5d9f  usr/share/doc/bootchart/changelog.gz
+5d97c5d6960f5005c747a1d19e580525  usr/share/doc/bootchart/TODO
+fd689aecd03e5bdb70eaac6379393f3c  usr/share/doc/bootchart/changelog.Debian.gz
+5833780a9af1e02e11700901b90f3d4a  usr/share/doc/bootchart/README.logger.gz

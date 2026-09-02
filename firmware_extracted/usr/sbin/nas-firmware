@@ -1,0 +1,53 @@
+#!/bin/bash
+
+#===============================================================================
+# nas-firmware 
+#===============================================================================
+
+LIBDIR=$PREFIX/usr/lib/nas/
+. $LIBDIR/firmware.sh
+
+case "$1" in
+  "update")
+    [ -z "$2" ] && usage "$1 FIRMWARE [FILENAME]"
+    firmware_update $2 $3 $4  
+    ;;
+  "iomicom_update")
+    iomicom_update $2
+    ;;
+  "image_update")
+    image_update
+    ;;
+  "update_url")
+    [ -z "$2" ] && usage "$1 URL"
+    firmware_update_url $2  
+    ;;
+  "odd_update")
+    [ -z "$2" ] && usage "$1 FIRMWARE"
+    odd_firmware_update $2   
+    ;;
+  "check")
+    firmware_check
+    ;;
+  "restore")
+    firmware_restore
+    ;;
+  "config_backup")
+    config_backup
+    ;;
+  "config_restore")
+    config_restore $2 $3
+    ;;
+  "factory_init")
+    firmware_factory_init
+    ;;
+  "get")
+    [ -z "$2" ] && usage "$1 PROPERTY"
+    firmware_get $2
+    ;;
+  *)
+    usage "{update|restore|get}" 
+    ;;
+esac
+
+exit $?
