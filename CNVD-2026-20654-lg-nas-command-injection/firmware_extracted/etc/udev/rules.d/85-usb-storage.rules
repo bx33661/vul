@@ -1,0 +1,34 @@
+# This file contains the rules needed to create persistent device names.
+
+# forward scsi device events to the corresponding block device
+ACTION=="change", SUBSYSTEM=="scsi", ENV{DEVTYPE}=="scsi_device", \
+	TEST=="block",			ATTR{block/*/uevent}="change"
+
+# we are only interested in add and change actions for block devices
+ACTION!="add|remove|change",		GOTO="persistent_storage_end"
+SUBSYSTEM!="block",			GOTO="persistent_storage_end"
+
+# skip xen virtual hard disks
+DRIVERS=="vbd",				GOTO="persistent_storage_end"
+
+# check these attributes of /sys/class/block nodes
+ENV{DEVTYPE}!="?*", ATTR{range}=="?*",	ENV{DEVTYPE}="disk"
+ENV{DEVTYPE}!="?*", ATTR{start}=="?*",	ENV{DEVTYPE}="partition"
+
+KERNELS=="0:0:0:0", \
+					GOTO="persistent_storage_add"
+
+# pass non-usb device
+KERNEL=="sd*[0-9]", ACTION=="add", ENV{ID_BUS}!="usb", \
+					GOTO="persistent_storage_end"
+
+LABEL="persistent_storage_add"
+
+ACTION=="add",				ENV{ACTION}="add"
+ACTION=="remove",			ENV{ACTION}="remove"
+ACTION=="change",			ENV{ACTION}="change"
+
+KERNEL=="sd*[!0-9]", RUN+="/usr/sbin/nas-storage usb_mount $env{ACTION} /dev/%k UDEV"
+
+LABEL="persistent_storage_end"
+

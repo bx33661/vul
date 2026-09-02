@@ -1,0 +1,90 @@
+#!/bin/bash
+
+#===============================================================================
+# nas-common 
+#===============================================================================
+
+LIBDIR=$PREFIX/usr/lib/nas/
+. $LIBDIR/common.sh
+
+case "$1" in
+  "monitor"|"mon")
+    tail -f $LOGFILE
+    ;;
+  "button")
+    shift
+    button_lock $@
+    ;;
+  "log")
+    shift
+    log $@
+    ;;
+  "log_func")
+    shift
+    log_func $@
+    ;;
+  "log_func_pipe")
+    shift
+    log_func_pipe $@
+    ;;
+  "icon")
+    shift
+    lcd_icon $@
+    ;;
+  "lcd")
+    shift
+    lcd_msg $@
+    ;;
+  "lcd_center")
+    shift
+    lcd_msg_center $@
+    ;;
+  "lcd_time")
+    shift
+    lcd_msg_time $@
+    ;;
+  "buzzer")
+    shift
+    buzzer $@
+    ;;
+  "led")
+    shift
+    led_set $@
+    ;;
+  "replace_conf")
+    [ $# -lt 5 ] && usage $1 delimiter field new_value file
+    replace_conf $2 $3 $4 $5
+    ;;
+  "mkfs_progress")
+    shift
+    mkfs_progress $@
+    ;;
+  "md5")
+    #log_func "MD5" $@
+    MD5PW=$(echo $2 | md5sum | cut -d " " -f 1)
+    echo $MD5PW
+    ;;
+  "acquire_lock")
+    acquire_lock $2 $3
+    ;;
+  "release_lock")
+    release_lock $2
+    ;;
+  "broadcast")
+    shift
+    broadcast $@
+    ;;
+  "mkudir")
+    mkudir_order $2
+    ;;
+  "arch")
+    get_arch
+    ;;
+  "model")
+    get_model
+    ;;
+  *)
+    usage "{replace_conf}" 
+    ;;
+esac
+

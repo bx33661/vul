@@ -1,0 +1,227 @@
+Aug 27 12:17:17 DSS-NC1 syslogd 1.5.0#5: restart.
+Aug 27 12:17:18 DSS-NC1 kernel: klogd 1.5.0#5, log source = /proc/kmsg started.
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] Linux version 2.6.22.18 (root@localhost.localdomain) (gcc version 4.2.0 20070413 (prerelease)) #9 Wed Jun 17 08:17:33 KST 2009
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] CPU: ARM926EJ-S [56251311] revision 1 (ARMv5TE), cr=00053177
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] Machine: Feroceon-KW
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] Using UBoot passing parameters structure
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] Memory policy: ECC disabled, Data cache writeback
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] On node 0 totalpages: 32768
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000]   DMA zone: 288 pages used for memmap
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000]   DMA zone: 0 pages reserved
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000]   DMA zone: 32480 pages, LIFO batch:7
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000]   Normal zone: 0 pages used for memmap
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] CPU0: D VIVT write-back cache
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] CPU0: I cache: 16384 bytes, associativity 4, 32 byte lines, 128 sets
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] CPU0: D cache: 16384 bytes, associativity 4, 32 byte lines, 128 sets
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] Built 1 zonelists.  Total pages: 32480
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] Kernel command line: console=ttyS0,115200 mtdparts=nand_mtd:0xc0000@0(uboot),0x400000@0x100000(kernel),0xb00000@0x500000(rootfs),0x5000000@0x1000000(data) root=/dev/nfs rw nfsroot=10.177.193.60:/home/jongmin/dev/svn/sdk/rootfs ip=10.177.193.59:10.177.193.60:::DB88FXX81:eth0:none mv_net_config=(00:11:88:0f:62:81,0:1:2:3),mtu=1500 mv_phone_config=dev0:fxs,dev1:fxs
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] PID hash table entries: 512 (order: 9, 2048 bytes)
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] Console: colour dummy device 80x30
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] Memory: 128MB 0MB 0MB 0MB = 128MB total
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] Memory: 125952KB available (3356K code, 255K data, 100K init)
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] SLUB: Genslabs=22, HWalign=32, Order=0-1, MinObjects=4, CPUs=1, Nodes=1
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.000000] Calibrating delay loop... 794.62 BogoMIPS (lpj=3973120)
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] Mount-cache hash table entries: 512
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] CPU: Testing write buffer coherency: ok
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] NET: Registered protocol family 16
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] 
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] CPU Interface
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] -------------
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] SDRAM_CS0 ....base 00000000, size 128MB 
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] SDRAM_CS1 ....disable
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] SDRAM_CS2 ....disable
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] SDRAM_CS3 ....disable
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] PEX0_MEM ....base e8000000, size 128MB 
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] PEX0_IO ....base f2000000, size   1MB 
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] INTER_REGS ....base f1000000, size   1MB 
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] NFLASH_CS ....base fa000000, size   2MB 
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] SPI_CS ....base f4000000, size  16MB 
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] BOOT_ROM_CS ....no such
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] DEV_BOOTCS ....no such
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] CRYPT_ENG ....base f0000000, size   2MB 
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] 
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000]   Marvell Development Board (LSP Version KW_LSP_4.2.7_patch2)-- RD-88F6192A-NAS  Soc: 88F6192 A0 LE
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] 
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000]  Detected Tclk 166666667 and SysClk 200000000 
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] MV Buttons Device Load
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.230000] Marvell USB EHCI Host controller #0: c0511200
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.730000] PEX0 interface detected no Link.
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.730000] PCI: bus0: Fast back to back transfers enabled
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.730000] SCSI subsystem initialized
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.730000] usbcore: registered new interface driver usbfs
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.730000] usbcore: registered new interface driver hub
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.730000] usbcore: registered new device driver usb
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.730000] NET: Registered protocol family 2
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.740000] Time: kw_clocksource clocksource has been installed.
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.830000] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.830000] TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.830000] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.830000] TCP: Hash tables configured (established 4096 bind 4096)
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.830000] TCP reno registered
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.860000] RTC registered
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.860000] Use the XOR engines (acceleration) for enhancing the following functions:
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.860000]   o RAID 5 Xor calculation
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.860000]   o kernel memcpy
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.860000]   o kenrel memzero
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.860000]   o copy user to/from kernel buffers
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.860000] Number of XOR engines to use: 4
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.860000] cesadev_init(c000c908)
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.860000] mvCesaInit: sessions=640, queue=64, pSram=f0000000
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.860000] Warning: TS unit is powered off.
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.880000] Starting Selective Mirror Daemon...
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.880000] /proc/s_mirror created !!!!!!!!!!!!!!!!!!!
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.880000] squashfs: version 3.3 (2007/10/31) Phillip Lougher
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.880000] squashfs: LZMA suppport for slax.org by jro
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.880000] io scheduler noop registered
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.880000] io scheduler anticipatory registered (default)
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.880000] io scheduler deadline registered
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.880000] io scheduler cfq registered
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.900000] Serial: 8250/16550 driver $Revision: 1.90 $ 4 ports, IRQ sharing disabled
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.900000] serial8250.0: ttyS0 at MMIO 0xf1012000 (irq = 33) is a 16550A
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.910000] serial8250.0: ttyS1 at MMIO 0xf1012100 (irq = 34) is a 16550A
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.920000] Loading Marvell Ethernet Driver:
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.920000]   o Cached descriptors in DRAM
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.930000]   o DRAM SW cache-coherency
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.930000]   o Single RX Queue support - ETH_DEF_RXQ=0
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.940000]   o Single TX Queue support - ETH_DEF_TXQ=0
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.940000]   o TCP segmentation offload enabled
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.950000]   o Receive checksum offload enabled
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.950000]   o Transmit checksum offload enabled
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.960000]   o Network Fast Processing (Routing) supported
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.960000]   o Driver ERROR statistics enabled
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.970000]   o Driver INFO statistics enabled
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.970000]   o Proc tool API enabled
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.980000]   o Rx descripors: q0=128
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.980000]   o Tx descripors: q0=532
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.980000]   o Loading network interface(s):
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.990000]     o eth0, ifindex = 1, GbE port = 0
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.990000] 
+Aug 27 12:17:18 DSS-NC1 kernel: [    0.990000] Warning: Giga 1 is Powered Off
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.000000] 
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.000000] mvFpRuleDb (c7d67000): 1024 entries, 4096 bytes
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.010000] Intel(R) PRO/1000 Network Driver - version 7.3.20-k2-NAPI
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.010000] Copyright (c) 1999-2006 Intel Corporation.
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.020000] e100: Intel(R) PRO/100 Network Driver, 3.5.17-k4-NAPI
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.030000] e100: Copyright(c) 1999-2006 Intel Corporation
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.030000] Integrated Sata device found
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.060000] scsi0 : Marvell SCSI to SATA adapter
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.060000] scsi1 : Marvell SCSI to SATA adapter
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.580000] scsi 1:0:0:0: Direct-Access     Hitachi  HDT721025SLA380  STBO PQ: 0 ANSI: 5
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.590000] scsi 1:0:1:0: Direct-Access     Hitachi  HDT721025SLA380  STBO PQ: 0 ANSI: 5
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.600000] scsi 1:0:2:0: CD-ROM            HL-DT-ST DVDRAM GH50N     T103 PQ: 0 ANSI: 0
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.610000] sd 1:0:0:0: [sda] 488397168 512-byte hardware sectors (250059 MB)
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.620000] sd 1:0:0:0: [sda] Write Protect is off
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.630000] sd 1:0:0:0: [sda] Mode Sense: 23 00 10 00
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.630000] sd 1:0:0:0: [sda] Write cache: enabled, read cache: enabled, supports DPO and FUA
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.640000] sd 1:0:0:0: [sda] 488397168 512-byte hardware sectors (250059 MB)
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.640000] sd 1:0:0:0: [sda] Write Protect is off
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.650000] sd 1:0:0:0: [sda] Mode Sense: 23 00 10 00
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.650000] sd 1:0:0:0: [sda] Write cache: enabled, read cache: enabled, supports DPO and FUA
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.660000]  sda: sda1 sda2 sda3
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.690000] sd 1:0:0:0: [sda] Attached SCSI disk
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.690000] sd 1:0:1:0: [sdb] 488397168 512-byte hardware sectors (250059 MB)
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.700000] sd 1:0:1:0: [sdb] Write Protect is off
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.710000] sd 1:0:1:0: [sdb] Mode Sense: 23 00 10 00
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.710000] sd 1:0:1:0: [sdb] Write cache: enabled, read cache: enabled, supports DPO and FUA
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.720000] sd 1:0:1:0: [sdb] 488397168 512-byte hardware sectors (250059 MB)
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.720000] sd 1:0:1:0: [sdb] Write Protect is off
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.730000] sd 1:0:1:0: [sdb] Mode Sense: 23 00 10 00
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.730000] sd 1:0:1:0: [sdb] Write cache: enabled, read cache: enabled, supports DPO and FUA
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.740000]  sdb: sdb1 sdb2 sdb3
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.770000] sd 1:0:1:0: [sdb] Attached SCSI disk
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.810000] sr0: scsi3-mmc drive: 48x/48x writer dvd-ram cd/rw xa/form2 cdda tray
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.820000] Uniform CD-ROM driver Revision: 3.20
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.820000] sr 1:0:2:0: Attached scsi CD-ROM sr0
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.820000] sd 1:0:0:0: Attached scsi generic sg0 type 0
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.830000] sd 1:0:1:0: Attached scsi generic sg1 type 0
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.830000] sr 1:0:2:0: Attached scsi generic sg2 type 5
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.840000] NAND device: Manufacturer ID: 0x20, Chip ID: 0xf1 (ST Micro NAND 128MiB 3,3V 8-bit)
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.850000] nand_bbm_init: Init nand bad block information...
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.850000] Loading nand bad block info(07800000+00020000)...
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.910000] nand_bbm_info_load: bbm->magic = 8192a5a6
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.910000] nand_bbm_info_load: nand_bbm_info_load] bb_count (0, 0)
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.920000] nand_bbm_info_load: nand_bbm_info_load] [0] maps(2f8, 3ff)
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.930000] nand_bbm_info_load: ^I^I rindex = 3ff
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.930000] nand_bbm_info_load: nand_bbm_info_load] bb_count (1, 0)
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.940000] nand_bbm_info_load: Loading nand bad block info...ok
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.940000] 4 cmdlinepart partitions found on MTD device nand_mtd
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.950000] Using command line partition definition
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.950000] Creating 4 MTD partitions on "nand_mtd":
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.960000] 0x00000000-0x000c0000 : "uboot"
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.960000] 0x00100000-0x00500000 : "kernel"
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.970000] 0x00500000-0x01000000 : "rootfs"
+Aug 27 12:17:18 DSS-NC1 kernel: [    1.980000] 0x01000000-0x06000000 : "data"
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.030000] nand_block_isbad] NAND_BBM_ADJUST(0x05f00000) -> 0x07fe0000
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.030000] ehci_marvell ehci_marvell.70059: Marvell Orion EHCI
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.040000] ehci_marvell ehci_marvell.70059: new USB bus registered, assigned bus number 1
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.080000] ehci_marvell ehci_marvell.70059: irq 19, io base 0xf1050100
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.100000] ehci_marvell ehci_marvell.70059: USB 2.0 started, EHCI 1.00, driver 10 Dec 2004
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.100000] usb usb1: configuration #1 chosen from 1 choice
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.110000] hub 1-0:1.0: USB hub found
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.110000] hub 1-0:1.0: 1 port detected
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.230000] Initializing USB Mass Storage driver...
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.510000] usb 1-1: new high speed USB device using ehci_marvell and address 2
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.660000] usb 1-1: configuration #1 chosen from 1 choice
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.660000] hub 1-1:1.0: USB hub found
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.670000] hub 1-1:1.0: 4 ports detected
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.940000] usbcore: registered new interface driver usb-storage
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.940000] USB Mass Storage support registered.
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.950000] mice: PS/2 mouse device common for all mice
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.950000] i2c /dev entries driver
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.950000] md: linear personality registered for level -1
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.960000] md: raid0 personality registered for level 0
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.970000] md: raid1 personality registered for level 1
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.970000] device-mapper: ioctl: 4.11.0-ioctl (2006-10-12) initialised: dm-devel@redhat.com
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.980000] sdhci: Secure Digital Host Controller Interface driver
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.990000] sdhci: Copyright(c) Pierre Ossman
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.990000] TCP cubic registered
+Aug 27 12:17:18 DSS-NC1 kernel: [    2.990000] NET: Registered protocol family 1
+Aug 27 12:17:18 DSS-NC1 kernel: [    3.000000] NET: Registered protocol family 17
+Aug 27 12:17:18 DSS-NC1 kernel: [    3.530000] eth0: link down
+Aug 27 12:17:18 DSS-NC1 kernel: [    3.530000] eth0: started
+Aug 27 12:17:18 DSS-NC1 kernel: [    3.860000] usb 1-1.4: new high speed USB device using ehci_marvell and address 3
+Aug 27 12:17:18 DSS-NC1 kernel: [    3.980000] usb 1-1.4: configuration #1 chosen from 1 choice
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.550000] IP-Config: Guessing netmask 255.0.0.0
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.550000] IP-Config: Complete:
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.550000]       device=eth0, addr=10.177.193.59, mask=255.0.0.0, gw=255.255.255.255,
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.560000]      host=DB88FXX81, domain=, nis-domain=(none),
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.570000]      bootserver=10.177.193.60, rootserver=10.177.193.60, rootpath=
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.570000] md: Autodetecting RAID arrays.
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.650000] md: autorun ...
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.660000] md: considering sdb3 ...
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.660000] md:  adding sdb3 ...
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.660000] md: sdb2 has different UUID to sdb3
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.670000] md: sdb1 has different UUID to sdb3
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.670000] md:  adding sda3 ...
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.680000] md: sda1 has different UUID to sdb3
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.680000] md: created md2
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.680000] md: bind<sda3>
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.690000] md: bind<sdb3>
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.690000] md: running: <sdb3><sda3>
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.690000] raid1: raid set md2 active with 2 out of 2 mirrors
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.700000] md: considering sdb2 ...
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.700000] md:  adding sdb2 ...
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.710000] md: sdb1 has different UUID to sdb2
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.710000] md: sda1 has different UUID to sdb2
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.720000] md: created md5
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.720000] md: bind<sdb2>
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.720000] md: running: <sdb2>
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.730000] md: considering sdb1 ...
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.730000] md:  adding sdb1 ...
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.730000] md:  adding sda1 ...
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.740000] md: created md1
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.740000] md: bind<sda1>
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.740000] md: bind<sdb1>
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.740000] md: running: <sdb1><sda1>
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.750000] raid1: raid set md1 active with 2 out of 2 mirrors
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.750000] md: ... autorun DONE.
+Aug 27 12:17:18 DSS-NC1 kernel: [    4.760000] Looking up port of RPC 100003/2 on 10.177.193.60
+Aug 27 12:17:18 DSS-NC1 kernel: [    6.670000] eth0: link up, full duplex, speed 1 Gbps
+Aug 27 12:17:18 DSS-NC1 kernel: [    9.760000] Looking up port of RPC 100005/1 on 10.177.193.60
+Aug 27 12:17:18 DSS-NC1 kernel: [    9.780000] VFS: Mounted root (nfs filesystem).
+Aug 27 12:17:18 DSS-NC1 kernel: [    9.780000] Freeing init memory: 100K
+Aug 27 12:19:01 DSS-NC1 kernel: [  418.010000] nfs: server 10.177.193.60 not responding, still trying
+Aug 27 12:19:04 DSS-NC1 kernel: [  421.000000] nfs: server 10.177.193.60 OK
+Aug 27 12:19:20 DSS-NC1 exiting on signal 15

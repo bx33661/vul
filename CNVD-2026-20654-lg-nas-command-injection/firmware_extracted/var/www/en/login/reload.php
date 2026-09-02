@@ -1,0 +1,1 @@
+<html><head><title>LG NAS</title><script type="text/javascript">location.reload(true);</script></head><body></body></html>

@@ -1,0 +1,9 @@
+439811875dca3d5b94df8be8be9d53b7  usr/share/doc/libkadm55/changelog.Debian.gz
+1d592b61381f4c221776d8e32cf81638  usr/share/doc/libkadm55/copyright
+fbeff61fdc2688060fd7f5ade73648f5  usr/share/doc/libkadm55/README.Debian.gz
+d3e8c052366e1db1e86eb1318bc39851  usr/share/doc/libkadm55/NEWS.Debian.gz
+19f078474fcb67628f00a481a31f5dbe  usr/share/lintian/overrides/libkadm55
+8f6bf16d42b7de80702e86d56cd8f711  usr/lib/libgssrpc.so.4.0
+51be9bdf5e7a8ec884164b79b9c0d403  usr/lib/libkadm5clnt.so.5.1
+6b9df4583fa455b35c30971b58c4e7b7  usr/lib/libkdb5.so.4.0
+6890507455fbfcf0a54ae7a4d9c7b7f4  usr/lib/libkadm5srv.so.5.1

@@ -1,0 +1,182 @@
+#!/bin/sh
+#========================================================
+# Fan 
+#========================================================
+# Mode		Temp Range	DC Level	PWM
+# Silent	< 49C		6V		24
+# Normal	49~58C		7V		30
+# Cooling 	> 58C		9V		84
+# TEMP SHUTDOWN : 67
+
+TLOW=49
+THIGH=58
+TERROR=67
+
+RPM_SILENT=1100
+RPM_NORM=1350
+RPM_COOL=1700
+
+PWM_SILENT=36
+PWM_NORM=42
+PWM_COOL=96
+
+PREV_MODE=
+CUR_MODE=
+FAN_STATUS="/var/run/fan_status"
+FAN_CONF="/etc/nas/fan.conf"
+#========================================================
+# nas-mond 
+#========================================================
+
+LIBDIR=/usr/lib/nas
+. $LIBDIR/common.sh
+
+FUNC="NAS-MOND"
+INTERVAL=300  # sec
+
+hdd_bled() {
+  local hddcnt=0
+  for DISK in "1:0:0:0" "1:0:1:0"
+  do
+    HDD=$(find /sys/block/sd* -name device |xargs ls -l |grep "$DISK")
+    if [ -z "$HDD" ]; then
+      led_set $((LED_HDD1_BLUE+hddcnt)) on
+    fi
+    hddcnt=$((hddcnt+1))
+  done
+}
+
+
+Check_HDD()
+{
+  # Step 1. Check RAID Status
+  grep faulty /proc/mdstat > /dev/null 2>&1
+  sRetFaulty=$?
+  if [ "$sRetFaulty" = 0 ] ; then
+    log_func $FUNC "found faulty"
+    nas-common led $LED_HDD1_RED on
+    nas-common led $LED_HDD2_RED on
+  fi
+
+}
+
+Check_Fan() {
+
+  RPM=$(iomain -r fan | cut -d" " -f 4)
+  TEMP=$(iomain -r temp | cut -d" " -f 3)
+
+# Step 1. Check Current Fan RPM & Temperature
+  if [ ! -e "$FAN_CONF" ]; then
+    touch $FAN_CONF
+    echo "SILENT  24" >>$FAN_CONF
+    echo "NORM    34" >>$FAN_CONF
+    echo "COOL    84" >>$FAN_CONF
+  fi
+
+  if [ "$RPM" -eq "0" ]; then
+    log_func $FUNC "Fan RPM is Zero"
+  fi
+
+  if [ "$TEMP" -gt "$TERROR" ]; then
+    log_func $FUNC "Too High Temperature"
+    lcd_msg "High Temperature"
+    sleep 5
+    nas-system shutdown
+  fi
+# Step 2. Feedback of Fan RPM & Set
+
+  if [ $TEMP -gt $THIGH ]; then
+    PWM=$(get_conf_blank COOL $FAN_CONF)
+    RPM_MIN=$RPM_COOL
+    RPM_MODE="RPM_COOL"
+    PWM_MAX=$PWM_COOL
+  elif [ $TEMP -lt $TLOW ]; then
+    PWM=$(get_conf_blank SILENT $FAN_CONF)
+    RPM_MIN=$RPM_SILENT
+    RPM_MODE="RPM_SILENT"
+    PWM_MAX=$PWM_SILENT
+  else
+    PWM=$(get_conf_blank NORM $FAN_CONF)
+    RPM_MIN=$RPM_NORM
+    RPM_MODE="RPM_NORMAL"
+    PWM_MAX=$PWM_NORM
+  fi
+  echo "$RPM_MODE" > $FAN_STATUS
+
+  CUR_MODE=$PWM
+  if [ "$PREV_MODE" != "$CUR_MODE" ]; then
+    log_func $FUNC fan speed change to $PWM
+    iomain -w "$PWM"
+    sleep 6
+    adjust_fan 
+  fi
+  PREV_MODE=$PWM
+}
+
+adjust_fan() {
+
+  RPM=$(iomain -r fan | cut -d" " -f 4)
+  while [ "$PWM" -lt "$PWM_MAX" ] && [ "$RPM" -lt "$RPM_MIN" ];
+  do
+  if [ "$RPM" -lt "$RPM_MIN" ]; then
+    PWM=$((PWM+2))
+    iomain -w "$PWM"
+    sleep 5
+    RPM=$(iomain -r fan | cut -d" " -f 4)
+  fi
+  done
+
+  if [ "$TEMP" -gt "$THIGH" ]; then
+    replace_conf_blank COOL $PWM $FAN_CONF
+  elif [ "$TEMP" -lt "$TLOW" ]; then
+    replace_conf_blank SILENT $PWM $FAN_CONF
+  else
+    replace_conf_blank NORM $PWM $FAN_CONF
+  fi
+}
+
+# NAS-MOND MAIN
+#
+# $1 : (empty) run all, (fan,led) function only
+#
+main() {
+
+  log_func $FUNC $1 Start
+  # Check Blue HDD LED
+  hdd_bled
+  if [ "$1" != "led" ]; then
+    PWM=$(get_conf_blank COOL $FAN_CONF)
+    iomain -w $PWM
+    sleep 3
+  fi
+
+  while true; do
+    if [ -z "$1" ]; then
+      Check_Fan
+      Check_HDD
+    elif [ "$1" = "fan" ]; then
+      Check_Fan
+    elif [ "$1" = "led" ]; then
+      Check_HDD
+    fi
+  
+    broadcast ip
+
+    sleep $INTERVAL
+  done
+}
+
+case "$1" in
+  "fan")
+    main fan
+    ;;
+  "led")
+    main led
+    ;;
+  "main")
+    main
+    ;;
+  *)
+    main
+    ;;
+esac

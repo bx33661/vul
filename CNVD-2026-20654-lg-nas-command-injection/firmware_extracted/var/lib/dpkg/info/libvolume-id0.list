@@ -1,0 +1,11 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libvolume-id0
+/usr/share/doc/libvolume-id0/changelog.gz
+/usr/share/doc/libvolume-id0/copyright
+/usr/share/doc/libvolume-id0/changelog.Debian.gz
+/lib
+/lib/libvolume_id.so.0.85.0
+/lib/libvolume_id.so.0

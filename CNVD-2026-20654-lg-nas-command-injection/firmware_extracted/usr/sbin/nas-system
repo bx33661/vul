@@ -1,0 +1,81 @@
+#!/bin/bash
+
+#===============================================================================
+# nas-system 
+#===============================================================================
+
+LIBDIR=$PREFIX/usr/lib/nas
+. $LIBDIR/system.sh
+
+case "$1" in
+  "language")
+    [ -z "$2" ] && usage "$1 CODEPAGE"
+    set_language $2
+    ;;
+  "time")
+    [ -z "$2" ] && usage "$1 TIME (DD/MM/YY HH:MM:SS)"
+    set_time $2 $3    
+    ;;
+  "timezone")
+    [ -z "$2" ] && usage "$1 TIMEZONE"
+    set_timezone $2    
+    ;;
+  "ntp")
+    [ $# -lt 4 ] && usage "$1 ENABLE NTP_SERVER UPDATE"
+    set_ntp $2 $3 $4    
+    ;;
+  "sync_ntp")
+    sync_ntp     
+    ;;
+  "schedule_backup")
+    [ $# -lt 4 ] && usage "$1 SCHEDULE BACKUP"
+    schedule_backup $2 $3 $4
+    ;;
+  "sleep")
+    $2_sleep
+    ;;
+  "hibernation")
+    set_hibernation $2 $3
+    ;;
+  "ups")
+    set_ups $2 $3 $4
+    ;;
+  "schedule_on_off")
+    shift
+    set_schedule_power $@ 
+    ;;
+  "pre_schedule_power")
+    pre_schedule_power
+    ;;
+  "restart")
+    system_restart
+    ;;
+  "shutdown")
+    system_shutdown
+    ;;
+  "email_alert")
+    [ -z "$2" ] && usage "$1 {on|off|test|user}"
+    email_alert $2 $3 $4 $5
+    ;;
+  "check_icon")
+    check_icon
+    ;;
+  "start_hibernation")
+    shift 
+    start_hibernation $@
+    ;;
+  "set")
+    [ $# -lt 3 ] && usage "$1 PROPERTY VALUE"
+    PROPERTY=$2
+    shift 2
+    system_set $PROPERTY $@
+    ;;
+  "get")
+    [ -z "$2" ] && usage "$1 PROPERTY"
+    system_get $2
+    ;;
+  *)
+    usage "{time|timezone|ntp|sync_ntp}" 
+    ;;
+esac
+

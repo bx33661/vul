@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#==========================================
+# nas-micom
+#==========================================
+
+LIBDIR=/usr/lib/nas
+. $LIBDIR/micom.sh
+
+case "$1" in
+	"INFO_FAN")
+	info_fan	
+	;;
+	"INFO_IP")
+	info_ip	
+	;;
+	"INFO_MICOM")
+	info_micom
+	;;
+	"INFO_USAGE")
+	hdd_percent	
+	;;
+	"INFO_TIME")
+	set_date
+	;;
+	"INFO_TEMP")
+	set_temp
+	;;
+	"INFO_FWVER")
+	set_fwver
+	;;
+	"INFO_FSTAB")
+	set_fstab	
+	;;
+	*)
+	usage "{get}"
+	;;
+esac

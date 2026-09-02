@@ -1,0 +1,46 @@
+#!/bin/sh
+#===============================================================================
+# SSS Firmware
+#===============================================================================
+# File      : dyndns
+# Who     : JWB
+# Description   : This script starts / stops ftp server
+#
+# Copyright   : LG ELECTRONICS INC.
+# history     : 2010.02.19 edited last
+#===============================================================================
+cd /etc/init.d/
+
+check_status()
+{
+  if [ $?=0 ]
+  then
+    echo "OK"
+  else
+    echo "FAILED"
+  fi
+}
+case "$1" in
+  start)
+    echo -n "Starting DynDNS Daemon"
+    echo
+    start-stop-daemon -S -q -x /usr/sbin/inadyn
+    check_status
+    ;;
+  stop)
+    echo -n "Stopping DynDNS Daemon"
+    echo
+    start-stop-daemon -K -q -x /usr/sbin/inadyn
+    ;;
+  restart)
+    echo -n "Restarting DynDNS Daemon"
+    echo
+    start-stop-daemon -K -q -x /usr/sbin/inadyn
+    start-stop-daemon -S -q -x /usr/sbin/inadyn
+    check_status
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart}"
+    ;;
+esac
+

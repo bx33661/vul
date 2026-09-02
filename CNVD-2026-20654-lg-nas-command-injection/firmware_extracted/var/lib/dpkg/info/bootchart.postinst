@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installinit
+if [ -x "/etc/init.d/bootchart" ]; then
+	update-rc.d bootchart start 99 1 2 3 4 5 . >/dev/null || exit $?
+fi
+# End automatically added section

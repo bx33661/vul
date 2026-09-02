@@ -1,0 +1,16 @@
+<div id="mst_login_block1">
+    <div id="mst_login_block2">
+        <div id="mst_login_block2_head">
+            <div id="mst_login_server_name">[[server_name]]</div>
+            <div class="mst_logo"></div>
+        </div>
+        <form id="mst_login_form">
+            <div id="mst_login_block2_body">
+                [[LOGIN_PASSWORD]]
+                    <input type="password" id="mstweb_page_login_password" name="mstweb_page_login_password" size="20" maxlength="8" />
+                    <input id="mst_login_btn" type="submit" value="[[LOGIN_LOGIN]]" />
+                <div id="mst_state_login" class="mst_state">[[lose_session]]</div>
+            </div>
+        </form>
+    </div>
+</div>

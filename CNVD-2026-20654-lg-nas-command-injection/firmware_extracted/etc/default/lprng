@@ -1,0 +1,2 @@
+#Start the LPRng daemon lpd? Yes or No
+START_LPD=yes

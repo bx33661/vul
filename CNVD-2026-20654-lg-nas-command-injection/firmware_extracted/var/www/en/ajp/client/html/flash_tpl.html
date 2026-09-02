@@ -1,0 +1,208 @@
+<?php
+	if ( !isset($_SESSION["AJXP_USER"]) )
+	{
+		session_unset();
+		session_destroy();
+		$_SESSION = array();
+		
+		echo "<html>\n";
+		echo "<head>\n";
+		echo "<meta http-equiv='cache-control' content='no-cache' />\n";
+		echo "<meta http-equiv='pragma' content='no-cache' />\n";
+		echo "<script language=\"javascript\">\n";
+		echo "alert(\"Session expired\\nPlease login again!\");\n";
+		echo "self.close();\n";
+		echo "parent.close();\n";
+		echo "</script>\n";
+		echo "</head>\n";
+		echo "</html>\n";
+		exit(1);
+	}
+	
+    $UploadMaxSize = Utils::convertBytes(ini_get('upload_max_filesize'));
+    $confMaxSize = ConfService::getConf("UPLOAD_MAX_FILE");
+    if($confMaxSize != 0 &&  $confMaxSize < $UploadMaxSize) $UploadMaxSize = $confMaxSize;
+    $confTotalSize = ConfService::getConf("UPLOAD_MAX_TOTAL");
+    $confTotalNumber = ConfService::getConf("UPLOAD_MAX_NUMBER");
+    
+	$FlashVar = '&fileTypes=*.*&fileTypeDescription=All%20files&totalUploadSize='.$confTotalSize.'&fileSizeLimit='.$UploadMaxSize.'&maxFileNumber='.$confTotalNumber;
+?>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
+</head>
+<body bgcolor="ffffff" onload="setReady();" style="overflow:hidden; padding: 0px; padding-left: 0px; margin: 0px; background-image: url('<?php print(CLIENT_RESOURCES_FOLDER);?>/images/strip.png');">
+<script language="javascript" type="text/javascript">
+var jsReady = false;
+function isReady(){
+	return jsReady;
+}
+function setReady(){
+	jsReady = true;
+}
+var messages = 
+{
+	MaxFileSizeLimit:252,
+	MaxFileCountLimit:502,
+	MaxFileSize:211, 
+	HTTPError:253, 
+	IOError:514, 
+	SecurityError:255,
+	Uploaded:256,
+	Remove:257,
+	Add:214,
+	Clear:216,
+	Upload:77,
+	Cancel:232,
+	TotalFile:258,
+	SizeText:259,
+	RemainTimeText: 507,
+	TransferRateText: 508,
+	existingFilesFound:262, 
+	overwrite:263, 
+	skip:264, 
+	rename:6, 
+	UploadLimitsTitle:281, 
+	UploadLimitsSizePerFile:282, 
+	UploadLimitsTotalSize:283, 
+	UploadLimitsFilesNumber:284,
+	
+	UploaderOptionsLabel:312,
+	UploaderLimitLabel:281,
+	AutoUploadLabel:311,
+	CloseText:86,
+	OptionsText:310,
+	ErrorText:506,
+	FileSizeCheckError:513
+};
+
+/*
+// KHJ20090915 base64_encode POST에서 +가 공백으로 바뀌는 문제 해결을 위해 rawurlencode방식을 사용할 수도 있음
+function rawurlencode (str) {
+    // http://kevin.vanzonneveld.net
+    // +   original by: Brett Zamir (http://brett-zamir.me)
+    // +      input by: travc
+    // +      input by: Brett Zamir (http://brett-zamir.me)
+    // +   bugfixed by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+    // +      input by: Michael Grier
+    // +   bugfixed by: Brett Zamir (http://brett-zamir.me)
+    // +      input by: Ratheous
+    // +      reimplemented by: Brett Zamir (http://brett-zamir.me)
+    // %          note 1: This reflects PHP 5.3/6.0+ behavior
+    // *     example 1: rawurlencode('Kevin van Zonneveld!');
+    // *     returns 1: 'Kevin%20van%20Zonneveld%21'
+    // *     example 2: rawurlencode('http://kevin.vanzonneveld.net/');
+    // *     returns 2: 'http%3A%2F%2Fkevin.vanzonneveld.net%2F'
+    // *     example 3: rawurlencode('http://www.google.nl/search?q=php.js&ie=utf-8&oe=utf-8&aq=t&rls=com.ubuntu:en-US:unofficial&client=firefox-a');
+    // *     returns 3: 'http%3A%2F%2Fwww.google.nl%2Fsearch%3Fq%3Dphp.js%26ie%3Dutf-8%26oe%3Dutf-8%26aq%3Dt%26rls%3Dcom.ubuntu%3Aen-US%3Aunofficial%26client%3Dfirefox-a'
+ 
+    var hexStr = function (dec) {
+        return '%' + dec.toString(16).toUpperCase();
+    };
+ 
+    var ret = '',
+            unreserved = /[\w.~-]/; // A-Za-z0-9_.~-
+    str = (str+'').toString();
+ 
+    for (var i = 0, dl = str.length; i < dl; i++) {
+        var ch = str.charAt(i);
+        if (unreserved.test(ch)) {
+            ret += ch;
+        }
+        else {
+            var code = str.charCodeAt(i);
+            // Reserved assumed to be in UTF-8, as in PHP
+            if (code < 128) { // 1 byte
+                ret += hexStr(code);
+            }
+            else if (code >= 128 && code < 2048) { // 2 bytes
+                ret += hexStr((code >> 6) | 0xC0);
+                ret += hexStr((code & 0x3F) | 0x80);
+            }
+            else if (code >= 2048 && code < 65536) { // 3 bytes
+                ret += hexStr((code >> 12) | 0xE0);
+                ret += hexStr(((code >> 6) & 0x3F) | 0x80);
+                ret += hexStr((code & 0x3F) | 0x80);
+            }
+            else if (code >= 65536) { // 4 bytes
+                ret += hexStr((code >> 18) | 0xF0);
+                ret += hexStr(((code >> 12) & 0x3F) | 0x80);
+                ret += hexStr(((code >> 6) & 0x3F) | 0x80);
+                ret += hexStr((code & 0x3F) | 0x80);
+            }
+        }
+    }
+    return ret;
+}
+*/
+
+function triggerFlashEvent(){
+	if(arguments.length < 1) return;
+	var eventType = arguments[0];
+	switch(eventType){
+		case "currentFiles":
+			return parent.ajaxplorer.filesList.getFileNames("__AJXP_SEP__");
+			break;
+		case "currentFolder":
+			var folder = parent.base64_encode(parent.ajaxplorer.filesList.getCurrentRep());
+			return folder;
+			break;	
+		case "uploadComplete":
+			parent.ajaxplorer.filesList.reload();
+			break;
+		case "getMessage":
+			var messageId = arguments[1];
+			if(parent && parent.window.MessageHash && messages){
+				return parent.window.MessageHash[messages[messageId]];
+			}
+			return messageId;			
+			break;
+		case "closeModal":
+			parent.hideLightBox(true);
+			break;
+		case "getProperty":
+			var pName = arguments[1];
+			var value = parent.getAjxpCookie(pName);
+			if(!value) return null;
+			return (value == "true"?true:false);
+			break;
+		case "storeProperty":
+			var pName = arguments[1];
+			var pValue = arguments[2];
+			return parent.setAjxpCookie(pName, pValue);
+			break;
+		case "CloseWindow":
+			parent.hideLightBox(true);
+			parent.ajaxplorer.alertMessage(arguments[1], "FALSE");
+			parent.close();
+			break;
+		default:
+		break;
+	}
+}
+
+
+var url = '<?php print($_SERVER['SCRIPT_NAME']);?>?get_action=upload&ajxp_sessid=<?php echo session_id(); ?>';
+/*
+if(parent.ajaxplorer){
+	url = url+'&dir='+escape(parent.ajaxplorer.filesList.getCurrentRep());
+}
+*/
+
+var FlashObject = "<?php print(CLIENT_RESOURCES_FOLDER);?>/flash/FlashFileUpload.swf";
+var FlashVarValue = "<?php echo $FlashVar; ?>" + "&uploadPage=" + escape(url) + "<?php echo (strlen(HTTPS_POLICY_FILE) > 0 ? "&policyFile=".HTTPS_POLICY_FILE : ""); ?>";
+
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="' + window.location.protocol + '//fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="450" height="360" id="fileUpload" align="middle">\
+<param name="allowScriptAccess" value="sameDomain" /> \
+<param name="movie" value="'+FlashObject+'" /> \
+<param name="quality" value="high" /> \
+<param name="wmode" value="opaque"> \
+<param name="FlashVars" value="' + FlashVarValue +'">\
+<embed src="'+FlashObject+'" \
+FlashVars="' + FlashVarValue + '" \
+quality="high" wmode="transparent" width="450" height="360" name="fileUpload" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"\
+pluginspage="http://www.macromedia.com/go/getflashplayer" />\
+</object>');
+</script>
+</body>
+</html>

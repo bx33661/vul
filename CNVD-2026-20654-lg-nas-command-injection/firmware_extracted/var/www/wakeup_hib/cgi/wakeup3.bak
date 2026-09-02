@@ -1,0 +1,68 @@
+#!/bin/sh
+eval `/var/www/cgi/proccgi.sh $*`
+echo Content-type: text/html
+echo ""
+MD5_pw=`echo $FORM_pw | md5sum |cut -d' ' -f1`
+_pw=$(cat /var/run/admin_password)
+
+if [ "$MD5_pw" == "" ]
+then
+/bin/cat << EOM1
+  <HTML>
+  <HEAD>
+  <TITLE>Wakeup</TITLE>
+  </HEAD>
+  <BODY bgcolor="#cccccc" text="#000000">
+  p
+  <HR SIZE=5>
+  <H2><font color=red>Wrong Password</font></H2>
+  <H2>Input admin password for Wakeup</H2>
+  <HR SIZE=1>
+  <form action="/cgi/wakeup3" method="post">
+    <input name="pw" type="password">
+    <input type="submit" value="Wakeup">
+  </form>
+  <HR SIZE=1>
+  </BODY>
+  </HTML>
+EOM1
+else
+
+  if [ "$MD5_pw" == "$_pw" ] 
+  then
+/bin/cat << EOM2
+    <HTML>
+    <HEAD>
+    <TITLE>Wakeup</TITLE>
+    </HEAD>
+    <BODY bgcolor="#cccccc" text="#000000">
+    <HR SIZE=5>
+    <H2>The System will start in a minute</H2>
+    <H2>Please re-connect...</H2>
+    <HR SIZE=1>
+    </BODY>
+    </HTML>
+EOM2
+/hib_reboot.sh
+  else
+/bin/cat << EOM3
+    <HTML>
+    <HEAD>
+    <TITLE>Wakeup</TITLE>
+    </HEAD>
+    <BODY bgcolor="#cccccc" text="#000000">
+    <HR SIZE=5>
+    <H2><font color=red>Wrong Password </font></H2>
+    <H2>Input admin password for Wakeup</H2>
+    <HR SIZE=1>
+    <form action="/cgi/wakeup3" method="post">
+      <input name="pw" type="password">
+      <input type="submit" value="Wakeup">
+    </form>
+    <HR SIZE=1>
+    </BODY>
+    </HTML>
+EOM3
+  fi
+fi
+ 

@@ -1,0 +1,8 @@
+<tr name="bu_t_tr" id="[[TR_ID]]" onmouseover="list('bu_t', 'change_tr', this.id, 'over')" onmouseout="list('bu_t', 'change_tr', this.id, 'out')">
+	<td class="list_item_td_checkbox">
+		<input type="checkbox" name='bu_t_se' value='[[task_id]]' id='[[SE_ID]]' onclick="list('bu_t', 'view_update_btn')" />
+	</td>
+	<td class="mst_bu_t_list_item_td_folder" onmousedown="list('bu_t', 'change_tr', this.parentNode.id, 'down')">[[container_name]]</td>
+	<td class="mst_bu_t_list_item_td_state" onmousedown="list('bu_t', 'change_tr', this.parentNode.id, 'down')">[[state]]</td>
+	<td onmousedown="list('bu_t', 'change_tr', this.parentNode.id, 'down')">[[time]]</td>
+</tr>

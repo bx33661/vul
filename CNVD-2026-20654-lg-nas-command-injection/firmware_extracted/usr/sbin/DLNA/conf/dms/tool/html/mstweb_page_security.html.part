@@ -1,0 +1,124 @@
+<div is="mst_state_security" class="mst_state"></div>
+
+<table>
+<tr>
+	<td class="mst_sec_ad_block">
+		<fieldset>
+			<legend>[[SECURITY_DENY_LIST]]</legend>
+			<div class="legend_page">
+			<div class="mst_sec_ad_legend_block1">
+
+			<div class="icon_list_block">
+			<div class="icon_list_block_main">
+			<table>
+			<tr>
+			<td>
+			<input type="button" id="sec_d_btn_remove" value="[[SECURITY_BUTTON_DELETE]]" onclick="mstweb_page_security_remove(false)" />
+			</td>
+			</tr>
+			</table>
+			</div>
+			<div class="icon_list_block_sub">
+			<ul class="icon_list">
+			<li class="icon_item_reload" id="sec_d_btn_reload" onclick="mstweb_page_security_get_deny_list()" onmouseover="list('sec_d', 'change_btn', this.id, 'reload', 'over')" onmouseout="list('sec_d', 'change_btn', this.id, 'reload', 'out')" onmouseup="list('sec_d', 'change_btn', this.id, 'reload', 'up')" onmousedown="list('sec_d', 'change_btn', this.id, 'reload', 'down')" />
+			<li class="icon_item_padding" />
+			<li class="icon_item_allon" id="sec_d_btn_all" onclick="list('sec_d', 'change_all_tr', 'select')" onmouseover="list('sec_d', 'change_btn', this.id, 'allon', 'over')" onmouseout="list('sec_d', 'change_btn', this.id, 'allon', 'out')" onmouseup="list('sec_d', 'change_btn', this.id, 'allon', 'up')" onmousedown="list('sec_d', 'change_btn', this.id, 'allon', 'down')" />
+			<li class="icon_item_alloff" id="sec_d_btn_none" onclick="list('sec_d', 'change_all_tr', 'unselect')" onmouseover="list('sec_d', 'change_btn', this.id, 'alloff', 'over')" onmouseout="list('sec_d', 'change_btn', this.id, 'alloff', 'out')" onmouseup="list('sec_d', 'change_btn', this.id, 'alloff', 'up')" onmousedown="list('sec_d', 'change_btn', this.id, 'alloff', 'down')" />
+			</ul>
+			<div class="float_cancel"></div>
+			</div>
+			<div class="float_cancel"></div>
+			</div>
+
+			<div class="list_head">
+			<table class="list_head2">
+			<tr>
+			<td class="list_item_td_checkbox"></td>
+			<td class="mst_sec_ad_list_item_td_host">[[SECURITY_HOST]]</td>
+			<td>[[SECURITY_IP_MAC]]</td>
+			</tr>
+			</table>
+			</div>
+
+			<form id="mstweb_page_security_deny" name="mstweb_page_security_deny">
+			<div id="page_security_deny"></div>
+			</form>
+			</div>
+			</div>
+		</fieldset>
+		<div id="mst_sec_d_footnote">[[SECURITY_DENY_LIST_FOOTNOTE]]</div>
+	</td>
+
+	<td id="mst_sec_ad_move_block1">
+		<input id="sec_d_btn_to_allow" type="button" onclick="mstweb_page_security_to_allow()" value="[[SECURITY_BUTTON_PUBLIC]]" />
+		<input id="sec_a_btn_to_deny" type="button" onclick="mstweb_page_security_to_deny()" value="[[SECURITY_BUTTON_PRIVATE]]" />
+	</td>
+
+	<td class="mst_sec_ad_block">
+		<fieldset>
+			<legend>[[SECURITY_ALLOW_LIST]]</legend>
+			<div class="legend_page">
+
+			<div class="mst_sec_ad_legend_block1">
+			<div class="icon_list_block">
+			<div class="icon_list_block_main">
+			<table>
+			<tr>
+			<td>
+			<input type="button" id="sec_a_btn_remove" value="[[SECURITY_BUTTON_DELETE]]" onclick="mstweb_page_security_remove(true)" />
+			</td>
+			</tr>
+			</table>
+			</div>
+			<div class="icon_list_block_sub">
+			<ul class="icon_list">
+			<li class="icon_item_reload" id="sec_a_btn_reload" onclick="mstweb_page_security_get_allow_list()" onmouseover="list('sec_a', 'change_btn', this.id, 'reload', 'over')" onmouseout="list('sec_a', 'change_btn', this.id, 'reload', 'out')" onmousedown="list('sec_a', 'change_btn', this.id, 'reload', 'down')" onmouseup="list('sec_a', 'change_btn', this.id, 'reload', 'up')" />
+			<li class="icon_item_padding" />
+			<li class="icon_item_allon" id="sec_a_btn_all" onclick="list('sec_a', 'change_all_tr', 'select')" onmouseover="list('sec_a', 'change_btn', this.id, 'allon', 'over')" onmouseout="list('sec_a', 'change_btn', this.id, 'allon', 'out')" onmousedown="list('sec_a', 'change_btn', this.id, 'allon', 'down')" onmouseup="list('sec_a', 'change_btn', this.id, 'allon', 'up')" />
+			<li class="icon_item_alloff" id="sec_a_btn_none" onclick="list('sec_a', 'change_all_tr', 'unselect')" onmouseover="list('sec_a', 'change_btn', this.id, 'alloff', 'over')" onmouseout="list('sec_a', 'change_btn', this.id, 'alloff', 'out')" onmousedown="list('sec_a', 'change_btn', this.id, 'alloff', 'down')" onmouseup="list('sec_a', 'change_btn', this.id, 'alloff', 'up')" />
+			</ul>
+			<div class="float_cancel"></div>
+			</div>
+			<div class="float_cancel"></div>
+			</div>
+
+			<div class="list_head">
+			<table class="list_head2">
+			<tr>
+			<td class="list_item_td_checkbox"></td>
+			<td class="mst_sec_ad_list_item_td_host">[[SECURITY_HOST]]</td>
+			<td>[[SECURITY_IP_MAC]]</td>
+			</tr>
+			</table>
+			</div>
+
+			<form id="mstweb_page_security_allow" name="mstweb_page_security_allow">
+			<div id="page_security_allow"></div>
+			</form>
+			</div>
+			</div>
+		</fieldset>
+		<div id="mst_sec_a_footnote">[[SECURITY_ALLOW_LIST_FOOTNOTE]]</div>
+		<div id="mst_sec_setting_security_dialog">
+			<input type="checkbox" id="mst_sec_setting_security_dialog_visibility" onclick="mstweb_page_security_change_security_dialog_visibility()" [[SECURITY_CHECK_SHOW_SECURITY_DIALOG]] />
+			<span>[[SECURITY_SHOW_SECURITY_DIALOG]]</span>
+		</div>
+	</td>
+</tr>
+</table>
+
+<table class="mst_sec_default_block1" id="mst_sec_default">
+<tr>
+	<td>
+		<fieldset>
+			<legend>[[SECURITY_DEFAULT]]</legend>
+			<div class="legend_page">
+				[[SECURITY_DEFAULT_FOOTER_MESSAGE]]
+				<form id="mstweb_page_security_default">
+					<div id='page_security_default'></div>
+				</form>
+			</div>
+		</fieldset>
+	</td>
+</tr>
+</table>

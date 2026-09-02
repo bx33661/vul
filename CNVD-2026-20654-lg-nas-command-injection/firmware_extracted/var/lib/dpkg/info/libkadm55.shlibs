@@ -1,0 +1,4 @@
+libgssrpc 4 libkadm55
+libkadm5clnt 5 libkadm55
+libkdb5 4 libkadm55
+libkadm5srv 5 libkadm55

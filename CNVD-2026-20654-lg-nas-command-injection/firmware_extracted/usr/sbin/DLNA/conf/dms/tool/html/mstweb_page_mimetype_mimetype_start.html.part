@@ -1,0 +1,15 @@
+<div id="mst_mime_list_body" class="list_body">
+    <table class="list_tbl">
+    <tr name="mime_tr" id="mime_tr_add" class="list_body2_edit_invisible">
+        <td class="list_item_td_checkbox">
+            <input type="checkbox" name="mime_se_add" value="" id='mime_se_add' class="list_item_invisible" />
+        </td>
+        <td class="list_item_td_extention">
+            <input id="page_mimetype_add_txt_extention" size="12" type="text" name="extention" onkeyup="cntl('mime_a', 'update_view')" value="" /> 
+        </td>
+        <td>
+            <input id="page_mimetype_add_txt_mimetype" size="24"type="text" name="mimetype" onkeyup="cntl('mime_a', 'update_view')" value="" />
+            <input type="button" id="page_mimetype_add_btn_apply" value="[[MIMETYPE_ADD]]" onclick="mstweb_page_mimetype_register(false, '', 'page_mimetype_add_txt_extention', 'page_mimetype_add_txt_mimetype')" />
+            <input type="button" id="page_mimetype_add_btn_cancel" value="[[COMMON_CANCEL]]" onclick="mstweb_page_mimetype_on_add()" />
+        </td>
+    </tr>

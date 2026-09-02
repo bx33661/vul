@@ -1,0 +1,38 @@
+<div id="mst_bu_t_list_block1">
+	<div id="mst_bu_t_list_block2" >
+        <div class="icon_list_block">
+			<div class="icon_list_block_main">
+				<table>
+				<tr>
+					<td>
+						<input type="button" id="bu_t_btn_add" value="[[BACKUP_BUTTON_ADD_TASK]]" onclick="mstweb_page_backup_page_browse_container('[[udn]]', '[[control_url_cd]]', '[[friendly_name]]', '[[icon_url]]')" />
+						<input type="button" id="bu_t_btn_del" value="[[BACKUP_BUTTON_REMOVE_TASK]]" onclick="mstweb_page_backup_unregister_task('[[udn]]', '[[control_url_cd]]', '[[friendly_name]]', '[[icon_url]]')" />
+					</td>
+				</tr>
+				</table>
+			</div>
+			<div class="icon_list_block_sub">
+				<ul class="icon_list">
+					<li class="icon_item_reload" id="bu_t_btn_reload" onclick="mstweb_page_backup_get_task_list('[[udn]]', '[[control_url_cd]]', '[[friendly_name]]', '[[icon_url]]', true)" onmouseover="list('bu_t', 'change_btn', this.id, 'reload', 'over')" onmouseout="list('bu_t', 'change_btn', this.id, 'reload', 'out')" onmouseup="list('bu_t', 'change_btn', this.id, 'reload', 'up')" onmousedown="list('bu_t', 'change_btn', this.id, 'reload', 'down')" />
+					<li class="icon_item_padding" />
+					<li class="icon_item_allon" id="bu_t_btn_all" onclick="list('bu_t', 'change_all_tr', 'select')" onmouseover="list('bu_t', 'change_btn', this.id, 'allon', 'over')" onmouseout="list('bu_t', 'change_btn', this.id, 'allon', 'out')" onmouseup="list('bu_t', 'change_btn', this.id, 'allon', 'up')" onmousedown="list('bu_t', 'change_btn', this.id, 'allon', 'down')" />
+					<li class="icon_item_alloff" id="bu_t_btn_none" onclick="list('bu_t', 'change_all_tr', 'unselect')" onmouseover="list('bu_t', 'change_btn', this.id, 'alloff', 'over')" onmouseout="list('bu_t', 'change_btn', this.id, 'alloff', 'out')" onmouseup="list('bu_t', 'change_btn', this.id, 'alloff', 'up')" onmousedown="list('bu_t', 'change_btn', this.id, 'alloff', 'down')" />
+				</ul>
+				<div class="float_cancel"></div>
+			</div>
+            <div class="float_cancel"></div>
+		</div>
+	
+		<div class="list_head">
+			<table class="list_head2">
+			<tr>
+				<td class="list_item_td_checkbox"></td>
+				<td class="mst_bu_t_list_item_td_folder">[[folder]]</td>
+				<td class="mst_bu_t_list_item_td_state">[[state]]</td>
+				<td>[[date]]</td>
+			</tr>
+			</table>
+		</div>
+	
+		<div class="list_body">
+			<table class="list_tbl" id="bu_t_list_body">

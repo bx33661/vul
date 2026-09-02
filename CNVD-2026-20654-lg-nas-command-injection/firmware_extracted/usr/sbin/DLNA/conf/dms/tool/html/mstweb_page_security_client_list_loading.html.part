@@ -1,0 +1,8 @@
+<table id='mst_sec_ad_list_loading'>
+<tr>
+    <td id="mst_sec_ad_list_loading_td_icon">
+        <div class="icon_item_loading"></div>
+    </td>
+    <td>[[LIST_LOADING]]</td>
+</tr>
+<table>

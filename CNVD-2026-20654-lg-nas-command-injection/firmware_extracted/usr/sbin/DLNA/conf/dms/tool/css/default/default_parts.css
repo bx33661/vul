@@ -1,0 +1,332 @@
+/*** form ***/
+input.btn {
+    white-space: nowrap;
+}
+
+input.rad {
+    vertical-align: middle;
+    margin: 0px 3px;
+}
+
+input.txt {
+    padding: 1px 0 0 1px;
+    margin: 2px 0;
+}
+
+.btns {
+    padding: 2px 0px 3px 0px;
+}
+
+div.btn_item {
+    text-decoration: none; 
+    color: black;
+    border-style: outset;
+    border-width: 2px;
+    margin: 0px 4px 0px 0px;
+    padding: 1px 3px;
+    background-color: #d3d3d3; 
+}
+
+div.btn_item:hover { 
+    background-color: #d1eaf2; 
+}
+
+a.btn_dim {
+    background-color: transparent; 
+    color: gray;
+}
+
+a.btn_dim:hover { 
+    background-color: transparent; 
+    cursor: default;
+}
+
+
+/*** list ***/
+
+.list_item_td_first {
+    width: 10px;
+}
+
+.list_item_invisible {
+    display: none;
+}
+
+.list_item_td_checkbox {
+    text-align: center; 
+    width: 25px;
+}
+
+
+.list_head {
+    border: 1px solid #999; 
+}
+
+.list_head, .list_body {
+    width: 100%;
+}
+
+
+table.list_head2, table.list_tbl, table.list_tbl2 {
+    table-layout: fixed;
+    width: 100%;
+    background-color: #fff;
+}
+
+table.list_head2 tr {
+    background-color: #f0ffff !important; 
+    color:#10659e; 
+    height: 19px;
+
+/*
+    padding: 0 2px;
+*/
+}
+
+
+table.list_head2 tr td {
+/*
+    padding: 0 2px;
+*/
+}
+
+.list_body {
+    border-bottom: 1px solid #999; 
+    border-left: 1px solid #999; 
+    border-right: 1px solid #999; 
+    background-color: #fff;
+}
+
+.list_body td, .list_head td {
+    padding: 2px 2px 0 2px;
+}
+
+table.list_tbl tr, table.list_tbl2 tr {
+    min-height: 19px;
+    background-color: #fff;
+    cursor: pointer; 
+}
+
+table.list_tbl * * tr, table.list_tbl2 * * tr {
+    background-color: transparent;
+}
+
+table.list_tbl tr.list_body2_hover, table.list_tbl2 tr.list_body2_hover {
+/*
+    background-color: #fffaf0;
+*/
+    background-color: #ffffcc;
+}
+
+
+table.list_tbl tr.list_body2_selected {
+    background-color: #d1eaf2  !important;
+}
+
+table.list_tbl2 tr.list_body2_selected {
+    background-color: #f0f8ff;
+    cursor: auto;
+}
+
+table.list_tbl tr.list_body2_edit, table.list_tbl2 tr.list_body2_edit,
+table.list_tbl tr.list_body2_edit_invisible, table.list_tbl2 tr.list_body2_edit_invisible 
+{
+    background-color: #f0f8ff;
+    cursor: auto;
+}
+
+table.list_tbl tr.list_body2_edit_invisible, table.list_tbl2 tr.list_body2_edit_invisible {
+    display: none;
+}
+
+table.list_tbl tr td, table.list_tbl2 tr td {
+/*
+    padding: 2px 2px 0 2px;
+*/
+    overflow: hidden;
+    border-bottom: 1px solid #dedede;
+}
+
+table.list_tbl tr td .no_border * td, table.list_tbl2 tr td .no_border * td {
+    border-bottom: 0px;
+}
+
+table.list_tbl tr.list_body2_selected td div.backup_server_table_text, table.list_tbl2 tr.list_body2_selected td div.backup_server_table_text {
+    font-weight: bold;
+}
+
+/*** state ***/
+.mst_state {
+    color: black;
+}
+
+.mst_state_error {
+    color: red;
+}
+
+.mst_state_ok {
+    color: blue;
+}
+
+.mst_state_info {
+    color: blue;
+}
+
+#mst_state_name, #mst_state_mimetype, #mst_state_view, #mst_state_password {
+    margin-bottom: 10px;
+}
+
+/*** icon list, icon item ***/
+
+.icon_list_block {
+    height: 28px;
+    margin-bottom: 1px;
+}
+
+.icon_list_block_main {
+    float: left; 
+    height: 100%;
+}
+
+.icon_list_block_main input {
+    padding: 0 10px;
+}
+
+.icon_list_block_main table {
+    height: 100%;
+}
+
+.icon_list_block_main table tr td {
+    vertical-align: bottom; 
+}
+
+.icon_list_block_sub {
+    float: right;
+}
+
+.icon_list li {
+    float: left;
+    list-style: none;
+}
+
+.icon_item_padding {
+    width: 5px;
+    height: 5px;
+}
+
+.icon_item_reload {
+    background: url(../../img/default/reload_icon.gif) 0 0 no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.icon_item_reload_push {
+    background: url(../../img/default/reload_icon_push.gif) 0 0 no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.icon_item_reload_dim {
+    background: url(../../img/default/reload_icon_gray.gif) 0 0 no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.icon_item_reload_hover {
+    background: url(../../img/default/reload_icon_hover.gif) 0 0 no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.icon_item_allon {
+    background: url(../../img/default/allon_icon.gif) 0 0 no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.icon_item_allon_push {
+    background: url(../../img/default/allon_icon_push.gif) 0 0 no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.icon_item_allon_dim {
+    background: url(../../img/default/allon_icon_gray.gif) 0 0 no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.icon_item_allon_hover {
+    background: url(../../img/default/allon_icon_hover.gif) 0 0 no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.icon_item_alloff {
+    background: url(../../img/default/alloff_icon.gif) 0 0 no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.icon_item_alloff_push {
+    background: url(../../img/default/alloff_icon_push.gif) 0 0 no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.icon_item_alloff_dim {
+    background: url(../../img/default/alloff_icon_gray.gif) 0 0 no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.icon_item_alloff_hover {
+    background: url(../../img/default/alloff_icon_hover.gif) 0 0 no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.icon_item_foler_close {
+    background: url(../../img/default/close.gif) 0 0 no-repeat;
+    width: 20px;
+    height: 14px;
+}
+
+.icon_item_loading {
+    background: url(../../img/default/loading.gif) 0 0 no-repeat;
+    width: 16px;
+    height: 22px;
+}
+
+.icon_item_headline {
+    background: url(../../img/default/logout.gif) no-repeat;
+}
+
+span.separater {
+    color: gray;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+/*** logo ***/
+.mst_logo {
+    background: url(../../img/default/login_logo_transparent.gif) 0 0 no-repeat;
+    width: 336px;
+    height: 46px;
+}
+
+/*** legend ***/
+
+.legend_page {
+    padding: 5px 10px 10px 10px;
+}
+
+/*** for float ***/
+.float_cancel {
+    clear: both;
+}
+
+/*** for setting ***/
+hr.setting {
+    margin: 20px;
+}

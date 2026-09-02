@@ -1,0 +1,29 @@
+#!/bin/sh
+
+#===============================================================================
+# nas-icond 
+#===============================================================================
+
+LIBDIR=$PREFIX/usr/lib/nas/
+. $LIBDIR/common.sh
+
+DAEMON="NAS-ICOND"
+SESSION_DB=/var/run/samba/sessionid.tdb
+INTERVAL=10		# sec
+
+log_func $DAEMON "ICON monitoring daemon started"
+
+while true; do
+
+  # USER icon
+  COUNT=$(tdbtool $SESSION_DB info | cut -d " " -f 1)
+  COUNT=$(printf "%d" "$COUNT" 2>/dev/null)
+
+  if [ "$COUNT" -gt "0" ]; then
+    lcd_icon $ICON_USER on
+  else
+    lcd_icon $ICON_USER off
+  fi
+
+  sleep $INTERVAL
+done

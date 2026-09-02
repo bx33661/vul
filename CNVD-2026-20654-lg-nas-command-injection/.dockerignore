@@ -1,0 +1,9 @@
+.git
+.DS_Store
+
+# The build consumes the pristine compressed rootfs. Do not also send the
+# expanded 441 MB tree or the outer firmware package into the build context.
+firmware_extracted/**
+!firmware_extracted/firmware.tar.gz
+
+environment/logs

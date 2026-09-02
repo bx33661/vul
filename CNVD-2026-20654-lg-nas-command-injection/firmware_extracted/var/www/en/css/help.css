@@ -1,0 +1,63 @@
+	ul {
+		list-style-type:none;
+		font-size:13px;
+		
+	}
+	li {
+	  margin-bottom:10px;
+	  
+  }
+	
+	.info {
+		background-image:url('../images/comnso/cms_icon_info.gif');
+		background-repeat:no-repeat;
+		line-height:32px;
+		padding-left:40px;
+		font-weight:bold;
+		border:1px dashed #e5e5e5;
+		
+	}
+	.main_explain{
+		margin-left:30px;
+		
+	}
+
+	.sub_explain{
+		font-weight:bold;
+		font-size:15px;
+		list-style-type:disc;
+		
+	}
+	
+	a:link, a:visited{
+		text-decoration:underline;
+		color:#ff9300;
+	}
+	
+	a:hover, a:active{
+		text-decoration:underline;
+		font-weight:bold;
+	}
+	
+	.sub_list{
+			list-style-type:circle;	
+			margin-left:40px;
+			border:1px dashed #e5e5e5; 
+	}
+	
+	.strong{
+		font-weight:bold;
+	}
+	
+	.with_icon{
+		background-repeat:no-repeat;
+		line-height:32px;
+		padding-left:40px;
+	}
+	
+	.with_wide_icon{
+		background-repeat:no-repeat;
+		background-position:left;
+		line-height:32px;
+		padding-left:80px;
+	}

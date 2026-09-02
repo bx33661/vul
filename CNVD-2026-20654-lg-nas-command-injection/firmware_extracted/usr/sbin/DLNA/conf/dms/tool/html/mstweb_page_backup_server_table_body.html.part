@@ -1,0 +1,23 @@
+<tr name="bu_s_tr" id="[[TR_ID]]" onmouseover="list('bu_s', 'change_tr', this.id, 'over')" onmouseout="list('bu_s', 'change_tr', this.id, 'out')" onmousedown="mstweb_page_backup_get_task_list('[[udn]]', '[[control_url_cd]]', '[[friendly_name]]', '[[icon_url]]', false); list('bu_s', 'change_tr', this.id, 'down_non_reversal')">
+	<td class="list_item_td_first">
+		<input type="checkbox" class="list_item_invisible" name='bu_s_se' value='[[udn]]' id='[[SE_ID]]' />
+	</td>
+	<td>
+		<div id="mst_bu_s_list_item" class="no_border">
+			<table>
+			<tr>
+				<td id="mst_bu_s_list_item_td_icon">
+					<img src="[[icon_url]]" id="mst_bu_s_list_item_icon" />
+				</td>
+				<td id="mst_bu_s_list_item_td_name">
+					<div class="backup_server_table_text">[[friendly_name]]</div>
+				</td>
+				<td>
+					<div class="backup_server_table_text">[[BACKUP_NTASK]]<span id="ntask_[[udn]]">[[ntask]]</span></div>
+				</td>
+			</tr>
+			</table>
+		</div>
+		<span id="bu_s_td_[[udn]]"></span>
+	</td>
+</tr>

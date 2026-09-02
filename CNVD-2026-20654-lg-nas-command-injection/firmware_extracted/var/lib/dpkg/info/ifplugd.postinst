@@ -1,0 +1,95 @@
+#!/bin/sh -e
+ 
+# source debconf library
+. /usr/share/debconf/confmodule
+ 
+CONFIGFILE=/etc/ifplugd/ifplugd.conf
+CONFIGTMP=${CONFIGFILE}.tmp
+
+DEFAULTFILE=/etc/default/ifplugd
+DEFAULTTMP=${DEFAULTFILE}.tmp
+
+write_db_conf (){
+
+	rm -f ${CONFIGTMP}
+
+	echo "# this file is deprecated - use /etc/default/ifplugd." >> ${CONFIGTMP}
+ 
+	mv ${CONFIGTMP} ${CONFIGFILE}
+}
+
+write_default (){
+
+	rm -f ${DEFAULTTMP}
+
+	(
+	    echo "# This file may be changed either manually or by running dpkg-reconfigure."
+	    echo "#"
+	    echo "# N.B.: dpkg-reconfigure deletes everything from this file except for"
+	    echo "# the assignments to variables INTERFACES, HOTPLUG_INTERFACES, ARGS and"
+	    echo "# SUSPEND_ACTION.  When run it uses the current values of those variables"
+	    echo "# as their default values, thus preserving the administrator's changes."
+            echo "#"
+            echo "# This file is sourced by both the init script /etc/init.d/ifplugd and"
+            echo "# the udev script /lib/udev/ifplugd.agent to give default values."
+            echo "# The init script starts ifplugd for all interfaces listed in"
+            echo "# INTERFACES, and the udev script starts ifplugd for all interfaces"
+            echo "# listed in HOTPLUG_INTERFACES. The special value "all" starts one"
+            echo "# ifplugd for all interfaces being present."
+	) >> $DEFAULTTMP
+
+	db_get ifplugd/interfaces || true
+	echo "INTERFACES=\"$RET\"" >> $DEFAULTTMP
+	db_get ifplugd/hotplug_interfaces || true
+	echo "HOTPLUG_INTERFACES=\"$RET\"" >> $DEFAULTTMP
+	db_get ifplugd/args || true
+	echo "ARGS=\"$RET\"" >> $DEFAULTTMP
+	db_get ifplugd/suspend_action || true
+	echo "SUSPEND_ACTION=\"$RET\"" >> $DEFAULTTMP
+ 
+	mv ${DEFAULTTMP} ${DEFAULTFILE}
+}
+
+case "$1" in
+    configure)
+ 
+		write_db_conf
+		write_default
+		if [ ! "$2" ] || [ "$2" = "<unknown>" ] ; then
+			# Fresh install
+			for F in /etc/apm/suspend.d/20ifplugd \
+				    /etc/apm/resume.d/80ifplugd /etc/apm/other.d/50ifplugd ; do
+				[ -e $F ] && mv -f $F ${F}.dpkg-old
+				ln -nsf ../scripts.d/ifplugd $F
+			done
+		fi
+        ;;
+ 
+    abort-upgrade|abort-remove|abort-deconfigure)
+        ;;
+esac
+
+db_stop
+
+# Automatically added by dh_installinit
+if [ -x "/etc/init.d/ifplugd" ]; then
+	update-rc.d ifplugd defaults >/dev/null
+	if [ -x "`which invoke-rc.d 2>/dev/null`" ]; then
+		invoke-rc.d ifplugd start || exit $?
+	else
+		/etc/init.d/ifplugd start || exit $?
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installudev
+if [ "$1" = configure ]; then
+	if [ -e "/etc/udev/ifplugd.rules" ]; then
+		echo "Preserving user changes to /etc/udev/rules.d/z60_ifplugd.rules ..."
+		if [ -e "/etc/udev/rules.d/z60_ifplugd.rules" ]; then
+			mv -f "/etc/udev/rules.d/z60_ifplugd.rules" "/etc/udev/rules.d/z60_ifplugd.rules.dpkg-new"
+		fi
+		mv -f "/etc/udev/ifplugd.rules" "/etc/udev/rules.d/z60_ifplugd.rules"
+	fi
+fi
+# End automatically added section
+

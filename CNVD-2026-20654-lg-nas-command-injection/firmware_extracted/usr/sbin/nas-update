@@ -1,0 +1,39 @@
+#!/bin/bash
+
+SERVER_IP=10.177.193.60
+DEBIAN_SITE_ORG=http://http.us.debian.org/debian
+DEBIAN_SITE=http://10.177.190.57/debian
+DEBIAN_RELEASE=lenny
+TARGET_PLATFORM=armel
+
+case "$1" in
+  "dev")
+    apt-get update
+    apt-get -y install binutils cpp-4.3 gcc-4.3 g++-4.3
+    apt-get -y install cpp gcc make patch pkg-config
+
+    # make compiler link
+    ln -s /usr/bin/ar /usr/bin/arm-none-linux-gnueabi-ar
+    ln -s /usr/bin/ld /usr/bin/arm-none-linux-gnueabi-ld
+    ln -s /usr/bin/gcc-4.3 /usr/bin/arm-none-linux-gnueabi-gcc
+    ln -s /usr/bin/gcc-4.3 /usr/bin/arm-none-linux-gnueabi-gcc-4.3  
+    ln -s /usr/bin/cpp-4.3 /usr/bin/arm-none-linux-gnueabi-cpp
+    ln -s /usr/bin/cpp-4.3 /usr/bin/arm-none-linux-gnueabi-cpp-4.3
+
+    # for afpd
+    apt-get -y install mime-support
+    sed -i 's/half-configured/installed/g' /var/lib/dpkg/status
+    apt-get -f install
+
+    ;;
+  "usr")
+    DOWNLOAD_PATH=/svn/firmware/usr
+    wget -qrnp -P /tmp/ -R "*.html*" http://$SERVER_IP/$DOWNLOAD_PATH/
+    chmod +x /tmp/$SERVER_IP/$DOWNLOAD_PATH/lib/nas/*
+    chmod +x /tmp/$SERVER_IP/$DOWNLOAD_PATH/sbin/*
+    cp -af /tmp/$SERVER_IP/$DOWNLOAD_PATH/* /usr/
+    ;;
+  "etc")
+    echo hi
+    ;;   
+esac

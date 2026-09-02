@@ -1,0 +1,44 @@
+form {
+   margin: 0px;
+}
+#file_box{
+	width:640px;
+	height:224px;
+	overflow:auto;
+	border:1px solid;
+	padding:3px;
+	z-index:1;
+	background:#ffffff;
+}
+#rename_box{
+	position:absolute;
+	padding:3px;
+	border:1px solid #0079F5; 
+	background:#D6EAFE;
+}
+
+//아이콘모드로 표시할때 개개 디렉토리와 파일을 네모난 상자모양으로 표시해줄때 그 상자의 속성
+div.file_obj_icon{
+	width:120px;
+	height:100px;
+	border:1px solid #CCCCCC;
+	overflow:hidden;
+	text-align:center;
+	padding:0px;
+}
+
+/** Copy , Cut 했을때 선택된 것 색깔 바꿔주는 로직에서 쓰임 (시작)**/
+
+div.file_obj_icon_selected{
+	width:120px;
+	height:100px;
+	border:1px solid #CCCCCC;
+	overflow:hidden;
+	text-align:center;
+	padding:0px;
+	background:#649AFC;
+}
+tr.tr_selected{
+	background:#649AFC;
+}
+/** Copy , Cut 했을때 선택된 것 색깔 바꿔주는 로직에서 쓰임 (끝)**/

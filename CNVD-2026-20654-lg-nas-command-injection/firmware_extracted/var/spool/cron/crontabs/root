@@ -1,0 +1,3 @@
+25 6	* * *	cd / && run-parts --report /etc/cron.daily 
+47 6	* * 6	cd / && run-parts --report /etc/cron.weekly 
+52 6	1 * *	cd / && run-parts --report /etc/cron.monthly 

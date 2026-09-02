@@ -1,0 +1,694 @@
+<text_list>
+    <text>
+        <id>ACTIVATION_FINISHED</id>
+        <value>デジタル録画番組の配信（DTCP-IP配信）を行うことができます。</value>
+    </text>
+    <text>
+        <id>ACTIVATION_UNFINISHED</id>
+        <value>デジタル録画番組の配信（DTCP-IP配信）を行うことはできません。&lt;br/&gt; &lt;br/&gt;デジタル録画番組の配信機能を有効にするためには、お使いのパソコンが インターネットに接続されている必要があります。&lt;br/&gt; ただしデジタル録画番組の配信を行う上ではインターネットに接続されている必要はありません。</value>
+    </text>
+    <text>
+        <id>BACKUP_ASK_REGISTER_TASK</id>
+        <value>Do you want to register the selected folder?</value>
+    </text>
+    <text>
+        <id>BACKUP_ASK_REMOVE_TASK</id>
+        <value>Do you want to unregister the selected task?</value>
+    </text>
+    <text>
+        <id>BACKUP_BACK_TO_SERVER_LIST</id>
+        <value>Go back to Server List</value>
+    </text>
+    <text>
+        <id>BACKUP_BROWSE_CONTAINER_TITLE</id>
+        <value>Select Folder to Save Backup</value>
+    </text>
+    <text>
+        <id>BACKUP_BROWSING_CONTAINER</id>
+        <value>Retrieving folder list...</value>
+    </text>
+    <text>
+        <id>BACKUP_BUTTON_ADD_TASK</id>
+        <value>Add Task</value>
+    </text>
+    <text>
+        <id>BACKUP_BUTTON_CREATE_TASK</id>
+        <value>Folder Backup</value>
+    </text>
+    <text>
+        <id>BACKUP_BUTTON_REMOVE_TASK</id>
+        <value>Unregister Task</value>
+    </text>
+    <text>
+        <id>BACKUP_CHANGE_TASK_STATE_DISABLE</id>
+        <value>Stop Task</value>
+    </text>
+    <text>
+        <id>BACKUP_CHANGE_TASK_STATE_ENABLE</id>
+        <value>Restart Task</value>
+    </text>
+    <text>
+        <id>BACKUP_CHANGING_TASK_STATE</id>
+        <value>Changing task status...</value>
+    </text>
+    <text>
+        <id>BACKUP_CONTAINER_NAME</id>
+        <value>Folder Name</value>
+    </text>
+    <text>
+        <id>BACKUP_CREATING_TASK</id>
+        <value>Registering task...</value>
+    </text>
+    <text>
+        <id>BACKUP_FAILED_BROWSE_CONTAINER</id>
+        <value>Failed to retrieve folder.</value>
+    </text>
+    <text>
+        <id>BACKUP_FAILED_CHANGE_TASK_STATE</id>
+        <value>Failed to change task status.</value>
+    </text>
+    <text>
+        <id>BACKUP_FAILED_CREATE_TASK</id>
+        <value>Failed to register task.</value>
+    </text>
+    <text>
+        <id>BACKUP_FAILED_GET_SERVER_LIST</id>
+        <value>Failed to retrieve Server list.</value>
+    </text>
+    <text>
+        <id>BACKUP_FAILED_GET_TASK_LIST</id>
+        <value>Failed to retrieve task list.</value>
+    </text>
+    <text>
+        <id>BACKUP_FAILED_NO_CONTAINER_IN_SERVER</id>
+        <value>There is no folder on the Server.</value>
+    </text>
+    <text>
+        <id>BACKUP_FAILED_REMOVE_TASK</id>
+        <value>Failed to unregister task.</value>
+    </text>
+    <text>
+        <id>BACKUP_FAILED_RETRIEVE_SERVER_LIST</id>
+        <value>Failed to retrieve Server list.</value>
+    </text>
+    <text>
+        <id>BACKUP_FAILED_RETRIEVE_TASK_LIST</id>
+        <value>Failed to retrieve task list.</value>
+    </text>
+    <text>
+        <id>BACKUP_MENU_REGISTER</id>
+        <value>Register</value>
+    </text>
+    <text>
+        <id>BACKUP_MENU_UNREGISTER</id>
+        <value>Unregister</value>
+    </text>
+    <text>
+        <id>BACKUP_MENU_VIEW</id>
+        <value>List</value>
+    </text>
+    <text>
+        <id>BACKUP_NTASK</id>
+        <value>Number of Task: </value>
+    </text>
+    <text>
+        <id>BACKUP_REMOVING_TASK</id>
+        <value>Unregistering task...</value>
+    </text>
+    <text>
+        <id>BACKUP_RERETRIEVE_SERVER_LIST</id>
+        <value>Reload Server List</value>
+    </text>
+    <text>
+        <id>BACKUP_RERETRIEVE_TASK_LIST</id>
+        <value>Reload Task List</value>
+    </text>
+    <text>
+        <id>BACKUP_RETRIEVING_CONTAINER_LIST</id>
+        <value>Retrieving folder list...</value>
+    </text>
+    <text>
+        <id>BACKUP_RETRIEVING_SERVER_LIST</id>
+        <value>Retrieving Server list...</value>
+    </text>
+    <text>
+        <id>BACKUP_RETRIEVING_TASK_LIST</id>
+        <value>Retrieving task list...</value>
+    </text>
+    <text>
+        <id>BACKUP_SERVER_LIST</id>
+        <value>Server List</value>
+    </text>
+    <text>
+        <id>BACKUP_SUCCEEDED_BROWSE_CONTAINER</id>
+        <value>Succeeded in retrieving folder.</value>
+    </text>
+    <text>
+        <id>BACKUP_SUCCEEDED_CHANGE_TASK_STATE</id>
+        <value>Succeeded in changing task status.</value>
+    </text>
+    <text>
+        <id>BACKUP_SUCCEEDED_CREATE_TASK</id>
+        <value>Succeeded in registering task.</value>
+    </text>
+    <text>
+        <id>BACKUP_SUCCEEDED_GET_SERVER_LIST</id>
+        <value>Succeeded in retrieving Server list.</value>
+    </text>
+    <text>
+        <id>BACKUP_SUCCEEDED_GET_TASK_LIST</id>
+        <value>Succeeded in retrieving task list.</value>
+    </text>
+    <text>
+        <id>BACKUP_SUCCEEDED_REMOVE_TASK</id>
+        <value>Succeeded in unregistering task.</value>
+    </text>
+    <text>
+        <id>BACKUP_S_CONTAINER_LIST</id>
+        <value>Folder List of </value>
+    </text>
+    <text>
+        <id>BACKUP_TASK_LIST_CONTAINER</id>
+        <value>Folder Name</value>
+    </text>
+    <text>
+        <id>BACKUP_TASK_LIST_LAST_BACKUP_DATE</id>
+        <value>Last Backup Date</value>
+    </text>
+    <text>
+        <id>BACKUP_TASK_LIST_STATE</id>
+        <value>Status</value>
+    </text>
+    <text>
+        <id>BACKUP_TASK_STATE_DISABLE</id>
+        <value>Stopped</value>
+    </text>
+    <text>
+        <id>BACKUP_TASK_STATE_RUNNING</id>
+        <value>Running</value>
+    </text>
+    <text>
+        <id>BACKUP_TASK_STATE_STANDBY</id>
+        <value>Standby</value>
+    </text>
+    <text>
+        <id>BACKUP_TASK_STATE_UNKNOWN</id>
+        <value>Unknown</value>
+    </text>
+    <text>
+        <id>BACKUP_TASK_STATE_WAITING</id>
+        <value>Waiting</value>
+    </text>
+    <text>
+        <id>BACKUP_TITLE</id>
+        <value>Backup</value>
+    </text>
+    <text>
+        <id>COMMON_APPLY</id>
+        <value>Apply</value>
+    </text>
+    <text>
+        <id>COMMON_CANCEL</id>
+        <value>Cancel</value>
+    </text>
+    <text>
+        <id>COMMON_CLEAR</id>
+        <value>Clear</value>
+    </text>
+    <text>
+        <id>COMMON_CONFIRM_CONNECTION</id>
+        <value>Verify your PC is connected to the network and the Server is started.</value>
+    </text>
+    <text>
+        <id>COMMON_EXEC</id>
+        <value>Execute</value>
+    </text>
+    <text>
+        <id>COMMON_FAILED</id>
+        <value>Unexpected error occurred.</value>
+    </text>
+    <text>
+        <id>COMMON_FAILED_GET_LIST</id>
+        <value>Failed to retrieve list.</value>
+    </text>
+    <text>
+        <id>COMMON_FAILED_GET_PAGE</id>
+        <value>Failed to retrieve page.</value>
+    </text>
+    <text>
+        <id>COMMON_LOADING_PAGE</id>
+        <value>Retrieving page...</value>
+    </text>
+    <text>
+        <id>COMMON_LOGOUT</id>
+        <value>Log out</value>
+    </text>
+    <text>
+        <id>COMMON_MOVE_PREVIOUS_PAGE</id>
+        <value>Back</value>
+    </text>
+    <text>
+        <id>COMMON_RELOAD</id>
+        <value>Reload</value>
+    </text>
+    <text>
+        <id>COMMON_REMOVE</id>
+        <value>Remove</value>
+    </text>
+    <text>
+        <id>COMMON_SELECT_ALL</id>
+        <value>Select All</value>
+    </text>
+    <text>
+        <id>COMMON_UNDO</id>
+        <value>Undo</value>
+    </text>
+    <text>
+        <id>COMMON_UNSELECT_ALL</id>
+        <value>Clear Selections</value>
+    </text>
+    <text>
+        <id>CONTROL_AUTORUN_EXPLANATION</id>
+        <value>Start Server at Windows Startup</value>
+    </text>
+    <text>
+        <id>CONTROL_AUTORUN_TITLE</id>
+        <value>Autostart Server</value>
+    </text>
+    <text>
+        <id>CONTROL_EXPLANATION</id>
+        <value>You can start or stop the Server.</value>
+    </text>
+    <text>
+        <id>CONTROL_START_SERVER</id>
+        <value>Start Server</value>
+    </text>
+    <text>
+        <id>CONTROL_STATE</id>
+        <value>Server Status</value>
+    </text>
+    <text>
+        <id>CONTROL_STATE_OFF</id>
+        <value>Server is stopped.</value>
+    </text>
+    <text>
+        <id>CONTROL_STATE_ON</id>
+        <value>Server is started.</value>
+    </text>
+    <text>
+        <id>CONTROL_STOP_SERVER</id>
+        <value>Stop Server</value>
+    </text>
+    <text>
+        <id>CONTROL_TITLE</id>
+        <value>Start/Stop Server</value>
+    </text>
+    <text>
+        <id>DATABASE_FAILED_REPAIR_DATABASE</id>
+        <value>Failed to rebuild database.</value>
+    </text>
+    <text>
+        <id>DATABASE_NOTICE_MESSAGE</id>
+        <value>Server database is being restructured in order to keep consistency with files in published folders.&lt;br /&gt;This may take some time to complete.  </value>
+    </text>
+    <text>
+        <id>DATABASE_REPAIRED_MESSAGE</id>
+        <value>Finished rebuilding database.</value>
+    </text>
+    <text>
+        <id>DATABASE_REPAIR_DATABASE</id>
+        <value>Rebuild Database</value>
+    </text>
+    <text>
+        <id>DATABASE_TITLE</id>
+        <value>Rebuilding Database</value>
+    </text>
+    <text>
+        <id>DESIGN_FAILED_CHANGE_STYLESHEET</id>
+        <value>Failed to change design.</value>
+    </text>
+    <text>
+        <id>DESIGN_ITEM_DEFAULT</id>
+        <value>Default</value>
+    </text>
+    <text>
+        <id>DESIGN_ITEM_NONE</id>
+        <value>None</value>
+    </text>
+    <text>
+        <id>DESIGN_TITLE</id>
+        <value>Design</value>
+    </text>
+    <text>
+        <id>LANGUAGE_FAILED_CHANGE_LANGUAGE</id>
+        <value>Failed to change display language.</value>
+    </text>
+    <text>
+        <id>LANGUAGE_ITEM_EN</id>
+        <value>English</value>
+    </text>
+    <text>
+        <id>LANGUAGE_ITEM_JA</id>
+        <value>Japanese</value>
+    </text>
+    <text>
+        <id>LANGUAGE_TITLE</id>
+        <value>Display Language</value>
+    </text>
+    <text>
+        <id>LIST_LOADING</id>
+        <value>Loading...</value>
+    </text>
+    <text>
+        <id>LOGIN_INVALID_PASSWORD</id>
+        <value>Password does not match.</value>
+    </text>
+    <text>
+        <id>LOGIN_LOGIN</id>
+        <value>Log in</value>
+    </text>
+    <text>
+        <id>LOGIN_LOST_SESSION</id>
+        <value>Session has become invalid.</value>
+    </text>
+    <text>
+        <id>LOGIN_PASSWORD</id>
+        <value>Password</value>
+    </text>
+    <text>
+        <id>LOGIN_TITLE</id>
+        <value>Log in</value>
+    </text>
+    <text>
+        <id>MENU_TITLE_BACKUP</id>
+        <value>Backup</value>
+    </text>
+    <text>
+        <id>MENU_TITLE_CONTROL</id>
+        <value>Start/Stop Server</value>
+    </text>
+    <text>
+        <id>MENU_TITLE_LOGOUT</id>
+        <value>Log out</value>
+    </text>
+    <text>
+        <id>MENU_TITLE_SECURITY</id>
+        <value>Security</value>
+    </text>
+    <text>
+        <id>MENU_TITLE_SETTING</id>
+        <value>Other Settings</value>
+    </text>
+    <text>
+        <id>MENU_TITLE_SHARE</id>
+        <value>Published Folder</value>
+    </text>
+    <text>
+        <id>MIMETYPE_ADD</id>
+        <value>Add</value>
+    </text>
+    <text>
+        <id>MIMETYPE_ASK_RESET_MIMETYPE</id>
+        <value>Do you want reset the type of published files?</value>
+    </text>
+    <text>
+        <id>MIMETYPE_ASK_UNREGISTER_MIMETYPE</id>
+        <value>Do you want to unregister the selected file type?</value>
+    </text>
+    <text>
+        <id>MIMETYPE_EDIT</id>
+        <value>Edit</value>
+    </text>
+    <text>
+        <id>MIMETYPE_EXTENTION</id>
+        <value>Extension</value>
+    </text>
+    <text>
+        <id>MIMETYPE_FAILED_EDIT_MIMETYPE</id>
+        <value>Failed to edit file type.</value>
+    </text>
+    <text>
+        <id>MIMETYPE_FAILED_REGISTER_MIMETYPE</id>
+        <value>Failed to register file type.</value>
+    </text>
+    <text>
+        <id>MIMETYPE_FAILED_REGISTER_MIMETYPE_ALREADY_REGISTERED</id>
+        <value>Already registered.</value>
+    </text>
+    <text>
+        <id>MIMETYPE_FAILED_REGISTER_MIMETYPE_INVALID_EXTENSION</id>
+        <value>The extension is not correct.</value>
+    </text>
+    <text>
+        <id>MIMETYPE_FAILED_REGISTER_MIMETYPE_INVALID_MIMETYPE</id>
+        <value>MIME-Type is not correct.</value>
+    </text>
+    <text>
+        <id>MIMETYPE_FAILED_RESET_MIMETYPE</id>
+        <value>Failed to reset file type.</value>
+    </text>
+    <text>
+        <id>MIMETYPE_FAILED_UNREGISTER_MIMETYPE</id>
+        <value>Failed to unregister file type.</value>
+    </text>
+    <text>
+        <id>MIMETYPE_MIMETYPE</id>
+        <value>Mime Type</value>
+    </text>
+    <text>
+        <id>MIMETYPE_RESET</id>
+        <value>Reset</value>
+    </text>
+    <text>
+        <id>MIMETYPE_TITLE</id>
+        <value>Type of Published File</value>
+    </text>
+    <text>
+        <id>MIMETYPE_TITLE_REGISTER</id>
+        <value>Add Type of Published File</value>
+    </text>
+    <text>
+        <id>MIMETYPE_UNREGISTER</id>
+        <value>Unregister</value>
+    </text>
+    <text>
+        <id>PASSWORD_CHANGED_MESSAGE</id>
+        <value>Password has been set.</value>
+    </text>
+    <text>
+        <id>PASSWORD_DIFFERENT_PASSWORD</id>
+        <value>Password is incorrect.</value>
+    </text>
+    <text>
+        <id>PASSWORD_FAILED_CHANGE_PASSWORD</id>
+        <value>Failed to change password.</value>
+    </text>
+    <text>
+        <id>PASSWORD_INVALIDCHAR_MESSAGE</id>
+        <value>The password must be composed from alphanumeric characters only.&lt;br/&gt;Please input the password again.    </value>
+    </text>
+    <text>
+        <id>PASSWORD_MISSMATCH_MESSAGE</id>
+        <value>Password does not match.&lt;br/&gt;Please input the password again.    </value>
+    </text>
+    <text>
+        <id>PASSWORD_NEW_PASSWORD</id>
+        <value>New Password</value>
+    </text>
+    <text>
+        <id>PASSWORD_PASSWORD</id>
+        <value>Password</value>
+    </text>
+    <text>
+        <id>PASSWORD_RETYPE</id>
+        <value>Reenter Password</value>
+    </text>
+    <text>
+        <id>PASSWORD_TITLE</id>
+        <value>Change Password</value>
+    </text>
+    <text>
+        <id>SECURITY_ALLOW_LIST</id>
+        <value>Published List</value>
+    </text>
+    <text>
+        <id>SECURITY_ALLOW_LIST_FOOTNOTE</id>
+        <value></value>
+    </text>
+    <text>
+        <id>SECURITY_BUTTON_DELETE</id>
+        <value>Remove</value>
+    </text>
+    <text>
+        <id>SECURITY_BUTTON_PRIVATE</id>
+        <value>Unpublish</value>
+    </text>
+    <text>
+        <id>SECURITY_BUTTON_PUBLIC</id>
+        <value>Publish</value>
+    </text>
+    <text>
+        <id>SECURITY_DEFAULT</id>
+        <value>Default Access Right Settings</value>
+    </text>
+    <text>
+        <id>SECURITY_DEFAULT_FOOTER_MESSAGE</id>
+        <value>When a new client connects the Server, the access right allocated by client default will be set.</value>
+    </text>
+    <text>
+        <id>SECURITY_DENY_LIST</id>
+        <value>Unpublished List</value>
+    </text>
+    <text>
+        <id>SECURITY_DENY_LIST_FOOTNOTE</id>
+        <value></value>
+    </text>
+    <text>
+        <id>SECURITY_FAILED_CHANGE_DEFAULT_SECURITY</id>
+        <value>Failed to change default access right.</value>
+    </text>
+    <text>
+        <id>SECURITY_FAILED_CHANGE_SECURITY</id>
+        <value>Failed to change client's access right.</value>
+    </text>
+    <text>
+        <id>SECURITY_FAILED_CHANGE_SECURITY_DIALOG_VISIBILITY</id>
+        <value>Failed to change follow setting: Show security information dialog box.</value>
+    </text>
+    <text>
+        <id>SECURITY_FAILED_GET_DEFAULT_SECURITY</id>
+        <value>Failed to retrieve default access right.</value>
+    </text>
+    <text>
+        <id>SECURITY_FAILED_UNREGISTER_CLIENT</id>
+        <value>Failed to remove client.</value>
+    </text>
+    <text>
+        <id>SECURITY_HOST</id>
+        <value>Host Name</value>
+    </text>
+    <text>
+        <id>SECURITY_IP</id>
+        <value>IP Address</value>
+    </text>
+    <text>
+        <id>SECURITY_IP_MAC</id>
+        <value>IP / MAC Address</value>
+    </text>
+    <text>
+        <id>SECURITY_MAC</id>
+        <value>MAC Address</value>
+    </text>
+    <text>
+        <id>SECURITY_OVER_ALLOWED_CLIENTS</id>
+        <value>Media contents may be published to a maximum of 5 clients.</value>
+    </text>
+    <text>
+        <id>SECURITY_PRIVATE</id>
+        <value>Unpublish</value>
+    </text>
+    <text>
+        <id>SECURITY_PUBLIC</id>
+        <value>Publish</value>
+    </text>
+    <text>
+        <id>SECURITY_SECURITY_DIALOG_DEFAULT_ALLOW</id>
+        <value>This setting enables the specified client to access the contents of the listed folders to 'Published Folder List'.\nWhen your computer is connected to the Internet, access protection is required using equipment such as a router to prevent unauthorized access to your files. If such equipment is not installed, it is strongly recommended you refuse access by unknown clients.\n\nDo you want to publish your files for the specified client?</value>
+    </text>
+    <text>
+        <id>SECURITY_SECURITY_DIALOG_TOALLOW</id>
+        <value>This setting enables the specified client to access the contents of the listed folders to 'Published Folder List'.\nWhen your computer is connected to the Internet, access protection is required using equipment such as a router to prevent unauthorized access to your files. If such equipment is not installed, it is strongly recommended you refuse access by unknown clients.\n\nDo you want to publish your files for the specified client?</value>
+    </text>
+    <text>
+        <id>SECURITY_SHARE</id>
+        <value>Publish</value>
+    </text>
+    <text>
+        <id>SECURITY_SHOW_SECURITY_DIALOG</id>
+        <value>Show security information dialog box.</value>
+    </text>
+    <text>
+        <id>SECURITY_TITLE</id>
+        <value>Security Settings</value>
+    </text>
+    <text>
+        <id>SERVER_FOOTER_MESSAGE</id>
+        <value>If left blank, &lt;br/&gt; the Server name will default to 'Host name [DiXiM Media Server]'    </value>
+    </text>
+    <text>
+        <id>SERVER_NAME_CHANGED_MESSAGE</id>
+        <value>Server name has been changed.</value>
+    </text>
+    <text>
+        <id>SERVER_NAME_FAILED_GET_SERVER_NAME</id>
+        <value>Failed to retrieve Server name.</value>
+    </text>
+    <text>
+        <id>SERVER_NAME_FAILED_SET_SERVER_NAME</id>
+        <value>Failed to set Server name.</value>
+    </text>
+    <text>
+        <id>SERVER_TITLE</id>
+        <value>Server Name</value>
+    </text>
+    <text>
+        <id>SETTING_TITLE</id>
+        <value>Settings</value>
+    </text>
+    <text>
+        <id>SETTING_TITLE_ACTIVATION</id>
+        <value>デジタル録画番組の配信</value>
+    </text>
+    <text>
+        <id>SETTING_TITLE_DATABASE</id>
+        <value>Database</value>
+    </text>
+    <text>
+        <id>SETTING_TITLE_MIMETYPE</id>
+        <value>Type of Published File</value>
+    </text>
+    <text>
+        <id>SETTING_TITLE_NAME</id>
+        <value>Server Name</value>
+    </text>
+    <text>
+        <id>SETTING_TITLE_PASSWORD</id>
+        <value>Password</value>
+    </text>
+    <text>
+        <id>SETTING_TITLE_VIEW</id>
+        <value>View</value>
+    </text>
+    <text>
+        <id>SHARE_ADD</id>
+        <value>Add Folder</value>
+    </text>
+    <text>
+        <id>SHARE_ASK_UNREGISTER</id>
+        <value>Do you want to unpublish the selected folder?</value>
+    </text>
+    <text>
+        <id>SHARE_CONTAINER</id>
+        <value>Folder Name</value>
+    </text>
+    <text>
+        <id>SHARE_FAILED_SHARE_SPECIAL_DIR</id>
+        <value>Failed to register [[DIR]], because the folder is a folder which related to a special published folder.</value>
+    </text>
+    <text>
+        <id>SHARE_FAILED_UNREGISTER</id>
+        <value>Failed to unregister published folder.</value>
+    </text>
+    <text>
+        <id>SHARE_FAILED_UNSHARE_SPECIAL_DIR</id>
+        <value>Failed to unregister [[DIR]], because the folder is a folder which related to a special published folder.</value>
+    </text>
+    <text>
+        <id>SHARE_TITLE</id>
+        <value>Published Folder</value>
+    </text>
+    <text>
+        <id>SHARE_UNREGISTER</id>
+        <value>Unpublish Folder</value>
+    </text>
+</text_list>

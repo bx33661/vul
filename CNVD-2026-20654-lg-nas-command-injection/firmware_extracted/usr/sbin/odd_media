@@ -1,0 +1,51 @@
+#!/bin/bash
+#===============================================
+#   odd_media
+#===============================================
+MEDIAFILE=/tmp/mediatype
+STATUSFILE=/tmp/mediastatus
+INFOFILE=/tmp/minfo
+FAILFILE=/tmp/minfo_fail
+
+rm -rf $MEDIAFILE $STATUSFILE $INFOFILE
+CNTFAILFILE=$(bash -c "ls -l $FAILFILE*" | grep -c "$FAILFILE")
+if [ $CNTFAILFILE -gt 20 ]; then
+	bash -c "rm -rf $FAILFILE*"
+fi
+
+
+#if disc is loading, wait until 5 min 
+for (( TIME=1; TIME <= 300; TIME += 1))
+do
+	SENSE=$(sg_turs -v /dev/sg2 2>&1 | grep "Additional sense" | cut -d: -f2 | awk '{print $1}')
+	if [ -z "$SENSE" ]; then
+		# recognized
+		cdrecord -v -minfo dev=1,2,0 2>&1 > $INFOFILE
+		RESULT=${PIPESTATUS[0]}
+		if [ "$RESULT" != "0" ]; then
+			mv $INFOFILE $FAILFILE$(date +%s)
+			echo "minfo_fail" > $INFOFILE
+			cdrecord -v -minfo dev=1,2,0 2>&1 >> $INFOFILE
+		fi
+		DISCTYPE=$(cat $INFOFILE | grep "Mounted media type" | cut -d: -f2 | awk '{print $1}')
+		echo "$DISCTYPE" > $MEDIAFILE
+		DISCSTATUS=$(cat $INFOFILE | grep "disk status" | cut -d: -f2 | awk '{print $1}')
+		echo "$DISCSTATUS" > $STATUSFILE
+		exit 0	
+	elif [ "$SENSE" = "Medium" ]; then
+		#Medium not present
+		rm $INFOFILE
+		echo "No disk" > $MEDIAFILE 
+		echo "No disk" > $STATUSFILE 
+		exit 0	
+	fi
+
+	sleep 1
+done
+
+if [ $TIME -gt 300 ]; then
+		rm $INFOFILE
+		echo "Time out $TIME sec" > $MEDIAFILE 
+		echo "Time out $TIME sec" > $STATUSFILE 
+		exit 0
+fi

@@ -1,0 +1,42 @@
+* {
+    font-size: 12px; 
+    font-family: MS UI Gothic, MS PGothic, Osaka;
+    margin: 0;
+    padding: 0;
+}
+
+div, span {
+    color: #373737;
+}
+
+html {
+    overflow-y: auto;   /* only for ie7 */
+}
+
+body {
+    text-align: center;
+    margin: 10px 10px;
+    background-color: #bebebe;
+    _overflow: auto;    /* ie6 hack */
+}
+
+table {
+    border-collapse: collapse;
+}
+
+fieldset {
+    border: 1px solid darkgray;
+    margin: 3px;
+}
+
+legend {
+    margin-left: 10px; 
+    padding: 3px;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: #0068cf;
+}
+

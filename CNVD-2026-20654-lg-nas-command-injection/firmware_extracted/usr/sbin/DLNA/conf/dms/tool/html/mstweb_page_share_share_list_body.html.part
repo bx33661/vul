@@ -1,0 +1,6 @@
+<tr name="share_tr" id="[[TR_ID]]" onmouseover="list('share', 'change_tr', this.id, 'over')" onmouseout="list('share', 'change_tr', this.id, 'out')">
+    <td class="list_item_td_checkbox" onmousedown="list('share', 'change_tr', this.parentNode.id, 'add')">
+        <input type="checkbox" name="share_se" value="[[PATH]]" id='[[SE_ID]]' onclick="list('share', 'view_update_btn')" />
+    </td>
+    <td onmousedown="list('share', 'change_tr', this.parentNode.id, 'down')">[[PATH]]</td>
+</tr>

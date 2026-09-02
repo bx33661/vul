@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scpd xmlns="urn:schemas-upnp-org:service-1-0">
+    <specVersion>
+        <major>1</major>
+        <minor>0</minor>
+    </specVersion>
+    <actionList>
+        <action>
+            <name>Start</name>
+        </action>
+        <action>
+            <name>Stop</name>
+        </action>
+        <action>
+            <name>GetStatus</name>
+            <argumentList>
+                <argument>
+                    <name>Status</name>
+                    <direction>out</direction>
+                    <relatedStateVariable>A_ARG_TYPE_Status</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+        <action>
+            <name>SetAutoRun</name>
+            <argumentList>
+                <argument>
+                    <name>AutoRun</name>
+                    <direction>in</direction>
+                    <relatedStateVariable>A_ARG_TYPE_AutoRun</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+        <action>
+            <name>GetAutoRun</name>
+            <argumentList>
+                <argument>
+                    <name>AutoRun</name>
+                    <direction>out</direction>
+                    <relatedStateVariable>A_ARG_TYPE_AutoRun</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+    </actionList>
+    <serviceStateTable>
+        <stateVariable sendEvents="no">
+            <name>A_ARG_TYPE_Status</name>
+            <dataType>boolean</dataType>
+        </stateVariable>
+        <stateVariable sendEvents="no">
+            <name>A_ARG_TYPE_AutoRun</name>
+            <dataType>boolean</dataType>
+        </stateVariable>
+   </serviceStateTable>
+</scpd>

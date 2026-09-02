@@ -1,0 +1,42 @@
+<div id="mst_bu_b_block1">
+    <div id="mst_bu_b_block2">
+        <div class="icon_list_block">
+            <div class="icon_list_block_main">
+                <table>
+                <tr>
+                    <td>
+                        <a href="javascript:mstweb_page_backup_get_page_server_list()">[[BACKUP_BACK_TO_SERVER_LIST]]</a>
+                        <span class="separater"> | </span>
+                        <input type="button" id="page_backup_register_task_btn_apply" value="[[BACKUP_BUTTON_CREATE_TASK]]" onclick="mstweb_page_backup_register_task()" disabled="" />
+                        <input type="text" id="page_backup_register_task_txt_container" value="" size="50" readonly="readonly" />
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div class="icon_list_block_sub">
+                <ul class="icon_list">
+                    <li class="icon_item_reload" id="page_backup_register_task_btn_reload" onclick="mstweb_page_backup_init_container_tree()" onmouseover="cntl('bu_t','change_state','reload','hover')" onmouseout="cntl('bu_t','change_state','reload','normal')" onmouseup="cntl('bu_t','change_state','reload','normal')" onmousedown="cntl('bu_t','change_state','reload','push')" />
+                </ul>
+                <div class="float_cancel"></div>
+            </div>
+            <div class="float_cancel"></div>
+        </div>
+
+        <div class="list_head">
+            <table class="list_head2">
+                <tr>
+                    <td class="list_item_td_first"></td>
+                    <td id="mst_bu_b_list_item_td_icon"><img src="[[ICON_URL]]" /></td>
+                    <td><span id="mst_bu_b_list_item_td_name_name">[[FRIENDLY_NAME]]</span> [[BACKUP_S_CONTAINER_LIST]]</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="mst_bu_b_container_tree" class="list_body">
+            <div class="no_border" id="mstweb_page_backup_page_browse_container_browse"></div>
+        </div>
+    </div>
+
+    <input type="hidden" name="udn" id="mstweb_page_backup_page_browse_container_udn" value="[[UDN]]" />
+    <input type="hidden" name="control_url_cd" id="mstweb_page_backup_page_browse_container_control_url_cd" value="[[CONTROL_URL_CD]]" />
+</div>

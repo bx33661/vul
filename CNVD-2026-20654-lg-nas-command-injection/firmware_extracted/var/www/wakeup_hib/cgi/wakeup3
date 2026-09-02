@@ -1,0 +1,22 @@
+#!/bin/sh
+eval `/var/www/cgi/proccgi.sh $*`
+echo Content-type: text/html
+echo ""
+MD5_pw=`echo $FORM_pw | md5sum |cut -d' ' -f1`
+_pw=$(cat /var/run/admin_password)
+
+if [ "$MD5_pw" == "" ]
+then
+/bin/cat ./ng.html
+else
+
+  if [ "$MD5_pw" == "$_pw" ] 
+  then
+/bin/cat ./ok.html
+sleep 1
+/hib_reboot.sh 
+  else
+/bin/cat ./ng.html
+  fi
+fi
+ 

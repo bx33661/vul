@@ -1,0 +1,267 @@
+
+Template: udev/reboot_needed
+Type: error
+Description: Reboot needed after this upgrade
+ You are currently upgrading udev using an incompatible kernel version. A
+ compatible version is installed or being installed on the system, but
+ you need to reboot using this new kernel as soon as the upgrade is
+ complete.
+ .
+ Without a reboot with this new kernel version, the system may become
+ UNUSABLE.
+Description-ar.UTF-8: يجب إعادة تشغيل الجهاز بعد هذه الترقية
+ تقوم حالياً بترقية udev باستخدام نسخة نواة غير متوافقة. هناك نسخة نواة متوافقة مثبتة أو يتم تثبيتها على النظام، ولكن يجب عليك إعادة تشغيل النظام واستخدام النواة الجديدة حالما تنتهي عملية الترقية.
+ .
+ بدون أن تقوم بإعادة التشغيل واستخدام نسخة النواة الجديدة، فإن النظام قد يصبح غير مستقر.
+Description-ca.UTF-8: Es necessari reiniciar després d'aquesta actualització
+ Esteu actualitzant l'udev utilitzant una versió del nucli incompatible. S'està instal·lant o està instal·lada una versió compatible al vostre sistema, però necessiteu reiniciar per utilitzar aquest nou nucli en el moment que l'actualització estiga complerta.
+ .
+ Si no reinicieu amb aquesta nova versió del nucli, el vostre sistema es podria quedar INUTILITZABLE.
+Description-cs.UTF-8: Po této aktualizaci je vyžadován restart
+ Momentálně aktualizujete udev a používáte nekompatibilní verzi jádra. Do systému se již nainstalovala, případně se každou chvílí nainstaluje, kompatibilní verze. Po dokončení instalace musíte co nejdříve restartovat systém s tímto novým jádrem.
+ .
+ Bez restartu do nového jádra se systém může stát NEPOUŽITELNÝM.
+Description-de.UTF-8: Nach diesem Upgrade ist ein Neustart notwendig
+ Sie führen gegenwärtig ein Upgrade von Udev unter Verwendung einer inkompatiblen Kernel-Version durch. Eine kompatible Version ist oder wird gerade auf Ihrem System installiert. Sie müssen jedoch Ihren Rechner mit dem neuen Kernel neu starten, sobald das Upgrade beendet ist.
+ .
+ Ohne Neustart mit dieser neuen Kernel-Version könnte Ihr System UNBENUTZBAR werden.
+Description-es.UTF-8: Es necesario reiniciar después de esta actualización
+ Está actualizando udev utilizando una versión incompatible del núcleo. Se está instalando o será instalada en su sistema una versión compatible, pero tiene que reiniciar utilizando este núcleo en cuanto haya terminado esta actualización.
+ .
+ Su sistema puede volverse INUTILIZABLE si no reinicia con esta nueva versión del núcleo.
+Description-eu.UTF-8: Eguneraketa honen ondoren berrabiarazi egin behar da
+ Bateragarri ez den kernel bertsio bat erabiliaz udev eguneratzen ari zara. Bertsio bateragarri bat instalaturik dago edo instalatu da zure sisteman, baina ahal bezain laster kernel berri hau erabiliaz berrabiarazi behar da eguneraketa hau burutu ahal izateko.
+ .
+ Kernel berri horrekin ez berrabiarazi ezkero, zure sistema ERABILTEZINA geratu daiteke.
+Description-fi.UTF-8: Tämän päivityksen jälkeen tietokone on käynnistettävä uudelleen
+ Ohjelmaa udev päivitetään käyttäen yhteensopimatonta ytimen versiota. Yhteensopiva versio on asennettuna tai asennetaan järjestelmään, mutta tietokone tulee käynnistää uudelleen käyttämään tätä uutta ydintä heti, kun päivitys on valmis.
+ .
+ Jos konetta ei käynnistetä uudelleen käyttäen uutta ytimen versiota, järjestelmä saattaa muuttua käyttökelvottomaksi.
+Description-fr.UTF-8: Redémarrage nécessaire après cette mise à jour
+ Vous êtes en train de mettre à jour udev en utilisant une version du noyau incompatible. Une version compatible est installée ou en cours d'installation sur le système, mais il faudra redémarrer en utilisant ce nouveau noyau dès la fin de cette mise à jour.
+ .
+ Sans redémarrage en utilisant cette nouvelle version du noyau, votre système peut devenir INUTILISABLE.
+Description-gl.UTF-8: Hai que reiniciar trala actualización
+ Está a actualizar udev mentres emprega unha versión incompatible do núcleo. Hai unha versión compatible instalada ou a se instalar no sistema, pero ha ter que reiniciar para empregar ese novo núcleo o antes posible trala actualización.
+ .
+ Se non reinicia para empregar esta nova versión do núcleo, o sistema pode quedar inutilizable.
+Description-hu.UTF-8: Újraindítás szükséges e frissítés után
+ Az udev rendszert egy inkompatibilis kernel jelenlegi használatával frissíted. Egy kompatibilis verzió is telepítésre kerül, és ennek használatához újra kell majd indítani a rendszert a frissítés után.
+ .
+ Az új kernellel való újraindítás nélkül a rendszer HASZNÁLHATATLANNÁ válhat.
+Description-it.UTF-8: Dopo questo aggiornamento è necessario riavviare il sistema
+ Si sta aggiornando udev mentre è in uso una versione del kernel incompatibile. Sul sistema è installata o sta per essere installata una versione compatibile, però al termine dell'aggiornamento sarà necessario riavviare il sistema per usare il nuovo kernel.
+ .
+ Il sistema potrebbe diventare INUTILIZZABILE se non lo si riavvia con la nuova versione del kernel.
+Description-ja.UTF-8: 今回のアップグレード後には再起動が必要です
+ 現在 udev をアップグレードしようとしていますが、この udev とは互換性の無いバージョンのカーネルを利用しています。互換性のあるバージョンのカーネルは、システムにインストールされている、あるいはこれからインストールされるところですが、アップグレード完了後すぐにこの新しいカーネルを使って再起動する必要があります。
+ .
+ この新しいバージョンのカーネルを使って再起動しなければ、システムは「利用不可能」になるでしょう。
+Description-ko.UTF-8: 이번 업그레이드 후 재부팅 필요
+ 현재 호환되지 않는 커널 버전을 사용하면서 udev을 업그레이드하고 있습니다. 호환되는 버전이 설치되었든지 설치하는 중이지만, 업그레이드가 끝나자마자 새 커널을 사용하도록 재부팅을 하셔야 합니다.
+ .
+ 새로운 커널 버전로 재부팅하지 않으면 시스템을 사용할 수 없게 될 수도 있습니다.
+Description-lt.UTF-8: Po šio atnaujinimo reikia pakartotinai įkelti sistemą
+ Jūs atnaujinate udev naudodami nesuderinamą branduolio versiją. Suderinama versija jau įdiegta arba bus įdiegta, bet baigus atnaujinimą Jums reikia pakartotinai įkelti sistemą (perkrauti) su nauju branduoliu.
+ .
+ Neperkrovus sistemos su nauja branduolio versija, sistema gali tapti NEDARBINGA.
+Description-ml.UTF-8: പുതുക്കലിനു് ശേഷം വീണ്ടും തുടങ്ങണം
+ പൊരുത്തമില്ലാത്തൊരു കെര്‍ണല്‍ പതിപ്പുപയോഗിച്ചാണു് നിങ്ങള്‍ ഇപ്പോള്‍ യുഡെവ് പുതുക്കിക്കൊണ്ടിരിയ്ക്കുന്നതു്. പൊരുത്തമുള്ളൊരു പതിപ്പു് സിസ്റ്റത്തില്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്തിട്ടുണ്ടു് അല്ലെങ്കില്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്തു് കൊണ്ടിരിയ്ക്കുകയാണു്, പക്ഷേ പുതുക്കല്‍ തീര്‍ന്നയുടനെത്തന്നെ ഈ പുതിയ കെര്‍ണലുപയോഗിച്ചു് നിങ്ങള്‍ വീണ്ടും തുടങ്ങണം.
+ .
+ ഈ പുതിയ കെര്‍ണല്‍ പതിപ്പുപയോഗിച്ചു് വീണ്ടും തുടങ്ങിയില്ലെങ്കില്‍ നിങ്ങളുടെ സിസ്റ്റം ഉപയോഗിയ്ക്കാന്‍ പറ്റാത്തതായേയ്ക്കാം.
+Description-nb.UTF-8: Omstart er nødvendig etter denne oppgraderingen
+ Udev blir nå oppgradert ved hjelp av en kjerneversjon som ikke er kompatibel med udev. En kompatibel kjerneversjon er installert eller under installasjon på systemet, men maskinen må startes på nytt med denne nye kjernen så snart oppgraderingen er fullført.
+ .
+ Uten omstart med denne nye kjerneversjonen kan systemet bli UBRUKELIG.
+Description-nl.UTF-8: Herstart nodig na opwaardering
+ Het pakket udev wordt opgewaardeerd, maar uw systeem draait op dit moment met een kernel die niet compatibel is met de nieuwe versie van udev. Wel is of wordt een compatibele versie van de kernel op uw systeem geïnstalleerd. U wordt geadviseerd om uw systeem zo spoedig mogelijk nadat de opwaardering is voltooid, te herstarten met de nieuwe kernelversie.
+ .
+ Zonder een herstart naar deze nieuwe kernelversie kan het systeem onbruikbaar worden.
+Description-no.UTF-8: Omstart er nødvendig etter denne oppgraderingen
+ Udev blir nå oppgradert ved hjelp av en kjerneversjon som ikke er kompatibel med udev. En kompatibel kjerneversjon er installert eller under installasjon på systemet, men maskinen må startes på nytt med denne nye kjernen så snart oppgraderingen er fullført.
+ .
+ Uten omstart med denne nye kjerneversjonen kan systemet bli UBRUKELIG.
+Description-pt.UTF-8: Será necessário reiniciar após esta actualização
+ Está neste momento a actualizar o udev com uma versão incompatível de kernel. Está instalada ou está a ser instalada uma versão compatível no seu sistema, mas deverá reiniciar usando este novo kernel assim que a actualização termine.
+ .
+ Se não reiniciar com esta nova versão de kernel, o seu sistema poderá ficar INUTILIZÁVEL.
+Description-pt_BR.UTF-8: Reinicialização necessária após esta atualização
+ Você está atualmente atualizando o udev utilizando uma versão de kernel incompatível. Uma versão compatível está instalada ou sendo instalada em seu sistema, mas você precisa reinicializar usando esse novo kernel assim que a atualização estiver completa.
+ .
+ Sem uma reinicialização usando esta nova versão de kernel, o sistema pode tornar-se INUTILIZÁVEL.
+Description-ru.UTF-8: После этого обновления требуется перезагрузка
+ Вы обновляете udev используя ядро несовместимой версии. Совместимая версия уже установлена или будет установлена в систему, но вам нужно выполнить перезагрузку с новым ядром сразу после завершения обновления.
+ .
+ Без перезагрузки с ядром новой версии, система может стать НЕРАБОТОСПОСОБНОЙ.
+Description-sk.UTF-8: Po tejto aktualizácii bude potrebný reštart.
+ Momentálne aktualizujete udev, pričom používate nekompatibilnú verziu jadra. Na systéme je nainštalovaná alebo sa inštaluje kompatibilná verzia, ale hneď po dokončení inštalácie budete musieť čo najskôr reštartovať systém s novým jadrom.
+ .
+ Ak nevykonáte reštart s touto novou verziou jadra, systém sa môže stať NEPOUŽITEĽNÝM.
+Description-sv.UTF-8: Efter denna uppgradering krävs en omstart.
+ Du uppgraderar för närvarande udev med en inkompatibel kärnversion. En kompatibel kärnversion finns installerad eller håller på att installeras på ditt system, men du måste starta om med denna nya kärna så fort uppgraderingen är klar.
+ .
+ Om du inte startar om med denna nya kärnersionen så kan ditt system bli OANVÄNDBART.
+Description-ta.UTF-8: இந்த மேம்படுத்தலுக்குப்பின் மீள்துவக்கம் தேவை
+ இசைவில்லாத ஒரு உட்கூறு பதிப்புடன் நீங்கள் யூடெவ் ஐ மேம்படுத்துகிறீர்கள். ஒரு இசைவான பதிப்பு நிறுவப்பட்டுள்ளது அல்லது நிறுவப்படுகிறது ஆனால் மேம்படுத்தல் முடிந்ததும் இந்த புதிய உட்கூறை பயன்படுத்தி நீங்கள் மீள்துவக்கம் செய்ய வேண்டும். 
+ .
+ அத்தகைய மீள்துவக்கம் இல்லாது போனால் கணினி பயன்படுத்த இயலாத நிலைக்கு ஆளாக்கப்படும்.
+
+Template: udev/new_kernel_needed
+Type: boolean
+Default: false
+Description: Proceed with the udev upgrade despite the kernel incompatibility?
+ You are currently upgrading udev to a version that is not
+ compatible with the currently running kernel.
+ .
+ You MUST install a compatible kernel version (2.6.18 or newer) before
+ upgrading, otherwise the system may become UNUSABLE.
+ Packages with a name starting with "linux-image-2.6-" provide a kernel
+ image usable with this new udev version.
+ .
+ If you choose to upgrade udev nevertheless, you should install a
+ compatible kernel and reboot with that kernel as soon as
+ possible.
+Description-ar.UTF-8: هل تريد الاستمرار بترقية udev على الرغم من عدم توافق النواة؟
+ تقوم حالياً بترقية udev إلى نسخة غير متوافقة مع النواة التي تعمل حالياً.
+ .
+ يجب أن تقوم بتثبيت نسخة نواة متوافقة (2.6.18 أو أحدث) قبل أن تقوم بالترقية، وإلا فقد يصبح النظام غير مستقر. الحزم التي يبدأ اسمها بالنص "linux-image-2.6-" توفر نسخة نواة متوافقة مع نسخة udev هذه.
+ .
+ إن اخترت ترقية udev على الرغم من ذلك، فيجب عليك تثبيت نواة متوافقة وإعادة التشغيل لاستخدام تلك النواة في أقرب وقت ممكن.
+Description-ca.UTF-8: Voleu continuar amb l'actualització malgrat la incompatibilitat del nucli?
+ Esteu actualitzant l'udev a una versió que no és compatible amb la versió del nucli que s'està executant.
+ .
+ HEU d'instal·lar una versió del nucli compatible (2.6.18 o posterior) abans de continuar amb l'actualització, si no, el vostre sistema es quedarà INUTILITZABLE. Els paquets que el seu nom comença per «linux-image-2.6-» proporcionen una imatge del nucli utilitzable amb aquesta nova versió de l'udev.
+ .
+ Si trieu d'actualitzar l'udev de totes maneres, hauríeu d'instal·lar un nucli compatible i reiniciar tan prompte com siga possible.
+Description-cs.UTF-8: Pokračovat v aktualizaci udevu i přes nekompatibilní jádro?
+ Momentálně aktualizujete udev na verzi, která není kompatibilní s běžícím jádrem.
+ .
+ Před aktualizací MUSÍTE nainstalovat kompatibilní verzi jádra (2.6.18 nebo vyšší). Pokud tak neučiníte, stane se systém NEPOUŽITELNÝM. Balíky, jejichž název začíná na "linux-image-2.6-", poskytují jádra, která jsou vhodná pro tuto verzi udev.
+ .
+ Budete-li přesto pokračovat v aktualizaci balíku udev, měli byste nainstalovat kompatibilní verzi jádra a co nejrychleji do něj restartovat.
+Description-de.UTF-8: Upgrade trotz Kernel-Inkompatibilität fortsetzen?
+ Sie führen gegenwärtig ein Upgrade von Udev auf eine Version durch, die mit dem gegenwärtig laufenden Kernel nicht kompatibel ist.
+ .
+ Sie MÜSSEN eine kompatible Kernel-Version (2.6.18 oder höher) installieren, bevor Sie das Upgrade durchführen. Anderenfalls könnte das System UNBENUTZBAR werden. Pakete, deren Name mit »linux-image-2.6-« beginnt, stellen ein Kernel-Image zu Verfügung, welches mit dieser neuen Udev-Version verwendbar ist.
+ .
+ Falls Sie sich entscheiden, das Upgrade von Udev trotzdem durchzuführen, sollten Sie so bald wie möglich einen kompatiblen Kernel installieren und das System damit neu starten.
+Description-es.UTF-8: ¿Desea continuar con la actualización de udev a pesar de la incompatibilidad del núcleo?
+ Está actualizando udev a una versión que no es compatible con el núleo que actualmente se ejecuta.
+ .
+ DEBE instalar una versión de núcleo compatible (2.6.18 o superior) antes de continuar con la actualización, de otro modo el sistema puede volverse INUTILIZABLE. Los paquetes que comienzan con «linux-image-2.6-» proporcionan una imagen del núcleo compatible con esta nueva versión de udev.
+ .
+ Si obstante elige actualizar udev, debe instalar un núcleo compatible y reiniciar con él lo antes posible.
+Description-eu.UTF-8: Kernel bateragarritasun eza albo batera utzi eta eguneraketarekin jarraitu?
+ Une honetan instalaturik duzun kernel-arekin bateragarri ez den udev bertsio batetara bertsio berritzen ari zara.
+ .
+ Bertsio bateragarri bat instalatu BEHAR duzu (2.6.18 edo berriagoa) aurrera jarraitu aurretik. bestela sistema ERABILTEZINA geratu daiteke. Pakete izena "linux-image-2.6-"-rekin asten diren paketeak udev bertsio berria erabiltzen duen kernel irudi bat dute.
+ .
+ Hala ere udev eguneratzea hautatu ezkero, ahal bezain laster kernel bateragarri bat instalatu eta berrabiarazi egin behar duzu.
+Description-fi.UTF-8: Jatketaanko udevin päivitystä huolimatta ytimen yhteensopimattomuudesta?
+ Ohjelmaa udev päivitetään versioon, joka ei ole yhteensopiva käytössä olevan ytimen kanssa.
+ .
+ Sinun TÄYTYY asentaa yhteensopiva ytimen versio (2.6.18 tai uudempi) ennen päivitystä. Muussa tapauksessa järjestelmä saattaa muuttua käyttökelvottomaksi. Paketit, joiden nimi alkaa ”linux-image-2.6-” tarjoavat tämän uuden udevin version kanssa käyttökelpoisia ytimiä.
+ .
+ Jos päätät päivittää udevin kaikesta huolimatta, sinun tulisi asentaa yhteensopiva ydin ja käynnistää tietokone uudelleen käyttäen tuota ydintä mahdollisimman pian.
+Description-fr.UTF-8: Voulez-vous poursuivre la mise à jour bien que le noyau soit incompatible ?
+ Vous êtes actuellement en train de mettre à jour udev vers une version qui pas compatible avec le noyau actuellement utilisé.
+ .
+ Vous DEVEZ installer une version du noyau compatible (c'est-à-dire 2.6.18 ou plus récente) avant de procéder à cette mise à jour, sinon votre système peut devenir INUTILISABLE. Les paquets dont le nom commence par « linux-image-2.6- » fournissent une image du noyau utilisable avec cette nouvelle version du paquet udev.
+ .
+ Si, malgré tout, vous choisissez de mettre à jour udev, vous devriez installer une version du noyau compatible et redémarrer dès que possible.
+Description-gl.UTF-8: ¿Quere continuar a actualización a pesares da incompatibilidade do núcleo?
+ Está a actualizar udev a unha versión que non é compatible co núcleo que está a executar.
+ .
+ Debe instalar unha versión do núcleo compatible (2.6.18 ou posterior) antes de actualizar; se non, o seu sistema pode quedar inutilizable. Os paquetes que teñen un nome que comeza por "linux-image-2.6-" fornecen unha versión do núcleo que se pode empregar con esta nova versión de udev.
+ .
+ Se decide seguir a actualizar udev, debería instalar un núcleo compatible e reiniciar con ese núcleo o antes posible.
+Description-hu.UTF-8: Folytatod az udev frissítést a kernel inkompatibilitás tudtával?
+ Az udev rendszert a jelenlegi kernellel nem kompatibilis verzióra frissíted.
+ .
+ Telepítened KELL egy kompatibilis kernel verziót (2.6.18 vagy újabb) a frissítés előtt, különben a rendszer HASZNÁLHATATLANNÁ válhat. A  "linux-image-2.6-" kezdetű csomagok egy ezen új udev verzióval használható kernel képet adnak.
+ .
+ Ha frissíted az udev rendszert, telepítened kell egy kompatibilis kernelt és ajánlott mielőbb indítani vele.
+Description-it.UTF-8: Procedere con l'aggiornamento di udev nonostante l'incompatibilità con il kernel?
+ Si sta aggiornando udev a una versione che non è compatibile con il kernel attualmente in uso.
+ .
+ Si DEVE installare una versione del kernel compatibile (2.6.18 o successiva) prima dell'aggiornamento, altrimenti il sistema potrebbe diventare INUTILIZZABILE. I pacchetti il cui nome inizia con "linux-image-2.6-" forniscono un'immagine del kernel adatta a questa nuova versione di udev.
+ .
+ Se si sceglie comunque di aggiornare udev, si deve installare un kernel compatibile e riavviare con il nuovo kernel il prima possibile.
+Description-ja.UTF-8: カーネルとの互換性がありませんが、それでもアップグレードを実行しますか?
+ udev を、現在動作しているカーネルとは互換性が無いバージョンのものにアップグレードしようとしています。
+ .
+ アップグレードを実行する前に、互換性があるバージョン (2.6.18 以上) のカーネルをインストールする「必要」があります。さもなくば、システムは「利用不可能」になります。"linux-image-2.6-" で始まる名前のパッケージでこの新バージョンの udev で使えるカーネルイメージが提供されます。
+ .
+ それでも udev をアップグレードするという場合は、互換性のあるバージョンのカーネルをインストールして、直ちに再起動する必要があります。
+Description-ko.UTF-8: 커널이 호환되지 않는데도 udev 업그레이드를 계속 진행할까요?
+ 현재 사용중인 커널과 호환되지 않는 udev 버전으로 업그레이드하는 중입니다.
+ .
+ 업그레이드하기 전에 호환되는 커널 버전(2.6.18 이상)을 반.드.시. 설치하셔야지, 안 그러면 시스템을 사용할 수 없게 될 수도 있습니다. 새로 설치하는 udev 버전과 사용할 수 있는 커널 이미지는 이름이 "linux-image-2.6-"로 시작하는 꾸러미에서 찾으실 수 있습니다.
+ .
+ 그래도 udev을 업그레이드하고자 하신다면 최대한 빨리 호환되는 커널을 설치하시고 그 커널로 재부팅하시기 바랍니다.
+Description-lt.UTF-8: Ar tęsti udev atnaujinimą, nepaisant nesuderinamumo su branduoliu.
+ Jūs atnaujinate udev iki versijos, kuri yra nesuderinama su dabartiniu metu veikiančiu branduoliu.
+ .
+ Jūs PRIVALOTE įdiegti suderinamos versijos branduolį (2.6.18 arba aukštesnės) prieš atnaujinimą, nes sistema gali tapti NEDARBINGA. Paketai, kurių vardai prasideda "linux-image-2.6-" tiekia branduolius tinkamus šiai naujai udev versijai.
+ .
+ Jei vis dėlto pasirenkate tęsti atnaujinimą, Jūs turite įdiegti suderinamą branduolį ir pakartotinai įkelti (perkrauti) sistemą su nauju branduoliu kai tik galėsite.
+Description-ml.UTF-8: കെര്‍ണല്‍ പൊരുത്തക്കേടുണ്ടെന്നറിഞ്ഞിട്ടും യുഡെവിന്റെ പുതുക്കലുമായി മുമ്പോട്ടു് പോകണോ?
+ ഇപ്പോള്‍ പ്രവര്‍ത്തിച്ചു് കൊണ്ടിരിയ്ക്കുന്ന കെര്‍ണല്‍ പതിപ്പുമായി പൊരുത്തമില്ലാത്ത യുഡെവിന്റെ ഒരു പതിപ്പിലേയ്ക്കാണു് നിങ്ങളിപ്പോള്‍ പുതുക്കിക്കൊണ്ടിരിയ്ക്കുന്നതു്.
+ .
+ പുതുക്കുന്നതിനു് മുമ്പു് പൊരുത്തമുള്ളൊരു കെര്‍ണല്‍ പതിപ്പു് (2.6.18 അല്ലെങ്കില്‍ പുതിയതു്) ഇന്‍സ്റ്റോള്‍ ചെയ്തിരിയ്ക്കണം, അല്ലായെങ്കില്‍ സിസ്റ്റം ഉപയോഗിയ്ക്കാന്‍ പറ്റാത്തതായേയ്ക്കാം. "linux-image-2.6-" എന്നു് തുടങ്ങുന്ന പേരുള്ള പൊതികള്‍ ഈ പുതിയ യുഡെവ് പതിപ്പുമായി ഉപയോഗിയ്ക്കാന്‍ പറ്റുന്ന കെര്‍ണല്‍ നല്‍കുന്നുണ്ടു്.
+ .
+ ഇതെല്ലാം അവഗണിച്ചു് നിങ്ങള്‍ യുഡെവ് പുതുക്കാന്‍ തന്നെ തീരുമാനിച്ചെങ്കില്‍ നിങ്ങള്‍ പൊരുത്തമുള്ളൊരു കെര്‍ണല്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്തു് എത്രയും പെട്ടെന്നു് വീണ്ടും തുടങ്ങേണ്ടതാണു്.
+Description-nb.UTF-8: Fortsette med oppgraderingen likevel, trass i ukompatibel kjerne?
+ Udev er i ferd med å bli oppgradert til en versjon som ikke er kompatibel med den kjernen som nå kjører.
+ .
+ En kompatibel kjerneversjon (2.6.18 eller senere) MÅ installeres før udev oppgraderes, ellers kan systemet bli UBRUKELIG. Pakker med navn som begynner med «linux-image-2.6-» inneholder kjernebilder som kan brukes med denne nye udev-versjonen.
+ .
+ Hvis du velger å oppgradere udev likevel, bør du installere en kompatibel kjerne og starte maskinen med den så snart som mulig.
+Description-nl.UTF-8: Verder gaan met de opwaardering ondanks de kernel-incompatibiliteit?
+ U bent momenteel udev aan het opwaarderen naar een versie die niet compatibel is met de huidige kernelversie.
+ .
+ U moet een compatibele kernelversie (2.6.18 of hoger) installeren voordat u met de opwaardering verder gaat, anders kan uw systeem onbruikbaar worden. Pakketten die beginnen met "linux-image-2.6-" voorzien in een kernel die bruikbaar is met deze nieuwe udev-versie.
+ .
+ Indien u er toch voor kiest udev op te waarderen, dient u zo spoedig mogelijk een compatibele kernel te installeren en uw systeem met die kernel opnieuw te starten.
+Description-no.UTF-8: Fortsette med oppgraderingen likevel, trass i ukompatibel kjerne?
+ Udev er i ferd med å bli oppgradert til en versjon som ikke er kompatibel med den kjernen som nå kjører.
+ .
+ En kompatibel kjerneversjon (2.6.18 eller senere) MÅ installeres før udev oppgraderes, ellers kan systemet bli UBRUKELIG. Pakker med navn som begynner med «linux-image-2.6-» inneholder kjernebilder som kan brukes med denne nye udev-versjonen.
+ .
+ Hvis du velger å oppgradere udev likevel, bør du installere en kompatibel kjerne og starte maskinen med den så snart som mulig.
+Description-pt.UTF-8: Continuar com a actualização do udev apesar da incompatibilidade com o kernel?
+ Está a actualizar o udev para uma versão que não é compatível com o kernel que está a correr actualmente.
+ .
+ TERÁ de instalar uma versão do kernel compatível (2.6.18 ou superior) antes da actualização continuar, de outra forma o sistema poderá ficar INUTILIZÁVEL. Os pacotes que comecem com "linux-image-2.6-" disponibilizam uma imagem de kernel utilizável com esta nova versão do udev.
+ .
+ Se decidir actualizar o udev de qualquer forma, deverá instalar um kernel compatível e reiniciar com esse kernel o mais rápido possível.
+Description-pt_BR.UTF-8: Proceder com a atualização do udev apesar da incompatibilidade de kernel?
+ Você está atualmente atualizando o udev para uma versão que não é compatível com o kernel atualmente em execução.
+ .
+ Você DEVE instalar uma versão de kernel compatível (2.6.18 ou posterior) antes de atualizar, caso contrário o sistema pode tornar-se INUTILIZÁVEL. Pacotes com um nome iniciando com "linux-image-2.6-" fornecem uma imagem de kernel usável com esta nova versão do udev.
+ .
+ Se você escolher atualizar o udev de qualquer forma, você deverá instalar um kernel compatível e reinicializar com este kernel o mais rápido possível.
+Description-ru.UTF-8: Продолжить обновление udev несмотря на несовместимость ядра?
+ Вы обновляете udev до версии, которая не совместима с работающим в настоящее время ядром.
+ .
+ Вы ДОЛЖНЫ установить ядро совместимой версии (2.6.18 или выше) перед обновлением, иначе система может стать НЕРАБОТОСПОСОБНОЙ. Пакеты с именами начинающимися с "linux-image-2.6-" содержат образы ядра совместимые с новой версией udev.
+ .
+ Если вы продолжите обновление udev несмотря на это, то вам следует установить совместимое ядро и перезагрузить машину с этим ядром как можно скорее.
+Description-sk.UTF-8: Pokračovať v aktualizácii udev napriek nekompatibilite jadra?
+ Momentálne aktualizujete udev na verziu, ktorá nie je kompatibilná s verziou jadra, ktoré práve používate nekompatibilnú.
+ .
+ MUSÍTE si pred aktualizáciou nainštalovať kompatibilnú verziu jadra (2.6.18 alebo vyššiu), inak sa váš systém môže stať NEPOUŽITEĽNÝM. Balíky, ktorých názov začína „linux-image-2.6-” poskytujú jadro kompatibilné s touto novou verziou udev.
+ .
+ Ak sa rozhodnete napriek tomu aktualizovať udev, mali by ste si nainštalovať kompatibilnú verziu jadra a čo najskôr reštartovať.
+Description-sv.UTF-8: Vill du ändå fortsätta med uppgraderingen?
+ Du kommer att uppgradea udev till en version som inte är kompatibel med den kärna du använder för tillfället.
+ .
+ Du MÅSTE installera en kompatibel kärnversion (2.6.18 eller nyare) innan du fortsätter med uppgraderingen, annars kan ditt system bli OANVÄNDBART. Paket vars namn börjar med "linux-image-2.6-" innehåller en kärna som går att använda med denna version av udev.
+ .
+ Om du ändå väljer att fortsätta att uppgradera udev, så skall du installera en kompatibel kärna och starta om med denna så fort som möjligt.
+Description-ta.UTF-8: உட்கூறு இசைவில்லாது யூடெவ் ஐ மேம்படுத்தலை தொடரலாமா?
+ நீங்கள் யூடெவ் பதிப்பை ஐ மேம்படுத்துகிறீர்கள். அது இப்போதுள்ள உட்கூறு பதிப்புடன் இசைவில்லாதது. 
+ .
+ நீங்கள் மேம்படுத்து முன் அவசியமாக இசைவுள்ள  உட்கூறு பதிப்பு (2.6.18 அல்லது மேல்) ஒன்றை நிறுவியாக வேண்டும். இல்லாவிட்டால் கணினி பயன்படுத்த முடியாத நிலைக்கு போகும். இந்த புதிய யூடெவ் பதிப்புடன் "linux-image-2.6-" என பெயர் துவங்கும் பொதிகள் இசைவுள்ளவை.
+ .
+ அப்படியும் யூடெவ்  ஐ மேம்படுத்த நினைத்தால் இசைவுள்ள உட்கூறு பதிப்புஒன்றை நிறுவியாக வேண்டும். உடனேயே அந்த உட்கூறுடன் மீள்துவக்கம் செய்ய வேண்டும்.

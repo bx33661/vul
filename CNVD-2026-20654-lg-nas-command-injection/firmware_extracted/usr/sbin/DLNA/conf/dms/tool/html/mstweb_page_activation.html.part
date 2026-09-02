@@ -1,0 +1,5 @@
+<div id="mst_state_activation" class="mst_state"></div>
+
+<div class="setting_main_container_list">
+	<div class="setting_main_container">[[ACTIVATION_MESSAGE]]</div>
+</div>

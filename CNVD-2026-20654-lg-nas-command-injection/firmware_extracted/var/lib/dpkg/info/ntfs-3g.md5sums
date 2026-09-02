@@ -1,0 +1,5 @@
+932c50fe499c43a207478538d70597bb  usr/share/man/man8/ntfs-3g.8.gz
+a4ff14128b0560606c3ab60acb0e7f37  usr/share/man/man8/ntfs-3g.probe.8.gz
+3e7fd13894d9422e0e4eb4386b69a747  usr/share/hal/fdi/policy/10osvendor/20-ntfs-3g-policy.fdi
+8527e10aee7b6390360fa5dcaae93f85  usr/bin/ntfs-3g.probe
+5b1e15be0589d3cd3bd642e3aee32f18  usr/bin/ntfs-3g

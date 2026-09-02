@@ -1,0 +1,6 @@
+nas-printer:\
+		:ml=0:\
+		:mx=0:\
+		:sd=/var/spool/lp:\
+		:sh:\
+		:lp=/dev/usb/lp0:

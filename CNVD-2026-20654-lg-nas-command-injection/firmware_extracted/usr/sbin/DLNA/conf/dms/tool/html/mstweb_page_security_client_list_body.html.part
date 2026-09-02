@@ -1,0 +1,7 @@
+<tr class="list_tbl" name="[[TR_NAME]]" id="[[TR_ID]]" onmouseover="list('[[LIST]]', 'change_tr', this.id, 'over')" onmouseout="list('[[LIST]]', 'change_tr', this.id, 'out')">
+    <td class="list_item_td_checkbox" onmousedown="list('[[LIST]]', 'change_tr', this.parentNode.id, 'add')">
+        <input type="checkbox" name="[[SE_NAME]]" value="[[MAC_AND_IP]]" id='[[SE_ID]]' onclick="list('[[LIST]]', 'view_update_btn')" />
+    </td>
+    <td id="[[HOST_ID]]" class="mst_sec_ad_list_item_td_host" onmousedown="list('[[LIST]]', 'change_tr', this.parentNode.id, 'down')">[[HOST]]</td>
+    <td onmousedown="list('[[LIST]]', 'change_tr', this.parentNode.id, 'down')">[[IP]]<br />[[MAC]]</td>
+</tr>

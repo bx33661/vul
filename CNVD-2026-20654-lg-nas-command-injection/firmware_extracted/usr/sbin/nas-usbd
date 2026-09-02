@@ -1,0 +1,40 @@
+#!/bin/sh
+
+#===============================================================================
+# nas-usbd 
+#===============================================================================
+
+LIBDIR=$PREFIX/usr/lib/nas/
+. $LIBDIR/storage.sh
+
+DAEMON="NAS-USBD"
+INTERVAL=4		# sec
+USB_DEV_LIST=/var/run/nas-usb.device
+
+log_func $DAEMON "USB monitoring daemon started"
+
+while true; do
+  cat $USB_DEV_LIST | \
+  while read DEVPATH SIZE; do
+    dd if=$DEVPATH of=/dev/null bs=1 count=0 >/dev/null 2>&1
+    SIZE_FILE="/sys/block/$(basename $DEVPATH)/size"
+    if [ -e "$SIZE_FILE" ]; then
+      NEWSIZE=$(cat $SIZE_FILE)
+    else 
+      continue
+    fi
+    
+    # echo $DEVPATH $SIZE $NEWSIZE
+    if [ "$SIZE" = "0" ] && [ "$NEWSIZE" != "0" ]; then
+      # inserted
+      usb_device_change $DEVPATH
+      usb_mount add $DEVPATH $DAEMON
+    elif [ "$SIZE" != "0" ] && [ "$NEWSIZE" = "0" ]; then
+      # ejected
+      usb_device_change $DEVPATH
+      usb_mount remove $DEVPATH $DAEMON
+    fi
+  done
+
+  sleep $INTERVAL
+done

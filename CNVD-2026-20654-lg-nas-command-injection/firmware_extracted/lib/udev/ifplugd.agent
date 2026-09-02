@@ -1,0 +1,59 @@
+#!/bin/sh
+# udev agent script
+
+DAEMON_NAME=ifplugd
+
+DAEMON=/usr/sbin/$DAEMON_NAME
+CFG=/etc/default/$DAEMON_NAME
+
+[ -x $DAEMON ] || exit 0
+
+HOTPLUGFUNCS=/lib/udev/hotplug.functions
+
+[ -f $HOTPLUGFUNCS ] || exit 1
+. $HOTPLUGFUNCS
+DEBUG=yes export DEBUG
+
+[ "$INTERFACE" ] || { mesg Bad invocation: \$INTERFACE is not set ; exit 1 ; }
+
+[ -f $CFG ] || { mesg No $DAEMON_NAME configuration file ; exit 1 ; }
+. $CFG
+
+# return true (0) if interface from list $1 is in list $2
+# return false (1) otherwise
+search_interfaces () {
+    for IF in $2 ; do
+        for SEARCH_IF in $1 ; do
+            if [ "$SEARCH_IF" = "$IF" ] ; then
+                return 0
+            fi
+        done
+    done
+    return 1
+}
+
+IFPLUGD=/usr/sbin/ifplugd
+test -x $IFPLUGD || exit 0
+
+search_interfaces "$INTERFACE" "$INTERFACES"
+if [ $? -gt 0 ] ; then
+    # Interface isn't statically managed by ifplugd
+    search_interfaces "all $INTERFACE" "$HOTPLUG_INTERFACES"
+    if [ $? -eq 0 ] ; then
+        # Interface is in hotplug allowed list
+        case $ACTION in
+        add|register)
+            debug_mesg Invoking $DAEMON_NAME for $INTERFACE
+            IF1=$(echo $INTERFACE | sed "s/-/_/")
+            A=$(eval echo \$\{ARGS_${IF1}\})
+            [ -z "$A" ] && A="$ARGS"
+            exec $IFPLUGD -i $INTERFACE $A &
+            ;;
+        remove|unregister)
+            debug_mesg Stopping $DAEMON_NAME for $INTERFACE
+            exec $IFPLUGD -k --wait-on-kill -i $INTERFACE &
+            ;;
+        esac
+        break
+    fi
+fi

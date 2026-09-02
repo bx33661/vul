@@ -1,0 +1,666 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=ks_c_5601-1987">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="help_firmware.files/filelist.xml">
+<title>LG Network Storage</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>NAS_TEST</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>NAS_TEST</o:LastAuthor>
+  <o:Revision>1</o:Revision>
+  <o:TotalTime>4</o:TotalTime>
+  <o:Created>2009-08-28T07:52:00Z</o:Created>
+  <o:LastSaved>2009-08-28T07:56:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>576</o:Words>
+  <o:Characters>3288</o:Characters>
+  <o:Company>P6</o:Company>
+  <o:Lines>27</o:Lines>
+  <o:Paragraphs>7</o:Paragraphs>
+  <o:CharactersWithSpaces>3857</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:바탕;
+	panose-1:2 3 6 0 0 1 1 1 1 1;
+	mso-font-alt:Batang;
+	mso-font-charset:129;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:돋움;
+	panose-1:2 11 6 0 0 1 1 1 1 1;
+	mso-font-alt:Dotum;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:"\@돋움";
+	panose-1:2 11 6 0 0 1 1 1 1 1;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:"\@바탕";
+	panose-1:2 3 6 0 0 1 1 1 1 1;
+	mso-font-charset:129;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:YoonGothicB;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:굴림;
+	mso-font-charset:129;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:1 151388160 16 0 524288 0;}
+@font-face
+	{font-family:YoonGothicL;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:"맑은 고딕";
+	mso-font-alt:돋움;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1879047505 165117179 18 0 524289 0;}
+@font-face
+	{font-family:"\@YoonGothicB";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:129;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:1 151388160 16 0 524288 0;}
+@font-face
+	{font-family:"\@맑은 고딕";
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1879047505 165117179 18 0 524289 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	text-autospace:none;
+	word-break:break-hangul;
+	font-size:10.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"맑은 고딕";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-noshow:yes;
+	mso-style-link:" Char Char1";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	text-autospace:none;
+	word-break:break-hangul;
+	font-size:10.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"맑은 고딕";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+span.MsoCommentReference
+	{mso-style-noshow:yes;
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	text-autospace:none;
+	word-break:break-hangul;
+	font-size:9.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:돋움;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+span.CharChar1
+	{mso-style-name:" Char Char1";
+	mso-style-noshow:yes;
+	mso-style-locked:yes;
+	mso-style-link:"메모 텍스트";
+	mso-bidi-font-size:11.0pt;
+	font-family:"맑은 고딕";
+	mso-ascii-font-family:"맑은 고딕";
+	mso-fareast-font-family:"맑은 고딕";
+	mso-hansi-font-family:"맑은 고딕";
+	mso-font-kerning:1.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:KO;
+	mso-bidi-language:AR-SA;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:99.25pt 3.0cm 3.0cm 3.0cm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"표준 표";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=KO style='tab-interval:40.0pt'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='font-size:
+16.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicB;
+color:gray;mso-font-kerning:0pt;mso-ansi-language:FR'>Firmware<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicB;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>Il permet de g&eacute;rer les
+firmwares (mise &agrave; jour, r&eacute;initialisation, sauvegarde/restauration des valeurs
+configur&eacute;es) du LG Network Storage.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=EN-US
+style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:
+YoonGothicL;color:black;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><b style='mso-bidi-font-weight:
+normal'><span lang=FR style='font-size:12.0pt;line-height:150%;font-family:
+Arial;mso-fareast-font-family:YoonGothicB;color:black;mso-font-kerning:0pt;
+mso-ansi-language:FR'>Mise &agrave; jour<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>Le syst&egrave;me du LG Network
+Storage et le firmware de Blu-ray / DVD peuvent &ecirc;tre t&eacute;l&eacute;charg&eacute;s du site Web de
+produit, et utilis&eacute;s pour la mise &agrave; jour.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>Les syst&egrave;mes avec firewall
+ne permettent pas la mise &agrave; jour.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%;mso-layout-grid-align:none;
+word-break:keep-all'><span lang=EN-US style='mso-bidi-font-size:10.0pt;
+line-height:150%;font-family:Arial;mso-fareast-font-family:바탕;color:black;
+mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><b style='mso-bidi-font-weight:
+normal'><span lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;
+font-family:Arial;mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:
+0pt;mso-ansi-language:FR'>[Mise &agrave; niveau du Syst&egrave;me Firmware]<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:바탕;mso-ascii-font-family:Arial;mso-bidi-font-family:
+Arial;color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>①</span><span
+lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;
+mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:0pt;
+mso-ansi-language:FR'> V&eacute;rifiez la connexion sur l’Internet et t&eacute;l&eacute;chargez le
+firmware de syst&egrave;me pour le LG Network Storage.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>Site web du
+produit&nbsp;: http://www.lge.com<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:바탕;
+mso-hansi-font-family:바탕;color:black;mso-font-kerning:0pt;mso-ansi-language:
+FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:바탕;mso-ascii-font-family:Arial;mso-bidi-font-family:
+Arial;color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>②</span><span
+lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;
+mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:0pt;
+mso-ansi-language:FR'> Appuyez sur le bouton ‘rechercher’ pour s&eacute;lectionner le
+firmware syst&egrave;me t&eacute;l&eacute;charg&eacute; sur le site web du produit.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:바탕;
+mso-hansi-font-family:바탕;color:black;mso-font-kerning:0pt;mso-ansi-language:
+FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:바탕;mso-ascii-font-family:Arial;mso-bidi-font-family:
+Arial;color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>③</span><span
+lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;
+mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:0pt;
+mso-ansi-language:FR'> Installez le firmware syst&egrave;me s&eacute;lectionn&eacute; sur le LG
+Network Storage en appuyant sur le bouton ‘mise &agrave; jour’. Vous pouvez v&eacute;rifier
+l’&eacute;tat de mise &agrave; jour &agrave; travers le panneau LCD.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:바탕;
+mso-hansi-font-family:바탕;color:black;mso-font-kerning:0pt;mso-ansi-language:
+FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:바탕;mso-ascii-font-family:Arial;mso-bidi-font-family:
+Arial;color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>④</span><span
+lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;
+mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:0pt;
+mso-ansi-language:FR'> Le syst&egrave;me red&eacute;marre automatiquement lorsque la mise &agrave;
+jour est termin&eacute;e. La connexion sur le net est alors interrompue
+automatiquement, veuillez vous reconnecter.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><b style='mso-bidi-font-weight:
+normal'><span lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;
+font-family:Arial;mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:
+0pt;mso-ansi-language:FR'>[Mise &agrave; jour de Firmware du lecteur Blu-ray / DVD]</span></b><b
+style='mso-bidi-font-weight:normal'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:바탕;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:바탕;mso-ascii-font-family:Arial;mso-bidi-font-family:
+Arial;color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>①</span><span
+lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;
+mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:0pt;
+mso-ansi-language:FR'> V&eacute;rifiez la connexion sur l’Internet et t&eacute;l&eacute;chargez le
+firmware syst&egrave;me pour le lecteur Blu-ray / DVD incorpor&eacute; au LG Network Storage.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>Site web du
+produit&nbsp;: http://www.lge.com<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:바탕;
+mso-hansi-font-family:바탕;color:black;mso-font-kerning:0pt;mso-ansi-language:
+FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:바탕;mso-ascii-font-family:Arial;mso-bidi-font-family:
+Arial;color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>②</span><span
+lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;
+mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:0pt;
+mso-ansi-language:FR'> S&eacute;lectionnez le firmware du lecteur Blu-ray / DVD t&eacute;l&eacute;charg&eacute;
+&agrave; partir du site web.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:바탕;
+mso-hansi-font-family:바탕;color:black;mso-font-kerning:0pt;mso-ansi-language:
+FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:바탕;mso-ascii-font-family:Arial;mso-bidi-font-family:
+Arial;color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>③</span><span
+lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;
+mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:0pt;
+mso-ansi-language:FR'> Installez le firmware du lecteur Blu-ray / DVD
+s&eacute;lectionn&eacute;.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:바탕;
+mso-hansi-font-family:바탕;color:black;mso-font-kerning:0pt;mso-ansi-language:
+FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:바탕;mso-ascii-font-family:Arial;mso-bidi-font-family:
+Arial;color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>④</span><span
+lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;
+mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:0pt;
+mso-ansi-language:FR'> La version du firmware du lecteur Blu-ray / DVD install&eacute;
+sera indiqu&eacute;e lorsque l’installation est termin&eacute;e.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicB;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicB;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>* Pour la stabilit&eacute; des
+donn&eacute;es, une sauvegarde des donn&eacute;es du LG Network Storage est fortement
+recommand&eacute;e avant la mise &agrave; jour. L’installation dure entre 1 et quelques
+minutes. L’acc&egrave;s avanc&eacute; des autres utilisateurs clients au LG Network Storage durant
+la mise &agrave; jour du firmware est interdit. </span><span lang=EN-US
+style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:
+YoonGothicB;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=EN-US
+style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:
+YoonGothicB;color:black;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='font-size:
+12.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicB;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>R&eacute;initialization<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='font-size:
+12.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicB;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>Fonction de
+r&eacute;initialisation du LG Network Storage. Cliquez sur le bouton ‘R&eacute;initialisation’
+pour r&eacute;initialiser le syst&egrave;me.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicB;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>* Il faut &ecirc;tre attentif
+lors des modifications des param&eacute;trages car toutes les informations et donn&eacute;es
+sont effac&eacute;es apr&egrave;s la r&eacute;initialisation.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicB;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>* La r&eacute;initialisation
+dure environ 10 minutes.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicB;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='font-size:
+12.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicB;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>Sauvegarde de
+configuration<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicB;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicB;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>Ceci est une fonction
+qui sauvegarde/ restaure les informations configur&eacute;es du LG Network Storage
+d’un moment donn&eacute;. Les param&eacute;tres r&eacute;seau (nom d’h&ocirc;te, adresse IP, groupe de
+travail), param&eacute;tres de l’heure (date/heure, NTP), param&eacute;tres du service de notification
+de courrier, administration partag&eacute;e (utilisateur, groupe, s&eacute;curit&eacute; dossier) et
+param&egrave;tres de service doivent &ecirc;tre sauvegard&eacute;s mais les donn&eacute;es d’utilisateurs
+requi&egrave;rent une sauvegarde s&eacute;par&eacute;e.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=EN-US
+style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:
+YoonGothicB;color:black;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.0pt;line-height:150%;
+font-family:Arial;mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:
+0pt'>&lt;<span class=SpellE>Sauvegarder</span>&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>Sauvegarder la
+configuration actuelle de l’utilisateur.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>* Vous pouvez
+sauvegarder 5 fichiers de sauvegarde au maximum.]<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;background:aqua;mso-highlight:aqua;mso-font-kerning:0pt;mso-ansi-language:
+FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:10.0pt;line-height:150%;
+font-family:Arial;mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:
+0pt'>&lt;<span class=SpellE>Restaurer</span>&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:바탕;mso-ascii-font-family:Arial;mso-bidi-font-family:
+Arial;color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>①</span><span
+lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;
+mso-fareast-font-family:바탕;color:black;mso-font-kerning:0pt;mso-ansi-language:
+FR'> Choisir le fichier de sauvegarde ou l’heure de d&eacute;but pour la restauration.</span><span
+lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;
+mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:0pt;
+mso-ansi-language:FR'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:바탕;mso-ascii-font-family:Arial;mso-bidi-font-family:
+Arial;color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>②</span><span
+lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;
+mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:0pt;
+mso-ansi-language:FR'> Cliquez sur le bouton </span><span lang=FR
+style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:
+바탕;color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>‘</span><span
+lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;
+mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:0pt;
+mso-ansi-language:FR'>Restaurer</span><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:바탕;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>’</span><span lang=FR
+style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:
+YoonGothicL;color:black;mso-font-kerning:0pt;mso-ansi-language:FR'> et modifiez
+les valeurs de configuration.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicB;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><b style='mso-bidi-font-weight:
+normal'><span lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;
+font-family:Arial;mso-fareast-font-family:YoonGothicB;color:black;mso-font-kerning:
+0pt;mso-ansi-language:FR'>&lt;</span></b><b style='mso-bidi-font-weight:normal'><span
+lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;
+mso-fareast-font-family:YoonGothicL;color:black;mso-font-kerning:0pt;
+mso-ansi-language:FR'> </span></b><b style='mso-bidi-font-weight:normal'><span
+lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;font-family:Arial;
+mso-fareast-font-family:YoonGothicB;color:black;mso-font-kerning:0pt;
+mso-ansi-language:FR'>Sauvegardez les param&egrave;tres sur le PC et restaurez &gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>Ceci est une fonction
+qui permet de restaurer les valeurs en utilisant les fichiers sauvegard&eacute;s dans
+le PC lorsqu’elles sont r&eacute;initialis&eacute;es d&ucirc; &agrave; la r&eacute;initialisation du NAS.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><b style='mso-bidi-font-weight:
+normal'><span lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;
+font-family:Arial;mso-fareast-font-family:YoonGothicB;color:black;mso-font-kerning:
+0pt;mso-ansi-language:FR'>&lt; Sauvegardez les fichiers de configuration sur le
+PC&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>Choisissez les fichiers
+de configuration &agrave; sauvegarder sur le PC et cliquez sur le bouton ‘Sauvegarder’
+pour les sauvegarder sur le PC.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><b style='mso-bidi-font-weight:
+normal'><span lang=FR style='mso-bidi-font-size:10.0pt;line-height:150%;
+font-family:Arial;mso-fareast-font-family:YoonGothicB;color:black;mso-font-kerning:
+0pt;mso-ansi-language:FR'>&lt; Restaurer NAS avec les param&egrave;tres sauvegard&eacute;s
+sur le PC &gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>Vous pouvez restaurer le
+param&eacute;trage du NAS en utilisant les fichiers de configuration sauvegard&eacute;s dans
+le PC.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:바탕;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>1. ‘Restaurer le
+parametrage du LG NAS avec les les fichiers de configuration sauvegard&eacute;s dans
+le PC’, puis s&eacute;lectionnez les fichiers de configuration sauvegard&eacute;s en
+utilisant le bouton ‘Rechercher’.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:바탕;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+mso-layout-grid-align:none;word-break:keep-all'><span lang=FR style='mso-bidi-font-size:
+10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:YoonGothicL;
+color:black;mso-font-kerning:0pt;mso-ansi-language:FR'>2. S&eacute;lectionnez le
+fichier de configuration ) restaurer et appuyez sur ‘Restaurer’&nbsp;; la
+configuration du NAS est modifi&eacute;e en valeurs d&eacute;finies.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-bidi-font-size:10.0pt;font-family:
+Arial;mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

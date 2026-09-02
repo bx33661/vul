@@ -1,0 +1,286 @@
+<metadataDef>
+    <namespaceList>
+        <namespace prefix="dlna" uri="urn:schemas-dlna-org:metadata-1-0/" />
+        <namespace prefix="dixim" uri="urn:schemas-digion-com:metadata-1-0/dixim/DIDL-Lite/" />
+        <namespace prefix="arib" uri="urn:schemas-arib-or-jp:elements-1-0/" />
+        <namespace prefix="dtcp" uri="urn:schemas-dtcp-com:metadata-1-0/" />
+        <namespace prefix="microsoft" uri="urn:schemas-microsoft-com:WMPNSS-1-0/" />
+        </namespaceList>    
+    <metadataList>
+    
+        <metadata id="1" name="@id" type="STRING" />
+        <metadata id="1" name="item@id" type="STRING" />
+        <metadata id="1" name="container@id" type="STRING" />
+        
+        <metadata id="2" name="@parentID" type="STRING" />
+        <metadata id="2" name="item@parentID" type="STRING" />
+        <metadata id="2" name="container@parentID" type="STRING" />
+        
+        <metadata id="3" name="@refID" type="STRING" />
+        <metadata id="3" name="item@refID" type="STRING" />
+        
+        <metadata id="4" name="@restricted" type="BOOLEAN" />
+        <metadata id="4" name="item@restricted" type="BOOLEAN" />
+        <metadata id="4" name="container@restricted" type="BOOLEAN" />
+        
+        <metadata id="5" name="@searchable" type="BOOLEAN" />
+        <metadata id="5" name="container@searchable" type="BOOLEAN" />
+
+        <metadata id="6" name="@childCount" type="INTEGER" />
+        <metadata id="6" name="container@childCount" type="INTEGER" />
+        
+        <metadata id="7" name="@dlna:dlnaManaged" type="STRING" />
+        <metadata id="7" name="item@dlna:dlnaManaged" type="STRING" />   
+        <metadata id="7" name="container@dlna:dlnaManaged" type="STRING" />
+
+        <metadata id="8" name="@dixim:file" type="STRING" />
+        <metadata id="8" name="item@dixim:file" type="STRING" />   
+        <metadata id="8" name="container@dixim:file" type="STRING" />
+
+        <metadata id="9" name="@dixim:timestamp" type="UNSIGNED_LONG" />
+        <metadata id="9" name="item@dixim:timestamp" type="UNSIGNED_LONG" />   
+        <metadata id="9" name="container@dixim:timestamp" type="UNSIGNED_LONG" />
+        
+        <metadata id="10" name="@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        <metadata id="10" name="item@dixim:persistAcrossCrawls" type="BOOLEAN" />   
+        <metadata id="10" name="container@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="11" name="@dixim:originalID" type="STRING" />
+        <metadata id="11" name="item@dixim:originalID" type="STRING" />
+        <metadata id="11" name="container@dixim:originalID" type="STRING" />
+
+        <metadata id="12" name="@dixim:originalParentID" type="STRING" />
+        <metadata id="12" name="item@dixim:originalParentID" type="STRING" />
+        <metadata id="12" name="container@dixim:originalParentID" type="STRING" />
+
+        <metadata id="13" name="@dixim:originalRefID" type="STRING" />
+        <metadata id="13" name="item@dixim:originalRefID" type="STRING" />
+        <metadata id="13" name="container@dixim:originalRefID" type="STRING" />
+
+        <metadata id="14" name="@dixim:playlist" type="STRING" />
+        <metadata id="14" name="item@dixim:playlist" type="STRING" />
+        <metadata id="14" name="container@dixim:playlist" type="STRING" />
+
+        <metadata id="15" name="@dixim:sortOrder" type="INTEGER" />
+        <metadata id="15" name="item@dixim:sortOrder" type="INTEGER" />
+        <metadata id="15" name="container@dixim:sortOrder" type="INTEGER" />
+
+        <metadata id="100" name="dc:title" type="STRING" />
+        <metadata id="101" name="dc:title@dixim:persistAcrossCrawls" type="BOOLEAN" />
+
+        <metadata id="200" name="upnp:class" type="STRING" />
+        <metadata id="201" name="upnp:class@name" type="STRING" />
+        
+        <metadata id="300" name="res" type="URI" />
+        <metadata id="301" name="res@protocolInfo" type="STRING" />
+        <metadata id="302" name="res@size" type="UNSIGNED_LONG" />
+        <metadata id="303" name="res@importUri" type="URI" />
+        <metadata id="304" name="res@bitrate" type="UNSIGNED_INTEGER" />
+        <metadata id="305" name="res@bitsPerSample" type="UNSIGNED_INTEGER" />
+        <metadata id="306" name="res@sampleFrequency" type="UNSIGNED_INTEGER" />
+        <metadata id="307" name="res@nrAudioChannels" type="UNSIGNED_INTEGER" />
+        <metadata id="308" name="res@duration" type="STRING" />
+        <metadata id="309" name="res@colorDepth" type="UNSIGNED_INTEGER" />
+        <metadata id="310" name="res@resolution" type="STRING" />
+        <metadata id="311" name="res@protection" type="STRING" />
+        <metadata id="312" name="res@dlna:cleartextSize" type="UNSIGNED_LONG" />
+        <metadata id="313" name="res@dlna:ifoFileURI" type="URI" />
+        <metadata id="314" name="res@dlna:importIfoFileURI" type="URI" />
+        <metadata id="315" name="res@dlna:resumeUpload" type="BOOLEAN" />
+        <metadata id="316" name="res@dlna:uploadedSize" type="UNSIGNED_LONG" />
+        <metadata id="317" name="res@dixim:timestamp" type="UNSIGNED_LONG" />
+        <metadata id="318" name="res@dixim:file" type="STRING" />
+        <metadata id="319" name="res@dixim:transporter" type="STRING" />
+        <metadata id="320" name="res@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        <metadata id="321" name="res@dtcp:uploadInfo" type="STRING" />
+        
+        <metadata id="400" name="arib:caProgramInfo" type="BOOLEAN" />
+        <metadata id="401" name="arib:caProgramInfo@available" type="BOOLEAN" />
+        <metadata id="402" name="arib:caProgramInfo@price" type="STRING" />
+        <metadata id="403" name="arib:caProgramInfo@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="500" name="arib:captionInfo" type="BOOLEAN" />
+        <metadata id="501" name="arib:captionInfo@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="600" name="arib:copyControlInfo" type="STRING" />
+        <metadata id="601" name="arib:copyControlInfo@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="700" name="arib:dataProgramInfo" type="BOOLEAN" />
+        <metadata id="701" name="arib:dataProgramInfo@sync" type="BOOLEAN" />
+        <metadata id="702" name="arib:dataProgramInfo@dixim:persistAcrossCrawls" type="BOOLEAN" />
+       
+        <metadata id="800" name="arib:longDescription" type="STRING" />
+        <metadata id="801" name="arib:longDescription@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="900" name="arib:multiESInfo" type="BOOLEAN" />
+        <metadata id="901" name="arib:multiESInfo@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="1000" name="arib:multiViewInfo" type="BOOLEAN" />
+        <metadata id="1001" name="arib:multiViewInfo@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="1100" name="arib:objectType" type="STRING" />
+        <metadata id="1101" name="arib:objectType@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="1200" name="arib:videoComponentType" type="UNSIGNED_INTEGER" />
+        <metadata id="1201" name="arib:videoComponentType@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="1300" name="dc:contributor" type="STRING" />
+        <metadata id="1301" name="dc:contributor@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="1400" name="dc:creator" type="STRING" />
+        <metadata id="1401" name="dc:creator@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="1500" name="dc:date" type="STRING" />
+        <metadata id="1501" name="dc:date@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="1600" name="dc:description" type="STRING" />
+        <metadata id="1601" name="dc:description@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="1700" name="dc:language" type="STRING" />
+        <metadata id="1701" name="dc:language@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="1800" name="dc:publisher" type="STRING" />
+        <metadata id="1801" name="dc:publisher@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="1900" name="dc:relation" type="STRING" />
+        <metadata id="1901" name="dc:relation@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="2000" name="dc:rights" type="STRING" />
+        <metadata id="2001" name="dc:rights@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="2100" name="desc" type="STRING" />
+        <metadata id="2101" name="desc@id" type="STRING" />
+        <metadata id="2102" name="desc@type" type="STRING" />
+        <metadata id="2103" name="desc@nameSpace" type="STRING" />
+        <metadata id="2104" name="desc@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        <metadata id="2105" name="desc@dixim:noNeedToEscape" type="BOOLEAN" />
+        
+        <metadata id="2200" name="dlna:containerType" type="STRING" />
+        <metadata id="2201" name="dlna:containerType@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="2300" name="dlna:takeOut" type="STRING" />
+        <metadata id="2301" name="dlna:takeOut@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="2400" name="upnp:actor" type="STRING" />
+        <metadata id="2401" name="upnp:actor@role" type="STRING" />
+        <metadata id="2402" name="upnp:actor@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="2500" name="upnp:album" type="STRING" />
+        <metadata id="2501" name="upnp:album@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="2600" name="upnp:albumArtURI" type="URI" />
+        <metadata id="2601" name="upnp:albumArtURI@dlna:profileID" type="STRING" />
+        <metadata id="2602" name="upnp:albumArtURI@dixim:timestamp" type="UNSIGNED_LONG" />
+        <metadata id="2603" name="upnp:albumArtURI@dixim:file" type="STRING" />
+        <metadata id="2604" name="upnp:albumArtURI@dixim:transporter" type="STRING" />
+        <metadata id="2605" name="upnp:albumArtURI@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="2700" name="upnp:artist" type="STRING" />
+        <metadata id="2701" name="upnp:artist@role" type="STRING" />
+        <metadata id="2702" name="upnp:artist@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="2800" name="upnp:artistDiscographyURI" type="URI" />
+        <metadata id="2801" name="upnp:artistDiscographyURI@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="2900" name="upnp:author" type="STRING" />
+        <metadata id="2901" name="upnp:author@role" type="STRING" />
+        <metadata id="2902" name="upnp:author@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="3000" name="upnp:channelName" type="STRING" />
+        <metadata id="3001" name="upnp:channelName@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="3100" name="upnp:channelNr" type="INTEGER" />
+        <metadata id="3101" name="upnp:channelNr@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="3200" name="arib:audioComponentType" type="UNSIGNED_INTEGER" />
+        <metadata id="3201" name="arib:audioComponentType@qualityIndicator" type="UNSIGNED_INTEGER" />
+        <metadata id="3202" name="arib:audioComponentType@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="3300" name="upnp:createClass" type="STRING" />
+        <metadata id="3301" name="upnp:createClass@includeDerived" type="BOOLEAN" />
+        <metadata id="3302" name="upnp:createClass@name" type="STRING" />
+        <metadata id="3303" name="upnp:createClass@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="3400" name="upnp:director" type="STRING" />
+        <metadata id="3401" name="upnp:director@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="3500" name="upnp:DVDRegionCode" type="INTEGER" />
+        <metadata id="3501" name="upnp:DVDRegionCode@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="3600" name="upnp:genre" type="STRING" />
+        <metadata id="3601" name="upnp:genre@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="3700" name="upnp:icon" type="STRING" />
+        <metadata id="3701" name="upnp:icon@arib:resolution" type="STRING" />
+        <metadata id="3702" name="upnp:icon@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="3800" name="upnp:longDescription" type="STRING" />
+        <metadata id="3801" name="upnp:longDescription@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="3900" name="upnp:lyricsURI" type="URI" />
+        <metadata id="3901" name="upnp:lyricsURI@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="4000" name="upnp:originalTrackNumber" type="INTEGER" />
+        <metadata id="4001" name="upnp:originalTrackNumber@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="4100" name="upnp:playlist" type="STRING" />
+        <metadata id="4101" name="upnp:playlist@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="4200" name="upnp:producer" type="STRING" />
+        <metadata id="4201" name="upnp:producer@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="4300" name="upnp:radioBand" type="STRING" />
+        <metadata id="4301" name="upnp:radioBand@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="4400" name="upnp:radioCallSign" type="STRING" />
+        <metadata id="4401" name="upnp:radioCallSign@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="4500" name="upnp:radioStationID" type="STRING" />
+        <metadata id="4501" name="upnp:radioStationID@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="4600" name="upnp:rating" type="STRING" />
+        <metadata id="4601" name="upnp:rating@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="4700" name="upnp:region" type="STRING" />
+        <metadata id="4701" name="upnp:region@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="4800" name="upnp:scheduledEndTime" type="STRING" />
+        <metadata id="4801" name="upnp:scheduledEndTime@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="4900" name="upnp:scheduledStartTime" type="STRING" />
+        <metadata id="4901" name="upnp:scheduledStartTime@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="5000" name="upnp:searchClass" type="STRING" />
+        <metadata id="5001" name="upnp:searchClass@includeDerived" type="BOOLEAN" />
+        <metadata id="5002" name="upnp:searchClass@name" type="STRING" />
+        <metadata id="5003" name="upnp:searchClass@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="5100" name="upnp:storageFree" type="LONG" />
+        <metadata id="5101" name="upnp:storageFree@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="5200" name="upnp:storageMaxPartition" type="LONG" />
+        <metadata id="5201" name="upnp:storageMaxPartition@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="5300" name="upnp:storageMedium" type="STRING" />
+        <metadata id="5301" name="upnp:storageMedium@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="5400" name="upnp:storageTotal" type="LONG" />
+        <metadata id="5401" name="upnp:storageTotal@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="5500" name="upnp:storageUsed" type="LONG" />
+        <metadata id="5501" name="upnp:storageUsed@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="5600" name="upnp:toc" type="STRING" />
+        <metadata id="5601" name="upnp:toc@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="5700" name="upnp:userAnnotation" type="STRING" />
+        <metadata id="5701" name="upnp:userAnnotation@dixim:persistAcrossCrawls" type="BOOLEAN" />
+        
+        <metadata id="5800" name="upnp:writeStatus" type="STRING" />
+        <metadata id="5801" name="upnp:writeStatus@dixim:persistAcrossCrawls" type="BOOLEAN" />
+
+        <metadata id="10100" name="dixim:IP" type="STRING" />
+        <metadata id="10200" name="dixim:UDN" type="STRING" />
+        <metadata id="10300" name="dixim:IDPrefix" type="STRING" />
+    </metadataList> 
+</metadataDef>

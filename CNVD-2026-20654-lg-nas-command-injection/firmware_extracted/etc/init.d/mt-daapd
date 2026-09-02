@@ -1,0 +1,107 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          mt-daapd
+# Required-Start:    $local_fs $remote_fs $network $time avahi
+# Required-Stop:     $local_fs $remote_fs $network $time
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Multithreaded DAAP music server 
+# Description:       mt-daapd, a.k.a. Firefly Media Server, is what
+#                    most people will understand to be an iTunes share
+#                    server. It uses the DAAP protocol, as iTunes does,
+#                    and supports streaming MP3 and AAC natively. It can
+#                    make use of a number of conversion methods to expose
+#                    Ogg and FLAC files too.
+### END INIT INFO
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/usr/sbin/mt-daapd
+NAME=mt-daapd
+DESC="DAAP music server"
+
+test -x $DAEMON || exit 0
+
+# Include mt-daapd defaults if available
+if [ -f /etc/default/mt-daapd ] ; then
+	. /etc/default/mt-daapd
+fi
+
+#set -e
+
+. /lib/init/vars.sh
+. /lib/lsb/init-functions
+
+stopd() {
+	# echo -n "Stopping $DESC: "
+	start-stop-daemon --stop --quiet --pidfile /var/run/$NAME.pid \
+	    --signal 2 --exec $DAEMON --oknodo
+	# echo "$NAME."
+	counter=0
+	seen=0
+	while [ $counter -lt 15 ]; do
+		pgrep -f "/usr/sbin/mt-daapd" >/dev/null
+		[ $? != "0" ] && counter=15
+		#if [ $seen -eq 0 ]; then
+		#	echo -n "Waiting for mt-daapd to terminate..."
+		#	seen=1
+		#fi
+		
+		counter=$(($counter + 1))
+		#echo -n "."
+		sleep 1
+	done
+	# echo "OK, all clear."
+}
+
+startd() {
+	#echo -n "Starting $DESC: "
+	start-stop-daemon --start --quiet -m --pidfile /var/run/$NAME.pid \
+		--exec $DAEMON -- $DAEMON_OPTS 2>/dev/null
+	#echo "$NAME."
+        return $?
+}
+
+case "$1" in
+  start)
+	[ "$VERBOSE" != no ] && log_daemon_msg "Starting $DESC" "$NAME"
+	startd
+        case "$?" in
+                0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
+                *) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
+        esac
+	;;
+  stop)
+        [ "$VERBOSE" != no ] && log_daemon_msg "Stopping $DESC" "$NAME"
+        stopd
+        case "$?" in
+                0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
+                *) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
+        esac
+	;;
+  restart|force-reload)
+        log_daemon_msg "Restarting $DESC" "$NAME"
+        stopd
+        case "$?" in
+          0|1)
+                startd
+                case "$?" in
+                        0) log_end_msg 0 ;;
+                        1) log_end_msg 1 ;; # Old process is still running
+                        *) log_end_msg 1 ;; # Failed to start
+                esac
+                ;;
+          *)
+                # Failed to stop
+                log_end_msg 1
+                ;;
+        esac
+        ;;
+  *)
+	N=/etc/init.d/$NAME
+	echo "Usage: $N {start|stop|restart|force-reload}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

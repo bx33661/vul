@@ -1,0 +1,17 @@
+<table id="mst_sec_default_block2">
+<tr>
+	<td>
+		<input  id="mst_sec_default_allow" name="default" type="radio" class="rad" value="allow" onclick="mstweb_page_security_set_default(true)" [[DEFAULT_IS_ALLOW]] />
+	</td>
+	<td>
+		<span><label for="mst_sec_default_allow">[[SECURITY_DEFAULT_ALLOW]]</label></span>
+	</td>
+    <td class="margin"></td>
+	<td>
+		<input  id="mst_sec_default_deny" name="default" type="radio" class="rad" value="deny" onclick="mstweb_page_security_set_default(false)" [[DEFAULT_IS_DENY]] />
+	</td>
+	<td>
+		<span><label for="mst_sec_default_deny">[[SECURITY_DEFAULT_DENY]]</label></span>
+	</td>
+</tr>
+</table>

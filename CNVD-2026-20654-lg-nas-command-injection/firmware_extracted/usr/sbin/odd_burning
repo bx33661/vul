@@ -1,0 +1,302 @@
+#!/bin/bash
+#================================================================
+#odd_burning
+#================================================================
+
+. /usr/lib/nas/common.sh
+
+BURNLIST=/var/www/run/burn_list
+ISOFILE=/var/www/system/burn.iso
+ABORTFILE=/var/www/run/abort
+LOGFILE=/var/run/odd_burning.log
+STATUSFILE=/var/www/run/status11
+MEDIAFILE=/tmp/mediatype
+MINFOFILE=/tmp/minfo
+DEVICE=/dev/sr0
+FUNC="ODD_BURNING"
+VOLUMEIDFILE=/tmp/volume_id
+CDDEV=$(sg_map | grep /dev/scd0 | awk '{print $1}')
+
+MEDIATYPE=$(trim $(cat $MEDIAFILE))
+VOLUMEID=$(cat $VOLUMEIDFILE)
+DISCSTATUS=$(cat $MINFOFILE | grep 'disk status' | cut -d: -f2 | awk '{print $1}')
+
+umount $DEVICE
+
+log_func $FUNC "Burning Log" 
+echo "Burn Start" > $LOGFILE
+nas-common button lock
+lcd_msg "Web Burning..."
+sg_prevent -p 0 $CDDEV
+sg_prevent -p 1 $CDDEV
+
+FORMATOK="TRUE"
+if [ "$DISCSTATUS" != "empty" ]; then
+################################################
+##  Format                                    ## 
+################################################
+  case "$MEDIATYPE" in
+    "CD-RW")
+      echo "Formatting" > $STATUSFILE
+      cdrecord gracetime=1 blank=fast 2>&1 | \
+      while read DATA; do
+        log_func $FUNC $DATA 
+        echo $DATA >> $LOGFILE
+      done
+      sg_prevent -p 0 $CDDEV
+      sg_prevent -p 1 $CDDEV
+      eject -t $DEVICE
+      CHECK=$(cat $LOGFILE | grep -y -E 'fail*|error*|unable|fatal')
+      if [ ! -z "$CHECK" ]; then
+        FORMATOK="FALSE"
+      fi
+      ;;
+    "DVD-RW"|"DVD-RAM"|"BD-RE") # except DVD+RW because elapsed long time
+      #including BD-RE SL/DL
+      echo "Formatting" > $STATUSFILE
+      dvd+rw-format -force $DEVICE
+      DFMTRST=$?
+      sg_prevent -p 0 $CDDEV
+      sg_prevent -p 1 $CDDEV
+      if [ "$DFMTRST" != "0" ]; then
+        FORMATOK="FALSE"
+      fi
+      ;;
+    *)
+      ;;
+  esac
+
+  ################################################
+  ##  Check if Format is ok                     ##
+  ################################################
+  if [ "$FORMATOK" = "FALSE" ]; then
+  # Format Fail
+    if [ "$(cat $ABORTFILE)" = "T" ]; then
+      echo "F" > $ABORTFILE
+      echo "Aborted in progress of Format" >> $LOGFILE
+      log_func $FUNC "Aborted before odd_burning"
+    fi
+    echo "Format Failed" > $STATUSFILE
+    log_func $FUNC "Format Failed" 
+    lcd_msg_time "Web Burn Failed"
+    nas-common button unlock
+    sg_prevent -a $CDDEV
+    eject $DEVICE
+    exit 0
+  else 
+  # Format OK
+    case "$MEDIATYPE" in
+      "CD-RW"|"DVD-RW"|"DVD-RAM"|"BD-RE")
+        echo "Format Completed" >> $LOGFILE
+        echo "Format Completed" > $STATUSFILE
+        log_func $FUNC "Format Completed"
+        ;;
+      *)
+        ;;
+    esac
+  fi 
+fi
+
+#echo $(cat $ABORTFILE) >> $LOGFILE
+################################################
+##  Check aborted                             ##
+################################################
+if [ "$(cat $ABORTFILE)" = "T" ]; then
+  echo "F" > $ABORTFILE
+  echo "Aborted before burning" > $STATUSFILE
+  echo "Aborted before burning" >> $LOGFILE
+  log_func $FUNC "Aborted before odd_burning"
+  lcd_msg_time "Web Burn Aborted"
+  nas-common button unlock
+  sg_prevent -a $CDDEV
+  eject $DEVICE
+  exit 0
+else
+  odd_abort &
+fi
+
+sg_turs -v $CDDEV 2>&1 | grep "Medium not present" >/dev/null 2>&1
+if [ $? != 0 ]; then 
+################################################
+##  Burning                                   ##
+################################################
+sg_prevent -p 0 $CDDEV
+sg_prevent -p 1 $CDDEV
+echo "prevent" >> $LOGFILE
+PPROG="0"
+case "$MEDIATYPE" in
+#  "CD-R"|"CD-RW"|"DVD-R/DL")
+  "CD-R"|"CD-RW")
+    echo "mkisofs start" >> $LOGFILE
+    mkisofs -r -U -udf -input-charset utf8 -graft-points -o $ISOFILE -path-list $BURNLIST -V "$VOLUMEID" 2>&1 | \
+    while read PROG DATA; do
+      #echo $PROG $DATA
+      if [ "${PROG:(-1)}" = "%" ]; then
+        PROGNUM=$(echo $PROG | cut -d '%' -f 1 | cut -d '.' -f 1)
+		PROGNUM=$(($PROGNUM * 40 / 100)).0%
+        echo $PROGNUM > $STATUSFILE    
+		if [ "${PROGNUM:0:2}" != $PPROG ]; then
+			if [ "${PROGNUM:1:1}" = "." ]; then
+					PPROG=${PROGNUM:0:1}
+			else
+					PPROG=${PROGNUM:0:2}
+			fi
+			lcd_msg "Web Burning" $PPROG%
+        fi
+      elif [ "$PROG" != "Using" ]; then
+        log_func $FUNC $PROG $DATA 
+        echo $PROG $DATA  >> $LOGFILE
+      fi
+    done
+    MKISORESULT=${PIPESTATUS[0]}
+    echo "mkisofs result : $MKISORESULT" >> $LOGFILE
+    log_func $FUNC "mkisofs result : $MKISORESULT"
+
+    CURABORT=$(cat $STATUSFILE | awk '{print $1}')
+    log_func $FUNC "current abort" $CURABORT
+    if [[ "$(cat $ABORTFILE)" = "T" || "$CURABORT" = "Aborted" ]]; then
+      echo "F" > $ABORTFILE
+      echo "Aborted" > $STATUSFILE
+      echo "Aborted before cdrecord" >> $LOGFILE
+      log_func $FUNC "Aborted before cdrecord"
+      lcd_msg_time "Web Burn Aborted"
+  
+      pidof odd_abort
+      if [ "$?" = "0" ]; then
+        pkill odd_abort
+        echo "pkill odd_abort :" $? >> $LOGFILE 
+      fi
+       
+      sg_prevent -a $CDDEV
+      eject $DEVICE   
+      #exit 0
+    else
+      echo "cdrecord start" >> $LOGFILE
+      cdrecord -v gracetime=0 -sao dev=1,2,0 $ISOFILE | \
+      while read PROGRESS NOW OF TOTAL DATA; do
+        #echo $PROGRESS $NOW $OF $TOTAL $DATA 
+        if [ "$PROGRESS" = "PROGRESS" ]; then
+          PROGNUM=$((40 + $NOW * 60 / $TOTAL)).0%
+          echo $PROGNUM > $STATUSFILE    
+			if [ "${PROGNUM:0:2}" != $PPROG ]; then
+				if [ "${PROGNUM:1:1}" = "." ]; then
+						PPROG=${PROGNUM:0:1}
+				else
+						PPROG=${PROGNUM:0:2}
+				fi
+				lcd_msg "Web Burning" $PPROG%
+			fi
+        elif [ "$PROGRESS" != "Using" ]; then
+          log_func $FUNC $PROGRESS $NOW $OF $TOTAL $DATA
+          echo $PROGRESS $NOW $OF $TOTAL $DATA >> $LOGFILE
+        fi
+      done
+      CDRESULT=${PIPESTATUS[0]}
+      echo "cdrecord result : $CDRESULT" >> $LOGFILE
+      log_func $FUNC "cdrecord result : $CDRESULT"
+    fi
+    ;;
+  *)  #DVD/BD recordable disc
+    echo "growisofs start" >> $LOGFILE
+    if [ "$MEDIATYPE" = "BD-R" ]; then
+      OPTION="-r -udf -iso-level 3 -U -use-the-force-luke=noload -use-the-force-luke=spare:none -input-charset utf8"
+    else
+      OPTION="-r -udf -iso-level 3 -U -use-the-force-luke=noload -input-charset utf8"
+    fi
+    growisofs $OPTION -Z $DEVICE -graft-points -path-list $BURNLIST -V "$VOLUMEID" 2>&1 | \
+    while read PROG DATA; do
+      #echo $PROG $DATA
+      if [ "${PROG:(-1)}" = "%" ]; then
+        echo $PROG > $STATUSFILE    
+        if [ "${PROG:0:2}" != $PPROG ]; then
+			if [ "${PROG:1:1}" = "." ]; then
+				PPROG=${PROG:0:1}
+			else
+				PPROG=${PROG:0:2}
+			fi
+			lcd_msg "Web Burning" $PPROG%
+		fi
+      elif [ "$PROG" != "Using" ]; then
+        log_func $FUNC $PROG $DATA 
+	echo $PROG $DATA >> $LOGFILE
+      fi
+    done
+    DVDRESULT=${PIPESTATUS[0]}
+    echo "growisofs result : $DVDRESULT" >> $LOGFILE
+    log_func $FUNC "growisofs result : $DVDRESULT"
+    ;;
+esac
+else
+    echo "$STATUSFILE" | grep "Format Completed" >/dev/null 2>&1
+    if [ $? = 0 ]; then
+      log_func $FUNC "ejected after format" 
+      echo "ejected after format, fail" >> $LOGFILE
+      lcd_msg_time "Erased, Ejected"
+    else
+      log_func $FUNC "no disc before burning" 
+      echo "no disc before burning, fail" >> $LOGFILE
+      lcd_msg_time "No Disc"
+    fi
+fi
+
+CURABORT=$(cat $STATUSFILE | awk '{print $1}')
+log_func $FUNC "current status" $CURABORT
+if [[ "$(cat $ABORTFILE)" = "T" || "$CURABORT" = "Aborted" ]]; then
+  echo "F" > $ABORTFILE
+  echo "Aborted" > $STATUSFILE
+  echo "Aborted odd_burning" >> $LOGFILE
+  log_func $FUNC "Aborted odd_burning"
+  lcd_msg_time "Web Burn Aborted"
+
+  pidof odd_abort
+  if [ "$?" = "0" ]; then
+    pkill odd_abort
+    echo "pkill odd_abort :" $? >> $LOGFILE 
+  fi
+
+  sg_prevent -a $CDDEV
+  for (( TIME=1; TIME <= 10; TIME += 1))
+  do
+    eject $DEVICE
+    RSTEJT=$?
+    if [ "$RSTEJT" != "0" ]; then
+      sleep 1
+    else 
+      echo "eject ok in" $TIME "times" >> LOGFILE
+      log_func $FUNC "eject ok in" $TIME "times"
+      break
+    fi
+  done
+else
+  log_func $FUNC "Burn Finished" 
+  echo "Burn Finished" >> $LOGFILE
+  
+  ################################################
+  ##  Check if burning is ok                    ##
+  ################################################
+  CHECK=$(cat $LOGFILE | grep -y -E 'fail*|error*|unable|fatal')
+  if [ ! -z "$CHECK" ]; then
+    echo "Burn Failed" > $STATUSFILE
+    log_func $FUNC "Burn Failed" 
+    lcd_msg_time "Web Burn Failed"
+  else
+    echo "Burn Completed" > $STATUSFILE
+    log_func $FUNC "Burn Completed"
+    lcd_msg_time "Web Burn Ok"
+  fi 
+  
+  if [ -e $ISOFILE ]; then
+    rm -rf $ISOFILE
+  fi
+  
+  sg_prevent -a $CDDEV
+  eject $DEVICE
+fi
+
+pidof odd_abort
+if [ "$?" = "0" ]; then
+  pkill odd_abort
+  echo "pkill odd_abort :" $? >> $LOGFILE 
+fi
+
+nas-common button unlock

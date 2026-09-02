@@ -1,0 +1,28 @@
+#!/bin/sh
+
+case "$1" in
+	start)
+
+		echo "Starting Selective Mirror"
+		echo "/etc/sm_conf" > /proc/fs/s_mirror/config
+		;;
+	stop)
+		echo "Stopping Selective Mirror"
+		echo 0 > /etc/sm_enable
+		;;
+	enable)
+		echo 1 > /etc/sm_enable
+		;;
+	disable)
+		echo 0 > /etc/sm_enable
+		;;
+	copyConfig)
+		echo '/etc/sm_conf' > /proc/fs/s_mirror/config
+		;;
+
+esac
+
+if [ -f  /etc/sm_enable ] 
+then
+	cat /etc/sm_enable > /proc/fs/s_mirror/sm_enable
+fi

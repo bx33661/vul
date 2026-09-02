@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="urn:schemas-upnp-org:device-1-0"
+xmlns:dixim="urn:schemas-digion-com:device-1-0">
+    <specVersion>
+        <major>1</major>
+        <minor>0</minor>
+    </specVersion>
+    <device>
+        <UDN>uuid:00000000-0000-0000-0000-000000000000</UDN>
+        <deviceType>urn:digion.com:device:X_DMSManager:1</deviceType>
+        <friendlyName>Device Manager</friendlyName>
+        <manufacturer>LG Electornins</manufacturer>
+        <manufacturerURL>http://www.lge.com/</manufacturerURL>
+        <modelName>Device Manager</modelName>
+        <modelURL>http://www.lge.com/</modelURL>
+        <serviceList>
+            <dixim:X_service>
+                <dixim:X_serviceType>urn:schemas-digion-com:service:document:1</dixim:X_serviceType>
+                <dixim:X_serviceId>urn:digion-com:serviceId:document</dixim:X_serviceId>
+                <dixim:X_url>doc/</dixim:X_url>
+                <dixim:X_paramList>
+                    <dixim:X_param>
+                        <dixim:X_name>doc_path</dixim:X_name>
+                        <dixim:X_value>conf/dm/root/dm/doc/</dixim:X_value>
+                    </dixim:X_param>
+                    <dixim:X_param>
+                        <dixim:X_name>mimetype_path</dixim:X_name>
+                        <dixim:X_value>conf/dm/mimetype/</dixim:X_value>
+                    </dixim:X_param>
+                </dixim:X_paramList>
+            </dixim:X_service>
+            <service>
+                <serviceType>urn:schemas-digion-com:service:X_DeviceManager:1</serviceType>
+                <serviceId>urn:digion-com:serviceId:X_DeviceManager</serviceId>
+                <SCPDURL>doc/desc/dms.xml</SCPDURL>
+                <controlURL>control/X_DeviceManager</controlURL>
+                <eventSubURL></eventSubURL>
+                <dixim:X_descPath >conf/dm/root/dm/doc/desc/dms.xml</dixim:X_descPath>
+            </service>
+        </serviceList>
+    </device>
+</root>

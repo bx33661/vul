@@ -1,0 +1,29 @@
+<div id="header">
+    <div id="menu_main">
+        <ul id="menu_list">
+            <li id="mst_tab_main_security"><div class="upper_tab">[[MENU_TITLE_SECURITY]]</div></li>
+            <li id="mst_tab_main_share"><div class="upper_tab">[[MENU_TITLE_SHARE]]</div></li>
+            <li id="mst_tab_main_backup"><div class="upper_tab">[[MENU_TITLE_BACKUP]]</div></li>
+            <li id="mst_tab_main_control"><div class="upper_tab">[[MENU_TITLE_CONTROL]]</div></li>
+            <li id="mst_tab_main_setting"><div class="upper_tab">[[MENU_TITLE_SETTING]]</div></li>
+        </ul>
+    </div>
+    <div id="menu_sub">
+        <ul>
+            <li class="icon_item_headline">
+                <div onclick="mstweb_logout(true)" class="menu_logout">[[MENU_TITLE_LOGOUT]]</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="contents2">
+    <div id="contents3">
+        <div class="mst_state" id="mst_state_menu"></div>
+        <div id="mst_page_security" style="display:none">[[COMMON_LOADING_PAGE]]</div>
+        <div id="mst_page_share" style="display:none">[[COMMON_LOADING_PAGE]]</div>
+        <div id="mst_page_control" style="display:none">[[COMMON_LOADING_PAGE]]</div>
+        <div id="mst_page_backup" style="display:none">[[COMMON_LOADING_PAGE]]</div>
+        <div id="mst_page_setting" style="display:none">[[COMMON_LOADING_PAGE]]</div>
+    </div>
+</div>

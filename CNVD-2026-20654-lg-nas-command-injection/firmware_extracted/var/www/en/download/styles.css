@@ -1,0 +1,377 @@
+
+
+img {border:0}
+
+td		{font-family:"돋움,arial,verdana"; color:#5E5E5E; font-size:11px; line-height:140%;}
+
+
+body {margin-top:0px ; margin-bottom:0px ; margin-left:0px ; margin-right:0px; background-color:#ffffff}
+body , td , input , textarea , select {font-family:돋움,verdana ; font-size:12px ; color:#5B5B5B ; line-height:18px ; letter-spacing:0}
+
+body , textarea {
+	scrollbar-face-color : #ffffff ;
+	scrollbar-highlight-color : #ffffff ;
+	scrollbar-3dlight-color : #A6A6A6 ;
+	scrollbar-shadow-color : #A6A6A6 ;
+	scrollbar-darkshadow-color : #ffffff ;
+	scrollbar-track-color : #ffffff ;
+	scrollbar-arrow-color : #A6A6A6 ;
+}
+
+a:active      {font-family : "돋움","굴림", "Verdana", "arial"; color: #51A08B; text-decoration: none; line-height: 16px;}
+a:link        {font-family : "돋움","굴림", "Verdana", "arial"; color: #505050; text-decoration: none; line-height: 16px;}
+a:visited     {font-family : "돋움","굴림", "Verdana", "arial"; color: #505050; text-decoration: none; line-height: 16px;}
+a:hover       {font-family : "돋움","굴림", "Verdana", "arial"; color: #51A08B; text-decoration: none; line-height: 16px;}
+
+a.l_news:active {  font-family: "굴림", "굴림체"; font-size: 9pt; line-height: 13pt; color: #404040; text-decoration: none}
+a.l_news:link {  font-family: "굴림", "굴림체"; font-size: 9pt; line-height: 13pt; color: #404040; text-decoration: none}
+a.l_news:visited {  font-family: "굴림", "굴림체"; font-size: 9pt; line-height: 13pt; color: #404040; text-decoration: none}
+a.l_news:hover {  font-family: "굴림", "굴림체"; font-size: 9pt; line-height: 13pt; color: #577bb9; text-decoration: none}
+
+a.l_blue:active {  font-family: "굴림,굴림체"; font-size: 9pt; line-height: 13pt; color: #102447; text-decoration: none} 
+a.l_blue:link {  font-family: "굴림,굴림체"; font-size: 9pt; line-height: 13pt; color: #102447; text-decoration: none} 
+a.l_blue:visited {  font-family: "굴림,굴림체"; font-size: 9pt; line-height: 13pt; color: #102447; text-decoration: none} 
+a.l_blue:hover {  font-family: "굴림,굴림체"; font-size: 9pt; line-height: 13pt; color: #102447; text-decoration: none} 
+
+a.l_brown:active {  font-family: "Verdana"; font-size: 9pt; line-height: 13pt; color: #707072; text-decoration: none} 
+a.l_brown:link {  font-family: "Verdana"; font-size: 9pt; line-height: 13pt; color: #707072; text-decoration: none} 
+a.l_brown:visited {  font-family: "Verdana"; font-size: 9pt; line-height: 13pt; color: #707072; text-decoration: none} 
+a.l_brown:hover {  font-family: "Verdana"; font-size: 9pt; line-height: 13pt; color: #873d3c; text-decoration: none} 
+
+.m_gray_s9 {  font-family: "굴림"; font-size: 9pt; color: #636563}
+.m_gray_s8 {  font-family: "굴림"; font-size: 8pt; color: #636563}
+
+.m_gray_01 { font-family: "Verdana";font-size: 8pt; line-height: 14pt; color: #757575}
+.m_gray_02 { font-family: "Verdana";font-size: 7pt; line-height: 14pt; color: #828282}
+
+.m_gray_04 { font-family: "Verdana";font-size: 8pt; line-height: 12pt; color: #6e6f71} 
+.m_gray_05 { font-family: "Verdana";font-size: 7pt; line-height: 14pt; color: #2e2e2e}
+.m_gray_06 { font-family: "Verdana";font-size: 8pt; line-height: 14pt; color: #6f6f71; font-weight: bold}
+.m_gray_07 { font-family: "Verdana";font-size: 9pt; line-height: 14pt; color: #6e6e70; font-weight: bold}
+.m_gray_08 { font-family: "Verdana";font-size: 8pt; line-height: 14pt; color: #6f6f6f}
+.m_gray_09 { font-family: "Verdana";font-size: 9pt; line-height: 14pt; color: #6b6b6d; font-weight: bold}
+.m_gray_10 { font-family: "Verdana";font-size: 9pt; line-height: 14pt; color: #6c6c6c}
+.m_gray_11 { font-family: "Verdana";font-size: 8pt; line-height: 14pt; color: #6e6e70; font-weight: bold}
+.m_gray_12 { font-family: "Verdana";font-size: 7pt; line-height: 14pt; color: #6e6f71} 
+.m_gray_13 { font-family: "Verdana";font-size: 8pt; line-height: 14pt; color: #727272; font-weight: bold}  
+.m_gray_14 { font-family: "Verdana";font-size: 8pt; line-height: 14pt; color: #69696b; font-weight: bold}
+
+.white { font: 6px 돋움,Gulim,Verdana; font-size: 6pt; color: #ffffff}
+.t01 { font: 13px 돋움,Gulim,Verdana; font-size: 13pt; line-height: 14pt; color: #6E6F71; font-weight: bold}
+.sub { font: 10px 돋움,Gulim,Verdana; font-size: 10pt; line-height: 12pt; color: #6E6F71}
+.white_s1 {  font-family: "Verdana"; font-size: 8pt; line-height: 14pt; color: #ffffff}
+
+.blue_8 {  font-family: "굴림"; font-size: 8pt; line-height: 13pt; color: #616498}
+.blue {  font-family: "굴림"; font-size: 9pt; color: #007EFF}
+.blue_s1 {  font-family: "굴림"; font-size: 9pt; line-height: 14pt; color: #007EFF} 
+.blue {  font-family: "굴림"; font-size: 9pt; line-height: 14pt; color: #2b669a; font-weight: bold}
+
+.black {  font-family: "굴림"; font-size: 9pt;  color: #000000}
+.black_s1 {  font-family: "굴림"; font-size: 9pt; line-height: 14pt; color: #000000}
+
+.gray_8 {  font-family: "굴림"; font-size: 8pt; line-height: 13pt; color: #424242}
+.gray {  font-family: "verdana"; font-size: 9pt; line-height: 16pt; color: #707072}
+.gray_s1 {  font-family: "굴림"; font-size: 9pt; line-height: 16pt; color: #636363}
+
+.red_s1 {  font-family: "Verdana"; font-size: 10pt; line-height: 13pt; color: #863f3d; font-weight: bold}
+.red_s2 {  font-family: "Verdana"; font-size: 9pt; line-height: 12pt; color: #925051; font-weight: bold}
+.red_s3 {  font-family: "Verdana"; font-size: 8pt; line-height: 12pt; color: #955150}
+.red_s4 {  font-family: "Verdana"; font-size: 8pt; line-height: 13pt; color: #925052; font-weight: bold}
+.red_s5 {  font-family: "Verdana"; font-size: 11pt; line-height: 12pt; color: #925052; font-weight: bold}
+
+
+.yellow {  font-family: "굴림"; font-size: 9pt; line-height: 14pt; color: #FFFEDA}
+.gold {  font-family: "굴림"; font-size: 9pt; line-height: 14pt; color: #996600} 
+.orange_s1 {  font-family: "굴림"; font-size: 9pt; line-height: 14pt; color: #FF7E00; font-weight: bold}
+.orange_s2 {  font-family: "돋움,Gulim,Verdana"; font-size: 8pt; line-height: 12pt; color: #fd8232}
+
+ody {
+scrollbar-face-color: #ffffff;
+scrollbar-shadow-color: #999999;
+scrollbar-highlight-color: #999999;
+scrollbar-3dlight-color: #ffffff;
+scrollbar-darkshadow-color: #ffffff;
+scrollbar-track-color: #ffffff;
+scrollbar-arrow-color: #999999;
+}
+
+td {font-size: 9pt;  color: #666666}
+
+/*테이블 bg*/
+
+.bg_company {
+	background-image:url(../images/company/topimg_bg.jpg);
+	background-repeat:no-repeat;
+	background-position: left;
+}
+.bg_business {
+	background-image:url(../images/business/topimg_bg.jpg);
+	background-repeat:no-repeat;
+	background-position: left;
+}
+.bg_results {
+	background-image:url(../images/results/topimg_bg.jpg);
+	background-repeat:no-repeat;
+	background-position: left;
+}
+.bg_press {
+	background-image:url(../images/press/topimg_bg.jpg);
+	background-repeat:no-repeat;
+	background-position: left;
+}
+.bg_customer {
+	background-image:url(../images/customer/topimg_bg.jpg);
+	background-repeat:no-repeat;
+	background-position: left;
+}
+.bg_contentsbg {
+	background-image:url(../images/common/contents_Bg.gif);
+	background-repeat:repeat-x;
+	background-position: top; left;
+}
+		
+
+/*글씨*/
+.linemap     {font-size: 11px; font-family : "돋움"; color: #9A9A9A; line-height: 14px; }
+.Sgreen     {font-size: 11px; font-family : "돋움"; color: #748a1d; line-height: 14px; }
+.green     {font-size: 12px; font-family : "돋움"; color: #748a1d; line-height: 14px; }
+.calender_month     {font-size: 18px;font-family : "돋움";color: #06b5ab;line-height: 22px;font-weight: bold;}
+.calender_year     {font-size: 11px;font-family : "verdana";color: #3f4a05;font-weight: bold;}
+.mainnum     {font-size: 11px;font-family : "돋움";color: #49a296;line-height: 14px;}
+.Dgray {font-size: 12px; font-family : "돋움"; color: #2F2F2F; line-height: 18px; }
+.white {font-size: 12px; font-family : "돋움"; color: #ffffff; line-height: 18px; }
+.Lgray {font-size: 12px; font-family : "돋움"; color: #999182; line-height: 18px; }
+.Dorange {font-size: 12px; font-family : "돋움"; color: #CC6600; line-height: 18px; }
+.main_notice {font-size: 12px; font-family : "돋움"; color: #D9D2CC; line-height: 18px; }
+.main_notice_date {font-size: 12px; font-family : "돋움"; color: #C5AD80; line-height: 18px; }
+.main_date {font-size: 12px; font-family : "돋움"; color: #B49780; line-height: 18px; }
+.main_text {font-size: 12px; font-family : "돋움"; color: #E3D5BD; line-height: 18px; }
+.main_column_text {font-size: 11px; font-family : "돋움"; color: #E3D5BD; line-height: 18px; letter-spacing:-0.5}
+
+
+/*인덱스의 공지*/
+
+.notice       {font:12px font-family: "돋움"; color: #4c4c4c; text-decoration: none; line-height: 16px;}
+.notice a:active      {font:12px font-family: "돋움"; color: #ff6600; text-decoration: none; line-height: 16px;}
+.notice a:link        {font:12px font-family: "돋움"; color: #4c4c4c; text-decoration: none; line-height: 16px;}
+.notice a:visited     {font:12px font-family: "돋움"; color: #4c4c4c; text-decoration: none; line-height: 16px;}
+.notice a:hover       {font:12px font-family: "돋움"; color: #ff6600; text-decoration: none; line-height: 16px;}
+
+
+
+/*인덱스의 교우업소소개*/
+
+.intro       {font:12px font-family: "돋움"; color: #748a1d; text-decoration: none; line-height: 16px;}
+.notice a:active      {font:12px font-family: "돋움"; color: #ff6600; text-decoration: none; line-height: 16px;}
+.notice a:link        {font:12px font-family: "돋움"; color: #748a1d; text-decoration: none; line-height: 16px;}
+.notice a:visited     {font:12px font-family: "돋움"; color: #748a1d; text-decoration: none; line-height: 16px;}
+.notice a:hover       {font:12px font-family: "돋움"; color: #ff6600; text-decoration: none; line-height: 16px;}
+
+
+/*게시판*/
+
+.board       {font-size:11px; font-family: "돋움"; color: #666666; text-decoration: none; line-height: 16px;}
+.board a:active {font-size:11px; font-family: "돋움"; color: #FF6600; text-decoration: none; line-height: 16px;}
+.board a:link   {font-size:11px; font-family: "돋움"; color: #666666; text-decoration: none; line-height: 16px;}
+.board a:visited {font-size:11px; font-family: "돋움"; color: #666666; text-decoration: none; line-height: 16px;}
+.board a:hover   {font-size:11px; font-family: "돋움"; color: #FF6600; text-decoration: none; line-height: 16px;}
+.board_date          {font-size:11px; font-family: "돋움"; color: #a5a5a5; text-decoration: none; line-height: 16px;}
+.board_div          {font-size:11px; font-family: "돋움";	color: #0e75d2;	text-decoration: none;	line-height: 16px;}
+.board_online    {font-size:12px; font-family: "돋움";line-height: 20px;  background-color:#ffffff; border: 1 solid #DAD5D2}
+.board_searchbox    {font-size:12px; font-family: "돋움";line-height: 20px;  background-color:#ffffff; border: 1 solid #DADADA}
+.board_selectbox  {font-family: "돋움"; font-size:12px; height:20px; background-color: #ffffff; border: 1 solid #DADADA}
+.board_textarear {font-size:12px; font-family: "돋움"; background-color:#ffffff; border: 1 solid #DAD5D2}
+
+
+
+
+/*내용*/
+.contentbox    {font: 12px; width:540px; font-family : "돋움", "굴림", "Verdana", "arial"; color: #666666; line-height: 16px border: 1 solid #BFDBE0;}
+
+
+/*search/
+.search_box    {font-size:12px; font-family: "돋움";line-height: 20px; border: 1 solid #DADADA; background-color:#ffffff}
+.search_selectbox  {font-family: "돋움"; font-size:12px; height:20px; background-color: #ffffff; border: 1 solid #DADADA}
+
+/*메인 게시판 테두리*/
+.mainbox    {
+	line-height: 16px;
+	border: 1px solid C1CBA5;	
+	background-color: #f7f7e7;
+}
+
+
+
+
+/*main박스*/
+.idbox    {font-size:12px; font-family: "돋움";line-height: 16px; border: 1 solid #90d11d; background-color: bbe081;}
+.idbox2    {font-size:12px; font-family: "돋움";line-height: 16px; border: 1 solid #90d11d; background-color: bbe081;}
+
+
+/*회원가입*/
+.memberbox   {height:19px; width:99px; border: 1 solid #CCCCCC}
+.memberbox2   {height:19px; width:70px; border: 1 solid #CCCCCC}
+.memberbox3   {height:19px; width:45px; border: 1 solid #CCCCCC}
+.memberbox4   {height:19px; width:540px; border: 1 solid #CCCCCC}
+.memberbox5   {height:19px; width:280px; border: 1 solid #CCCCCC}
+.memberbox6   {height:19px; width:105px; border: 1 solid #CCCCCC}
+.memberbox7   {height:19px; width:125px; border: 1 solid #CCCCCC}
+
+
+/*formmail*/
+.formbox   {font: 11px/14px "돋움", Verdana, Gulim;	color:#ffffff;	height:19px;	width:108px;	border: 1 solid #D6E4A8;	background-color: A9C754;}
+.formbox2   {font: 12px Verdana,Gulim; color:#666666; font-size:12px;height:20px; width:60px; border: 1 solid #969796}
+.formbox3   {font: 12px Verdana,Gulim; color:#666666; font-size:12px;height:20px; width:294px; border: 1 solid #969796}
+.formbox4   {font: 12px Verdana,Gulim; color:#666666; font-size:12px;height:20px; width:220px; border: 1 solid #969796}
+
+
+/*선택상자*/
+/*.selectbox  { border-width:1; border: 1 solid #404040; height:20px; }
+*/.selectbox01  { font: 12px Verdana; font-size:12px; height:20px; color:505050; background-color: #C3BBAC; }
+.selectbox02  { font: 12px Verdana; font-size:12px; height:20px; background-color: #EFEFEF; border: 1 solid #ACA7AB}
+.selectbox03  { font: 12px Verdana; font-size:12px; height:20px; width:200px; color:6f6f71; background-color: #f7f7f7; border: 1 solid #d3d3d3}
+.selectboxpop  { font: 12px Verdana; font-size:12px; height:20px; width:250px; color:838383; background-color: #f7f7f7; border: 1 solid #d3d3d3}
+.selectbox04  { font: 12px 돋음,Gulim; font-size:12px; height:20px; width:565px; background-color: #ffffff; border: 1 solid #b8c682}
+
+
+/*현재위치*/
+.here a:active      {font:11px font-family: "돋움"; color: #FF7C00; letter-spacing: -0.01em; line-height:15px}
+.here a:link        {font:11px font-family: "돋움"; color: #686868; letter-spacing: -0.01em; line-height:15px}
+.here a:visited     {font:11px font-family: "돋움"; color: #686868; letter-spacing: -0.01em; line-height:15px}
+.here a:hover       {font:11px font-family: "돋움"; color: #FF7C00; letter-spacing: -0.01em; line-height:15px}
+
+
+/*sitemap*/
+.here2 a:active      {font:11px ; color: #333333; text-decoration: underline; letter-spacing: -0.01em; height:12px}
+.here2 a:link        {font:11px ; color: #999999; text-decoration: none; letter-spacing: -0.01em; height:12px}
+.here2 a:visited     {font:11px ; color: #999999; text-decoration: none; letter-spacing: -0.01em; height:12px}
+.here2 a:hover       {font:11px ; color: #333333; text-decoration: underline; letter-spacing: -0.01em; height:12px}
+
+
+/*인풋박스 글씨*/
+.boardtitle         {color: #5B0F43; text-decoration: none; line-height: 16px;}
+.boardread          {color: #838383; text-decoration: none; line-height: 19px;}
+
+
+/*폼박스*/
+.input {font: 12px 돋움,Gulim,Verdana; color:#ffffff; height:18px; border: 1 solid #D6CCBA }
+.input2 {font: 12px 돋움,Gulim,Verdana; color:#505050; height:18px; background-color: #C3BBAC; border: 1 solid #DBD3C3}
+
+
+/*텍스트영역*/
+.textarear {font: 12px 돋움,Gulim,Verdana; color:#ffffff; border: 1 solid #D6CCBA}
+
+/* 문단간격 */
+.120{line-height:120%}
+.130{line-height:130%}
+.140{line-height:140%}
+.150{line-height:150%}
+.160{line-height:160%}
+.170{line-height:170%}
+
+.login_input {font: 9pt 굴림; BACKGROUND-COLOR:#F0CF8E; COLOR:#603B00; BORDER:1px solid #603B00}
+
+.list_lounge {font: 9pt 굴림; BACKGROUND-COLOR:#D9EFF6; COLOR:#603B00; BORDER:1px solid #5AA7C3}
+
+.list_about {font: 9pt 굴림; BACKGROUND-COLOR:#EAF7D9; COLOR:#603B00; BORDER:1px solid #A4D365}
+
+.list_materials {font: 9pt 굴림; BACKGROUND-COLOR:#E7ECFE; COLOR:#603B00; BORDER:1px solid #7E91CD}
+
+.inputtext2{font: 9pt 굴림; BACKGROUND-COLOR:#F2F2F2; COLOR:#000000; BORDER:1px solid #BABABA}
+
+
+
+.inputtext_04{font: 8pt Verdana; BACKGROUND-COLOR:#aa6663; COLOR:#ffffff; height:19px; BORDER:1px solid #aa6663}
+
+.inputtext3{font: 10pt 굴림; BACKGROUND-COLOR:#ffffff; COLOR:#000000; BORDER:1px solid #BDBDBD}
+
+.inputtext_r {font: 9pt 굴림; BACKGROUND-COLOR:#FCD9B2; COLOR:#000000; BORDER:1px solid #AE875F}
+
+.inputtext_b {font: 9pt 굴림; BACKGROUND-COLOR:#009F91; COLOR:#ffffff; BORDER:1px solid #009F91}
+
+.SELECT { border:0; solid #d3d3d3; background-color: #5d5d5d; color: #FFFFFF; style="font-family:Verdana"; font-size:9pt; line-height:100%}
+
+
+.copyright {FONT-FAMILY: "Verdana", "Arial"; FONT-SIZE: 8pt; color: #333333; text-decoration: none}
+
+
+
+/*****************************************************/
+/*             Basic Table Template                  */
+/*                                                   */ 
+/*            Last Modified : 2008/11/13             */
+/*****************************************************/
+
+.basicTable {margin-bottom: 30px;}				
+
+	
+.header{background-color:#5d5d5d; 
+			  font-weight:bold; 
+			  color: #ffffff;
+				padding-left:20px;
+				height: 30px;
+									font-size: 9pt; 
+			    line-height: 14pt; 
+				}
+
+.subHeader{ 
+				  font-weight:bold; 
+				  color: #6e6f71;
+					padding-left:20px;
+					height: 30px; 
+					border-bottom: 1px solid #e3e3e5;
+					}
+
+.firstCol_250{  
+          background-color:#f5f5f7;
+					color: #6e6f71; 
+					width:250px;
+					border-right: 1px solid #e3e3e5;
+					border-bottom: 1px solid #e3e3e5;
+					padding-left:20px;
+					height:30px;
+					
+					font-size: 8pt; 
+			    line-height: 14pt; 
+					}
+						
+
+.otherCol_100{
+					padding-left:20px;
+					border-bottom: 1px solid #e3e3e5;
+					height:30px;
+					width:100px;
+					
+					
+					}
+
+
+.otherCol_420{
+					padding-left:20px;
+					border-bottom: 1px solid #e3e3e5;
+					height:30px;
+					width:420px;
+					
+					
+				
+					}
+					
+
+
+.tabTable{
+					margin-bottom: 30px;
+					}
+.tab{
+					border-bottom: 2px solid #853e3c;
+					height:30px;
+				  }
+
+
+
+					
+.inputtext{font: 8pt Verdana; BACKGROUND-COLOR:#f7f7f7; COLOR:#707070; height:19px; BORDER:1px solid #d3d3d3; margin-right:15px;}					
+
+.selectbox_50  { font: 12px Verdana; font-size:12px; height:20px; width:50px; color:#6f6f71; background-color: #f7f7f7; border: 1 solid #d3d3d3}
+.selectbox_60  { font: 12px Verdana; font-size:12px; height:20px; width:60px; color:#6f6f71; background-color: #f7f7f7; border: 1 solid #d3d3d3}
+.selectbox_80  { font: 12px Verdana; font-size:12px; height:20px; width:80px; color:#6f6f71; background-color: #f7f7f7; border: 1 solid #d3d3d3}
+

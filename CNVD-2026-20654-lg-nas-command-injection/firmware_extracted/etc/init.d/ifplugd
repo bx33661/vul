@@ -1,0 +1,112 @@
+#!/bin/sh 
+# $Id: ifplugd.init.in 43 2003-09-13 11:25:11Z lennart $
+
+# This file is part of ifplugd.
+#
+# ifplugd is free software; you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free
+# Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+#
+# ifplugd is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+# for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with ifplugd; if not, write to the Free Software Foundation,
+# Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.
+
+### BEGIN INIT INFO
+# Provides:          ifplugd
+# Required-Start:    $network $remote_fs
+# Required-Stop:     $network $remote_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Brings up/down network automatically
+# Description:       Brings networks interfaces up and down automatically when
+#                    the cable is removed / inserted
+### END INIT INFO
+
+CFG=/etc/default/ifplugd
+
+IFPLUGD=/usr/sbin/ifplugd
+test -x $IFPLUGD || exit 0
+
+. /lib/lsb/init-functions
+
+if [ `id -u` != "0" ] && [ "$1" = "start" -o "$1" = "stop" ] ; then
+  echo "You must be root to start, stop or restart ifplugd."
+  exit 1
+fi
+
+[ -f $CFG ] && . $CFG
+
+VERB="$1"
+shift
+
+[ $# -ne 0 ] && INTERFACES="$@"
+
+[ "x$INTERFACES" = "xauto" -o "x$INTERFACES" = "xall" ] && INTERFACES="`cat /proc/net/dev | awk '{ print $1 }' | egrep '^(eth|wlan)' | cut -d: -f1`"
+
+[ -z "$INTERFACES" ] && RESULT=1 || RESULT=0
+
+case "$VERB" in
+    start)
+        log_daemon_msg "Starting Network Interface Plugging Daemon..."
+        for IF in $INTERFACES ; do
+            grep --quiet $IF /proc/net/dev || continue
+            IF1=$(echo $IF | sed "s/-/_/")
+            A=$(eval echo \$\{ARGS_${IF1}\})
+            [ -z "$A" ] && A="$ARGS"
+            $IFPLUGD -i $IF $A >/dev/null 2>&1
+            [ "$?" = "4" ] && RESULT=1  
+            #echo -n " $IF"
+        done
+        log_end_msg $RESULT
+        ;;
+    stop)
+        log_daemon_msg "Stopping Network Interface Plugging Daemon..."
+        for IF in $INTERFACES ; do 
+            grep --quiet $IF /proc/net/dev || continue
+            $IFPLUGD -k --wait-on-kill -i $IF >/dev/null 2>&1
+            [ "$?" != "0" ] && RESULT=1
+            #echo -n " $IF"
+        done
+        log_end_msg $RESULT
+        ;;
+    status)
+        for IF in $INTERFACES ; do
+            $IFPLUGD -c -i $IF
+        done
+        ;;
+    suspend)
+        log_daemon_msg "Suspending Network Interface Plugging Daemon..."
+        for IF in $INTERFACES ; do
+            grep --quiet $IF /proc/net/dev || continue
+            $IFPLUGD -S -i $IF >/dev/null 2>&1
+            [ "$?" != "0" ] && RESULT=1
+            #echo -n " $IF"
+        done
+        log_end_msg $RESULT
+        ;;
+    resume)
+        log_daemon_msg "Resuming Network Interface Plugging Daemon..."
+        for IF in $INTERFACES ; do
+            $IFPLUGD -R -i $IF >/dev/null 2>&1
+            [ "$?" != "0" ] && RESULT=1
+            #echo -n " $IF"
+        done
+        log_end_msg $RESULT
+        ;;
+    force-reload|restart)
+        $0 stop $INTERFACES
+        sleep 3
+        $0 start $INTERFACES
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|force-reload|status|suspend|resume}"
+        exit 1
+esac
+
+exit 0

@@ -1,0 +1,6 @@
+5c7a78f8058b00724adc5bce70b77921  usr/share/kerberos-configs/krb5.conf.template
+af1f3044f7c126fb7fa3d50e49f2fe03  usr/share/doc/krb5-config/packaging-guidelines.gz
+e9bca44aab7f198a27f812e17ef017fa  usr/share/doc/krb5-config/README
+c145e616450f21039bc956d4913c3e34  usr/share/doc/krb5-config/copyright
+1b7022db1fcac76234945e6f6c0bb940  usr/share/doc/krb5-config/changelog.gz
+39eaed75cc1bd6ce8e873323c6ef3154  usr/share/doc/krb5-config/NEWS.Debian.gz

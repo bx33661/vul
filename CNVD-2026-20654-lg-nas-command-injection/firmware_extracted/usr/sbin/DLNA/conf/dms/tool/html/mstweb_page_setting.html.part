@@ -1,0 +1,31 @@
+<div id="mst_state_setting" class="mst_state"></div>
+
+<div id="mst_setting_block1">
+	<div id="mst_setting_menu">
+		<div id="mst_setting_menu_block1">
+			<ul id="setting_menu_list">
+				<li id="mst_tab_setting_name"><div class="left_side_tab">[[SETTING_TITLE_NAME]]</div></li>
+				<li id="mst_tab_setting_mimetype"><div class="left_side_tab">[[SETTING_TITLE_MIMETYPE]]</div></li>
+				<li id="mst_tab_setting_database"><div class="left_side_tab">[[SETTING_TITLE_DATABASE]]</div></li>
+				<li id="mst_tab_setting_view"><div class="left_side_tab">[[SETTING_TITLE_VIEW]]</div></li>
+				<li id="mst_tab_setting_activation"><div class="left_side_tab">[[SETTING_TITLE_ACTIVATION]]</div></li>
+				<li id="mst_tab_setting_password"><div class="left_side_tab">[[SETTING_TITLE_PASSWORD]]</div></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="mst_setting_content">
+		<div id="mst_setting_content_block1">
+			<div id="mst_setting_content_block2">
+				<div id="mst_setting_content_block3">
+					<div id="mst_page_name" style="display:none">[[COMMON_LOADING_PAGE]]</div>
+					<div id="mst_page_mimetype" style="display:none">[[COMMON_LOADING_PAGE]]</div>
+					<div id="mst_page_database" style="display:none">[[COMMON_LOADING_PAGE]]</div>
+					<div id="mst_page_view" style="display:none">[[COMMON_LOADING_PAGE]]</div>
+					<div id="mst_page_activation" style="display:none">[[COMMON_LOADING_PAGE]]</div>
+					<div id="mst_page_password" style="display:none">[[COMMON_LOADING_PAGE]]</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

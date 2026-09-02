@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[ "$METHOD" = loopback ] && exit 0
+
+ifconfig | nas-common log_func_pipe "IFCONFIG" 

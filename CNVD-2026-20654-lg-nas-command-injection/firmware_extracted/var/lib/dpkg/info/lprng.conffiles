@@ -1,0 +1,5 @@
+/etc/cron.daily/lprng
+/etc/lprng/lpd.perms
+/etc/lprng/lpd.conf
+/etc/network/if-up.d/lprng
+/etc/init.d/lprng
